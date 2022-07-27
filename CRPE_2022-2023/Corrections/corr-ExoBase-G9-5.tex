@@ -1,0 +1,53 @@
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item Les diagonales du quadrilatère QMNP sont [MN] et [PQ]. Ces diagonales sont de même longueur et se coupent en O, le milieu de [MN] et de [PQ].  Ce procédé permet de construire {\blue une famille de rectangles}. \\
+         Cas particulier : lorsque les diagonales sont perpendiculaires, on obtient un {\blue carré}.
+      \item Les diagonales du quadrilatère MSNR sont [MN] et [RS]. Ces diagonales se coupent en O = I, milieu de [MN] et de [RS]. Ce procédé permet de construire {\blue une famille de parallélogrammes}. \\
+         Cas particulier : lorsque les diagonales sont perpendiculaires, on obtient un {\blue losange}.
+      \item Programme de construction : \\
+         \begin{itemize}
+            \item Construire le segment [MN] de longueur \ucm{9} ainsi que le point O' sur ce segment situé à \ucm{2,5} de N ;
+            \item tracer le segment [RS] de longueur \ucm{5} et de milieu O' ;
+            \item tracer le quadrilatère MSNR.
+         \end{itemize}
+         {\psset{unit=0.9}
+         \begin{pspicture}(-5,0.5)(9,5.5)
+            \pspolygon[linecolor=B2](1,1)(5.5,4.6)(9.6,3.5)(8.9,1)
+            \pspolygon[linecolor=A1](9.2,3.6)(9.1,3.2)(9.5,3.1)(9.6,3.5)
+            \psline(1,1)(9.6,3.5)
+            \pscircle(7.2,2.8){2.5}
+            \psline(5.5,4.6)(8.9,1)
+            \rput[bl](0.5,0.9){M}
+            \rput[bl](9.82,3.64){N}
+            \rput[bl](7.1,3.2){O'=I}
+            \rput[bl](5.26,4.9){R}
+            \rput[bl](9.08,0.72){S}
+         \end{pspicture}}
+         \bigskip \\
+         On a I = O' donc, dans le quadrilatère MSNR, O'R = O'N = O'S et O' est le milieu de [RS] d'où : N est sur le cercle de diamètre [RS] ce qui implique que le triangle SNR est rectangle en N. \\
+         {\blue Le quadrilatère MSNR possède donc un angle droit en N}.
+      \item Programme de construction : \\
+         \begin{itemize}
+            \item Construire le segment [MN] de longueur 9 cm ainsi que le point O' sur ce segment situé à \ucm{2,5} de N ;
+            \item tracer le cercle de diamètre [MN] et le cercle de centre O' et de  rayon \ucm{4,5} : placer P sur l'un des points d'intersection de ces cercles ;
+            \item construire Q sur la droite (PO') tel que PQ = \ucm{9} ;
+            \item tracer le quadrilatère MQNP. \\
+         \end{itemize}
+      {\psset{unit=0.6}
+      \begin{pspicture}(-10,-2.2)(12,8)
+         \pspolygon[linecolor=A1](4.6,6.3)(5.1,6)(5.4,6.5)(4.9,6.8)
+         \psline(1,1)(9.6,3.7)
+         \pscircle(5.3,2.35){4.5}
+         \pscircle(7.2,2.95){4.5}
+         \pspolygon[linecolor=B2](1,1)(4.9,6.8)(9.6,3.7)(9.5,-0.9)
+         \psline(4.9,6.8)(9.5,-0.9)
+         \rput[bl](0.2,0.85){M}
+         \rput[bl](9.8,3.9){N}
+         \rput[bl](7.2,3.2){O'}
+          \rput[bl](5,7.2){P}
+        \rput[bl](9.3,-1.7){Q}
+      \end{pspicture}}
+      \bigskip \\
+      Le point P est situé sur le cercle de diamètre [MN], donc le triangle MNP est rectangle en P. \\
+      {\blue Le quadrilatère MPNQ possède donc un angle droit en P}.
+   \end{enumerate}

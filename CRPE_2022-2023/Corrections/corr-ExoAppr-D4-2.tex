@@ -1,0 +1,38 @@
+\ \\
+\begin{minipage}{11cm}
+   \begin{enumerate}
+      \item
+      \begin{enumerate}
+         \item Entre 32\degres F et 212\degres F, il y a 180\degres F et 10 intervalles réguliers, donc, \bm{un intervalle correspond à 18\degres F}.
+         \item S'il y avait proportionnalité, les \og 0 \fg{} coïncideraient, ce qui n'est pas le cas, donc, \bm{les deux suites de nombres ne sont pas proportionnelles.}
+      \end{enumerate}
+      \item Pour $t =0$, on a $T =32$, donc $32 =a\times0+b \iff b =32$. \\
+      Pour $t =100$, on a $T =212$, donc : \\
+      $212 =a\times100+32 \iff a\times100 =212-32$ \\ [1mm]
+      \hspace*{2.7cm} $\iff a =\dfrac{180}{100} =1,8$. \\ [1mm]
+      On a alors \bm{$T =1,8t+32$.}
+      \item
+      \begin{enumerate}
+         \item On a $t =25$, donc $T =1,8\times25+32 =77$. \\
+         \bm{Lorsqu'il fait 25\degres C, cela correspond à 77\degres F.}
+         \item On regarde sur le dessin, 25\degres C est le centre de l'intervalle [\,20\degres C\,;\,30\degres C\,], cela correspond au centre de l'intervalle [\,68\degres F\,;\,86\degres F\,], ce qui donne $\dfrac{68+86}{2} =77$, donc la température est bien de 77\degres F. \\ [-3mm]
+      \end{enumerate}
+      \item On doit avoir $t =T$, soit : \\
+      $t =1,8t+32 \iff t-1,8t =32$ \\
+      \hspace*{1.85cm} $\iff -0,8t =32$ \\
+      \hspace*{1.85cm} $\iff t =\dfrac{32}{-0,8} =-40$. \\ [1mm]
+      \bm{L'échelle des températures donne la même valeur à la température de $-40$ degrés.}
+   \end{enumerate}
+\end{minipage}
+\qquad
+   \begin{minipage}{3cm}
+      {\psset{unit=0.7}
+      \begin{pspicture}(-0.5,-0.5)(3,15)
+         \psline(1,0)(1,15)
+         \psline(2,0)(2,15)
+         \multido{\i=0+1,\n=-50+10}{16}{\psline(1,\i)(2,\i) \rput(0.5,\i){\footnotesize\n}}
+         \multido{\i=0+1,\n=-58+18}{16}{\rput(2.5,\i){\footnotesize\bm{\n}}}
+         \rput(0.5,15.8){\footnotesize\degre C}
+         \rput(2.3,15.8){\footnotesize\degre F}
+      \end{pspicture}}
+   \end{minipage}

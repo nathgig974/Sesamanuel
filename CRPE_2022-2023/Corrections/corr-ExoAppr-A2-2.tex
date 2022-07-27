@@ -1,0 +1,27 @@
+   Nous sommes dans une situation d'équiprobabilité car le tétraèdre est régulier et le dé est équilibré. \\
+   \begin{enumerate}
+      \item Le résultat du jet d'un dé ne dépend pas des résultats des lancers précédents, donc, \\ [1mm]
+      \bm{la probabilité d'obtenir un 1 est la même que d'obtenir un 3} : $\mathcal{P} =\dfrac14$.
+      \item Ici, on peut utiliser un arbre ou un tableau qui nous permet de répondre aux deux questions. \\ [4mm]
+      \begin{minipage}{5cm}
+         On considère par exemple l'arbre (non pondéré) ci-contre :
+      \end{minipage}
+      \qquad
+      \begin{minipage}{10cm}
+      \pstree[treemode=R,nodesep=4pt,levelsep=4cm,treesep=0.3cm]{\Tp}{%
+   \pstree{\TR{1}}{%
+         \TR{1} \TR{2} \TR{3} \TR{4}}
+   \pstree{\TR{2}}{%
+         \TR{1} \TR{2} \TR{3} \TR{4}}
+   \pstree{\TR{3}}{%
+         \TR{1} \TR{2} \TR{3} \TR{4}}
+   \pstree{\TR{4}}{%
+         \TR{1} \TR{2} \TR{3} \TR{4}}} \\ [4mm]
+      \end{minipage}
+      \begin{enumerate}
+         \item Chaque chemin à deux branches à la même probabilité d'être obtenu. \\
+         Nous avons 6 chemins comportant une seule fois le résultat 1 sur un total de $4\times4 =16$ possibilités, soit une probabilité de $\dfrac{6}{16} =\dfrac38$. Donc, \bm{la probabilité d'obtenir une seule fois le nombre 1 est $\dfrac38$.}
+         \smallskip
+         \item Nous avons également 6 chemins pour lesquels le résultat du second dé est strictement supérieur à celui du premier dé, soit une probabilité de $\dfrac38$. Donc, \bm{la probabilité que le nombre obtenu au deuxième lancer soit strictement supérieur au nombre obtenu au premier lancer est $\dfrac38$}.
+      \end{enumerate}
+   \end{enumerate}

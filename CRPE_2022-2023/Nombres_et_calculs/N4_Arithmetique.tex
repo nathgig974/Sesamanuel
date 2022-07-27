@@ -1,0 +1,1008 @@
+\chapter{Arithmétique} \label{N4}
+
+\vfill
+
+\begin{figure}[h]
+   \centering
+      \includegraphics[height=7cm]{Nombres_et_calculs/Images/N4_intro_arithmeticae}
+   \caption{Allegory of Arithmetic, Margarita Philosophica (1504) © Gregor Reisch}
+\end{figure}
+
+\vfill
+
+\begin{prerequis}[Un peu d'histoire]
+   L'arithmétique est une branche des mathématiques qui, entre autre, étudie les propriétés des nombres entiers. Elle est parfois appelée \og la science des nombres \fg. Dans l'école Pythagoricienne du 6\up{e} siècle avant J.-C., elle fait partie des quatre sciences mathématiques avec la géométrie, l'astronomie et la musique. \\
+   Avec l'arrivée des chiffres indo-arabes, les opérations sur les nombres deviennent plus simples. Sur la gravure ci-dessus de {\bf Gregor Reich}, on y voit un algoriste : {\bf Boethius} (à gauche) effectuer une opération avec les chiffres indo-arabes alors que l'abaciste {\bf Pythagore} (à droite), effectue une même opération à l'aide d'un abaque à jetons. Dame Arithmétique montre le triomphe de l'algoriste. \\
+   Il faut ensuite attendre le début du16\up{e} siècle avec notamment {\bf Fermat} pour que cette science fasse un bon en avant. Actuellement, l'arithmétique, et plus particulièrement les nombres entiers font partie intégrante des systèmes de codages en tous genres !
+\end{prerequis}
+
+
+\cours %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Multiples et diviseurs} %%% 1
+
+\begin{definition}[Division euclidienne]
+   Effectuer la division euclidienne d'un {\bf dividende} par un {\bf diviseur}, c'est trouver deux nombres entiers appelés {\bf quotient} et {\bf reste} tels que : \\
+   \hspace*{1cm} \og dividende $=$ diviseur $\times$ quotient $+$ reste \fg \qquad avec \qquad reste $<$ diviseur.
+\end{definition}
+
+\begin{exemple}
+   Avec une bouteille de \ucl{150} de jus, combien peut-on remplir de verres de \ucl{8} ? \\ [3mm]
+   Réponse : $150 =18\times8+6$ \\
+   donc, on peut remplir 18 verres de \ucl{8} et il restera \ucl{6}.
+   \correction
+      \begin{pspicture}(-2.5,-0.2)(4,2.8)
+         \rput(1,1.2){$\opidiv[displayintermediary=all,voperation=top]{150}{8}$}
+         \psline[linecolor=A1]{->}(0.7,2.8)(0.7,2.4)
+         \rput(0.7,3){\textcolor{A1}{dividende}}
+         \psline[linecolor=A1]{<-}(1.9,2.3)(2.4,2.3)
+         \rput[l](2.5,2.3){\textcolor{A1}{diviseur}}
+         \psline[linecolor=B1]{<-}(2.2,1.7)(2.7,1.7)
+         \rput[l](2.8,1.7){\textcolor{B1}{quotient}}
+         \psline[linecolor=B1]{<-}(1.4,0.2)(1.9,0.2)
+         \rput[l](2,0.2){\textcolor{B1}{reste}}
+      \end{pspicture}
+\end{exemple}
+
+\medskip
+
+
+\begin{definition}[Multiple, diviseur]
+   Soient $a$ et $b$ deux nombres entiers. Lorsque le reste de la division euclidienne de $a$ par $b$ est égal à 0, on dit que $a$ est un \textbf{multiple} de $b$, ou que $b$ est un \textbf{diviseur} de $a$, ou encore que $a$ est \textbf{divisible} par $b$. Autrement dit, il existe un entier $k$ tel que $a=k\times b$.
+\end{definition}
+
+\begin{exemple*1}
+   \begin{itemize}
+      \item 15 est multiple de 3 car $15=3\times 5+\textcolor{A1}{0}$, ou 3 est un diviseur de 15, ou 15 est divisible par 3.
+      \item 17 n'est pas un multiple de 3 car $17=3\times 5+\textcolor{A1}{2}$.
+      \item Les diviseurs de 24 sont 1; 2; 3; 4; 6; 8; 12; 24. Ceux de 36 sont 1; 2; 3 ; 4 ; 6 ; 9 ; 12 ; 18 ; 36.
+      \item Il y a une infinité de multiples de 18, comme par exemple 18 ; 36 ; 54 ; 180\dots \vspace*{-5mm}
+   \end{itemize}
+\end{exemple*1}
+
+\medskip
+
+
+\begin{propriete}[Critères de divisibilité]
+   \begin{itemize}
+      \item un nombre est divisible par 2 s'il se termine par 0 ; 2 ; 4 ; 6 ou 8, c'est un nombre pair ;
+      \item un nombre est divisible par 3 si la somme de ses chiffres est un multiple de 3 ;
+      \item un nombre est divisible par 5 s'il se termine par 0 ou 5 ;
+      \item un nombre est divisible par 9 si la somme de ses chiffres est un multiple de 9 ;
+      \item un nombre est divisible par 10 s'il se termine par 0. \\ [-8mm]
+   \end{itemize}
+\end{propriete}
+
+\begin{exemple*1}
+   658\,254 est-il divisible par 2 ? 3 ? 5 ? 9 ? 10 ?
+   \begin{itemize}
+      \item Pour les critères de divisibilité par 2, 5 et 10, il suffit de regarder le dernier chiffre, qui est 4. \\
+         Ce nombre est divisible par 2 (il est pair), mais pas par 5 et 10.
+      \item Pour les critères de divisibilité par 3 et 9, il suffit de calculer la somme des chiffres qui composent le nombre et de vérifier si cette somme est un multiple de 3 ou 9. \\
+         $6+5+8+2+5+4 =30$ est multiple de 3, mais pas de 9 donc, 658\,254 est divisible par 3 mais pas par 9.
+      \item Conclusion : 658\,254 est divisible par 2 et 3. \\ [-10mm]
+   \end{itemize}
+\end{exemple*1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Nombres premiers}
+
+\begin{definition}[Nombre premier]
+   Un entier naturel $p>1$ est un \textbf{nombre premier} s'il admet comme seuls diviseurs 1 et $p$.
+\end{definition}
+
+\begin{methode*1}[Crible d'Érathostène]
+Il s'agit d'une méthode permettant de trouver tous les nombres premiers inférieurs à un certain nombre $n$. Pour déterminer ces nombres, on remplit un tableau de nombres jusqu'à $n$, et on procède par élimination en commençant par éliminer 1, puis :
+\begin{itemize}
+   \item on garde le nombre suivant non barré 2 et on élimine tous les multiples de 2 ;
+   \item on garde le nombre suivant non barré 3 et on élimine tous les multiples de 3 et ainsi de suite jusqu'à $n$\dots
+\end{itemize}
+
+\exercice
+Pour $n=100$, on a : \\
+\begin{center}
+\newcommand{\CR}{\color{A1}}
+{\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+      \hline
+      \cancel{1} & \CR2 & \CR3 & \cancel{4} & \CR5 & \cancel{6} & \CR7 & \cancel{8} & \cancel{9} & \cancel{10} \\
+      \hline
+      \CR11 & \cancel{12} & \CR13 & \cancel{14} & \cancel{15} & \cancel{16} & \CR17 & \cancel{18} & \CR19 & \cancel{20} \\
+      \hline
+      \cancel{21} &\cancel{22} & \CR23 & \cancel{24} & \cancel{25} & \cancel{26} & \cancel{27} & \cancel{28} & \CR29 & \cancel{30} \\
+      \hline
+      \CR31 &\cancel{32} & \cancel{33} & \cancel{34} & \cancel{35} & \cancel{36} & \CR37 & \cancel{38} & \cancel{39} & \cancel{40} \\
+      \hline
+      \CR41 &\cancel{42} & \CR43 & \cancel{44} & \cancel{45} & \cancel{46} & \CR47 & \cancel{48} & \cancel{49} & \cancel{50} \\
+      \hline
+      \cancel{51} &\cancel{52} & \CR53 & \cancel{54} & \cancel{55} & \cancel{56} & \cancel{57} & \cancel{58} & \CR59 & \cancel{60} \\
+      \hline
+      \CR61 &\cancel{62} & \cancel{63} & \cancel{64} & \cancel{65} & \cancel{66} & \CR67 & \cancel{68} & \cancel{69} & \cancel{70} \\
+      \hline
+      \CR71 &\cancel{72} & \CR73 & \cancel{74} & \cancel{75} & \cancel{76} & \cancel{77} & \cancel{78} & \CR79 & \cancel{80} \\
+      \hline
+      \cancel{81} &\cancel{82} & \CR83 & \cancel{84} & \cancel{85} & \cancel{86} & \cancel{87} & \cancel{88} & \CR89 & \cancel{90} \\
+      \hline
+      \cancel{91} &\cancel{92} & \cancel{93} & \cancel{94} & \cancel{95} & \cancel{96} & \CR97 & \cancel{98} & \cancel{99} & \cancel{100} \\
+      \hline
+   \end{tabular}}
+\end{center}
+\correction
+   donc, les nombres premiers inférieurs à 100 sont : \\
+   2 ; 3 ; 5 ; 7 ; 11 ; 13 ; 17 ; 19 ; 23 ; 29 ; 31 ; 37 ; 41 ; 43 ; 47 ; 53 ; 59 ; 61 ; 67 ; 71 ; 73 ; 79 ; 83 ; 89 et 97.
+\end{methode*1}
+
+\smallskip
+
+\begin{propriete}
+   Les nombres premiers inférieurs à 30 sont 2, 3, 5, 7, 11, 13, 17, 19, 23 et 29.
+\end{propriete}
+
+\smallskip
+
+Pour vérifier qu'un nombre est premier, on vérifie qu'il n'est divisible par aucun des nombres premiers inférieurs à sa racine carrée.
+ 
+\begin{exemple*1}
+   97 est-il un nombre premier ? \\
+   $\sqrt{97}\simeq9,8$ donc, il on teste s'il existe un nombre premier inférieur ou égal à 9 qui divise 97 : \\
+    97 n'est pas divisible par 2, ni 3, ni 5, ni 7 donc, 97 est un nombre premier.
+\end{exemple*1}
+
+
+\begin{propriete}[Décomposition]
+   Tout nombre entier admet une décomposition en produit de facteurs premiers, unique à l'ordre des facteurs près. 
+\end{propriete}
+
+\medskip
+
+Pour déterminer cette décomposition, on teste si le nombre est divisible par les nombres premiers successifs, éventuellement plusieurs fois.
+
+\begin{exemple*1}
+   \begin{minipage}{8cm}
+      La décomposition de 180 en produit de facteurs \\
+      premiers donne : \\
+      $180=2\times2\times3\times3\times5$ ou encore, $180=2^2\times3^2\times5$.
+   \end{minipage}
+   {\renewcommand{\arraystretch}{0.7}
+   \begin{tabular}{r|ll}
+      180 & 2 & \\
+      90 & 2 & \\
+      45 & 3 \qquad & \\
+      15 & 3 & \\
+      5 & 5 & \\
+      1 & & \\
+   \end{tabular}}
+\end{exemple*1}
+
+\medskip
+
+Grâce à cette décomposition, on peut retrouver tous les diviseurs de 180 : en effet, un diviseur de 180 sera nécessairement un nombre de la forme $2^\alpha\times3^\beta\times5^\gamma$ où $\alpha=0, 1$ ou 2, $\beta=0, 1$ ou 2 et $\gamma=0$ ou $1$. \\
+Il y en a $(\alpha+1)\times(\beta+1)\times(\gamma+1) =3\times3\times2 =18$, que l'on peut trouver, par exemple, à partir d'un arbre :
+
+\begin{center} 
+\pstree[treemode=R,nodesep=2mm, levelsep=30mm,treesep=1mm,nrot=:U]{\TR{$1$}}{%
+       \pstree{\Tr{$2^0$}}{%
+            \pstree{\Tr{$3^0$}}{%
+                 \pstree{\Tr{$5^0$}}{%
+                      \Tr{$1\times1\times1=1$}}
+                 \pstree{\Tr{$5^1$}}{%
+                      \Tr{$1\times1\times5=5$}}}
+            \pstree{\Tr{$3^1$}}{%
+                 \pstree{\Tr{$5^0$}}{%
+                      \Tr{$1\times3\times1=3$}}
+                 \pstree{\Tr{$5^1$}}{%
+                      \Tr{$1\times3\times5=15$}}} 
+            \pstree{\Tr{$3^2$}}{%
+                 \pstree{\Tr{$5^0$}}{%
+                      \Tr{$1\times9\times1=9$}}
+                 \pstree{\Tr{$5^1$}}{%
+                      \Tr{$1\times9\times5=45$}}}}
+       \pstree{\Tr{$2^1$}}{%
+            \pstree{\Tr{$3^0$}}{%
+                 \pstree{\Tr{$5^0$}}{%
+                      \Tr{$2\times1\times1=2$}}
+                 \pstree{\Tr{$5^1$}}{%
+                      \Tr{$2\times1\times5=10$}}}
+            \pstree{\Tr{$3^1$}}{%
+                 \pstree{\Tr{$5^0$}}{%
+                      \Tr{$2\times3\times1=6$}}
+                 \pstree{\Tr{$5^1$}}{%
+                      \Tr{$2\times3\times5=30$}}} 
+            \pstree{\Tr{$3^2$}}{%
+                 \pstree{\Tr{$5^0$}}{%
+                      \Tr{$2\times9\times1=18$}}
+                 \pstree{\Tr{$5^1$}}{%
+                      \Tr{$2\times9\times5=90$}}}}
+       \pstree{\Tr{$2^2$}}{%
+            \pstree{\Tr{$3^0$}}{%
+                 \pstree{\Tr{$5^0$}}{%
+                      \Tr{$4\times1\times1=4$}}
+                 \pstree{\Tr{$5^1$}}{%
+                      \Tr{$4\times1\times5=20$}}}
+            \pstree{\Tr{$3^1$}}{%
+                 \pstree{\Tr{$5^0$}}{%
+                      \Tr{$4\times3\times1=12$}}
+                 \pstree{\Tr{$5^1$}}{%
+                      \Tr{$4\times3\times5=60$}}} 
+            \pstree{\Tr{$3^2$}}{%
+                 \pstree{\Tr{$5^0$}}{%
+                      \Tr{$4\times9\times1=36$}}
+                 \pstree{\Tr{$5^1$}}{%
+                      \Tr{$4\times9\times5=180$}}}}}
+\end{center}
+
+   On obtient tous les diviseurs de 180 : 1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 9 ; 10 ; 12 ; 15 ; 18 ; 20 ; 30 ; 36 ; 45 ; 60 ; 90 ; 180.
+   
+\smallskip
+
+
+\begin{definition}[Irréductibilité]
+   Une fraction {\bf irréductible} est une fraction dont le numérateur et le dénominateur n'ont pas de diviseur commun autre que 1. On ne peut donc pas la simplifier davantage.
+\end{definition}
+
+\begin{exemple*1}
+   $\dfrac{15}{30} =\dfrac{5}{10} =\dfrac{3}{6} = \dfrac12$. Parmi ces écritures du nombre 0,5 seule la fraction $\dfrac12$ est irréductible. 
+\end{exemple*1}
+
+\smallskip
+
+\begin{methode}[Rendre une fraction irréductible]
+   Pour rendre irréductible une fraction, on peut procéder de la façon suivante :
+   \begin{itemize}
+      \item on décompose le numérateur et le dénominateur en produit de facteurs premiers ;
+      \item on simplifie par tout nombre commun au numérateur et au dénominateur.
+   \end{itemize}
+   \exercice
+      Rendre la fraction $\dfrac{90}{84}$ irréductible.
+   \correction
+      $\dfrac{90}{84} =\dfrac{2\times3^2\times5}{2^2\times3\times7} =\dfrac{\cancel{2}\times\cancel{3}\times3\times5}{\cancel{2}\times2\times\cancel{3}\times7} =\dfrac{3\times5}{2\times7} =\dfrac{15}{14}$.
+\end{methode}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{PGCD}
+
+\begin{definition}[PGCD]
+   Soient $a$ et $b$ deux entiers, on appelle PGCD de $a$ et $b$ le \textbf{Plus Grand Commun Diviseur} de $a$ et $b$. On le note PGCD$(a,b)$ ou pgcd$(a,b)$.
+\end{definition}
+
+\begin{methode}[Calcul du PGCD à partir des diviseurs]
+   On détermine tous les diviseurs des deux nombres et on prend le plus grand de leurs diviseurs communs.
+\exercice
+   Déterminer le PGCD de 24 et 36.   
+\correction Les diviseurs de 24 sont \textcolor{A1}{1} ; \textcolor{A1}{2} ; \textcolor{A1}{3} ; \textcolor{A1}{4} ; \textcolor{A1}{6} ; 8 ; \textcolor{A1}{12} ; 24. \\
+   Ceux de 36 sont \textcolor{A1}{1} ; \textcolor{A1}{2} ; \textcolor{A1}{3} ; \textcolor{A1}{4} ; \textcolor{A1}{6} ; 9 ; \textcolor{A1}{12} ; 18 ; 36. \\
+   Les diviseurs communs à 24 et 36 sont : 1 ; 2 ; 3 ; 4 ; 6 et 12. Donc, PGCD$(24,36)=12$.
+\end{methode}
+
+\begin{methode}[Calcul du PGDC à partir de la décomposition]
+   On effectue la décomposition en facteurs premiers de chacun des nombres, leur PGCD s'obtient en multipliant les facteurs communs munis de la puissance minimale.
+\exercice
+   Déterminer le PGCD de 24 et 36.
+\correction   
+   $24 =2^3\times\textcolor{A1}{3}$ et $36 =\textcolor{A1}{2^2}\times3^2$ donc, PGCD$(24,36)=2^2\times3=12$. 
+\end{methode}
+
+\begin{methode}[Calcul du PGCD par l'algorithme d'Euclide]
+   On déroule l'algorithme d'Euclide, le PGCD de deux nombres est le dernier reste non nul.
+\exercice
+   Déterminer le PGCD de 24 et 36.   
+\correction
+   {\renewcommand{\arraystretch}{1}
+   $\begin{array}{rcll}
+      36 & = & 24\times1 + \textcolor{A1}{12} \\
+      24 & = & 12\times2 + \textcolor{A1}{0} \\
+   \end{array}$} \\
+   Le dernier reste non nul est 12 donc PGCD$(36,24)= 12$.
+\end{methode}
+
+\begin{definition}[Nombres premiers entre eux]
+   Deux nombres sont dits \textbf{premiers entre eux} si leur PGCD est égal à 1.
+\end{definition}
+
+\begin{exemple*1}
+   Les nombres 126 et 715 sont premiers entre eux car \\
+   $126 =2\times3^2\times7$ et $715 =5\times11\times13$ donc, PGCD$(126,715)=1$.
+\end{exemple*1}
+
+\begin{remarque}
+   Deux nombres sont premiers entre eux s'ils n'ont aucun diviseur commun.
+\end{remarque}
+
+\begin{propriete}
+   Si $n$ est multiple de $a$ et de $b$ et si $a$ et $b$ sont premiers entre eux, alors $n$ est multiple de $a\times b$.
+\end{propriete}
+
+\begin{exemple*1}
+   Si $n$ est multiple de 4 et de 3, il est multiple de 12. \\
+   Mais : si $n$ est multiple de 6 et de 8, il n'est pas forcément multiple de 48 (exemple : 24).
+\end{exemple*1}
+
+%
+%
+%\subsection{PPCM} %%%%%%%%%%%
+%
+%\begin{definition}[ppcm]
+%   Soient $a$ et $b$ deux entiers, on appelle PPCM de $a$ et $b$ le \textbf{Plus Petit Commun Multiple} de $a$ et $b$. On le note PPCM$(a,b)$ ou ppcm$(a,b)$.
+%\end{definition}
+%
+%\begin{methode}[Calcul du PPCM à partir des multiples]
+%   On détermine les multiples successifs des deux nombres jusqu'à obtenir un multiple commun.
+%\exercice
+%   Déterminer le PPCM de 24 et 36.   
+%\correction Les multiples de 24 sont 24 ; 48 ; \textcolor{A1}{72} ; 96 ; 120\dots{} \\
+%   Ceux de 36 sont 36 ; \textcolor{A1}{72} ; 108\dots{} Donc, PPCM$(24,36)=72$.
+%\end{methode}
+%
+%\begin{methode}[Calcul du PPCM à partir de la décomposition]
+%   On effectue la décomposition en facteurs premiers de chacun des nombres, leur PPCM s'obtient en multipliant tous les facteurs présents munis de la puissance maximale.
+%\exercice
+%   Déterminer le PPCM de 24 et 36.
+%\correction   
+%   $24=\textcolor{A1}{2^3}\times3$ et $36=2^2\times\textcolor{A1}{3^2}$ donc, PPCM$(24,36)=2^3\times3^2=72$.
+%\end{methode}
+%
+%\begin{remarque}
+%   On peut aussi utiliser la relation \normalfont{PGCD}$(a,b)\times$ \normalfont{PPCM}$(a,b) =a\times b$. \\
+%   Dans ce cas, $12\times$ \normalfont{PPCM}$(24,36) =24\times36$ d'où \normalfont{PPCM}$(24,36) =864\div12 =72$.
+%\end{remarque}
+%
+%\subsection{Cas d'utilisation du PGCD et du PPCM}
+%
+%On utilise le PGCD lorsqu'il s'agit de déterminer un diviseur commun à plusieurs nombres et que l'on souhaite trouver le plus grand de ces diviseurs, par exemple : \\
+%-- on souhaite remplir un rectangle de mesures données de carrés dont les côtés ont des mesures entières les plus grandes possibles ; \\
+%-- on souhaite faire un maximum de paquets identiques d'objets différents ; \\
+%-- on souhaite rendre une fraction irréductible\dots
+%
+%\begin{exemple}
+%   Marc a 108 billes rouges et 135 billes noires. II veut faire des paquets de sorte que tous les paquets contiennent le même nombre de billes rouges, le même nombre de billes noires, toutes les billes rouges et noires soient utilisées.
+%\correction   
+%   Le nombre maximal de paquets réalisés doit être un diviseur de 108 et de 135 à la fois. Il s'agit donc de trouver le PGCD de 108 et de 135. \\
+%   $108 =2^2\times3^3$ et $135=3^3\times5$. Donc, PGCD(108,135) $=3^3 =27$. \\
+%   Il y aura 27 paquets de 4 billes rouges et 5 billes noires.
+%\end{exemple}
+%
+%\bigskip
+%
+%On utilise le PPCM lorsqu'il s'agit de déterminer un multiple commun à plusieurs nombres et que l'on souhaite trouver le plus petit de ces multiples, par exemple : \\
+%-- on dispose de pavés droits identiques de mesures données et on souhaite remplir de ces formes un  cube le plus petit possible ; \\
+%-- on souhaite mettre deux fractions sur un dénominateur commun le plus petit\dots
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\exercicesbase
+
+\begin{center}
+   {\cursive Maîtriser les bases avec} \href{http://mathenpoche.sesamath.net}{\includegraphics[width=3cm]{Nombres_et_calculs/Images/mathenpoche}} \\
+   \bigskip
+   {\hautab{0.85}
+   \cursive
+   \begin{Ltableau}{0.775\linewidth}{4}{C{1}|C{1}|p{7cm}|p{2.3cm}}
+      \hline
+      Classe & \texttt{N\degre} & Thème & Dans le cours \\
+      \hline
+      \textcolor{orange}{\bf 6\up{e}} & \texttt{N2} & Division euclidienne, divisibilité & 1. et 2. \\
+      \hline
+      \textcolor{cyan}{\bf 5\up{e}} & \texttt{A3} & Nombres rationnels & 4. \\ 
+      & \texttt{A4} & Nombres entiers & 1. et 2. \\
+      \hline
+      \textcolor{violet}{\bf 4\up{e}} & \texttt{A3} & Nombres rationnels & 4. \\ 
+      & \texttt{A5} & Nombres entiers & 3. \\
+      \hline
+      \textcolor{teal}{\bf 3\up{e}} & \texttt{A5} & Nombres entiers & 3. et 4. \\
+      \hline
+   \end{Ltableau}}
+\end{center}
+
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2020 G5] %%% 1
+   Pour chacune des affirmations ci-dessous, indiquer si elle est vraie ou fausse en justifiant la réponse. \\
+   Une réponse non justifiée ne rapporte aucun point. \\ [1mm]
+   Affirmation 1 : \og Le nombre $\dfrac{27}{45}$ est un nombre décimal. \fg \\ [1mm]
+   Affirmation 2 : \og Si $a$ et $b$ sont deux nombres décimaux positifs non nuls, alors le résultat de la division de $a$ par $b$ est plus petit que $a$. \fg \\
+   Affirmation 3 : \og La somme de trois entiers consécutifs est toujours un multiple de 3. \fg \\
+   Affirmation 4 : \og 42 possède exactement 7 diviseurs positifs. \fg
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   $\dfrac{27}{45} =\dfrac{\cancel{3}\times\cancel{3}\times3}{\cancel{3}\times\cancel{3}\times5} =\dfrac35 =\dfrac{6}{10}$ est un nombre décimal. \\ [1mm]
+      {\blue L'affirmation 1 est vraie}. \\
+   Si $a =10$ et $b =0,5$ alors $a\div b =10\div0,5 =20$. Or, $20>10$. \\
+      {\blue L'affirmation 2 est fausse}. \\
+   Soit $n$ le premier des entiers consécutifs, alors la somme de trois entiers consécutifs s'écrit : \\
+      $n+(n+1)+(n+2) =3n+3 =3(n+1)$ qui est bien un multiple de 3. \\
+      {\blue L'affirmation 3 est vraie}. \\
+   $42 =2^1\times3^1\times7^1$ possède $(1+1)\times(1+1)\times(1+1) =8$ diviseurs qui sont 1 ; 2 ; 3 ; 6 ; 7 ;  14 ; 21 et 42. \\
+      {\blue L'affirmation 4 est fausse}. \\
+\end{corrige}
+
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2017 G1-G3 et 2018 G3] %%% 2
+   Indiquer si les affirmations suivantes sont vraies ou fausses en justifiant la réponse. \\
+   Une réponse exacte, mais non justifiée, ne rapporte aucun point. Une réponse fausse n’enlève pas de point.
+   \begin{enumerate}
+      \item Affirmation : \og 117 est un nombre premier. \fg
+      \item 
+      \begin{enumerate}
+         \item Affirmation \og Pour n’importe quel nombre entier $n$, $(n+2)^2 - (n-2)^2$ est un
+multiple de 8. \fg
+         \item Affirmation : \og Pour n’importe quel nombre entier $n$, $(n+2)^2 - (n-2)^2$ est un
+multiple de 32. \fg
+      \end{enumerate}
+      \item Affirmation : \og Il existe au moins un nombre entier pair supérieur à 7, divisible par 3
+mais divisible ni par 9 ni par 4. \fg
+      \item Pour réaliser un collier en perles, Camille enfile 200 perles en répétant le modèle suivant : une perle jaune, puis trois perles rouges, puis deux perles blanches. Affirmation : La couleur de la 147\up{e} perle sera rouge.
+      \item Affirmation : 126 possède exactement 10 diviseurs.
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+\begin{enumerate}
+   \item 117 est divisible au moins par 9 puisque la somme de ses chiffres est égale à 9, donc, 117 n'est pas un nombre premier. \\
+      {\blue L'affirmation est fausse}.
+   \item 
+      $(n+2)^2 - (n-2)^2 =(n^2+4n+4)-(n^2-4n+4)$ \\
+      \hspace*{3.15cm} $=\cancel{n^2}+4n+\cancel{4}-\cancel{n^2}+4n-\cancel{4}$ \\
+      \hspace*{3.15cm} $=8n$. \\
+      \begin{enumerate}
+         \item D'après le résultat obtenu après développement et réduction, \\
+            {\blue l'affirmation est vraie}.
+         \item Pour $n =1$ par exemple, $(n+2)^2 - (n-2)^2 =8$ qui n'est pas un multiple de 32 donc, \\
+            {\blue l'affirmation est fausse}.
+      \end{enumerate}
+   \setcounter{enumi}{2}
+   \item Le nombre recherché est multiple de 2 et de 3, mais pas de $2^2$ et $3^2$. Il suffit donc de choisir un nombre dont la décomposition en produit de facteurs premiers commence par $2\times3\times\dots$. Par exemple : $2\times3\times5 =30$. \\
+      {\blue L'affirmation est vraie}.
+   \item Une série de perles \og jaune-rouges-blanches \fg{} comporte 6 perles. Or, $147 =6\times24+3$ donc, la 147\up{e} perle sera de la même couleur que la 3\up{e} perle de la série, soit rouge. \\
+      {\blue L'affirmation est vraie}.
+   \item $126 =2^1\times3^2\times7^1$ donc, 126 possède $(1+1)\times(2+1)\times(1+1)$ diviseurs, soit 12 diviseurs qui sont : 1 ; 2 ; 3 ; 6 ; 7 ; 9 ; 14 ; 18 ; 21 ; 42 ; 63 ; 126. \\
+      {\blue L'affirmation est fausse}.
+\end{enumerate}
+\end{corrige}
+
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2020 G5] %%% 3
+\ \\ [-10mm]
+   \begin{enumerate}
+      \item
+         \begin{enumerate}
+            \item Soit $N$ un nombre entier compris entre 100 et 999. \\
+               $N$ s’écrit sous la forme $N =a\times100+b\times10+c$ où $a, b$ et $c$ sont des entiers compris entre 0 et 9. \\
+               Démontrer que si le nombre formé par le chiffre des dizaines et le chiffre des unités est divisible par 4 alors $N$ est divisible par 4. Par exemple, pour 732, comme 32 est divisible par 4 alors 732 est divisible par 4.
+            \item Cette règle fonctionne-t-elle pour la divisibilité par 8, c’est à dire, \og Si le nombre formé par le chiffre des dizaines et le chiffre des unités d’un nombre $N$ supérieur à 10 est divisible par 8 alors $N$ est divisible par 8 \fg ?
+         \end{enumerate}
+      \item On considère toujours un nombre entier $N$ compris entre 100 et 999 s’écrivant sous la forme sous la forme $N =a\times100+b\times10+c$ où $a, b$ et $c$ sont des entiers compris entre 0 et 9. \\
+         Calculer $N-(a+b+c)$. Démontrer que si $a+b+c$ est divisible par 9, alors $N$ l’est aussi.
+   \end{enumerate}
+\end{exercice}
+   
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item
+         \begin{enumerate}
+            \item $N =a\times100+b\times10+c$. Si le nombre formé par le chiffre des dizaines et le chiffre des unités est divisible par 4, alors il existe un entier $m$ tel que $b\times10+c =4\times m$. \\
+                On a alors $N =a\times100+b\times10+c =a\times4\times25+4\times m =4\times(a\times25+m)$ qui est bien un multiple de 4. \\
+                {\blue Si le nombre formé par le chiffre des dizaines et le chiffre des unités est divisible par 4, $N$ est multiple de 4}.
+            \item Prenons le nombre 116 : il se termine par \og 16 \fg{} qui est divisible par 8, mais $116 =8\times14+4$ n'est pas divisible par 8 donc, {\blue cette règle ne fonction pas pour 8}. 
+         \end{enumerate}
+      \setcounter{enumi}{1}
+      \item $N-(a+b+c) =a\times100+b\times10+c-a-b-c =a\times99+b\times9 ={\blue 9\times(a\times11+b)}$. \\
+      Si $a+b+c$ est divisible par 9, alors il existe un entier $m$ tel que $a+b+c =9\times m$. \\
+      On a alors $N =9\times(a\times11+b)+(a+b+c) =9\times(a\times11+b)+9\times m =9\times(11a+b+m)$. \\
+         {\blue Si $a+b+c$ est divisible par 9, $N$ l'est aussi}.
+   \end{enumerate}
+\end{corrige}
+
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2019 G3] %%% 4
+\ \\ [-10mm]
+   \begin{enumerate}
+      \item Pour tout nombre entier $n$, montrer que $30n+25$ est divisible par 5.
+      \item Voici un programme de calcul :
+         \begin{center}
+            \fbox{\begin{minipage}{10cm}
+               \begin{itemize}
+                  \item Choisir un nombre entier.
+                  \item Multiplier par 3.
+                  \item Ajouter 5.
+                  \item Elever au carré.
+                  \item Soustraire 9 fois le carré du nombre de départ
+               \end{itemize}
+         \end{minipage}}
+      \end{center}
+      \vspace*{-4mm}
+      \begin{enumerate}
+         \item Montrer que ce programme a pour résultat 265 si le nombre entier choisi est 8. Les calculs seront détaillés.
+         \item Quel résultat obtient-on si le nombre entier choisi est $-56$ ?
+         \item Montrer que le résultat de ce programme de calculs, quel que soit le nombre de départ, est divisible par 5.
+      \end{enumerate}
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item $30n+25 =5\times6n+5\times5 =5\times(6n+5)$ est {\blue divisible par 5}.
+      \item 
+         \begin{enumerate}
+            \item $8 \xrightarrow{\times3} 24 \xrightarrow{+5} 29 \xrightarrow{\times29} 841 \xrightarrow{-9\times8^2} {\blue 265}$.
+            \item $-56 \xrightarrow{\times3} -168 \xrightarrow{+5} -163 \xrightarrow{\times(-163)} 26\,569 \xrightarrow{-9\times(-56)^2} {\blue -1\,655}$.
+            \item $n \xrightarrow{\times3} 3n \xrightarrow{+5} 3n+5 \xrightarrow{\times(3n+5)} 9n^2+30n+25 \xrightarrow{-9n^2} 30n+25$. \\
+               Or, $30n+25$ est divisible par 5 d'après la première question donc, {\blue le résultat est toujours divisible par 5}.
+         \end{enumerate}
+   \end{enumerate}
+\end{corrige}
+
+
+
+
+\begin{exercice}[CRPE 2005 Réunion] %%% 5
+   Étant donné un entier $n$ supérieur ou égal à 10, on appelle associé de $n$ l'entier obtenu en intercalant un 0 entre le chiffre des dizaines et celui des unités de $n$. Par exemple, l'associé de 5 467 est 54\,607.
+   \begin{enumerate}
+      \item Quel est l'associé de 768\,492 ?
+      \item L'entier 2\,005 est-il l'associé d'un nombre ? Si oui, duquel ?
+      \item
+         \begin{enumerate}
+            \item Démontrer la propriété suivante : si $n$ est un entier divisible par 9, alors son associé l'est également.
+            \item Formuler la réciproque de la propriété précédente.
+            \item Cette réciproque est-elle vraie ? Justifier.
+         \end{enumerate}
+      \item Énoncer une condition nécessaire et suffisante portant sur l'entier $n$ pour que son associé soit divisible par 4. La démontrer.
+      \item Démontrer que les restes de la division euclidienne de $n$ et de son associé par 5 sont les mêmes.
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item {\blue L'associé de 768\,492 est 7\,684\,902.}
+      \item {\blue L'entier 2 005 est l'associé du nombre 205.}
+      \item
+         \begin{enumerate}
+            \item Si $n$ est un entier divisible par 9, alors la somme de ses chiffres est divisible par 9. Si l'on rajoute 0 à cette somme, celle-ci ne change pas et le nombre obtenu est donc divisible par 9. \\
+               {\blue Si $n$ est un entier divisible par 9, alors son associé l'est également.}
+            \item La réciproque de la propriété précédente s'écrit : \\
+               {\blue si l'associé d'un nombre $n$ est divisible par 9, alors $n$ est divisible par 9.}
+             \item La démonstration s'effectue à l'identique que dans la question 3) a) : si l'associé de $n$ est un entier divisible par 9, alors la somme de ses chiffres est divisible par 9. Si l'on  enlève 0 à cette somme, celle-ci ne change pas et $n$ est donc divisible par 9. {\blue La réciproque est vraie.}
+         \end{enumerate}
+      \setcounter{enumi}{3}
+      \item Un nombre entier est divisible par 4 si et seulement si le nombre formé par ses deux derniers chiffres est divisible par 4. Or, les deux derniers chiffres de l'associé sont 0 et $c$ où $c$ est un nombre compris entre 0 et 9. Il suffit donc que $c$ soit égal à 0, 4 et 8. Réciproquement, tout nombre associé terminant par 00, 04 ou 08 est divisible par 4. \\
+         Donc, {\blue l'associé de $n$ est divisible par 4 si et seulement si $n$ se termine par 0, 4 ou 8.}
+      \item Soit $n=d\times10+u$ où $d$ est le nombre de dizaines de $n$. Son associé s'écrit $n'=d\times100+u$. \\
+         Or, $n=5\times(2d)+u$ et $n'=5\times(20d)+u$, donc, {\blue $n$ et $n'$ ont le même reste de la division euclidienne par 5.}
+   \end{enumerate}
+\end{corrige}
+
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2003 Rouen] %%% 6
+   \textit{Introduction:} le but de cet exercice est de mettre en évidence et d'utiliser un critère de divisibilité par 7.
+   \begin{enumerate}
+      \item Donner tous les nombres entiers naturels à un et deux chiffres divisibles par 7.
+      \item \textit{Description et utilisation de la procédure :} \\
+      voici deux exemples mettant en \oe uvre une même procédure permettant de déterminer si un nombre entier naturel est divisible par 7 ou non. \vspace*{-4mm}
+        \begin{multicols}{2}
+             {\small\it
+            574 est-il divisible par 7 ? \\     
+            $\opsub[voperation=top]{57}{8}|\,4$
+            \psarc(0,-0.1){0.25}{-90}{90} \psline{->}(0,-0.35)(-0.4,-0.35) \rput(0.6,-0.1){$\times2$} \\         
+            49 est divisible par 7 donc 574 l'est aussi. \\  
+	    827 est-il divisible par 7 ? \\      
+            $\opsub[voperation=top]{82}{14}|\,7$
+            \psarc(0,-0.1){0.25}{-90}{90} \psline{->}(0,-0.35)(-0.4,-0.35) \rput(0.6,-0.1){$\times2$} \\        
+            68 n'est pas divisible par 7 donc 827 non plus.}
+         \end{multicols}
+      \vspace*{-8mm}
+      \begin{enumerate}
+         \item En appliquant la même procédure, dire si les nombres 406, 895 et 3 906 sont divisibles par 7.
+         \item Rédiger un texte décrivant, dans le cas général, la procédure permettant de déterminer si un nombre entier naturel est divisible par 7. \\ [-10mm]
+      \end{enumerate}
+      \item \textit{Justification :}
+      \begin{enumerate}
+         \item On décompose tout nombre entier naturel E sous la forme $E =10v+u$ où $v$ est un nombre entier naturel et $u$ un nombre entier naturel à un chiffre. Ecrire cette décomposition pour 273 et 1 856.
+         \item Exprimer en fonction de $v$ et $u$ le nombre obtenu en appliquant la procédure précédente à un nombre entier naturel $E$.
+         \item Montrer que si ce nombre obtenu après application de la procédure est divisible par 7 alors $E$ sera lui aussi divisible par 7.
+      \end{enumerate}
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item Pour déterminer les entiers naturels jusqu'à 99 divisibles par 7, il suffit de prendre les multiples de 7 : \\
+      on trouve {\blue 0 ; 7 ; 14 ; 21 ; 28 ; 35 ; 42 ; 49 ; 56 ; 63 ; 70 ; 77 ; 84 ; 91 et 98}.
+      \item
+         \begin{enumerate}
+            \item On procède de la même manière que les exemples :  
+               \begin{multicols}{3}
+                  $\opsub[voperation=top]{40}{12}|\,6$
+                  \psarc(0,0){0.25}{-90}{90}
+                  \psline{->}(0,-0.25)(-0.4,-0.25)
+                  \rput(0.6,0){$\times2$} \\         
+                  28 est divisible par 7 \\
+                  donc, 406 l'est aussi. \\      
+                  $\opsub[voperation=top]{89}{10}|\,5$
+                  \psarc(0,0){0.25}{-90}{90}
+                  \psline{->}(0,-0.25)(-0.4,-0.25)
+                  \rput(0.6,0){$\times2$} \\       
+                  79 n'est pas divisible par 7 \\
+                  donc, 895 non plus. \\         
+                  $\opsub[voperation=top]{390}{12}|\,6$
+                  \psarc(0,0){0.25}{-90}{90}
+                  \psline{->}(0,-0.25)(-0.4,-0.25)
+                  \rput(0.6,0){$\times2$} \\       
+                   378 est divisible par 7 \\
+                   donc, 3 906 l'est aussi. \\
+               \end{multicols}
+               {\blue Les nombres 406 et 3 906 sont divisibles par 7, mais 895 ne l'est pas.}
+            \item Soit E le nombre dont on souhaite savoir s'il est divisible par 7. On soustrait le double de la valeur du chiffre des unités de E au nombre de dizaines de E. Si le nombre obtenu est divisible par 7, alors E est divisible par 7. Si le nombre obtenu n'est pas divisible par 7, alors E n'est pas divisible par 7.
+         \end{enumerate}
+      \setcounter{enumi}{2}
+      \item       
+         \begin{enumerate}
+            \item {\blue $273 =10\times27+3$} et {\blue $1\,856 =10\times185+6$.}
+            \item Soit $n$ le nombre obtenu après procédure, alors {\blue $n=v-2u$.}
+            \item Si $n$ est divisible par 7, alors il existe un entier $k$ tel que $n=7k$, c'est-à-dire $v-2u =7k$, ou encore $v=2u+7k$. Or, $E =10v+u =10(2u+7k)+u =21u+70k =7(3u+10k)$ qui est multiple de 7. \\
+               {\blue Si le nombre $n$ est divisible par 7, alors le nombre $E$ de départ est divisible par 7.}
+      \end{enumerate}
+   \end{enumerate}
+\end{corrige}
+
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2009 G6] %%% 7
+   Toutes les réponses devront être justifiées. \\
+   Un entier naturel N est composé de trois chiffres dont le produit est 120 et la somme 16.
+   \begin{enumerate}
+      \item Montrer que N ne contient ni 0, ni 1, ni 2.
+      \item N peut-il contenir le chiffre 7 ? le chiffre 9 ?
+      \item Déterminer un nombre N solution du problème ci-dessus en explicitant votre procédure. Peut-on en déduire d'autres solutions ? Si oui, lesquelles ?
+      \item Déterminer tous les nombres N solutions de ce problème.
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item Soit $N=\overline{cdu}$. Si l'un des chiffres vaut 0, alors le produit vaudra 0, ce qui est  impossible. \\
+         Si l'un des chiffres est 1, alors le produit vaudra au maximum $9\times9 =81$, alors qu'il devrait être de 120. \\
+         Si l'un des chiffres est 2, le produit des deux autres chiffres doit valoir $60$. Or, 60 est le produit de 2 par 30, ou 3 par 20, ou 4 par 15, ou 5 par 12 ou 6 par 10. Toutes ces décompositions sont impossibles puisque l'un des deux nombres est supérieur à 9. Conclusion : {\blue N ne peut contenir ni 0, ni 1, ni 2.}
+      \item 120 n'est pas divisible par 7, pas plus que par 9 donc, {\blue N ne peut contenir ni 7, ni 9.}
+      \item On peut  chercher une décomposition de 120 en produit de trois facteurs, tous différents de 0, 1, 2, 7 et 9 : la décomposition en produit de facteurs premiers de 120 est $120 =2^3\times3\times5$. \\
+         Donc, par exemple, $120 =8\times3\times5$, et $8+3+5 =16$. {\blue Le nombre 835 est une solution du problème.} \\
+         Pour trouver d'autres solutions, il suffit de faire des permutations des trois chiffres 8, 3 et 5 ce qui donne : \\
+         {\blue 853, 538, 583, 358, 385.}
+      \item On détermine les autres décompositions de 120 en produit de trois facteurs, tous inférieurs à 10 et différents de 0, 1, 2, 7, 9 : seul $120 =4\times6\times5$ convient mais $4+6+5 =15 \neq 18$. \\
+         {\blue Il y a six solutions au problème : 835, 853, 538, 583, 358 et 385.}
+   \end{enumerate}
+\end{corrige}
+
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2015 G1] %%% 8
+   A et B sont deux nombres entiers positifs tels que :
+   \begin{itemize}
+      \item 111 est un multiple du nombre entier positif A ;
+      \item A $-$ B est un nombre entier positif ou nul divisible par 10 ;
+      \item B est le cube d'un nombre entier.
+   \end{itemize}
+   Trouver toutes les valeurs possibles pour A et B.
+\end{exercice}
+
+\begin{corrige}
+   Étudions une à une les données de l'exercice :
+   \begin{itemize}
+      \item 111 est un multiple du nombre entier positif $A$. \\
+         Autrement dit, $A$ est un diviseur de 111. Or, $111 =3\times37$ et les diviseurs positifs de 111 sont 1, 3, 37 et 111. \\
+         $A$ peut donc prendre les valeurs de 1, 3, 37 ou 111.
+      \item $A-B$ est un nombre entier positif ou nul divisible par 10. \\
+         Il existe un entier $n$ positif ou nul tel que $A-B =10\,n$, soit $B =A-10\,n$ avec $B\geq0$, c'est à dire $A-10\,n\geq0$ ou encore $0\leqslant n\leqslant \dfrac{A}{10}$. Résumons dans un tableau les possibilités pour $A, n$ et $B$ : \\ [1mm]
+         \begin{tabular}{|C{0.8}|c|C{0.8}|C{0.8}|}
+            \hline
+            \cellcolor{lightgray!50}$A$ & \cellcolor{lightgray!50}inégalité & \cellcolor{lightgray!50}$n$ & \cellcolor{lightgray!50}$B$ \\
+            \hline
+            1 & $0\leqslant n\leqslant 0,1$ & 0 & {\blue 1} \\
+            \hline
+            3 & $0\leqslant n\leqslant 0,3$ & 0 & 3 \\
+            \hline
+            \multirow{4}{*}{37} & \multirow{4}{*}{$0\leqslant n\leqslant 3,7$} & 0 & 37 \\
+            & & 1 & {\blue 27} \\
+            & & 2 & 17 \\
+            & & 3 & 7 \\
+            \hline
+         \end{tabular}
+         \qquad
+         \begin{tabular}{|C{0.8}|c|C{0.8}|C{0.8}|}
+            \hline
+            \cellcolor{lightgray!50}$A$ & \cellcolor{lightgray!50}inégalité & \cellcolor{lightgray!50}$n$ & \cellcolor{lightgray!50}$B$ \\
+            \hline
+            \multirow{12}{*}{111} & \multirow{12}{*}{$0\leqslant n\leqslant 11,1$} & 0 & 111 \\
+            & & 1 & 101 \\
+            & & 2 & 91 \\
+            & & 3 & 81 \\
+            & & 4 & 71 \\
+            & & 5 & 61 \\
+            & & 6 & 51 \\
+            & & 7 & 41 \\
+            & & 8 & 31 \\
+            & & 9 & 21 \\
+            & & 10 & 11 \\
+            & & 11 & {\blue 1} \\
+            \hline
+         \end{tabular}
+         \bigskip
+      \item $B$ est le cube d'un nombre entier. \\
+         Les cinq premiers cubes sont $0, 1, 8, 27$ et $256$. Parmi les solutions trouvées dans le deuxième item, on a trois couples de solutions : $(A,B) =(1,1)$ \quad ; \quad $(A,B) =(37,27)$ \quad et \quad $(A,B) =(111,1)$. \\ 
+         Les valeurs possibles pour  $A$ et $B$ sont donc $\left\{\begin{tabular}{l}
+           {\blue  $A=1$ et $B=1$} \\ {\blue $A =37$ et $B=27$} \\ {\blue $A =111$ et $B =1$}  \\
+         \end{tabular}\right.$
+   \end{itemize}
+\end{corrige}
+
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2009 G2] %%% 9
+   Dans cet exercice, $a$, $b$ et $c$ sont des chiffres compris entre 1 et 9. On considère des nombres écrits en base dix avec ces chiffres et on note, par exemple, $\overline{bac}$ le nombre dont $b$ est le chiffre des centaines, $a$ celui des dizaines et $c$ celui des unités. Les questions sont indépendantes.
+   \begin{enumerate}
+      \item Parmi les nombres 7, 13, 57 et 61, lequel n'est pas un nombre premier ? Justifier.
+      \item
+      \begin{enumerate}
+         \item Le nombre 3\,737 est-il un nombre premier ? Justifier.
+         \item Un nombre de la forme $\overline{abab}$ peut-il être un nombre premier ? Justifier.
+      \end{enumerate}
+      \item 
+      \begin{enumerate}
+         \item On considère les trois nombres $\overline{abc}$ , $\overline{abb}$ et $\overline{acc}$. Montrer que la somme de ces trois nombres est un nombre divisible par 3.
+         \item On considère les deux nombres $\overline{cba}$ et $\overline{bba}$. Proposer un troisième nombre de trois chiffres, uniquement formé avec des chiffres choisis parmi les chiffres $a$, $b$ et $c$, pour que la somme des trois nombres soit divisible par 3. Justifier.
+      \end{enumerate}
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item \textcolor{G1}{$\bullet$} 7 et 13 sont des nombres premiers ;
+         \begin{itemize}
+            \item $57 =3\times19$ est divisible par 1, 3, 19 et 57, ce n'est pas un nombre premier ;
+            \item 61 n'est divisible que par 1 et 61, c'est un nombre premier.
+         \end{itemize}
+         {\blue Parmi ces quatre nombres, seul 57 n'est pas un nombre premier.}
+      \item
+         \begin{enumerate}
+            \item $3\,737 =37\times100+37 =37\times101$, donc il est divisible par d'autres nombres que 1 et lui même. \\
+               {\blue 3\,737 n'est pas un nombre premier.}
+            \item $\overline{abab} =\overline{ab}\times100+\overline{ab} =\overline{ab}\times101$, il est donc divisible par d'autres nombres que 1 et lui même. \\
+               {\blue Un nombre du type $\overline{abab}$ n'est pas un nombre premier.}
+         \end{enumerate}
+      \setcounter{enumi}{2}
+      \item 
+         \begin{enumerate}
+            \item $\overline{abc}+\overline{abb}+\overline{acc} =(100a+10b+c)+(100a+10b+b)+(100a+10c+c)$ \\
+               \hspace*{3.1cm} $=300a+21b+12c$ \\
+               \hspace*{3.1cm} $=3(100a+7b+4c)$ \\
+               {\blue La somme de $\overline{abc}, \overline{abb}$ et $\overline{acc}$ est un nombre divisible par 3.}
+            \item Soit $\overline{mnp}$ le nombre recherché. \\
+               $\overline{cba}+\overline{bba}+\overline{mnp} =(100c+10b+a)+(100b+10b+a)+(100m+10n+p)$ \\
+               $\phantom{\overline{cba}+\overline{bba}+\overline{mnp}} =100c+120b+2a+100m+10n+p$ \\
+               $\phantom{\overline{cba}+\overline{bba}+\overline{mnp}} =3(33c+40b+33m+3n)+(c+2a+m+n+p)$ \\
+               Il reste à choisir $m, n$ et $p$ pour que $c+2a+m+n+p$ soit divisible par 3 : on a déjà deux $a$ et un $c$, on peut donc prendre un $a$ supplémentaire et deux autres $c$. On choisit un nombre comportant les chiffes $a, c$ et $c$, par exemple $\overline{cac}$ (mais on pourrait également choisir $\overline{acc}$ ou $\overline{cca}$) et on vérifie qu'il convient : \\
+               $\overline{cba}+\overline{bba}+\overline{cac} =(100c+10b+a)+(100b+10b+a)+(100c+10a+c)$ \\
+               $\phantom{\overline{cba}+\overline{bba}+\overline{cac}} =201c+120b+12a$ \\
+               $\phantom{\overline{cba}+\overline{bba}+\overline{cac}} =3(67c+40b+4a)$ qui est bien multiple de 3. \\     
+                {\blue La somme de $\overline{cba}, \overline{bba}$ et de $\overline{cac}$ est un nombre divisible par 3.}
+      \end{enumerate}
+   \end{enumerate}
+\end{corrige}
+
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2016 G1] %%% 10
+   Monsieur Durand veut faire poser des dalles carrées autour de la piscine sur une largeur de 120 cm comme indiqué sur le schéma ci-après où on a représenté dans le coin supérieur gauche la disposition des premières dalles convenue avec le carreleur. \\
+   Les dalles utilisées sont toutes identiques et la longueur, en centimètres, de leur côté est un nombre entier. On néglige l'épaisseur des joints. \\
+   \begin{minipage}{7.5cm}
+      {\psset{unit=0.6}
+      \begin{pspicture}(-1,0)(10.5,7.8)
+         \psline[linestyle=dotted](0,1.2)(10.4,1.2)
+         \psline[linestyle=dotted](0,6.2)(10.4,6.2)
+         \psline[linestyle=dotted](1.2,0)(1.2,7.4)
+         \psline[linestyle=dotted](9.2,0)(9.2,7.4)
+         \psframe(0,0)(10.4,7.4)
+         \psframe[fillstyle=solid,fillcolor=lightgray!50](1.2,1.2)(9.2,6.2)
+         \psline{<->}(0.9,1.2)(0.9,6.2)
+         \psline{<->}(1.2,6.5)(9.2,6.5)
+         \psline{<->}(8.9,0)(8.9,1.2)
+         \psframe[fillstyle=solid,fillcolor=lightgray](0,7.4)(0.3,7.1)
+         \psframe[fillstyle=solid,fillcolor=lightgray](0,7.1)(0.3,6.8)
+         \psframe[fillstyle=solid,fillcolor=lightgray](0.3,7.1)(0.6,7.4)
+         \begin{small}
+            \rput(5.2,3.7){piscine}
+            \rput(5.2,6.9){800 cm}
+            \rput(0.5,3.7){\rotatebox{90}{\ucm{500}}}
+            \rput(7.8,0.6){\ucm{120}}
+         \end{small}
+      \end{pspicture}}
+   \end{minipage}
+   \begin{minipage}{9.3cm}
+      \begin{enumerate}
+         \item Monsieur Durand souhaite ne pas avoir à couper de dalles. Quelles sont toutes les valeurs possibles pour la longueur du côté des dalles carrées ?          
+         \item Monsieur Durand choisit des  dalles carrées de \ucm{20} de côté.
+            \begin{enumerate}
+               \item Combien de dalles seront utilisées ?         
+               \item En déduire le nombre de dalles nécessaires, s'il avait choisi des dalles carrées de \ucm{5} de côté.
+            \end{enumerate}
+      \end{enumerate}
+   \end{minipage}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+  \begin{enumerate}
+      \item La mesure de la taille des dalles doit diviser à la fois la largeur de l'allée de \ucm{120}, la longueur totale du sol de \ucm{1040} ($\ucm{800}+2\times\ucm{120}$) et la largeur totale du sol de 740 cm ($\ucm{500}+2\times\ucm{120}$). Or, \\
+      \begin{colitemize}{3}
+         \item $120 =2^3\times3\times5$
+         \item $1\,040 =2^4\times5\times13$
+         \item $740 =2^2\times5\times37$
+      \end{colitemize}
+      Les diviseurs communs à ces trois nombres sont 1;\,2;\,4;\,5;\,10;\,20. \\
+      {\blue Les longueurs possibles des dalles sont \ucm{1} ;  \ucm{2} ; \ucm{4} ; \ucm{5} ; \ucm{10} et \ucm{20}.}
+      \item
+      \begin{enumerate}
+         \item On peut considérer que l'on a deux types d'allées : deux allées A de \ucm{1040} par \ucm{120} et deux allées B de \ucm{500} par \ucm{120}.
+         \begin{itemize}
+            \item A : on peut poser $\ucm{1040}\div20 \text{ cm/dalle} =52$ dalles dans la longueur et $\ucm{120}\div20\text{ cm/dalle} =6$ dalles dans la largeur, ce qui donne donc 312 dalles sur toute la surface ($52\times6$).
+            \item B : on peut poser $\ucm{500}\div20 \text{ cm/dalle}=25$ dalles dans la longueur et $\ucm{120}\div20\text{ cm/dalle} =6$ dalles dans la largeur, ce qui donne donc $150$ dalles sur toute la surface ($25\times6$).
+         \end{itemize}
+         Au total, on a donc $2\times312$ dalles + $2\times150$ dalles = 924 dalles. \\
+         {\blue M. Durand aura besoin de 924 dalles de 20 cm de côté pour couvrir son pourtour de piscine.}
+         \item On a besoin de 16 dalles de 5 cm de côté pour couvrir une dalle de 20 cm de côté (la longueur du côté étant divisée par 4, son aire est divisée par $4^2$). Il faut donc 16 fois plus de dalles de 5 cm pour couvrir la même surface. Or, $924\times16 =14\,784$, d'où : \\
+         {\blue M. Durand aura besoin de 14\,784 dalles de 5 cm de côté pour couvrir son pourtour de piscine.}
+      \end{enumerate}
+   \end{enumerate}
+\end{corrige}
+
+
+%\begin{exercice*}[Melting pot] %%%%%%%%%
+%   Les questions suivantes sont indépendantes.
+%   \begin{enumerate}
+%      \item Les nombres 211 et 221 sont-ils premiers ?
+%      \item Trouver tous les diviseurs de 60 et ceux de 210.
+%      \item Trouver trois entiers naturels qui admettent exactement 6 diviseurs.
+%   \end{enumerate}
+%\end{exercice*}
+%
+%\begin{corrige}
+%\ \\ [-5mm]
+%   \begin{enumerate}
+%      \item 
+%      \begin{itemize}
+%         \item $\sqrt{211} \simeq 14,5$. Il suffit donc de tester si 211 est divisible par les nombres premiers inférieurs à 14 ; \\
+%         or, 211 n'est pas divisible par 2, ni par 3, ni par 5, ni par 7, ni par 11, ni par 13. \\
+%         Donc, {\blue 211 est un nombre premier.}
+%         \item $\sqrt{221} \simeq 14,8$, il suffit donc de tester si 221 est divisible par les nombres premiers inférieurs à 14 ; \\
+%         or, 221 n'est pas divisible par 2, 3, 5, 7, 11, mais $221\div13=17$. \\
+%         Donc, {\blue 221 n'est pas un nombre premier.}
+%      \end{itemize}
+%       \item
+%       \begin{itemize}
+%          \item $60 =2^2\times3\times5$ donc, les diviseurs de 60 sont de la forme $2^\alpha\times3^\beta\times5^\gamma$ où $\alpha\in\{0;1;2\} ; \beta\in\{0;1\} ; \gamma\in\{0;1\}$. Au total, il y a $(2+1)\times(1+1)\times(1+1) =3\times2\times2 = 12$ diviseurs de 60. \\
+%         On peut rechercher les diviseurs de manière méthodique en utilisant un arbre de dénombrement : \\ [2.5mm]  
+%         \qquad \pstree[treemode=R,nodesep=3mm,levelsep=25mm,treesep=4mm,nrot=:U]{\TR{$1$}}{%
+%          \pstree{\Tr{$2^0$}}{%
+%            \pstree{\Tr{$3^0$}}{%
+%                 \pstree{\Tr{$5^0$}}{%
+%                      \Tr{$1\times1\times1=1$}}
+%                 \pstree{\Tr{$5^1$}}{%
+%                      \Tr{$1\times1\times5=5$}}}
+%            \pstree{\Tr{$3^1$}}{%
+%                 \pstree{\Tr{$5^0$}}{%
+%                      \Tr{$1\times3\times1=3$}}
+%                 \pstree{\Tr{$5^1$}}{%
+%                      \Tr{$1\times3\times5=15$}}}}
+%          \pstree{\Tr{$2^1$}}{%
+%            \pstree{\Tr{$3^0$}}{%
+%                 \pstree{\Tr{$5^0$}}{%
+%                      \Tr{$2\times1\times1=2$}}
+%                 \pstree{\Tr{$5^1$}}{%
+%                      \Tr{$2\times1\times5=10$}}}
+%            \pstree{\Tr{$3^1$}}{%
+%                 \pstree{\Tr{$5^0$}}{%
+%                      \Tr{$2\times3\times1=6$}}
+%                 \pstree{\Tr{$5^1$}}{%
+%                      \Tr{$2\times3\times5=30$}}}}
+%          \pstree{\Tr{$2^2$}}{%
+%            \pstree{\Tr{$3^0$}}{%
+%                 \pstree{\Tr{$5^0$}}{%
+%                      \Tr{$4\times1\times1=4$}}
+%                 \pstree{\Tr{$5^1$}}{%
+%                      \Tr{$4\times1\times5=20$}}}
+%            \pstree{\Tr{$3^1$}}{%
+%                 \pstree{\Tr{$5^0$}}{%
+%                      \Tr{$4\times3\times1=12$}}
+%                 \pstree{\Tr{$5^1$}}{%
+%                      \Tr{$4\times3\times5=60$}}}}} \\ [2.5mm]
+%      On obtient tous les diviseurs de 60 : {\blue 1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 10 ; 12 ; 15 ; 20 ; 30 ; 60.}
+%      \item $210 =2\times3\times5\times7$ donc, les diviseurs de 210 sont de la forme $2^\alpha\times3^\beta\times5^\gamma\times7^\delta$ où $\alpha, \beta, \gamma$ et $\delta\in\{0;1\}$. \\
+%      Au total, il y a $(1+1)\times(1+1)\times(1+1)\times(1+1) =2\times2\times2\times2 = 8$ diviseurs de 210. \\   
+%      Les diviseurs de 210 sont : {\blue 1 ; 2 ; 3 ; 5 ; 6 ; 7 ; 10 ; 14 ; 15 ; 21 ; 30 ; 35 ; 42 ; 70 ; 105 ; 210.}
+%      \end{itemize}
+%      \item $6 =3\times2 =(2+1)\times(1+1)$. \\
+%      Il faut donc trouver des nombres $n$ tels que $n=p^2\times q^1$ où $p$ et $q$ sont deux nombres premiers distincts. \\
+%      Par exemple : $2^2\times3 =12 \; ; \; 3^2\times2 =18$ et $2^2\times 5 =20$. \\
+%      D'où : {\blue les nombres 12, 18 et 20 ont exactement 6 diviseurs.} \\
+%   \end{enumerate}
+%\end{corrige}
+
+%\begin{exercice*}[Synchronisation] %%%%%%%
+%Deux horloges ne sont pas bien synchronisées:  l'une (A) fait entendre un top par minute, l'autre (B) en fait entendre un toutes les 62 secondes.
+%   \begin{enumerate}
+%      \item À midi, on les met en marche en même temps. À quelle heure feront-elles de nouveau un top en même temps ?
+%      \item Un peu plus d'une heure après leur mise en marche, on voudrait connaître l'heure exactement à 1 minute près. B fait entendre son top 16 secondes exactement après A. Quelle heure est-il ?
+%   \end{enumerate}
+%\end{exercice*}
+%
+%\begin{corrige}
+%\ \\ [-5mm]
+%\begin{enumerate}
+%   \item L'horloge A fait un top tous les multiples de 60 et l'horloge B fait un top tous les multiples de 62. \\
+%   Il faut donc trouver le plus petit commun multiple de 60 et 62. \\
+%   $60 =2^2\times3\times5$ et $62 =2\times31$. Le PPCM de 60 et 62 est donc égal à $2^2\times3\times5\times31 =1\,860$. \\
+%   Or, $1\,860 =31\times60$ donc, 1 860 secondes correspondent à 31 minutes. \\
+%   Conclusion : {\blue les deux horloges feront un top en même temps à 12h31}, puis toutes les 31 minutes. \\
+%   \smallskip
+%   \item D'après la question précédente, les horloges font un top en même temps à 13h02, puis l'horloge B avance de 2 secondes de plus que l'horloge A chaque minute donc, {\blue il est 13h10 à une minute près}.
+%\end{enumerate}
+%\end{corrige}
+
+%\begin{exercice*}[CRPE 2003 Bordeaux] %%%%%%%%%%%%%
+%   Une colonie de vacances, qui accueille au maximum cent enfants, organise une course d'orientation par équipes. Chaque équipe est constituée d'au moins deux enfants. \\
+%   Les moniteurs souhaiteraient qu'il y ait le même nombre d'enfants dans chaque équipe mais s'ils regroupent les enfants par trois, il en restera deux. S'ils les regroupent par quatre, il en restera un et s'ils les regroupent par cinq, il en restera deux. \\
+%   Finalement, ils réussissent à former plusieurs équipes, toutes avec le même nombre d'enfants.
+%   \begin{enumerate}
+%      \item Combien d'enfants y a-t-il dans cette colonie de vacances ? 
+%      \item Combien d'équipes sont ainsi formées ?
+%   \end{enumerate}
+%\end{exercice*}
+%
+%\begin{corrige}
+%\ \\ [-5mm]
+%\begin{enumerate}
+%      \item On pourrait utiliser une méthodes \og grossière \fg{} qui consiste à lister toutes les possibilités dans un tableau pour les différentes configurations et à choisir les valeurs communes aux trois cas. \\
+%      Mais utilisons une méthode plus fine : le nombre d'élèves $n$ est compris entre 4 (plusieurs équipes d'au moins 2 enfants) et 100 enfants.
+%      \begin{itemize}
+%         \item S'ils sont regroupés par 3, il en restera 2 ; donc $n =3a+2$ soit $n-2 =3a$ où $a\in\N^*$. {\it (1)}
+%         \item S'ils sont regroupés par 4, il en restera 1; donc $n =4b+1$ soit $n-1 =4b$ où $b\in\N^*$. {\it (2)}
+%         \item S'ils sont regroupés par 5, il en restera 2 ; donc $n =5c+2$ soit $n-2 =5c$ où $c\in\N^*$. {\it (3)}
+%      \end{itemize}
+%      De {\it (1)} et {\it (3)} on en déduit que $n-2$ est multiple de 3 et de 5, donc de 15 puisque 3 et 5 sont premiers entre eux. $n-2$ peut donc être égale à 15, 30, 45, 60, 75 ou 90 donc $n$ peut être égale à 17, 32, 47, 62, 77 ou 92. \\
+%      De {\it (2)}, $n-1$ étant égale à 16, 31, 46, 61, 76 ou 92 et également multiple de 4, il nous reste $n-1 =16$ et $n-1 =76$, d'où $n =17$ ou $n =77$. \\
+%         Or, 17 est impossible car sinon, on ne pourrait faire qu'une seule équipe. En revanche, 77 est composé et convient, d'où : {\blue il y a 77 enfants dans la colonie.}
+%      \item $77 =7\times11$. {\blue On peut faire soit 7 équipes de 11, soit 11 équipes de 7.}
+%   \end{enumerate}
+%\end{corrige}
+

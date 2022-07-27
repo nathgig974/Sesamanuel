@@ -1,0 +1,18 @@
+\ \\ [-5mm]
+\begin{enumerate}
+   \item On peut résumer dans un tableau les valeurs de a, b et n : \\  [1mm]
+   \qquad
+   {\renewcommand{\arraystretch}{1.2}
+   \begin{tabular}{r|c|c|c|}
+      \cline{2-4}
+      & a & n & b \\
+      \cline{2-4}
+      valeurs initiales & 5 & 0 & 1 \\
+      \cline{2-4}
+      valeurs après le premier passage & 5 & 1 & 5 \\
+      \cline{2-4}
+      valeurs après le second passage & 5 & 2 & 25 \\
+      \cline{2-4}
+   \end{tabular}}
+   \item À chaque boucle, il n'y a aucune action sur $a$ qui reste donc égal à 5, $n$ est incrémenté de 1 et b est multiplié par a, donc par 5. D'où, \bm{ce programme donne les puissances successives de 5 de $5^1$ à $5^{10}$.}
+   \end{enumerate}

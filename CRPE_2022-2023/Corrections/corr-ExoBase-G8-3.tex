@@ -1,0 +1,24 @@
+   Un hexagone régulier est un assemblage de 6 triangles équilatéraux. L'angle au centre de chacun des triangles mesure 60\degre{} et tous les sommets de l'hexagone se situent sur un même cercle. \\
+   Pour le dodécagone, assemblage de 12 triangles isocèles, l'angle au centre est de 30\degre{} ($360$\degre$\div12$). \\
+   \begin{pspicture}(-4,-4)(4.5,4)
+      \pspolygon(-2,-3.46)(-4,0)(-2,3.46)(2,3.46)(4,0)(2,-3.46)
+      \psline(-4,0)(4,0)
+      \psline(-2,-3.46)(2,3.46)
+      \psline(-2,3.46)(2,-3.46)
+      \psarc(0,0){1}{0}{60}
+      \psarc(0,0){1.2}{0}{60}
+      \rput(1.5,0.8){60\degre}
+      \pscircle[linecolor=lightgray](0,0){4}
+   \end{pspicture}
+   \begin{pspicture}(-4,-4)(3.5,4.5)
+      \pspolygon(-4,0)(-3.46,2)(-2,3.46)(0,4)(2,3.46)(3.46,2)(4,0)(3.46,-2)(2,-3.46)(0,-4)(-2,-3.46)(-3.46,-2)
+      \psline(-4,0)(4,0)
+      \psline(-2,-3.46)(2,3.46)
+      \psline(-2,3.46)(2,-3.46)
+      \psline(-3.46,-2)(3.46,2)
+      \psline(-3.46,2)(3.46,-2)
+      \psline(0,-4)(0,4)
+      \psarc(0,0){1.2}{0}{30}
+      \rput(1.5,0.4){30\degre}
+      \pscircle[linecolor=lightgray](0,0){4}
+   \end{pspicture}

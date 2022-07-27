@@ -1,0 +1,31 @@
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item L'échelle 1/1\,000\up{e} signifie que \ucm{1000} = \um{10} dans la réalité sont représentés par \ucm{1} sur le plan. \\
+    {\psset{unit=1}
+      \begin{pspicture}(-3.5,-0.8)(7.5,3.8)
+         \pspolygon(0,0)(5,0)(7,0)(5,3)(0,3)
+         \psline[linestyle=dashed](5,0)(5,3)
+         \psframe(0,0)(0.3,0.3)
+         \psframe(0,3)(0.3,2.7)
+         \psframe(5,0)(5.3,0.3)
+         \rput(-0.3,-0.3){D}
+         \rput(-0.3,3.3){A}
+         \rput(5,-0.3){E}
+         \rput(7.3,-0.3){C}
+         \rput(5.3,3.3){B}
+      \end{pspicture}
+   }
+   \item
+      \begin{enumerate}
+         \item Dans le trapèze ABCD, calculons BC. Le triangle BEC est rectangle en E, on utilise le théorème de Pythagore avec des mesures de longueur en mètre. \\
+            BC$^2$ = BE$^2$ + EC$^2 \iff \text{BC}^2 = 30^2+20^2 =1\,300 \iff \text{BC} =10\sqrt{13}$. \\
+            Le périmètre du jardin vaut alors : AB + BC + CD + DA = $\um{50}+10\sqrt{13}\,\um{}+\um{70}+\um{30} =(150+10\sqrt{13})\,\um{}$. \\
+            À ce périmètre, il faut enlever la largeur du portail, donc, {\blue la longueur de la clôture est de $(146,90+10\sqrt{13})\,\um{} \approx\um{183}$}
+         \item
+            \begin{itemize}
+               \item Aire de potager : $\mathcal{A}_p =\dfrac{\text{EC}\times\text{EB}}{2} =\dfrac{\um{20}\times\um{30}}{2} =$ {\blue $\umq{300}$}.
+               \item Aire des plantations florales : $\mathcal{A}_f =\dfrac12\times\pi\left(\dfrac{\text{AB}}{2}\right)^2=\dfrac12\times\pi\left(\dfrac{\um{50}}{2}\right)^2 =\dfrac{625}{2}\pi\,\umq{} \approx$ {\blue $\umq{982}$}. \smallskip
+               \item Aire du gazon : $\mathcal{A}_g =\text{DE}\times\text{DA}-\mathcal{A}_f =\um{50}\times\um{30}-\dfrac{625}{2}\pi\,\umq{} =\umq{1500}-\dfrac{625}{2}\pi\,\umq{} \approx $ {\blue $\umq{518}$}.
+            \end{itemize}
+         \end{enumerate}
+   \end{enumerate}

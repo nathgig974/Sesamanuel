@@ -1,0 +1,29 @@
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item Pour le cas 1, l'aire de la partie blanche est égale à la somme des aires des carrés 2 et 3. Il suffit donc de regarder dans quelle feuille de calcul c'est également le cas en regardant les valeurs des colonnes C, D et G : \\
+         Pour la feuille A, en ligne 2, on a $4 + 9$ qui est bien égal à 13. \\
+         Pour la feuille B, en ligne 2, on a $4 + 9$ qui n'est pas égal à 16. \\
+        {\blue La feuille de calcul A correspond au cas 1 et la feuille B correspond au cas 2}.
+      \item
+         \begin{enumerate}
+            \item En E2, on a pu saisir la formule : {\blue \texttt{=(A2+3)$\wedge$2}}
+            \item En F2, on a pu saisir la formule : {\blue \texttt{=B2+E2}}
+         \end{enumerate}
+      \setcounter{enumi}{2}
+      \item -- Pour la feuille de calcul A, on remarque que la valeur de chaque cellule de la colonne F est augmentée de 4 par rapport à sa cellule voisine de la colonne G, et si cela se vérifie pour toutes les valeurs, alors les deux aires ne pourront jamais être égales. \\
+         -- Pour la feuille de calcul B, les valeurs des cellules de la colonne F augmentent plus vite que celles de la colonne G tout en étant supérieures à partir de 2. Pour 1, les aires ne sont pas égales et comme les valeurs des côtés sont des nombres entiers naturels, il semble impossible de trouver une solution au problème. \\
+      {\blue D'après les copies d'écran, on peut conjecturer qu'il n'y a aucune solution au problème quelle que soit la configuration}.
+   \item On appelle $n$ la mesure, en centimètre, du côté du carré le plus petit.
+      \begin{itemize}
+         \item Le cas 1 se modélise par l'équation suivante : \\
+            $n^2+(n+3)^2 =(n+1)^2+(n+2)^2 \iff \cancel{n^2}+\cancel{n^2}+6n+9 =\cancel{n^2}+2n+1+\cancel{n^2}+4n+4$ \\
+            \hspace*{4.95cm} $\iff \cancel{6n}+9 =\cancel{6n}+5$ \\
+            \hspace*{4.95cm} $\iff 9 =5$. Cette équation n'est donc pas possible.
+         \item Le cas 2 se modélise par l'équation suivante : \\
+            $n^2+(n+1)^2+(n+2)^2 =(n+3)^2 \iff \cancel{n^2}+n^2+2n+1+n^2+4n+4 =\cancel{n^2}+6n+9$ \\
+            \hspace*{4.95cm} $\iff 2n^2+\cancel{6n}+5 =\cancel{6n}+9$ \\
+            \hspace*{4.95cm} $\iff 2n^2 =4$ \\
+            \hspace*{4.95cm} $\iff n^2 =2$. Les solutions de cette équation sont $\sqrt2$ et $-\sqrt2$ qui ne sont pas des nombres entiers, donc le cas 2 n'a pas de solution.
+      \end{itemize}
+      Conclusion : {\blue Cette situation n'a pas de solution}.
+   \end{enumerate}

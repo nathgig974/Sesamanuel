@@ -1,0 +1,48 @@
+Étudions une à une les données de l'exercice :
+\begin{itemize}
+   \item 111 est un multiple du nombre entier positif $A$. \\
+   Autrement dit, $A$ est un diviseur de 111. Or, $111 =3\times37$ et les diviseurs positifs de 111 sont 1, 3, 37 et 111. \\
+   $A$ peut donc prendre les valeurs de 1, 3, 37 ou 111.
+   \smallskip
+   \item $A-B$ est un nombre entier positif ou nul divisible par 10. \\
+   Il existe un entier $n$ positif ou nul tel que $A-B =10\,n$, soit $B =A-10\,n$ avec $B\geq0$, c'est à dire $A-10\,n\geq0$ ou encore $0\leqslant n\leqslant \dfrac{A}{10}$. Résumons dans un tableau les possibilités pour $A, n$ et $B$ : \\ [1mm]
+   \begin{tabular}{|C{0.8}|c|C{0.8}|C{0.8}|}
+      \hline
+      \cellcolor{lightgray!50}$A$ & \cellcolor{lightgray!50}inégalité & \cellcolor{lightgray!50}$n$ & \cellcolor{lightgray!50}$B$ \\
+      \hline
+      1 & $0\leqslant n\leqslant 0,1$ & 0 & \bm{1} \\
+      \hline
+      3 & $0\leqslant n\leqslant 0,3$ & 0 & 3 \\
+      \hline
+      \multirow{4}{*}{37} & \multirow{4}{*}{$0\leqslant n\leqslant 3,7$} & 0 & 37 \\
+      & & 1 & \bm{27} \\
+      & & 2 & 17 \\
+      & & 3 & 7 \\
+      \hline
+   \end{tabular}
+   \qquad
+   \begin{tabular}{|C{0.8}|c|C{0.8}|C{0.8}|}
+      \hline
+      \cellcolor{lightgray!50}$A$ & \cellcolor{lightgray!50}inégalité & \cellcolor{lightgray!50}$n$ & \cellcolor{lightgray!50}$B$ \\
+      \hline
+      \multirow{12}{*}{111} & \multirow{12}{*}{$0\leqslant n\leqslant 11,1$} & 0 & 111 \\
+      & & 1 & 101 \\
+      & & 2 & 91 \\
+      & & 3 & 81 \\
+      & & 4 & 71 \\
+      & & 5 & 61 \\
+      & & 6 & 51 \\
+      & & 7 & 41 \\
+      & & 8 & 31 \\
+      & & 9 & 21 \\
+      & & 10 & 11 \\
+      & & 11 & \bm{1} \\
+      \hline
+   \end{tabular}
+   \bigskip
+   \item $B$ est le cube d'un nombre entier. \\
+   Les cinq premiers cubes sont $0, 1, 8, 27$ et $256$. Parmi les solutions trouvées dans le deuxième item, on a trois couples de solutions : $(A,B) =(1,1)$ \quad ; \quad $(A,B) =(37,27)$ \quad et \quad $(A,B) =(111,1)$. \\
+   Les valeurs possibles pour  $A$ et $B$ sont donc $\left\{\begin{tabular}{l}
+  \bm{ $A=1$ et $B=1$} \\ \bm{$A =37$ et $B=27$} \\ \bm{$A =111$ et $B =1$}  \\
+   \end{tabular}\right.$
+\end{itemize}

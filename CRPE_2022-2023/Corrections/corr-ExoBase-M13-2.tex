@@ -1,0 +1,66 @@
+   Faisons un petit schéma : \\
+   \begin{minipage}{5.2cm}
+   {\psset{unit=0.9}
+      \begin{pspicture}(-0.5,-1)(5,3.2)
+         \pstGeonode[PosAngle={-135,-45,45,135},CurveType=polygon]{A}(4,0){B}(4,2.5){C}(0,2.5){D}
+         \pstLineAB{D}{B}
+         \pstLineAB{A}{C}
+         \pstInterLL[PosAngle=-90]{D}{B}{C}{A}{I}
+         \pcline{<->}(0,3)(4,3)
+         \ncput*{$L$}
+         \pcline{<->}(-0.5,0)(-0.5,2.5)
+         \ncput*{$\ell$}
+         \pcline{<->}(0,1.25)(2,1.25)
+         \ncput*{$\frac{L}{2}$}
+         \pcline{<->}(2,1.25)(2,2.5)
+         \ncput*{$\frac{\ell}{2}$}
+      \end{pspicture}
+   }
+   \end{minipage}
+   \begin{minipage}{10cm}
+      \begin{enumerate}
+         \item Soit $L$ et $\ell$ la longueur et la largeur du rectangle ABCD, on a : \\
+            $\mathcal{A}(\text{CDI}) =\dfrac{L\times\dfrac{\ell}{2}}{2} =\dfrac14\times L\times \ell$ et par symétrie, $\mathcal{A}(\text{ABI}) =\dfrac14\times L\times \ell$ \\ [1mm]
+            $\mathcal{A}(\text{DAI}) =\dfrac{\ell\times\dfrac{L}{2}}{2} =\dfrac14\times \ell\times L$ et par symétrie, $\mathcal{A}(\text{CBI}) =\dfrac14\times \ell\times L$ \\ [1mm]
+            Donc, {\blue les quatre parts sont égales.}
+      \end{enumerate}
+   \end{minipage} \\
+   Nommons les points principaux de la figure : \\
+   \begin{minipage}{5.2cm}
+   {\psset{unit=0.9}
+      \begin{pspicture}(-0.5,-0.8)(5,3.5)
+         \pstGeonode[PosAngle={-135,-45,45,135},CurveType=polygon]{A}(4,0){B}(4,2.5){C}(0,2.5){D}
+         \pstMiddleAB{C}{B}{E}
+        \pstMiddleAB[PosAngle=45]{A}{B}{F}
+         \pstLineAB{D}{E}
+         \pstLineAB{D}{B}
+         \pstLineAB{D}{F}
+         \pcline{<->}(0,3)(4,3)
+         \ncput*{$L$}
+         \pcline{<->}(-0.5,0)(-0.5,2.5)
+         \ncput*{$\ell$}
+         \pcline{<->}(0,-0.5)(2,-0.5)
+         \ncput*{$\frac{L}{2}$}
+         \pcline{<->}(4.8,1.25)(4.8,2.5)
+         \ncput*{$\frac{\ell}{2}$}
+      \end{pspicture}
+   }
+   \end{minipage}
+   \begin{minipage}{10.5cm}
+      \begin{enumerate}
+         \setcounter{enumi}{1}
+         \item $\mathcal{A}(\text{DCE}) =\dfrac{L\times\dfrac{\ell}{2}}{2} =\dfrac14\times L\times \ell$ \hspace*{0.5cm} ; \quad $\mathcal{A}(\text{DEB}) =\dfrac{\dfrac{\ell}{2}\times L}{2} =\dfrac14\times L\times \ell$ \\ [1mm]
+            $\mathcal{A}(\text{DBF}) =\dfrac{\dfrac{L}{2}\times \ell}{2} =\dfrac14\times L\times \ell$  \hspace*{0.5cm} ; \quad $\mathcal{A}(\text{DFA}) =\dfrac{\dfrac{L}{2}\times \ell}{2} =\dfrac14\times L\times \ell$ \\ [1.5mm]
+            Donc, {\blue les quatre parts sont égales.}
+      \end{enumerate}
+   \end{minipage}
+   \begin{enumerate}
+   \setcounter{enumi}{2}
+      \item Si l'on considère l'aire du rectangle CIKJ (1 $u.a.$), on a :
+         \begin{itemize}
+            \item $\mathcal{A}(\text{EFC}) =\dfrac{2\times4}{2}\,u.a =4\,u.a.$
+            \item $\mathcal{A}(\text{DGFE}) =\mathcal{A}(\text{DGC})-\mathcal{A}(\text{EFC})$. Or, $\mathcal{A}(\text{DGC}) =\dfrac{5\times3}{2}\,u.a =7,5\,u.a$. Donc, $\mathcal{A}(\text{DGFE}) =7,5\,u.a.-4\,u.a. =3,5 \,u.a$.
+            \item $\mathcal{A}(\text{ABGD}) =\mathcal{A}(\text{ABC})-\mathcal{A}(\text{DGC})$. Or, $2\mathcal{A}(\text{ABC}) =\dfrac{6\times4}{2} \,u.a =12\,u.a$. Donc, $\mathcal{A}(\text{ABGD}) =12\,u.a.-7,5\,u.a. =4,5\,u.a$.
+        \end{itemize}
+         Conclusion : {\blue les trois surfaces proposées ont toutes des aires différentes.}
+   \end{enumerate}

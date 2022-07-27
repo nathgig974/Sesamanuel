@@ -1,0 +1,39 @@
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item Pour déterminer les entiers naturels jusqu'à 99 divisibles par 7, il suffit de prendre les multiples de 7 : \\
+      on trouve {\blue 0 ; 7 ; 14 ; 21 ; 28 ; 35 ; 42 ; 49 ; 56 ; 63 ; 70 ; 77 ; 84 ; 91 et 98}.
+      \item
+         \begin{enumerate}
+            \item On procède de la même manière que les exemples :
+               \begin{multicols}{3}
+                  $\opsub[voperation=top]{40}{12}|\,6$
+                  \psarc(0,0){0.25}{-90}{90}
+                  \psline{->}(0,-0.25)(-0.4,-0.25)
+                  \rput(0.6,0){$\times2$} \\
+                  28 est divisible par 7 \\
+                  donc, 406 l'est aussi. \\
+                  $\opsub[voperation=top]{89}{10}|\,5$
+                  \psarc(0,0){0.25}{-90}{90}
+                  \psline{->}(0,-0.25)(-0.4,-0.25)
+                  \rput(0.6,0){$\times2$} \\
+                  79 n'est pas divisible par 7 \\
+                  donc, 895 non plus. \\
+                  $\opsub[voperation=top]{390}{12}|\,6$
+                  \psarc(0,0){0.25}{-90}{90}
+                  \psline{->}(0,-0.25)(-0.4,-0.25)
+                  \rput(0.6,0){$\times2$} \\
+                   378 est divisible par 7 \\
+                   donc, 3 906 l'est aussi. \\
+               \end{multicols}
+               {\blue Les nombres 406 et 3 906 sont divisibles par 7, mais 895 ne l'est pas.}
+            \item Soit E le nombre dont on souhaite savoir s'il est divisible par 7. On soustrait le double de la valeur du chiffre des unités de E au nombre de dizaines de E. Si le nombre obtenu est divisible par 7, alors E est divisible par 7. Si le nombre obtenu n'est pas divisible par 7, alors E n'est pas divisible par 7.
+         \end{enumerate}
+      \setcounter{enumi}{2}
+      \item
+         \begin{enumerate}
+            \item {\blue $273 =10\times27+3$} et {\blue $1\,856 =10\times185+6$.}
+            \item Soit $n$ le nombre obtenu après procédure, alors {\blue $n=v-2u$.}
+            \item Si $n$ est divisible par 7, alors il existe un entier $k$ tel que $n=7k$, c'est-à-dire $v-2u =7k$, ou encore $v=2u+7k$. Or, $E =10v+u =10(2u+7k)+u =21u+70k =7(3u+10k)$ qui est multiple de 7. \\
+               {\blue Si le nombre $n$ est divisible par 7, alors le nombre $E$ de départ est divisible par 7.}
+      \end{enumerate}
+   \end{enumerate}

@@ -1,0 +1,53 @@
+   \begin{colenumerate}{2}
+      \item \\
+         \begin{pspicture}(-5,-1.2)(1.5,0)
+            \psline{->}(-4.5,0)(1.5,0)
+            \multido{\n=-4+1}{6}{\rput(\n,0){|}}
+            \rput(0,-0.3){\small 0}
+            \rput(1,-0.3){\small 1}
+            \rput(-3,0.3){$A$}
+            \rput(-1,0.3){$B$}
+            \psline[linecolor=blue]{<->}(-3,-0.35)(-1,-0.35)
+            \rput(-2,-0.8){$AB =|-3-(-1)| =|-2| =\blue 2$}
+         \end{pspicture}
+      \item \\
+         {\psset{unit=0.6}
+         \begin{pspicture}(-6,-1)(5,0)
+            \psline{->}(-5.5,0)(5,0)
+            \multido{\n=-5+1}{10}{\rput(\n,0){|}}
+            \rput(0,-0.5){\small 0}
+            \rput(1,-0.5){\small 1}
+            \rput(3,0.6){$A$}
+            \rput(-4,0.6){$B$}
+            \psline[linecolor=blue]{<->}(3,-0.9)(-4,-0.9)
+            \rput(-0.5,-1.5){$AB =|3-(-4)| =|7| =\blue 7$}
+         \end{pspicture}}
+      \item \\
+         {\psset{unit=0.9}
+         \begin{pspicture}(-2,-1)(6.5,0)
+            \psline{->}(-1.5,0)(6,0)
+            \multido{\n=-1+1}{7}{\rput(\n,0){|}}
+            \rput(0,-0.4){\small 0}
+            \rput(1,-0.4){\small 1}
+            \rput(5,0.4){$A$}
+            \rput(0.33,0.4){$B$}
+            \rput(0.33,0){\blue |}
+            \psline[linecolor=blue]{<->}(5,-0.7)(0.33,-0.7)
+            \rput(2.33,-1.2){$AB =\left|5-\frac13\right| =\left|\frac{14}{3}\right| =\blue \frac{14}{3}$}
+         \end{pspicture}}
+      \item \\
+         {\psset{unit=0.3}
+         \begin{pspicture}(-15,-1)(5,0)
+            \psline{->}(-13.5,0)(5,0)
+            \multido{\n=-13+1}{18}{\rput(\n,0){\small |}}
+            \rput(0,-1){\small 0}
+            \rput(1,-1){\small 1}
+            \rput(-12.3,1){$A$}
+            \rput(-12.3,0){\blue |}
+            \rput(3.56,1){$B$}
+            \rput(3.56,0){\blue |}
+            \psline[linecolor=blue]{<->}(3.56,-2)(-12.3,-2)
+            \rput(-5,-3.5){\blue $AB =|-12,3-3,56| =|-15,86| =15,86$}
+         \end{pspicture}}
+         \ \\
+   \end{colenumerate}

@@ -1,0 +1,36 @@
+\ \\ [-5mm]
+\begin{enumerate}
+   \item Pour effecteur un tour de piste, l'athlète doit effectuer deux lignes droites de longueur 100 m et deux demi-tours de rayon $r =31,83$ m. \\
+   On a alors : $L =2\times100\text{ m}+2\times\pi\times31,83\text{ m} \approx399,99\text{ m}$. \\
+   \bm{Un tour de piste effectué en couloir 1 mesure environ 400 m.} \\
+   \item Pour dessiner le couloir 1, il faut tracer quatre segments qui correspondent aux lignes droites de mesure 100 m.  Il faut également tracer deux demi-cercles de rayon 31,83 m et deux demi-cercles de rayon $31,83\text{ m}+1,22\text{ m} =33,05\text{ m}$. \\
+   À l'échelle 1/1\,200, cela correspond aux mesures suivantes : $100\text{ m}/1\,200 \approx0,083\text{ m} \approx8,3\text{ cm}$ ; $31,83\text{ m}/1\,200 \approx0,0265\text{ m}\approx2,65\text{ cm}$ et $33,05\text{ m}/1\,200 \approx0,0275\text{ m}\approx2,75\text{ cm}$. \\
+   \begin{pspicture}(-4,-0.5)(11.5,6)
+      \psline(0,0)(8.3,0)
+      \psline(0,5.3)(8.3,5.3)
+      \psline(0,-0.1)(8.3,-0.1)
+      \psline(0,5.4)(8.3,5.4)
+      \psarc(0,2.65){2.65}{90}{-90}
+      \psarc(8.3,2.65){2.65}{-90}{90}
+      \psarc(0,2.65){2.75}{90}{-90}
+      \psarc(8.3,2.65){2.75}{-90}{90}
+      \psline[linestyle=dashed]{<->}(0,2.65)(8.3,2.65)
+      \psline[linestyle=dotted](0,5.3)(0,0)
+      \psline[linestyle=dotted](8.3,5.3)(8.3,0)
+      \rput(2.5,4){rayons : 2,65 cm et 2,75 cm}
+      \rput(4.15,2.25){8,3 cm}
+   \end{pspicture}
+   \item Sur une course de 200 m, si les athlètes commencent tous sur la même ligne de départ perpendiculaire aux lignes droites, plus les coureurs sont éloignés du couloir 1 plus ils vont parcourir de distance puisque le rayon du demi-cercle va augmenter. Pour palier à cette injustice, il faut décaler les départs ou les arrivées. \\
+   Or, pour simplifier la prise de durée et pour la beauté de l'épreuve, il est préférable que la ligne d'arrivée soit la même pour tout le monde, donc on décale les départs. \\
+   \item
+   \begin{enumerate}
+      \item Au couloir 6, le bord intérieur est à une distance de $31,83\text{ m}+5\times1,22\text{ m} =37,93\text{ m}$. \\
+      Si le coureur partait sur la ligne de départ matérialisée sur le schéma, il parcourrait une distance de $\pi\times37,93\text{ m}+100\text{ m} \approx219,1606\text{ m}$. Il aura donc fait environ 19,16 m en trop. \\ [1mm]
+      \bm{Le décalage du coureur de couloir 6 est de 19,16 m.} \\
+      \item Un demi-tour mesure $\pi\times37,93\text{ m}$ et correspond à un angle de 180\degres. \\ [1mm]
+      Donc, pour 19,16 m, on a un angle de $\alpha =\dfrac{19,16\text{ m}}{37,93\,\pi\text{ m}}\times180\degres \approx28,94\degres$. \\ [1mm]
+      \bm{La mesure de l'angle $\alpha$ est d'environ 28,9\degre.}
+      \item Le couloir 1 correspond à une valeur de $\alpha =0\degres$. Les \og zéros \fg{} ne se correspondent pas, c'est à dire que les échelles n'ont pas la même origine donc : \\
+      \bm{Il n'y a pas proportionnalité entre le numéro du couloir et la valeur de $\alpha$.}
+   \end{enumerate}
+\end{enumerate}

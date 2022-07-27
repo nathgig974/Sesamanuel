@@ -1,0 +1,37 @@
+\begin{enumerate}
+   \item
+   \begin{pspicture}(-3,-2)(13,6)
+      \pspolygon[linecolor=gray](-0.27,4.35)(0.38,4.08)(0.65,4.73)(0,5)
+      \pspolygon[linecolor=gray](-1.43,-0.27)(-1.16,0.38)(-1.81,0.65)(-2.08,0)
+      \psframe[linecolor=gray](0,0)(0.5,0.5)
+      \psline(-2.2,5.92)(13,-0.42)
+      \psline(-3,0)(13,0)
+      \psline(0,-2)(0,6)
+      \psline(-3.05,0.4)(2.73,-2)
+      \psline(0.42,6.01)(-2.71,-1.5)
+      \rput(0.3,5.2){$A$}
+      \rput(12,-0.4){$B$}
+      \rput(0.3,-0.3){$E$}
+      \rput(-2.3,0.5){$C$}
+      \rput(-0.4,-1.2){$D$}
+      \rput(0.5,2.5){5 cm}
+      \rput(6,3){13 cm}
+      \rput(-0.8,-0.2){$x$}
+      \rput(-1.5,2.5){$y$}
+      \rput(6,-0.3){12 cm}
+   \end{pspicture}
+   \item Dans toute la suite, les mesures sont exprimées en centimètre. Notons $x =CE$ et $y =AC$.
+   \begin{itemize}
+      \item Dans le triangle $ABE$ rectangle en E, on utilise le théorème de Pythagore : \\
+      $AB^2 =AE^2+EB^2 \iff EB^2 =13^2-5^2 =144$ donc $EB =12$.
+      \item Dans le triangle $ACE$ rectangle en E, on utilise le théorème de Pythagore : \\
+      $AC^2 =AE^2+EC^2 \iff y^2 =5^2+x^2$. \qquad (1)
+      \item Dans le triangle $ABC$ rectangle en A, on utilise le théorème de Pythagore : \\
+      $CB^2 =CA^2+AB^2 \iff (x+12)^2 =y^2+13^2$. \qquad (2)
+   \end{itemize}
+   D'après (1) et (2), on obtient $(x+12)^2 =5^2+x^2+13^2 \iff x^2+24x+144 =25+x^2+169$ \\
+   \hspace*{7cm} $\iff 24x =50 \iff x=\dfrac{25}{12}$. \\ [1mm]
+   L'aire du triangle $CEA$ en cm$^2$ vaut alors : $\mathcal{A} =\dfrac{\text{CE}\times\text{AE}}{2} =\dfrac{\dfrac{25}{12}\times5}{2} =\dfrac{125}{24} \approx 5,208$. \\ [1mm]
+   \bm{L'aire du triangle $CEA$ vaut environ, 5,21 cm$^2$.}
+\end{enumerate}
+

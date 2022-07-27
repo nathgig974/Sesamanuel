@@ -1,0 +1,152 @@
+\pagestyle{empty}
+\usetikzlibrary{calc}
+
+% Couleurs blue, brown, cyan, green, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, black, gray, yellow
+\tikzset{fondA/.style=purple}
+\tikzset{fondB/.style=green}
+\tikzset{fondPostit/.style={color= yellow!40}}
+\tikzset{ombrePunaise/.style={color={blue!10!gray}}}
+\tikzset{ombrePostit/.style={color={black},opacity=.5}}
+\tikzset{punaise/.style={ball color=red}}
+
+% \epingle{point}{angle}{échelle}
+\newcommand{\epingle}[3]{
+\coordinate[rotate=#2,yshift={#3*0.375cm}] (e) at #1;
+\coordinate[shift={++(60:0.75)}] (g) at (e);
+\begin{scope} [scale=1.5]
+ \begin{scope}[rotate=-30]
+   \coordinate[shift={++(30:0.75)}] (h) at (e);
+   \draw[ombrePunaise,line cap=round,line width=4pt] (e) -- ++(60:0.75);
+   \fill [ombrePunaise,rotate=-30,scale=0.5] (h) ellipse (.65 and .3) ;
+   \fill [ombrePunaise,rotate=60,scale=0.5] (h) ++(0.4,0) ellipse (.4 and .3);
+   \fill [ombrePunaise,rotate=60,scale=0.5] (h) ++(0.8,0) ellipse (.2 and .4);
+ \end{scope}
+ \draw[line cap=round,line width=4pt] (e) -- ++(60:0.75);
+ \fill [punaise,rotate=-30,scale=0.5] (g) ellipse (.65cm and .3cm) ;
+ \fill [punaise,rotate=60,scale=0.5] (g) ++(0.4,0) ellipse (.4 and .3);
+ \fill [punaise,rotate=60,scale=0.5] (g) ++(0.8,0) ellipse (.2 and .4);
+\end{scope}}
+
+% \postIt{(point)}{angle}{échelle}{ligne 1}{ligne 2}{ligne 3}}
+\newcommand{\postIt}[6]
+{\begin{scope} [rotate=#2,scale=0.8]
+\fill [red,ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.25,-2.4)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\fill [ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.2,-2.35)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\fill [ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.15,-2.3)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\fill [fondPostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.2,0.1)$).. ++($#3*(0.1,-2.25)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\end{scope}
+\epingle{#1}{#2}{#3}
+\draw #1 node [scale=#3,rotate=#2] {#4};
+\draw #1 node [scale=#3,rotate=#2,below={#3*0.2cm}] {#5};
+\draw #1 node [scale=#3,rotate=#2,below={#3*0.4cm}] {#6};}
+
+%diagramme circulaire
+\newcommand*{\mytextstyle}{\sffamily\large\white}
+\newcommand{\arcarrow}[7]{%
+% inner radius, middle radius, outer radius, start angle,
+% end angle, options, text
+  \pgfmathsetmacro{\rin}{#1}
+  \pgfmathsetmacro{\rmid}{#2}
+  \pgfmathsetmacro{\rout}{#3}
+  \pgfmathsetmacro{\astart}{#4}
+  \pgfmathsetmacro{\aend}{#5}
+  \fill[#6] (\astart:\rin) arc (\astart:\aend:\rin) -- (\aend:\rout) arc (\aend:\astart:\rout) -- cycle;
+  \path[decoration = {text along path, text = {|\mytextstyle|#7}, text align = {align = center}, raise = -0.5ex}, decorate](\astart:\rmid) arc (\astart:\aend:\rmid);
+}
+
+
+
+%=======================================
+\begin{tikzpicture}[remember picture,overlay]
+% fond bicolore
+\coordinate (cp) at (current page);
+\coordinate (cpc) at (current page.center);
+\coordinate (cpe) at ($ (current page.east) + (1.7cm,0cm) $);
+\coordinate (cpne) at ($ (current page.north east) + (1.7cm,2.9cm) $);
+\coordinate (cpn) at ($ (current page.north) + (1.5cm,2.9cm) $);
+\coordinate (cpnw) at ($ (current page.north west) + (-0.2cm,2.9cm) $);
+\coordinate (cpw) at ($ (current page.west) + (-0.2cm,0cm) $);
+\coordinate (cpsw) at ($ (current page.south west) + (-0.2cm,-0.2cm) $);
+\coordinate (cps) at ($ (current page.south) + (1.5cm,-0.2cm) $);
+\coordinate (cpse) at ($ (current page.south east) + (1.7cm,-0.2cm) $);
+\fill[fondA] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpnw)  -- (cpsw) -- cycle;
+\fill[fondB] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpne)  -- (cpse) -- cycle;
+
+%\fill[fondA] (cpsw) .. controls (cpw) and (cpe) .. (cpne) -- (cpnw) -- cycle;
+%\fill[fondB] (cpsw) .. controls (cpw) and (cpe) .. (cpne) -- (cpse) -- cycle;
+
+% Titre
+\draw (cp)  node [xshift=-3.2cm,yshift=12cm,scale=8] {\white K{\color{green}\textit{i}}T};
+\draw (cp)  node [xshift=-3cm,yshift=9.5cm,scale=3] {\white de survie pour le CRPE};
+\draw (cp)  node [xshift=-3.2cm,yshift=5.5cm,scale=3] {
+\green\cursive{Tome 1 :}};
+\draw (cp)  node [xshift=-3.2cm,yshift=3.5cm,scale=3.5] {\green\cursive{préparation}};
+\draw (cp)  node [xshift=-3.3cm,yshift=2.3cm,scale=3.5] {\green\cursive{à l'écrit}};
+
+% post'it
+\coordinate[xshift=-5.5cm,yshift=-8.5cm] (postit) at (cp);
+\postIt{(postit)}{-16}{2} {\footnotesize\cursive Nathalie Daval}{\footnotesize INSPE Montpellier}{\footnotesize 2022-2023}
+
+%diagramme circulaire x4
+\begin{scope}[xshift=12.5cm,yshift=-18.5cm]
+   \fill[even odd rule,ball color=white] circle (4.3) circle (2.7);
+   \arcarrow{2.7}{3.5}{4.3}{55}{125}{ball color=purple}{G{é}om{é}trie}
+   \arcarrow{2.7}{3.5}{4.3}{145}{215}{ball color=purple}{Gestion de donn{é}es}
+   \arcarrow{2.7}{3.5}{4.3}{235}{305}{ball color=purple}{Nombres et calculs}
+   \arcarrow{2.7}{3.5}{4.3}{325}{395}{ball color=purple}{Grandeurs et mesures}
+\end{scope}		      
+\end{tikzpicture}
+
+\pagebreak
+
+Ce manuel est à destination des {\small AED} et {\small AESH} de l'académie de Montpellier, inscrits à la préparation au concours de professeur des écoles, dans le cadre de la formation proposée par la {\small DAFPEN} et préparée à la {\small FDE}. \\
+
+Cette version de 2022-2023 a été écrite avec \LaTeX{} et la classe \href{https://www.ctan.org/pkg/sesamanuel}{\blue sesamanuel} distribuée librement par l'association \href{http://www.sesamath.net}{\blue Sesamath}. Si vous y trouvez des coquilles ou erreurs, merci de me les signaler à l'adresse suivante : \\
+\href{mailto:nathalie.daval@umontpellier.fr}{nathalie.daval@umontpellier.fr} \\
+
+Le tome 1 propose 15 thèmes préparant l'épreuve écrite de mathématiques du concours {\small CRPE} (admissibilité).
+
+Chaque thème est composé du cours et d'exercices corrigés suivant la trame suivante : \\ [2mm]
+   -- {\textcolor{B2}{\sffamily\bfseries Un peu d'histoire}} : quelques remarques historiques concernant la notion. \\ [2mm]
+   -- \colorbox{A2}{\textcolor{white}{\sffamily\bfseries Cours}} : l'essentiel du cours à connaître. \\ [2mm]
+   -- \colorbox{G1}{\textcolor{white}{\sffamily\bfseries Vu au CRPE 2022}} : d'éventuels exercices corrigés issus du concours de 2022, groupements 1, 2 et 3. \\ [2mm]
+   -- {\cursive\bfseries Maîtriser les bases avec \includegraphics[width=2.2cm]{Nombres_et_calculs/Images/mathenpoche}} : on trouve sur ce site du cours, des exercices interactifs, des {\small QCM} et des devoirs niveau collège. \\ [2mm]
+   -- \colorbox{red}{\textcolor{white}{\sffamily\bfseries Entraînement}} : des exercices corrigés reprenant les bases du cours ainsi que des exercices ou parties d'exercices issus du {\small CRPE} pour approfondir les notions et se préparer aux exercices type concours. \\  [2mm]
+
+   \vfill
+   
+   Pour information, voilà une petite étude statistique sur le nombre de questions posées à la session 2022 (certaines pouvant figurer dans plusieurs catégories) pour les 4 groupements en fonction des thèmes (chapitres de ce kit).
+   
+   \begin{center}
+      {\hautab{1.5}
+      \begin{tabular}{|p{2.3cm}|*{15}{C{0.5}|}}
+         \hline
+         Chapitres & N1 & N2 & N3 & N4 & D5 & D6 & D7 & D8 & G9 & \!G10 & \!G11 & \!G12 & \!M13 & \!M14 & \!P15 \\
+         \hline
+         Questions & 8 & 13 & 15 & 0 & 22 & 21 & 19 & 4 & 1 & 4 & 3 & 0 & 11 & 22 & 20 \\
+         \hline
+         Pourcentages & 5 & 8 & 9 & 0 & 13 & 13 & 12 & 2  & 1 & 2 & 2 & 0 & 7 & 13 & 12 \\
+         \hline
+      \end{tabular}}
+   \end{center}
+
+On remarque que les notions très souvent abordées sont les fonctions, la proportionnalité, les probabilités, scratch, en plus des aires, volumes et de la vitesse. En revanche, on note l'absence de l'arithmétique pour cette session, et peu de géométrie. \\
+
+Bon courage à tous pour la session 2023 !!! \\
+
+\begin{center}
+   \includegraphics[width=3cm]{Annexes/Images/Licence}
+\end{center}
+

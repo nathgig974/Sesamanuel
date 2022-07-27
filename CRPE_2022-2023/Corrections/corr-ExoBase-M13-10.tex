@@ -1,0 +1,44 @@
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item L'aire de la feuille vaut $\ucm{120}\times\ucm{80} ={\blue \ucmq{9600}}$.
+      \item
+         \begin{enumerate}
+            \item Le rayon du disque vaut \ucm{14}, donc son diamètre vaut \ucm{28}. \\
+               Or, $4\times\ucm{28} =\ucm{112}$ et $5\times\ucm{28} =\ucm{140}$. La longueur de la feuille étant de \ucm{120}, {\blue Alice peut mettre au maximum quatre disques dans la longueur de la feuille}.
+            \item La largeur de la feuille mesure \ucm{80}. Or, $2\times\ucm{28} =\ucm{56}$ et $3\times\ucm{28} =\ucm{84}$. Alice peut mettre au maximum deux disques dans la largeur de la feuille puisqu'elle mesure \ucm{80}. \\
+               Si l'on considère la configuration de la figure (qui n'est pas optimale), on en déduit qu'{\blue Alice peut tracer au maximum huit disques sur sa feuille} ($2\times4 =8$).
+            \item Alice peut tracer huit disques par feuilles, et $4\times8\text{ disques} =32\text{ disques}$ alors que $3\times8\text{ disques} =24\text{ disques}$. Donc, {\blue il faudra au minimum quatre feuilles pour dessiner les 30 disques}.
+         \end{enumerate}
+   \end{enumerate}
+
+\Coupe
+
+    \begin{enumerate}
+         \setcounter{enumi}{2}
+         \item À l'échelle 1/8, les dimensions respectives de \ucm{120}, \ucm{80} et \ucm{14} sont représentées par des dimensions de $\ucm{120}\div8 =\ucm{15}, \ucm{80}\div8 =\ucm{10}$ et $\ucm{14}\div8 =\ucm{1,75}$. \\
+         \begin{pspicture}(-0.5,-0.25)(15,10.5)
+            \psframe(0,0)(15,10)
+            \multido{\r=1.75+3.5}{4}{\pscircle(\r,8.25){1.75}}
+            \multido{\r=1.75+3.5}{4}{\pscircle(\r,4.75){1.75}}
+         \end{pspicture}
+      \item $\mathcal{A}_{\text{disque}} =\pi\times r^2 =\pi\times(\ucm{14})^2 =196\pi\,\ucmq{} \approx\ucmq{615,75}$. \\
+         {\blue L'aire d'un disque vaut $196\,\pi\;\ucmq{}$, soit environ \ucmq{616}}.
+      \item
+         \begin{enumerate}
+            \item Aire utilisée pour tracer les disques : $8\times\ucmq{616} =\ucmq{4928}$. \\
+               Aire non utilisée : $\ucmq{9600}-\ucmq{4928} =\ucmq{4672}$. \\
+               {\blue L'aire non utilisée pour découper les huit disques est de \ucmq{4672}}. \\
+              $\dfrac{\ucmq{4972}}{\ucmq{9600}}\times100 \approx48,67$. Donc, {\blue la quantité de feuille non utilisée représente une proportion d'environ 49\,\%}. \medskip
+           \item Pour les 30 disques, il faut 3 feuilles avec 8 disques et une feuille avec 6 disques. \\
+           Le papier non utilisé correspond donc à $3\times\ucmq{4672}+\ucmq{9600}-6\times\ucmq{616} =\ucmq{19920}$. \\
+              {\blue L’aire de papier non utilisé après avoir découpé 30 disques est de \ucmq{19920}}. \\
+              $\dfrac{\ucmq{19920}}{4\times\ucmq{9600}}\times100 \approx51,875$. \\ [2mm]
+              Donc, {\blue L’aire de papier non utilisé après avoir découpé 30 disques représente une proportion d'environ 52\,\%}.
+         \end{enumerate}
+      \setcounter{enumi}{5}
+      \item On a $105 =3\times28+21$ et $75 =2\times28+19$ donc, le format Grand Aigle permet de tracer trois disques dans la longueur et deux dans la largeur, soit six disques par feuille. \\
+         De plus, $30 =6\times5$ donc, il faudra cinq feuilles, remplie chacune de six disques. \\
+         Pour une feuille, le gaspillage sera de $\ucm{105}\times\ucm{75}-6\times\ucmq{616} =\ucmq{7875}-\ucm{3696} =\ucm{4179}$. \\
+         Soit pour cinq feuilles : $5\times\ucm{4179} =\ucm{20895}$. \\
+         Par conséquent, {\blue le format Grand Aigle ne permet pas d'obtenir moins de chutes que le format Grand Monde}.
+   \end{enumerate}

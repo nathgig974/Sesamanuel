@@ -1,0 +1,32 @@
+\thispagestyle{empty}
+
+% Couleurs blue, brown, cyan, green, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, black, gray, yellow
+\tikzset{fondA/.style=purple}
+\tikzset{fondB/.style=green}
+\tikzset{fondPostit/.style={color= yellow!40}}
+\tikzset{ombrePunaise/.style={color={blue!10!gray}}}
+\tikzset{ombrePostit/.style={color={black},opacity=.5}}
+\tikzset{punaise/.style={ball color=red}}
+
+
+
+%=======================================
+\begin{tikzpicture}[remember picture,overlay]
+% fond bicolore
+\coordinate (cp) at (current page);
+\coordinate (cpc) at (current page.center);
+\coordinate (cpe) at ($ (current page.east) + (1.7cm,0cm) $);
+\coordinate (cpne) at ($ (current page.north east) + (1.7cm,2.9cm) $);
+\coordinate (cpn) at ($ (current page.north) + (1.5cm,2.9cm) $);
+\coordinate (cpnw) at ($ (current page.north west) + (-0.2cm,2.9cm) $);
+\coordinate (cpw) at ($ (current page.west) + (-0.2cm,0cm) $);
+\coordinate (cpsw) at ($ (current page.south west) + (-0.2cm,-0.2cm) $);
+\coordinate (cps) at ($ (current page.south) + (1.5cm,-0.2cm) $);
+\coordinate (cpse) at ($ (current page.south east) + (1.7cm,-0.2cm) $);
+\fill[fondA] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpnw)  -- (cpsw) -- cycle;
+\fill[fondB] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpne)  -- (cpse) -- cycle;
+
+%\fill[fondA] (cpsw) .. controls (cpw) and (cpe) .. (cpne) -- (cpnw) -- cycle;
+%\fill[fondB] (cpsw) .. controls (cpw) and (cpe) .. (cpne) -- (cpse) -- cycle;
+\end{tikzpicture}
+ 

@@ -1,0 +1,23 @@
+\ \\ [-5mm]
+\begin{enumerate}
+   \item Figure à l'échelle: \\
+      \begin{pspicture}(-4.5,-3.5)(9,5)
+         \pstGeonode[PosAngle={-135,-45,45,135},CurveType=polygon,PointSymbol=none](0,0){A}(8,0){D}(8,5){C}(0,5){B}
+         \pstGeonode[PosAngle=90,PointSymbol=none](2,5){P}(-0.56,1.93){R}(5.44,-3.07){H}
+         \pstLineAB[linecolor=B2]{P}{D}
+         \pstLineAB[linecolor=B2]{P}{R}
+         \pstLineAB[linecolor=B2]{R}{H}
+         \pstLineAB[linecolor=B2]{H}{D}
+         \pstRightAngle{P}{C}{D}
+         \pstRightAngle[linecolor=G1]{P}{D}{H}
+         \pstLineAB[linecolor=A1]{P}{H}
+         \psarc[linecolor=B1](8,0){4}{210}{240}
+      \end{pspicture}
+   \item{\bf Calcul de DP :} dans le triangle DCP rectangle en C, on utilise le théorème de Pythagore avec des mesures en cm : $\text{DP}^2 =\text{DC}^2+\text{CP}^2 =5^2+(8-2)^2 =25+36 =61 \Longrightarrow \text{DP} =\sqrt{61}$ cm. \\ [1mm]
+      {\bf Calcul de PH :} le triangle PDH est rectangle en H, d'après le théorème de Pythagore, on a \\
+      $\text{PH}^2 =\text{PD}^2+\text{DH}^2 =61+16 =77 \Longrightarrow$ {\blue PH $=\sqrt{77}$ cm.}
+   \item Le volume d'un prime se calcule en multipliant l'aire de sa base par sa hauteur. \\ [1mm]
+   Calcul de l'aire de la base : $\mathcal{A} =\dfrac{(\text{BP}+\text{AD})\times\text{AB}}{2} =\dfrac{(\ucm{2}+\ucm{8})\times\ucm{5}}{2} =\ucmq{25}$ \\ [1.5mm]
+   Calcul du volume du prisme : $\mathcal{V} =\mathcal{A}\times\text{AE} =\ucmq{25}\times\ucm{4} =\ucmc{100}$. \\ [1.5mm]
+   {\blue Le volume du prisme ABPDEFRH est de \ucmc{100}.}
+\end{enumerate}

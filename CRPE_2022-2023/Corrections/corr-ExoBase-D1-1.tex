@@ -1,0 +1,21 @@
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item Le cycliste parcourt en moyenne \ukm{30} en une heure. Donc, il parcourra \ukm{45} en une heure et trente minutes. {\blue Le cycliste arrivera à 11 heures dans la ville B.}
+      \item Représentation graphique du parcours.
+         {\psset{xunit=3.5cm,yunit=0.14cm,labelFontSize=\scriptstyle}
+         \begin{pspicture}(9,-5)(13,53)
+            \psaxes[Ox=9.5,Dx=0.5,Dy=5,xsubticks=2,ysubticks=5,comma]{->}(9.5,0)(13.2,48)
+            \pcline(9.5,0)(11,45) \Aput{aller}
+            \pcline(11,45)(12,45) \Bput{repos}
+            \pcline(12,45)(12.9,0) \Aput{retour}
+            \psline[linestyle=dotted](9.5,45)(11,45)
+            \psline[linestyle=dotted](11,0)(11,45)
+            \psline[linestyle=dotted](12,0)(12,45)
+            \rput(13.35,0){\scriptsize heure}
+            \rput(9.5,50){\scriptsize distance de A}
+         \end{pspicture}}
+      \item Il est 12 heures lorsque le cycliste repart (11h + 1h). Sa vitesse est de 50 km/h et il lui faut parcourir 45 km. \\ [1mm]
+         D'après la formule $v =\dfrac{d}{t}$, on a $t =\dfrac{d}{v} =\dfrac{\ukm{45}}{50\text{ km/h}} =0,9$ h. \\ [1mm]
+         Or, $0,9\times60 =54$, donc le cycliste va mettre 54 minutes pour rentrer. \\
+         {\blue Le cycliste sera de retour à la ville A à 12 heures et 54 minutes.} \\
+   \end{enumerate}

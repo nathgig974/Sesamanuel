@@ -1,0 +1,38 @@
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item
+         \begin{enumerate}
+            \item La Figure 1 possède $3\times4$ côtés $=$ {\blue 12 côtés} et la Figure 2 possède $3\times4\times4 =3\times4^2$ côtés $=$ {\blue 48 côtés}.
+            \item La Figure 3 possède $3\times4\times4\times4 =3\times4^3$ côtés $=$ {\blue 192 côtés}.
+            \item La Figure $n$ possède {\blue $3\times4^n$ côtés}.
+         \end{enumerate}
+      \setcounter{enumi}{1}
+      \item
+         \begin{enumerate}
+            \item La longueur d'un côté de la Figure 1 mesure un tiers de la mesure d'un côté de la Figure 0 qui vaut \ucm{1}. \\ [1mm]
+               Or, $\dfrac13\times1 =\dfrac13$ donc {\blue $L_1 =\dfrac13$}. \\
+               La longueur d'un côté de la Figure 2 mesure un tiers de la mesure d'un côté de la Figure 1 qui vaut $\dfrac13$. \\
+               Or, $\dfrac13\times\dfrac13 =\dfrac19$  donc {\blue $L_2 =\dfrac19$}. \\
+               La longueur d'un côté de la Figure 3 mesure un tiers de la mesure d'un côté de la Figure 2 qui vaut $\dfrac19$. \\
+               Or, $\dfrac13\times\dfrac19 =\dfrac{1}{27}$ donc {\blue $L_3 =\dfrac{1}{27}$}. \\ [1mm]
+            \item À chaque étape, la longueur du côté est multipliée par $\dfrac13$ donc, {\blue $L_n =\left(\dfrac13\right)^n =\dfrac{1}{3^n}$}. \smallskip
+         \end{enumerate}
+      \setcounter{enumi}{2}
+      \item
+         \begin{enumerate}
+            \item On obtient les valeurs de $P_n$ en multipliant le nombre de côtés à la longueur d'un côté, donc : \\
+               $P_1 =12\times L_1 =12\times\dfrac13 ={\blue 4}$. \\ [1mm]
+               $P_2 =48\times L_2 =48\times\dfrac19 =\dfrac{48}{9} ={\blue \dfrac{16}{3}}$. \\ [1mm]
+               $P_3 =192\times L_3 =192\times\dfrac{1}{27} =\dfrac{192}{27} ={\blue \dfrac{64}{9}}$. \\ [1mm]
+            \item On a $P_n =3\times4^n\times\dfrac{1}{3^n} ={\blue \dfrac{4^n}{3^{n-1}}}$. \smallskip
+         \end{enumerate}
+      \setcounter{enumi}{3}
+      \item On cherche s'il existe un entier $n$ tel que $p_n>100\,000 =1\times10^5$ (il faut convertir \ukm{1} en \ucm{}). \\
+         Il suffit de chercher, à l'aide d'une calculatrice, une telle valeur sachant que les valeurs de $P_n$ sont croissantes.
+         \begin{itemize}
+            \item Pour $n =10$, on a $P_{10} =\dfrac{4^{10}}{3^9} \approx53,3$. \smallskip
+            \item Pour $n =100$, on a $P_{100} =\dfrac{4^{100}}{3^{99}} \approx9,3\times10^{12}$. \smallskip
+         \end{itemize}
+         $n =100$ convient, on peut aussi trouver la valeur minimale convenant. \\
+         $P_{36} \approx94\,388$ et $P_{37} \approx 125\,850$, donc, {\blue tout nombre $n$ supérieur ou égal à 37 convient}.
+   \end{enumerate}

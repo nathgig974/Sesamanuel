@@ -1,0 +1,53 @@
+\ \\ [-5mm]
+\begin{enumerate}
+      \item
+      \begin{itemize}
+         \item Pour construire un angle de 60\degre, il suffit de construire un triangle équilatéral ;
+         \item  pour construire un angle de 45\degre, on peut construire un angle droit grâce à une perpendiculaire, puis construire sa bissectrice. \\ [8mm]
+      \end{itemize}
+      {\psset{algebraic=true,unit=1.1}
+      \begin{pspicture*}(-5,-1)(7,6)
+         \pspolygon[linecolor=gray](0,0)(6,0)(3,5.2)
+         \psline[linecolor=gray](6,-1)(6,6)
+         \psplot[linecolor=gray]{-1}{7}{(-4.24--0.71*x)/-0.71}
+         \psline[linecolor=B2](2.2,-1)(2.2,6)
+         \pscircle(3,0){3}
+         \psplot[linecolor=A1]{-1}{7}{--x}
+         \psplot[linecolor=A1]{-1}{7}{(--16-2.6*x)/4.5}
+         \psline[linecolor=G1](3,-0.5)(3,5.7)
+         \pspolygon[linecolor=B2](0,0)(6,0)(2.2,3.8)
+         \rput(-0.3,0){A}
+         \rput[bl](6.1,0.2){B}
+         \rput[bl](2.3,4){C}
+         \rput[bl](0.6,0.2){\textcolor{B2}{60\degre}}
+         \rput[bl](4.6,0.2){\textcolor{B2}{45\degre}}
+        \rput[bl](2.28,-0.3){H}
+         \rput[bl](3.08,-0.3){I}
+         \rput[bl](1.5,2.8){L}
+         \rput[bl](3.08,3.12){K}
+         \rput[bl](2.28,2.32){O}
+      \end{pspicture*}}
+      \item
+      \begin{itemize}
+         \item I est le centre du cercle de diamètre [AB], il est donc situé au milieu de [AB], à égale distance de A et de B ;
+         \item K est situé sur le cercle de diamètre [AB], le triangle ABK est inscrit dans un cercle ayant pour diamètre un de ses côtés, c'est donc un triangle rectangle en K. \\
+         Dans ce triangle, sachant que la somme des angles mesure 180\degre, que $\widehat{\text{ABK}}=45$\degre et $\widehat{\text{BKA}}=90$\degre, alors $\widehat{\text{KAB}}=180^\circ-90^\circ-45^\circ =45^\circ$. \\
+         Le triangle ABK est donc rectangle et isocèle en K puisqu'il possède deux angles de même mesure.
+      \end{itemize}
+      On a alors KA = KB, et IA = IB, donc, \bm{la droite (KI) est la médiatrice du segment [AB].}
+      \item
+      \begin{itemize}
+          \item Le triangle ABK étant rectangle en K, la droite (AK) est perpendiculaire à la droite (BC). \\
+          (AK) est donc la hauteur issue de A du triangle ABC ;
+          \item le triangle ABL étant rectangle en L (il est inscrit dans le cercle de diamètre [AB]), la droite (BL) est perpendiculaire à la droite (AC). (BL) est donc la hauteur issue de B du triangle ABC ;
+          \item ces deux hauteurs se coupent en l'orthocentre noté O. La troisième hauteur du triangle ABC est la droite (CH), qui passe donc elle aussi par O.
+      \end{itemize}
+      D'où : \bm{les points C, O, H sont alignés.}
+      \item
+      \begin{itemize}
+         \item (KI) est la médiatrice du segment [AB], donc, (KI) est perpendiculaire à (AB) ;
+         \item (CH) est une hauteur du triangle ABC, donc, (CH) est perpendiculaire à (AB) ;
+      \end{itemize}
+      or, deux droites perpendiculaires à une même droite sont parallèles entre elles, donc, les droites (CH) et (KI) sont parallèles. D'après la question 2, O est un point de la droite (CH), d'où  (CO) et (KI) sont parallèles, d'où : \\
+      \bm{le quadrilatère IKCO est un trapèze.}
+   \end{enumerate}

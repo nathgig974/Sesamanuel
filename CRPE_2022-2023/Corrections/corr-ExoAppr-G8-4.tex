@@ -1,0 +1,21 @@
+\ \\ [-5mm]
+\begin{enumerate}
+   \item Soit $n$ le nombre de bonbons recherché. On a déjà $0<n<100$, mais on peut considérer qu'elle a au moins 6 bonbons de sorte à pouvoir faire au moins un paquet de 2, 3, 4, 5 et 6 bonbons, soit $6\leq n<100$.
+   \begin{itemize}
+      \item Si elle les regroupe par 2, il en reste 1, donc, $n$ peut s'écrire sous la forme $n =2k+1$ avec $k$ un nombre entier positif, ou encore $n-1 =2k$ ce qui signifie que $n-1$ est divisible par 2. \\
+      On procède de la même manière pour chaque regroupement.
+      \item Si elle les regroupe par 3, il en reste 1, donc : $n-1$ est divisible par 3.
+      \item Si elle les regroupe par 4, il en reste 1, donc : $n-1$ est divisible par 4.
+      \item Si elle les regroupe par 5, il en reste 1, donc : $n-1$ est divisible par 5.
+      \item Si elle les regroupe par 6, il en reste 1, donc : $n-1$ est divisible par 6.
+   \end{itemize}
+   Donc, $n-1$ est divisible par 2, 3, 4, 5 et 6, donc par le PPCM de ces nombres. \\
+   Or, $2 =2^1, 3 =3^1, 4 =2^2, 5 =5^1$ et $6 =2^1\times3^1$ donc, PPCM$(2,3,4,5,6) =2^2\times3^1\times5^1 =4\times3\times5 =60$. \\
+   Le seul nombre entier compris entre 6 et 99 qui soit divisible par 60 est 60.  \\
+   On a donc $n-1 =60$, soit $n =61$. \bm{Emma possède 61 bonbons.}
+   \item
+   \begin{enumerate}
+      \item Les formules \Cell{\texttt{=MOD(A2;2)}} et \Cell{\texttt{=MOD(A2;B\$1)}} conviennent toutes les deux.
+      \item Jules peut agrandir ce tableau vers le bas en cherchant une ligne pour laquelle tous les restes sont égaux à 1. Il obtiendra ce résultat en ligne 62 quand le nombre écrit dans la colonne A sera égal à 61.
+   \end{enumerate}
+\end{enumerate}

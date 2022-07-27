@@ -1,0 +1,31 @@
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item Le prisme ADD'C'CB est composé de :
+      \begin{itemize}
+         \item {\blue 2 triangles isométriques BCC' et ADD' rectangles respectivement en C et D} ;
+         \item {\blue 3 rectangles ABCD, DCC'D' et ABC'D'}.
+      \end{itemize}
+      \item On a par exemple, dans le triangle BCC' rectangle en C : CB = \ucm{3} et CC' = \ucm{4}, donc le troisième côté BC' mesure \ucm{5} car (3, 4, 5) est un triplet pythagoricien. \\
+      {\psset{unit=0.55}
+         \begin{pspicture}(-1,-4)(13,4.5)
+            \pstGeonode[CurveType=polygon,PosAngle={135,135,-135,-135}](0,1){D}(3,1){A}(3,-1){B}(0,-1){C}
+            \pstGeonode[CurveType=polygon,PointName={D',D,C,C'},PosAngle={45,45,-45,-45}](8,1){E}(12,1){F}(12,-1){G}(8,-1){H}
+            \pstGeonode[PointName={D,C},PosAngle={90,-90}](4.8,3.4){I}(4.8,-3.4){J}
+            \pspolygon(A)(E)(I)
+            \pstRightAngle{A}{I}{E}
+            \pspolygon(B)(H)(J)
+            \pstRightAngle{B}{J}{H}
+            \psframe[fillstyle=solid,fillcolor=lightgray](3,-1)(8,1)
+         \end{pspicture}
+         \begin{pspicture}(2,-4)(15,4.5)
+            \pstGeonode[CurveType=polygon,PosAngle={135,-135,-45,45}](3,1){A}(3,-1){B}(8,-1){C'}(8,1){D'}
+            \pstGeonode[CurveType=polygon,PointName={D,A,B,C},PosAngle={90,45,-45,-90}](12,1){E}(15,1){F}(15,-1){G}(12,-1){H}
+            \pstGeonode[PointName={D,C},PosAngle={90,-90}](4.8,3.4){I}(4.8,-3.4){J}
+            \psline(E)(D')(I)(A)
+            \pstRightAngle{A}{I}{D'}
+            \psline(H)(C')(J)(B)
+            \pstRightAngle{B}{J}{C'}
+            \psframe[fillstyle=solid,fillcolor=lightgray](3,-1)(8,1)
+         \end{pspicture}
+      }
+   \end{enumerate}

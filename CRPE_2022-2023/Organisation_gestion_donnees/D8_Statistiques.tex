@@ -1,0 +1,1023 @@
+\chapter{Statistiques} \label{D8}
+
+\bigskip
+
+\begin{figure}[h]
+   \centering
+      \includegraphics[height=6cm]{Organisation_gestion_donnees/Images/D8_intro_statistiques}
+\end{figure}
+
+\begin{prerequis}[Un peu d'histoire]
+La science statistique semble exister dès la naissance des premières structures sociales. D'ailleurs, les premiers textes écrits retrouvés étaient des recensements du bétail, des informations sur son cours et des contrats divers. \\
+   On attribue souvent l'introduction du terme \og statistique \fg{} au professeur {\bf Achenwall}, qui aurait, en 1746, créé le mot Statistik, dérivé de la notion Staatskunde. \\
+   En revanche, l'étymologie du mot nous donne la définition suivante : \og étude méthodique par des procédés numériques des faits sociaux qui définissent un état. \fg. Le nom désigne ensuite (1862) l'objet des statistiques: \og ensemble de données numériques concernant une même catégorie de faits \fg. \\
+   Aujourd'hui, les plus gros consommateurs de statistiques sont les assureurs (risques d'accidents, de maladie des assurés), les médecins (épidémiologie), les démographes (populations et leur dynamique), les économistes (emploi, conjoncture économique), les météorologues\dots
+\end{prerequis}
+
+
+\cours %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Définitions et vocabulaire des statistiques} %%% 1
+
+
+\begin{vocabulaire}
+   la \textbf{population} est l'ensemble des individus sur lesquels porte l'étude statistique. Par exemple : une classe de CE2, les hommes, les habitants d'Occitanie\dots \\
+   Le \textbf{caractère} ou \textbf{variable} d'une série statistique est une propriété étudiée sur chaque individu :
+   \begin{itemize}
+      \item lorsque le caractère ne prend que des valeurs ou \textbf{modalités} numériques, il est \textbf{quantitatif} :
+         \begin{itemize}
+             \item[--] \textbf{discret} s'il ne peut prendre que des valeurs isolées (notes, âge\dots) ;
+             \item[--] \textbf{continu} dans le cas contraire (poids, taille\dots ). Dans ce cas on effectue un regroupement des valeurs par \textbf{classes} ;
+          \end{itemize}
+     \item sinon, on dit qu'il est \textbf{qualitatif} (couleur des yeux, sport pratiqué\dots ) : les modalités ne sont pas des nombres.
+   \end{itemize}
+   À chaque valeur (classe) est associée un \textbf{effectif} $n$: c'est le nombre  d'individus associés à cette valeur. \\
+   Faire des \textbf{statistiques}, c'est recueillir, organiser, synthétiser, représenter et exploiter des données dans un but de comparer, de prévoir, de constater\dots
+\end{vocabulaire}
+
+\begin{definition}[Fréquence]
+   On considère une série statistique à caractère quantitatif, dont les $p$ valeurs sont données par : $x_1$, $x_2$, \dots, $x_p$ d'effectifs associés $n_1$, $n_2$, \dots, $n_p$ avec $n_1+n_2+...+n_p=N$. \\
+   Pour chaque valeur on peut calculer une \textbf{fréquence} $f_i$ grâce à la formule $\dfrac{n_i}{N}$.
+\end{definition}
+
+\medskip
+
+L'ensemble des fréquences de toutes les valeurs du caractère s'appelle la distribution des fréquences.
+ 
+\begin{exemple*1}
+   Voici les notes sur 20 obtenues à une évaluation dans une classe de $30$ élèves : \\
+   {\bf Série A} - $2-3-3-4-5-6-6-7-7-7-8-8-8-8-8-9-9-9-9-9-9-10-10-11-11-11-13-13-15-16$. \\
+   On obtient le tableau suivant avec des fréquences en pourcentages : \\ [1mm]
+   {\hautab{1.2}
+   \begin{lctableau}{1.15\linewidth}{20}
+      \hline       
+      {\scriptsize Notes} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 \\
+      \hline
+      {\scriptsize Eff.} & 0 & 1 & 2 & 1 & 1 & 2 & 3 & 5 & 6 & 2 & 3 & 0 & 2 & 0 & 1 & 1 & 0 & 0 & 0 \\ 
+      \hline
+      {\scriptsize Fréq.} & 0 & 3 & 7 & 3 & 3 & 7 & 10 & 17 & 20 & 7 & 10 & 0 & 7 & 0 & 3 & 3 & 0 & 0 & 0 \\ 
+      \hline
+   \end{lctableau}} \ \\ [-7mm]
+\end{exemple*1}
+
+\begin{remarque}
+   une fréquence est un nombres compris entre 0 et 1, ou entre 0\,\% et 100\,\% lorsqu'il est exprimé en pourcentage. \\
+   On peut vérifier que la somme des fréquences est égale à 1 ou à 100\,\%. 
+\end{remarque}
+
+\smallskip
+
+   On peut également faire un regroupement par classes, ce qui rend l'étude moins précise, mais ce qui permet d'avoir une vision plus globale.
+
+\begin{exemple*1}
+   Pour la \textbf{série A}, on peut regrouper les données par classes d'amplitude $5$ points : \\ [1mm]
+   {\hautab{1.2}
+   \begin{lctableau}{\linewidth}{5}
+      \hline       
+      {\small Notes} & $[~0~;~5~[$ & $[~5~;~10~[$ & $[~10~;~15~[$ & $[~15~;~20~[$ \\
+      \hline
+      {\small Effectif} & 4 & 17 & 7 & 2 \\
+      \hline
+      {\small Fréquence} & 0,13 & 0,57 & 0,23 & 0,07 \\
+      \hline
+   \end{lctableau}} \ \\ [-7mm]
+\end{exemple*1}
+
+
+\section{Indicateurs de position} %%% 2
+
+%\subsection{Le mode et la classe modale} %%%
+%
+%\begin{definition}[Mode]
+%   Le \textbf{mode} d'une série statistique est la valeur du caractère qui a le plus grand effectif. \\
+%   Si le caractère est un caractère quantitatif continu, on regroupe ses valeurs par classes. \\
+%   La classe qui a le plus grand effectif est appelée \textbf{classe modale}.
+%\end{definition}
+%
+%\begin{remarque}
+%   Il peut y avoir plusieurs modes et plusieurs classes modales.
+%\end{remarque}
+%
+%\begin{exemple*1}
+%   \begin{itemize}
+%     \item Dans la \textbf{série A}, le mode est égal à 9 (effectif 6) ;
+%     \item si on regroupe par classes d'amplitude $5$ points, la classe modale est [\,5\,;\,10\,[ (effectif 17).
+%   \end{itemize}
+%\end{exemple*1}
+
+\subsection{Moyenne arithmétique} % A
+
+\begin{definition}[Moyenne]
+   Soit la série statistique à caractère quantitatif dont les $p$ valeurs sont données par $x_1, x_2, \dots, x_p$ d'effectifs $n_1, n_2, \dots, n_p$ avec $n_1+n_2+...+n_p =N$. \\
+   La \textbf{moyenne arithmétique pondérée} de cette série est le nombre :
+   $$\overline{x}=\frac{n_1x_1+n_2x_2+...+n_px_p}{n_1+n_2+...+n_p}=\dfrac{1}{N}\sum_{i=1}^{p}{n_ix_i}.$$
+\end{definition}
+
+\medskip
+
+Par la suite, on utilisera le terme {\bf moyenne} pour désigner la moyenne arithmétique.
+
+\begin{remarque}
+   \begin{itemize}
+      \item Dans le cas où tous les $n_i$ valent 1,  la moyenne de la série statistique est le quotient de la somme de toutes les valeurs par l'effectif total : $\overline{x}=\dfrac{x_1+x_2+...+x_n}{n}$. \smallskip
+      \item Lorsque la série est regroupée en classes, on calcule la moyenne en prenant pour valeur $x_i$ le centre de chaque classe obtenu en faisant la moyenne des deux extrémités de la classe.
+   \end{itemize}
+\end{remarque}
+
+\smallskip
+
+\begin{exemple*1}
+   Pour la {\bf série A}, on obtient :
+   \smallskip
+   \begin{itemize}
+     \item une moyenne $\overline{m} =\dfrac{1\times2+2\times3+\dots+1\times16}{30} =\dfrac{254}{30} \approx 8,47$ ; 
+     \medskip
+     \item si on regroupe par classes d'amplitude $5$ points, une estimation de la moyenne est : \\ [1mm]
+       $\overline{m} =\dfrac{4\times2,5+17\times7,5+7\times12,5+2\times17,5}{30} =\dfrac{260}{30}\approx 8,67$. \\ [-8mm]
+   \end{itemize}
+\end{exemple*1}
+
+   \medskip
+   
+   La calculatrice permet de déterminer les éléments statistiques en allant dans le mode statistiques.
+
+\begin{propriete}[Somme et multiplication]
+   \begin{itemize}
+      \item Si on ajoute (respectivement soustrait) un même nombre $k$ à toutes les valeurs d'une série, alors la moyenne de cette série se trouve augmentée (respectivement diminuée) de $k$.
+      \item Si on multiplie (respectivement divise) par un même nombre (non nul pour la division) $k$ toutes les valeurs d'une série, alors la moyenne de cette série se trouve multipliée (respectivement divisée) par $k$. \\ [-7mm]
+   \end{itemize}
+\end{propriete}
+
+\smallskip
+
+\begin{exemple*1}
+   On considère la \textbf{série A} :
+   \begin{itemize}
+      \item si on ajoute $1,5$ points à chaque note de l'évaluation, la moyenne de classe devient: \\
+         $\overline{m}=8,47+1,5=9,97$. \smallskip
+      \item si on augmente chaque note de $10\,\%$, cela revient à multiplier chaque note par $1,1$ : \\
+         $\overline{m}=8,47\times1,1=9,32$. \\ [-8mm]
+   \end{itemize}
+\end{exemple*1}
+
+\subsection{Médiane} %%%
+
+\begin{definition}[Médiane]
+   On considère la série statistique ordonnée dont les $n$ valeurs sont $x_1\leqslant x_2  \leqslant \dots \leqslant x_n$. \\
+   La \textbf{médiane} est un nombre $M$ qui permet de diviser cette série en deux sous-groupes de même effectif.
+   \begin{itemize}
+      \item Si $n$ est \textbf{impair}, $M$ est la valeur de cette série dont le rang est $\dfrac{n+1}{2}$, notée $x_{\frac{n+1}{2}}$.
+      \smallskip
+      \item Si $n$ est \textbf{pair}, $M$ appartient à l'intervalle fermé formé par les deux nombres situés \og au milieu \fg{} de la série, à savoir $x_{\frac{n}{2}}$ et $x_{\frac{n}{2}+1}$.
+   \end{itemize}
+\end{definition}
+
+\begin{exemple*1}
+   \begin{itemize}
+      \item La médiane de la série \og $2-5-6-\textcolor{A1}{8}-9-9-10$ \fg{} est $8$.
+      \item La médiane de la série \og $2-5-\textcolor{A1}{6}-\textcolor{A1}{8}-9-9$ \fg{} est n'importe quel nombre situé entre 6 et 8 inclus. On chosit souvent le centre de l'intervalle, à savoir 7, mais il est tout à fait possible de choisir 6 ou 6,5\dots \\ [-8mm]
+   \end{itemize}
+\end{exemple*1}
+
+\begin{remarque}
+   lorsque l'on a une grande série statistique et que l'on souhaite déterminer la médiane, on peut faire le tableau des effectifs cumulés croissants ({\small ECC}).
+\end{remarque}
+
+\smallskip
+
+\begin{exemple*1}
+    Pour la \textbf{série A}, d'effectif 30, la médiane est un nombre situé entre la \textcolor{A1}{15\up{ième}} et la \textcolor{A1}{16\up{ième}} valeur qui sont \textcolor{A1}{8} et \textcolor{A1}{9}, on peut prendre par exemple $M=8,5$. \\ [2mm]
+   {\hautab{1.5}
+   \small
+   \begin{lctableau}{1.15\linewidth}{20}
+      \hline       
+      {\scriptsize Notes} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 \\
+      \hline
+      {\scriptsize Eff.} & 0 & 1 & 2 & 1 & 1 & 2 & 3 & 5 & 6 & 2 & 3 & 0 & 2 & 0 & 1 & 1 & 0 & 0 & 0 \\ 
+      \hline
+      {\scriptsize ECC} & 0 & 1 & 3 & 4 & 5 & 7 & 10 & 15 & 21 & 23 & 26 & 26 & 28 & 28 & 29 & 30 & 30 & 30 & 30 \\ 
+      \hline
+   \end{lctableau}}
+   \begin{pspicture}(-3.3,0)(5,1)      
+      {\small la 15\up{e} valeur est 8 \psline{->}(0,0.3)(1.1,1.1) \psline{<-}(2,1.1)(3,0.3) \hspace*{3cm} la 16\up{e} valeur est 9}
+   \end{pspicture}
+\end{exemple*1}
+
+
+%\subsection{Quartiles} %%%
+%
+%\begin{definition}[Quartiles]
+%   On appelle \textbf{quartiles} un triplet de réels $(Q_1;Q_2;Q_3)$ qui sépare la série en quatre groupes de même effectif. Le \textbf{premier} [respectivement le \textbf{troisième}] quartile est la plus petite valeur de la série telle que au moins 25\,\% [respectivement 75\,\%] des valeurs de la série lui soient inférieures ou égales. $Q_2$ correspond à la médiane de la série.
+%\end{definition}
+%
+%\begin{exemple*1}
+%   Pour la \textbf{série A}, $30\times0,25 =7,5$ et $30\times0,75 =22,5$ donc :
+%   \begin{itemize}
+%      \item $Q_1$ correspond à la \textcolor{A1}{8\up{ième}} valeur : $Q_1=7$ ;
+%      \item $Q_2 =M =8,5$ ;
+%      \item $Q_3$ correspond à la \textcolor{A1}{23\up{ième}} valeur : $Q_3=10$.
+%   \end{itemize}  
+%\end{exemple*1}
+%
+%\begin{remarque} 
+%   Pour $Q_1$, on a $30\times0,25 =7,5$, mais si on avait choisi la 7\up{ième} valeur, le quota des $25\,\%$ n'aurait pas été atteint. Dans le cas d'une valeur décimale non entière, on prend systématiquement le nombre entier suivant.
+%\end{remarque}
+%
+%\bigskip
+%
+%On peut représenter ces données grâce à une \og boîte à moustaches \fg{}, ou \textbf{diagramme de Tuckey} (de son inventeur {\it John Tukey}, en 1977). Pour cela, il nous faut les valeurs suivantes : le minimum et le maximum ; les trois quartiles. \\
+%
+%{\psset{xunit=0.8cm,yunit=1.3}
+%\begin{pspicture}(-0.5,-0.25)(20,2)
+%   \psframe[linewidth=1.5pt](7,0.8)(10,1.6)
+%   \psline[linewidth=1.5pt]{-}(8.5,0.8)(8.5,1.6)
+%   \psline[linewidth=1.5pt]{-}(2,1.2)(7,1.2)
+%   \psline[linewidth=1.5pt]{-}(10,1.2)(16,1.2)
+%   \psline[linewidth=1.5pt]{-}(2,1.05)(2,1.35)
+%   \psline[linewidth=1.5pt]{-}(16,1.05)(16,1.35)
+%   \psaxes [labelFontSize=\scriptstyle]{->}(0,0.4)(20.4,0.4)
+%   \rput(2,2){\small{min}}
+%   \rput(7,2){\small{$Q_1$}}
+%   \rput(8.5,2){\small{$M$}}
+%   \rput(10,2){\small{$Q_3$}}
+%   \rput(16,2){\small{Max}}
+%\end{pspicture}}
+%
+%La boîte à moustaches résume quelques caractéristiques de position du caractère étudié et est utilisé principalement pour comparer un même caractère dans deux ou plusieurs populations de tailles différentes.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Indicateur de dispersion}
+
+\begin{definition}[Étendue]
+   On appelle \textbf{étendue} d'une série discrète le réel égal à la différence entre la plus grande valeur et la plus petite valeur de la série.
+\end{definition}
+
+\bigskip
+
+Son principal mérite est d'exister, et de fournir une information sur la dispersion.
+
+\begin{exemple*1}
+   L'étendue de la \textbf{série A} est de $E=16-2=14$.
+\end{exemple*1}
+
+
+%\begin{definition}[Intervalle et écart inter-quartile]
+%   On appelle \textbf{intervalle inter-quartiles} l'intervalle $[~Q_1~;~Q_3~]$. \\
+%   L'amplitude de cet intervalle est appelée \textbf{écart inter-quartiles}.
+%\end{definition}
+%
+%\begin{exemple*1}
+%   Dans la \textbf{série A}, l'intervalle inter-quartiles est $[~7~;~10~]$ dont l'écart vaut $10-7=3$.
+%\end{exemple*1}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Groupement 3 - Exercice 2 - Question 1 : statistiques]
+   \ \\ [-16mm]
+   \begin{QCM}
+      Célia s’entraîne à courir tous les jours de la semaine sur le même parcours. \\
+      Elle aimerait comparer ses résultats d’entraînement sur une semaine à ceux de sa sœur qui s’entraîne également sur le même parcours.
+      \begin{center}
+         \fbox{\begin{minipage}{7cm}
+            Résultats obtenus par Célia cette semaine : \\ [5mm]
+            Lundi : 33 min et 12 secondes \\
+            Mardi : 32 min et 4 secondes \\
+            Mercredi : 40 min et 25 secondes \\
+            Jeudi : 27 min et 11 secondes \\
+            Vendredi : 30 min \\
+            Samedi : 26 min et 38 secondes \\
+            Dimanche : 29 min et 1 seconde \\
+         \end{minipage}}
+         \quad
+         \fbox{\begin{minipage}{7cm}
+            Résultats obtenus par sa sœur cette semaine : \\ [5mm]
+            Moyenne : 31 min et 13 secondes \\
+            Médiane : 30 min \\
+            Étendue : 3 min \\ [2cm]
+         \end{minipage}}
+      \end{center}
+      \begin{enumerate}
+         \item Comparer les durées moyennes de course.
+         \item Comparer les durées médianes de course.
+         \item Avec les informations ci-dessus, Célia affirme \og Je suis la seule de nous deux à avoir réussi à effectuer ce parcours en moins de 28 minutes cette semaine \fg. Cette affirmation est-elle vraie ?   
+         \item Avec les informations ci-dessus, sa sœur lui répond \og Moi, j’ai été la plus régulière de nous deux sur la semaine \fg. Expliquer ce commentaire.    
+      \end{enumerate}
+   \end{QCM}
+   
+   \bigskip
+   
+   \textcolor{G1}{
+   {\bf Exemple de corrigé.} \smallskip
+      \begin{enumerate}
+         \item Pour Célia, on additionne tous les résultats, puis on divise par 7. \\
+            On peut commencer par additionner les minutes : $33+32+40+27+30+26+29 =217$ ; \\
+            puis, on fait de même avec les secondes : $12+4+25+11+38+1 =91$. \\
+            Au total, cela fait $217\times60\text{ s}+91\text{ s} =13\,111\text{ s}$. \\ [1mm]
+            $\overline{m}_{\text{Célia}} =\dfrac{13\,111\text{ s}}{7} =1\,873\text{ s} =31\times60\text{ s}+13\text{ s} =31\text{ min et } 13\text{ s}$. \\ [1mm]
+            \uline{Célia et sa soeur ont eu la même durée moyenne de course cette semaine}.
+         \item Pour déterminer la durée médiane de Célia, il suffit de classer les durées dans l'ordre croissant (par exemple), puis de prendre la valeur centrale, c'est-à-dire la 4\up{e}. \\
+            On obtient 30 min. \\
+            \uline{Célia et sa soeur ont eu la même durée médiane de course cette semaine}.
+         \item La moyenne de la s\oe ur est de 31 min 13 s. L'étendue étant de 3 min, la valeur minimal est nécessairement supérieure à 28 min 13 s. \\
+            \uline{Célia a raison, c'est la seule à avoir fait le parcours en moins de 28 minutes}.
+         \item L'étendue des résultats de Célia est égale à 40 min 25 s $-$ 26 min 38 s $=$ 13 min 47 s, alors que celle de sa s\oe ur est de 3 min. \\
+            \uline{C'est certainement pour cette raison que la s\oe ur de Célia dit avoir été plus régulière}.
+      \end{enumerate}}
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{center}
+   {\cursive Maîtriser les bases avec} \href{http://mathenpoche.sesamath.net}{\includegraphics[width=3cm]{Nombres_et_calculs/Images/mathenpoche}} \\
+   \bigskip
+   {\hautab{0.85}
+   \cursive
+   \begin{Ltableau}{0.775\linewidth}{4}{C{1}|C{1}|p{7cm}|p{2.3cm}}
+      \hline
+      Classe & \texttt{N\degre} & Thème & Dans le cours \\
+      \hline
+      \textcolor{orange}{\bf 6\up{e}} & \texttt{O2} & Tableaux, diagrammes, graphiques & \\
+      \hline
+      \textcolor{cyan}{\bf 5\up{e}} & \texttt{B2} & Statistiques et probabilités & 1.  et 2 \\
+      \hline
+      \textcolor{violet}{\bf 4\up{e}} & \texttt{B2} & Statistiques et proportionnalité & 1., 2. et 3. \\
+      \hline
+      \textcolor{teal}{\bf 3\up{e}} & \texttt{B2} & Statistiques et probabilités & 2. et 3. \\
+      \hline
+   \end{Ltableau}}
+\end{center}
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2017 G2] %%% 1
+   On considère une série statistique de moyenne égale à 5. On complète la série en ajoutant 5 comme valeur supplémentaire. {\bf Affirmation :} la moyenne de la série ne change pas.
+\end{exercice}
+
+\begin{corrige}
+   Dans une série statistique, ajouter une valeur égale à la moyenne ne change pas la moyenne donc, {\blue l'affirmation est vraie}.
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2015 G2] %%% 2
+   Une petite entreprise emploie 7 personnes, dont 3 femmes. \\
+   Voici quelques informations sur le salaire mensuel des personnels :
+   \begin{itemize}
+      \item Salaires des hommes : 1\,250 \euro ; 1\,400 \euro ; 1\,600 \euro ; 3\,200 \euro.
+      \item Salaires des femmes : salaire médian : 1\,875 \euro ; salaire moyen: 1\,700 \euro ; étendue des salaires : 1\,000 \euro.
+   \end{itemize}
+   Le patron de l'entreprise veut embaucher une femme supplémentaire pour respecter la parité. \\
+   Calculer le salaire qu'il doit verser à cette nouvelle recrue pour que les salaires moyens des hommes et des femmes soient égaux.
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+\begin{itemize}
+   \item $1\,250+1\,400+1\,600+3\,200 =7\,450$. Donc, la somme des salaires des hommes est de 7\,450 \euro.
+   \item $3\times1\,700 =5\,100$. La somme des salaires des femmes est de $5\,100$ \euro.
+   \item Le nombre de femmes sera égal au nombre d'hommes, donc la somme des salaires doit également être la même. Or, $7\,450-5\,100 =2\,350$.
+\end{itemize}
+   {\blue L'entreprise devra donner un salaire de 2\,350 \euro{} à cette femme pour respecter l'équité.} \\
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2021 G1] %%% 3
+   L’entreprise AMP’OUL emploie treize personnes : 8 pour la chaîne de fabrication, 3 pour l’emballage et l’organisation des livraisons (dont les salaires sont identiques), 2 pour la comptabilité et la gestion (dont les salaires sont identiques). Les salaires nets suivants, en euros, ont été reçus par les salariés en février 2020 :
+   \begin{center}
+      {\small
+      \begin{ltableau}{0.8\linewidth}{4}
+         \hline
+         \multicolumn{4}{|c|}{Chaîne de fabrication} \\
+         \hline
+         1\,938,36 & 1\,488,11 & 1\,994,38 & 2\,048,37 \\
+         \hline
+         2\,192,48 & 1\,998,93 & 1\,539,45 & 1\,948,37 \\
+         \hline
+         \hline
+         \cellcolor{FondTableaux}{Emballage et organi- sation des livraisons} & 1\,864,37 & \cellcolor{FondTableaux}{Comptabilité \newline et gestion} & 1\,593,38 \\
+         \hline
+      \end{ltableau}}
+   \end{center}
+   \begin{enumerate}
+      \item Quelle est l’étendue de cette série ?
+      \item Déterminer le salaire médian de cette entreprise.
+      \item Calculer le salaire moyen dans cette entreprise.
+      \item Le coût global d’un salarié en février 2020 est donné par la formule suivante pour cette entreprise : \smallskip
+         \begin{center}
+            \fbox{Coût global d'un salarié $=\dfrac{\text{salaire net}}{0,78}\times1,45$}
+         \end{center} \smallskip
+         Quel est le coût global en euros, pour un salarié de l’emballage et de l’organisation des livraisons ?
+      \item On souhaite augmenter de 3\,\% le salaire net de l’employé gagnant \ueuro{1488,11}.
+         \begin{enumerate}
+            \item Quel est le salaire net de cet employé après augmentation ?
+            \item Calculer le coût global de ce salaire après augmentation.
+           \item De quel pourcentage le coût global a-t-il augmenté ?
+        \end{enumerate}
+  \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item Le salaire minimal est \ueuro{1488,11} et le salaire maximal est \ueuro{2192,48}. Or, $2\,192,48-1\,488,11 =704,37$ donc, {\blue l'étendue de cette série est de \ueuro{704,37}}.
+      \item La série comporte 13 valeurs, le salaire médian est donc le 7\up{e} lorsqu'on les ordonne, par exemple du plus petit au plus grand. On a : $1\,488,11 < 1\,539,45 <1\,593,38 < 1\,593,38 < 1\,864,37 < 1\,864,37 < \fbox{1\,864,37}\dots$ \\
+         {\blue Le salaire médian est \ueuro{1\,864,37}}. \smallskip
+      \item $\dfrac{1\,938,36+1\,488,11+1\,994,38+2\,048,37+2\,192,48+1\,998,93+1\,539,45+1\,948,37+3\times1\,864,37+2\times1\,593,38}{13}$ \\
+         $=\dfrac{23\,928,32}{13} =1\,840,64$. Donc, {\blue Le salaire moyen est de $\ueuro{1840,64}$}.
+      \item Coût global d'un salarié de l'emballage et de l'organisation des livraisons : $\dfrac{\ueuro{1864,37}}{0,78}\times1,45 \approx\ueuro{3465,82}$. \\
+         {\blue Le coût d'un tel salarié pour l'entreprise est de \ueuro{3465,82}}.
+      \item 
+         \begin{enumerate}
+            \item Une augmentation de 3\,\% correspond à un coefficient multiplicateur de $1+\dfrac{3}{100} =1,03$. \\ [1mm]
+               $\ueuro{1488,11}\times1,03 \approx\ueuro{1532,75}$. {\blue Le salaire net après augmentation sera d'environ \ueuro{1532,75}}. \smallskip
+            \item Coût global de ce salarié après augmentation : $\dfrac{\ueuro{1532,75}}{0,78}\times1,45 \approx\ueuro{2849,34}$. \\ [1mm]
+              {\blue Le coût d'un tel salarié après augmentation est de \ueuro{2849,34}}. \smallskip
+           \item Coût global de ce salarié avant augmentation : $\dfrac{\ueuro{1488,11}}{0,78}\times1,45 \approx\ueuro{2766,36}$. \\ [1mm]
+              Pourcentage d'augmentation : $\dfrac{\ueuro{2849,34}-\ueuro{2766,36}}{\ueuro{2766,36}}\times100 \approx 3\,\%$. {\blue Le coût a augmenté d'environ 3\,\%}.
+        \end{enumerate}
+  \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice}[D'après CRPE blanc 2017] %%% 4
+   Le tableau ci-dessous donne la répartition des 800 chefs d'exploitations agricoles d'une région selon leur âge.
+   \begin{center}
+      {\hautab{1.2}
+      \begin{LCtableau}{0.8\linewidth}{7}{c}
+         \hline
+         Tranche d'âge & [ 15 ; 25 [ & [ 25 ; 35 [ & [ 35 ; 45 [ & [ 45 ; 55 [ & [ 55 ; 65 [ & total \\
+         \hline
+         Effectif & 11 & 84 & 148 & 260 & 297 & 800 \\
+         \hline
+      \end{LCtableau}}
+   \end{center}
+   \begin{enumerate}
+      \item Expliquer pourquoi l'âge médian des chefs d'exploitation agricole est nécessairement entre 45 et 55 ans.
+      \item Déterminer l'âge médian, la répartition des âges dans la classe [ 45~;~55 [ étant donnée par le tableau suivant : \\
+         \begin{center}
+            {\hautab{1.2}
+            \begin{LCtableau}{0.7\linewidth}{11}{c}
+               \hline
+               âge & 45 & 46 & 47 & 48 & 49 & 50 & 51 & 52 & 53 & 54 \\ 
+               \hline
+               effectif &18 & 21 & 24 & 31 & 30 & 31 & 30 & 27 & 28 & 20 \\
+               \hline
+            \end{LCtableau}}
+         \end{center}
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item La médiane correspond à un âge compris entre le 400\up{e} et le 401\up{e} âge classés dans l'ordre croissant. \\
+         Il y a 243 chefs de moins de 45 ans ($11+84+148$), donc moins de 400 et 297 de plus de 55 ans, donc moins de 400 également. Par conséquent, {\blue la médiane se situe bien dans l'intervalle [ 45 ; 55 [.}
+      \item Il y a 243 chefs de moins de 45 ans. Il faut donc déterminer la 157\up{e} valeur ($400-243$) et la 158\up{e} valeur ($401-243$) du tableau. \\ \smallskip
+         \qquad
+         \begin{LCtableau}{0.8\linewidth}{11}{c}
+            \hline
+            âge & 45 & 46 & 47 & 48 & 49 & 50 & 51 & 52 & 53 & 54 \\ 
+            \hline
+            effectif & 18 & 21 & 24 & 31 & 30 & 31 & 30 & 27 & 28 & 20 \\
+            \hline
+            e.c.c. & 18 & 39 & 63 & 94 & 124 & 155 & 185 & \dots & & \\
+            \hline
+         \end{LCtableau}
+         \smallskip
+         La 157\up{e} et la 158\up{e} valeur correspondent à un âge de 51 ans  donc, {\blue la médiane est de 51 ans.} \\ [1mm]
+      On pouvait également déterminer la 400\up{e} et la 401\up{e} en considérant le tableau entier et en prenant en compte la répartition plus précise du tableau de la question 2).
+   \end{enumerate}
+  \end{corrige}
+
+\medskip
+
+
+\begin{exercice}[CRPE 2020 G4] %%% 5
+   Un professeur a donné un contrôle commun à trois de ses classes. Avant de rendre les copies à ses élèves, il a fait quelques calculs statistiques à partir de leurs notes.
+   \begin{enumerate}
+      \item Pour la classe A qui compte 24 élèves, il a relevé les informations suivantes : \smallskip
+         \begin{center}
+            {\hautab{1.2}
+            \begin{ltableau}{0.65\linewidth}{4}
+               \hline
+               Note minimale & Médiane & Moyenne & Étendue \\
+               \hline
+               5 & 11 & 12 & 14 \\
+               \hline
+            \end{ltableau}}
+         \end{center}
+         Dire si chacune des affirmations ci-dessous est vraie ou fausse, en justifiant les réponses.
+         \begin{enumerate}
+            \item \og La note maximale est 20. \fg
+            \item \og Si on enlève une copie avec la note maximale et une copie avec la note minimale, la moyenne des notes restantes augmente. \fg
+            \item \og Au moins la moitié des élèves ont une note de 12 ou plus. \fg
+         \end{enumerate}
+      \item La classe B compte 16 filles et 11 garçons. À ce contrôle, la moyenne des filles est de 11,7 et celle des garçons de 10,3. Quelle est la moyenne des notes des élèves de la classe B à ce contrôle ? Arrondir le résultat au dixième.
+      \item La classe C compte 32 élèves. Le professeur a calculé la moyenne des notes des élèves des deux classes A et C. Cette moyenne est de 11,2. Quelle est la moyenne des notes des élèves de la classe C à ce contrôle ?
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item
+         \begin{enumerate}
+            \item La note minimale est 5 et l'étendue est 14 donc, la note maximale est $5+14 =19\neq20$. \\
+               {\blue L'affirmation est fausse}.
+            \item La moyenne entre la note minimale et la note maximale est $\dfrac{5+19}{2} =12$ qui est exactement la moyenne de la classe donc, cette moyenne ne va pas changer. \\
+               {\blue L'affirmation est fausse}.
+            \item La médiane est 11 donc, la moitié des élèves ont une note supérieure ou égale à 11. \\
+               {\blue L'affirmation est fausse}. \medskip
+         \end{enumerate}
+      \setcounter{enumi}{1}
+      \item $m_B =\dfrac{16\times11,7+11\times10,3}{16+11} =\dfrac{300,5}{27} \approx11,13$. \\ [1mm]
+         {\blue La moyenne des notes des élèves de la classe B à ce contrôle est d'environ 11,1}. \smallskip
+      \item Soit $m_C$ la moyenne de la classe C. \\ [1mm]
+         $\dfrac{24\times12+32\times m_C}{24+32} =11,2 \iff \dfrac{288+32m_C}{56} =11,2$ \\ [2mm]
+         \hspace*{3.8cm} $\iff 288+32m_c =11,2\times56 =627,2$ \\ [1mm]
+         \hspace*{3.8cm} $\iff 32m_C =627,2-288 =339,2$ \\ [2mm]
+         \hspace*{3.8cm} $\iff m_C =\dfrac{339,2}{32} =10,6$. \\ [2mm]
+         {\blue La moyenne des notes pour la classe C est de 10,6}.
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2005 Grenoble] %%% 6
+   Voici la liste partielle des notes sur 20 obtenues par Luc et Julie aux six devoirs de mathématiques du premier trimestre :
+   \begin{center}
+      {\hautab{1.2}
+      \begin{LCtableau}{0.7\linewidth}{8}{c}
+         \hline
+         Devoirs & 1 & 2 & 3 & 4 & 5 & 6 & Moy. \\
+         \hline
+         Notes de Luc & 12 & 5 & 18 & 11 & 19 & & \\
+         \hline
+         Notes de Julie & 20 & 15 & 4 & 9 & $x$ & $y$ & 12,5 \\
+         \hline
+      \end{LCtableau}}
+   \end{center}  
+   \begin{enumerate}
+      \item 
+        \begin{enumerate}
+            \item Calculer la moyenne de Luc, si la note obtenue au sixième devoir est égale à la moyenne des cinq premiers.
+            \item Une meilleure note au devoir 6 aurait-elle permis à Luc d'obtenir une moyenne de 15 ?
+         \end{enumerate}
+         \item La note $y$ obtenue par Julie au devoir 6 a augmenté de 25\,\% par rapport à la note $x$ qu'elle a obtenue au devoir 5.
+         \begin{enumerate}
+            \item Exprimer $y$ en fonction de $x$.
+            \item Calculer $x$ et $y$.
+         \end{enumerate}
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item 
+         \begin{enumerate}
+            \item Soit $n$ la note de Luc au devoir 6, elle correspond à la moyenne des cinq premiers, sa moyenne totale ne varie donc pas après ce sixième devoir. \\ [1mm] 
+               $n =\dfrac{12+5+18+11+19}{5} =\dfrac{65}{5} =13$. {\blue La moyenne de Luc est de 13}. \smallskip 
+            \item Soit $n'$ la note de Luc au devoir 6 pour obtenir 15 de moyenne, on a : \\ [1mm]    
+               $\dfrac{12+5+18+11+19+n'}{6} =15 \iff \dfrac{65+n'}{6}=15$ \\ [2mm]
+               \hspace*{4.6cm} $\iff 65+n' =15\times6 =90$ \\ [1mm]
+               \hspace*{4.6cm} $\iff n' =90-65 =25$. \\
+               {\blue Luc ne peut pas avoir 15 de moyenne après le sixième devoir.}
+         \end{enumerate}
+      \setcounter{enumi}{1}
+      \item
+         \begin{enumerate}
+            \item Une augmentation de 25\,\% correspond à un coefficient multiplicateur de $1+\dfrac{25}{100} =1,25$. \\
+               Donc, on a {\blue $y=1,25x$} \medskip
+            \item $\dfrac{20+15+4+9+x+y}{6} =12,5 \iff \dfrac{48+x+1,25x}{6}=12,5$ \\ [2mm]
+               \hspace*{4.95cm} $\iff \dfrac{48+2,25x}{6} =12,5$ \\ [2mm]
+               \hspace*{4.95cm} $\iff 48+2,25x =12,5\times6 =75$ \\ [1mm]
+               \hspace*{4.95cm} $\iff 2,25x =75-48 =27$ \\ [2mm]
+               \hspace*{4.95cm} $ \iff x =\dfrac{27}{2,25} =12$ \\ [1mm]
+               Dans ce cas, $y=1,25\times12 =15$. \\         
+               {\blue Julie a obtenu les notes de 12 au devoir 5 et 15 au devoir 6.}
+         \end{enumerate}
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2017 G2] %%% 7
+   Ce tableau présente la hauteur, en millimètre, des précipitations journalières au cours du mois d’avril 2016, sur l'aéroport Roland Garros de l’île de La Réunion.
+   \begin{center}
+      {\hautab{1.4}
+      \begin{LCtableau}{0.8\linewidth}{11}{c}
+         \hline
+         Hauteur des précipitations (mm) & 0 & 0,3 & 1,3 & 1,7  & 2,5 & 7 & 13 & 21 & 28 & 42 \\
+         \hline
+         Nombre de jours & 4 & 6 & 4 & 4 & 3 & 3 & 2 & 1 & 2 & 1 \\
+         \hline
+      \end{LCtableau}}
+   \end{center}
+   \begin{enumerate}
+      \item Calculer la valeur moyenne des précipitations journalières au cours du mois d’avril 2016, arrondie au dixième de millimètre.
+      \item Déterminer la valeur médiane de ces précipitations journalières. Interpréter ce résultat par une phrase.
+      \item Quelle est l’étendue de cette série ?
+      \item Déterminer le nombre de jours où la hauteur des précipitations est supérieure ou égale à 13 mm, puis exprimer ce nombre en pourcentage par rapport au nombre de jours dans le mois.
+      \item Sachant qu’une des pistes de décollage de l’aéroport Roland Garros est rectangulaire et mesure 3 200 m de long et 50 m de large, calculer, en mètre cube, puis en litre, le volume de pluie tombé sur cette piste au cours du mois d’avril 2016.
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item $m =\dfrac{4\times0+6\times0,3+4\times1,3+4\times1,7+3\times2,5+3\times7+2\times13+1\times21+2\times28+1\times42}{4+6+4+4+3+3+1+1+2+1}$ \\ [2mm]
+         $m =\dfrac{187,3}{30} \approx6,2433$. \\ [2mm]
+         {\blue Il a plu en moyenne environ \umm{6,2} au mois d'avril 2016}.
+      \item Il y a 30 valeurs, il faut donc prendre un nombre entre la 15\up{e} valeur (qui est \umm{1,7} et la 16\up{e} valeur (qui est également \umm{1,7} donc, {\blue la médiane vaut \umm{1,7}}. \\
+         La moitié des précipitations journalière sont inférieures ou égales à \umm{1,7} et la moitié des précipitations journalières sont supérieures ou égales à \umm{1,7}.
+      \item $42-0 =42$ donc, {\blue l'étendue vaut \umm{42}}.
+      \item La hauteur des précipitations est supérieure ou égale à \umm{13} {\blue pendant 6 jours}, ce qui correspond à un \\ [1mm]
+         pourcentage de $\dfrac{6}{30}\times100 ={\blue 20\,\%}$. \\ [1mm]
+      \item Il a plu \umm{187,3} d'eau durant le mois d'avril 2016. Ceci sur une surface totale de \um{3200} par \um{50}, soit $\um{3200}\times\um{50} =\umq{160000}$. \\
+         Ce qui donne un volume de $\umq{160000}\times\um{0,1873} =\umc{29968}$. \\
+         Or, pour transformer un volume en capacité, on utilise généralement la correspondance suivante :   \udmc{1} =\ul{1}. \\
+         Soit $\umc{29968} =\udmc{29968000} \approx \ul{30000000}$. \\
+         {\blue Au cours du mois d'avril, il est tombé \udmc{29968} soit près de \ul{30000000} d'eau sur l'aéroport de Rolland Garros}. \\ [5mm]
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice}[Quelle chance !] %%% 4
+   Le digramme en bâtons ci-dessous représente le temps de trajet journalier en minutes de 36 personnes travaillant dans l'entreprise kadubol.
+   \begin{center}
+      {\psset{yunit=0.8}
+      \begin{pspicture}(1,-0.5)(12,8)
+         \multido{\n=0+1}{8}{\psline[linecolor=lightgray](-.1,\n)(12,\n) \rput(-0.4,\n){\small \n}}
+         \psline[linecolor=gray](0,-.1)(0,7.5)
+         \multido{\r =0.5+1,\i =5+5}{12}{\rput(\r,-0.5){\small \i}}
+         \psset{linewidth=5mm,linecolor=gray}
+         \psline(0.5,0)(0.5,1)
+         \psline(1.5,0)(1.5,3)
+         \psline(2.5,0)(2.5,2)
+         \psline(3.5,0)(3.5,2)
+         \psline(4.5,0)(4.5,4)
+         \psline(5.5,0)(5.5,7)
+         \psline(6.5,0)(6.5,5)
+         \psline(7.5,0)(7.5,4)
+         \psline(8.5,0)(8.5,3)
+         \psline(9.5,0)(9.5,2)
+         \psline(11.5,0)(11.5,3)
+         \uput[r](12,-0.3){\it temps en minutes}
+         \rput(1.5,7.9){\it nombre de personnes}
+      \end{pspicture}}
+   \end{center} 
+   \textit{On donnera les résultats numériques à $10^{-1}$ près sauf indication contraire.}   
+   \begin{enumerate}
+      \item 
+         \begin{enumerate}
+            \item Construire le tableau d'effectifs et de fréquences récapitulant toutes ces valeurs.
+            \item Calculer l'étendue de cette
+série.
+            \item Déterminer la moyenne et la médiane.
+         \end{enumerate}
+      \item
+         \begin{enumerate}
+            \item Construire un deuxième tableau en regroupant les effectifs par classes d'amplitude 15 minutes.
+            \item Calculer à nouveau la moyenne en utilisant la répartition par classes. Le résultat obtenu est-il le même que lors du calcul précédent ? Pourquoi ? Est-il plus fiable ?
+         \end{enumerate}
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item
+         \begin{enumerate}
+            \item On obtient le tableau suivant : \\ [1mm]
+               {\hautab{1.5}
+               \begin{LCtableau}{0.9\linewidth}{13}{c}
+                  \hline
+                  Durée en min& 5 & 10 & 15 & 20 & 25 & 30 & 35 & 40 & 45 & 50 & 55 & 60 \\
+                  \hline
+                  Effectif & 1 & 3 & 2 & 2 & 4 & 7 & 5 & 4 & 3 & 2 & 0 & 3 \\
+                  \hline
+                  Fréquence en $\%$ & 2,8 & 8,3 & 5,6 & 5,6 & 11,1 & 19,4 & 13,9 & 11,1 & 8,3 & 5,6 & 0 & 8,3 \\
+                  \hline
+               \end{LCtableau}}
+            \item $60-5 =55$, donc, l'étendue vaut {\blue $e =55$ minutes}. \medskip
+            \item $m =\dfrac{1\times5+3\times10+2\times15+2\times20+4\times25+7\times30+5\times35+4\times40+3\times45+2\times50+3\times60}{1+3+2+2+4+7+5+4+3+2+0+3}$ \\ [1mm]
+               $m =\dfrac{1\,165}{36} \approx32,35$. \\ [2mm]
+               Il y a 36 valeurs dans cette liste, la médiane est donc une valeur située entre la 18\up{e} et la 19\up{e} valeur lorsqu'elles sont ordonnées. Or, ces valeurs valent toutes les deux \umin{30} donc, la médiane est égale à \umin{30}. \\
+               {\blue La moyenne vaut \umin{32,4} et la médiane vaut \umin{30}}.
+         \end{enumerate}   
+   \setcounter{enumi}{1}
+   \item      
+      \begin{enumerate}
+         \item Tableau par classes : \\ [1mm]
+            {\hautab{1.5}
+            \begin{lctableau}{0.9\linewidth}{5}
+               \hline
+               Durée en min & $]\,0\,;\,15\,]$ & $]\,15\,;\,30\,]$ & $]\,30\,;\,45\,]$ & $]\,45\,;\,60\,]$ \\
+               \hline
+               Effectif & 6 & 13 & 12 & 5 \\
+               \hline
+            \end{lctableau}}
+         \item On trouve $\overline{m} =\dfrac{6\times7,5+13\times22,5+12\times37,5+5\times52,5}{36} \approx$ {\blue 29,2 minutes.} \\ [1mm]
+            Ce résultats est assez différent de celui trouvé dans la  question 2)c) car la moyenne est faite à partir de la répartition par classe, on perd donc en précision, puisqu'alors on ne s'occupe plus de la valeur exacte, mais de l'appartenance à un intervalle plus grand.
+         \end{enumerate}
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice}[CRPE 2021 G2] %%% 6
+   La cheffe d’une entreprise a commandé à son gestionnaire une étude sur les salaires de ses employés pour l’année 2020. \\
+   L’entreprise est installée sur deux sites :
+   \begin{itemize}
+      \item le site de Toulouse où travaillent 19 employés ;
+      \item le site de Montauban où travaillent 12 employés.
+   \end{itemize}
+   La répartition des salaires nets des employés du site de Toulouse est représentée par le diagramme en barres ci-dessous, les salaires étant rangés dans l’ordre croissant. \\
+   Une tasse de café est renversée sur le document réalisé par le gestionnaire et une tache vient masquer certaines informations concernant le site de Toulouse. \\
+   \begin{minipage}{10.5cm}
+      {\psset{unit=1.1}
+      \small
+      \begin{pspicture}(-1.5,-1.5)(7,7)
+         \multido{\n=0+1}{6}{\psline[linecolor=lightgray](-0.1,\n)(7,\n) \rput(-0.5,\n){\n}}
+         \psline(0,0)(0,5)
+         \psset{linewidth=5mm,linecolor=gray}
+         \psline(0.5,0)(0.5,2)
+         \rput(0.5,-0.5){1 410}
+         \psline(1.5,0)(1.5,4)
+         \rput(1.5,-0.5){1 590}
+         \psline(2.5,0)(2.5,3)
+         \rput(2.5,-0.5){1 760}
+         \psline(3.5,0)(3.5,2)
+         \rput(3.5,-0.5){1 920}
+         \psline(4.5,0)(4.5,4)
+         \rput(4.5,-0.5){2 100}
+         \psline(5.5,0)(5.5,3)
+         \psline(6.5,0)(6.5,1)
+         \psellipse[fillstyle=solid,fillcolor=darkgray,linecolor=darkgray](5.8,-0.45)(0.5,0.1)
+         \psellipse[fillstyle=solid,fillcolor=darkgray,linecolor=darkgray](6.5,-0.3)(0.6,0.3)
+         \rput(0,5.7){\parbox{1.3cm}{\it nombre de personnes}}
+         \rput(6.5,-1){\small\it salaires nets en \ueuro{}}
+         \rput(4,6){\bf Répartition des salaires à Toulouse}
+         \rput(4,5.5){\bf en 2020}
+      \end{pspicture}}  
+   \end{minipage}
+   \begin{minipage}{5cm}
+      \begin{center}
+         \fbox{\parbox{4.4cm}{
+            {\bf Informations sur les salaires à Montauban en 2020 :} \\ [3mm]
+            Salaire moyen : \ueuro{1520} \\
+            12 employés \\
+            Salaire maximum : \ueuro{2300} \\
+            Salaire minimum : \ueuro{1410} \\
+         }}
+      \end{center}
+   \end{minipage}
+   \begin{enumerate}
+      \item La cheffe d’entreprise affirme que plus de 40\,\% des personnes travaillant à Toulouse gagnent plus de \ueuro{2000}. Est-ce vrai ? Justifier la réponse.
+      \item Sur le site de Toulouse, l’étendue des salaires est égale à \ueuro{1890} et le salaire moyen est de \ueuro{1935}.
+         \begin{enumerate}
+            \item Déterminer la valeur du plus haut salaire de Toulouse.
+            \item Déterminer la valeur des salaires correspondant à l’avant-dernière barre du graphique présentant la répartition des salaires à Toulouse en 2020.
+         \end{enumerate}
+      \item Déterminer le salaire médian des employés de Toulouse.
+      \item Calculer le salaire moyen en 2020 de l’ensemble du personnel de cette entreprise. Arrondir à l’unité.
+      \item En 2021, la cheffe d’entreprise souhaiterait octroyer une augmentation de 10\,\% à tous les employés travaillant à Montauban.
+         \begin{enumerate}
+            \item Quel sera alors le montant du salaire minimum à Montauban en 2021 ?
+            \item De quel pourcentage aurait-il fallu augmenter les salaires de Montauban pour que le salaire moyen soit le même sur les deux sites ? Justifier. On donnera le résultat arrondi au dixième d’unité de pourcentage.
+         \end{enumerate}
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item $4+3+1 =8$ employés gagnent plus de \ueuro{2000} à Toulouse, sur un total de $2+4+3+2+4+3+1 =19$. Ce qui correspond à un pourcentage de $\dfrac{8}{19}\times100 \approx42,11\,\%>40\,\%$. \\ [1mm]
+         {\blue L'affirmation de la cheffe d'entreprise est vraie}.
+      \item
+         \begin{enumerate}
+            \item Le salaire minimal est de \ueuro{1410} et l'étendue de \ueuro{1890} donc, {\blue le salaire maximal vaut} $\ueuro{1410}+\ueuro{1890} ={\blue \ueuro{3300}}$. \\
+            \item Soit $s$ le salaire recherché, en \ueuro{}. On a : \\ [2mm]
+               $\dfrac{2\times\ueuro{1410}+4\times\ueuro{1590}+3\times\ueuro{1760}+2\times\ueuro{1920}+4\times\ueuro{2100}+3\times s+1\times\ueuro{3300}}{19} =\ueuro{1935}$ \\ [1mm]
+               $\iff \dfrac{\ueuro{30000}+3s}{19} =\ueuro{1935}$ \\ [2mm]
+               $\iff \ueuro{30000}+3s =19\times\ueuro{1935} =\ueuro{36765}$ \\ [1mm]
+               $\iff 3s =\ueuro{36765}-\ueuro{30000} =\ueuro{6765}$ \\ [2mm]
+               $\iff s =\dfrac{\ueuro{6765}}{3} =\ueuro{2255}$. Donc, {\blue L'avant-dernière barre correspond à un salaire de \ueuro{2255}}. \medskip
+         \end{enumerate}
+      \setcounter{enumi}{2}
+      \item Il y a 19 employés à Toulouse, donc le salaire médian est le 10\up{e} salaire lorsqu'on les ordonne su plus petit au plus grand, par exemple. Par lecture sur le diagramme en bâtons, le 10\up{e} salaire vaut \ueuro{1920}. \\
+         {\blue Le salaire médian à Toulouse vaut \ueuro{1920}}. \medskip
+      \item $m =\dfrac{19\times\ueuro{1935}+12\times\ueuro{1520}}{19+12} =\dfrac{\ueuro{55005}}{31} \approx\ueuro{1774,35}$. \\ [2mm]
+         {\blue Le salaire moyen de l'entreprise vaut environ \ueuro{1774}}.
+      \item 
+         \begin{enumerate}
+            \item Une augmentation de 10\,\% correspond à un coefficient multiplicateur de $1+\dfrac{10}{100} =1,1$. \\ [1mm]
+               Or, $\ueuro{1410}\times1,1 =\ueuro{1551}$. \\
+               {\blue Le montant du salaire minimum à Montauban en 2021 sera de \ueuro{1551}}.
+            \item On cherche le coefficient multiplicateur $c_m$ qui permet de passe de \ueuro{1520} à \ueuro{1935} : \\ [1mm]
+                $\ueuro{1520}\times c_m =\ueuro{1935} \iff c_m =\dfrac{\ueuro{1935}}{\ueuro{1520}} \approx1,2730$. \\ [2mm]
+                Or, $1,2730 =1+0,2730 =1+\dfrac{27,30}{100}$ donc, {\blue il faudrait augmenter les salaires de Montauban d'environ 27,3\,\%}.
+         \end{enumerate}
+   \end{enumerate}  
+\end{corrige}
+
+\pagebreak
+
+
+\begin{exercice}[CRPE 2016 G2] %%% 7
+   Quatre-vingts archers d'un club de tir à l'arc A ont participé à un championnat. Le nombre de points obtenus par chaque archer du club est donné par le diagramme ci-dessous.
+   \begin{center}
+      {\psset{yunit=0.8}
+      \begin{pspicture}(-1,-1)(11,11.5)
+         \multido{\n=0+1,\i =0+2}{11}{\psline[linecolor=lightgray](-0.1,\n)(11,\n) \rput(-0.5,\n){\small \i}}
+         \multido{\r =0.5+1,\i=0+1}{11}{\rput(\r,-0.7){\small \i}}
+         \psline(0,-0.1)(0,10)
+         \psset{linewidth=5mm,linecolor=gray}
+         \psline(2.5,0)(2.5,2.5)
+         \psline(3.5,0)(3.5,4.5)
+         \psline(5.5,0)(5.5,4)
+         \psline(6.5,0)(6.5,6)
+         \psline(7.5,0)(7.5,7)
+         \psline(8.5,0)(8.5,3)
+         \psline(9.5,0)(9.5,4)
+         \psline(10.5,0)(10.5,9)
+         \rput(0,11){\small\it Nombre d'archers}
+         \rput(9.5,-1.5){\small\it Nombre de points}
+      \end{pspicture}}
+   \end{center}
+   \begin{enumerate}
+      \item Répondre à l'aide du diagramme précédent aux questions suivantes.
+         \begin{enumerate}
+            \item Combien d'archers ont gagné exactement six points lors de ce championnat ?
+            \item Combien d'archers ont gagné trois points ou plus lors de ce championnat ?
+            \item Quel est le score médian des archers du club A ?
+         \end{enumerate}
+      \item Le club de tir à l'arc voisin B a aussi participé à ce championnat. Voici quelques données relatives aux résultats des archers de ce club :
+         \begin{itemize}
+            \item Le score moyen des archers lors du championnat est 7 points.
+            \item Le score moyen des dix meilleurs archers lors du championnat est 9,9 points. \\ [-10mm]
+         \end{itemize}
+         \begin{enumerate}
+            \item Comparer les résultats des deux clubs selon leurs scores moyens.
+            \item Comparer les résultats des deux clubs selon les scores de leurs dix meilleurs archers.
+          \end{enumerate}
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item
+         \begin{enumerate}
+            \item {\blue 12 d'archers} ont gagné exactement six points lors de ce championnat.
+            \item {\blue 75 d'archers} ont gagné trois points ou plus lors de ce championnat.
+            \item L'effectif est de 80, le score médian correspond donc à une valeur comprise entre le 40\up{e} et le 41\up{e} archer, classés par ordre croissant du nombre de points par exemple. \\
+               Or, le 40\up{e} et le 41\up{e} archer ont tous deux marqué 7 points donc, {\blue le score médian est de 7 points.}
+         \end{enumerate}
+      \setcounter{enumi}{1}
+      \item 
+         \begin{enumerate}
+            \item Calculons le score moyen des archers du club A : \\ [1mm]
+               $m =\dfrac{5\times2+9\times3+8\times5+12\times6+14\times7+6\times8+8\times9+18\times10}{80} =\dfrac{547}{80} =6,8375$. \\ [2mm]
+               Or, le score moyen du club B est de 7 points donc, {\blue c'est le club B qui a le score moyen le plus élevé}.
+            \item Les 10 meilleurs archers du club A ont tous marqué 10 points alors que la moyenne des 10 meilleurs archers du club B est de 9,9 points donc, \\
+            {\blue selon les scores de leurs dix meilleurs archers, c'est le club A qui l'emporte}.
+         \end{enumerate}
+   \end{enumerate}
+\end{corrige}
+
+
+%\begin{exercice*}[Famille nombreuse]
+%   J'ai 7 enfants :
+%   \begin{itemize}
+%      \item l'âge modal est 5 ans ;
+%      \item Marie-Capucine a précisément l'âge médian, 7 ans ;
+%      \item les jumeaux ont l'âge moyen, 8 ans.
+%   \end{itemize}
+%   Mais quel âge a donc mon aîné ?
+%\end{exercice*}
+%
+%\begin{corrige}
+%Procédons étape par étape :
+%   \begin{itemize}
+%      \item Marie-Capucine a précisément l'âge médian, 7 ans :       
+%      \begin{tabular}{|*{7}{C{0.4}|}}
+%         \hline
+%         \textcolor{white}{7} & \textcolor{white}{7} & \textcolor{white}{7} & 7 & \textcolor{white}{7} & \textcolor{white}{7} & \textcolor{white}{7} \\
+%         \hline
+%      \end{tabular}
+%      \smallskip
+%      \item Les jumeaux ont 8 ans :    
+%       \begin{tabular}{|*{7}{C{0.4}|}}
+%         \hline
+%         \textcolor{white}{7} & \textcolor{white}{7} & \textcolor{white}{7} & 7 & 8 & 8 & \textcolor{white}{7} \\
+%         \hline
+%      \end{tabular}
+%      \smallskip
+%      \item l'âge modal est 5 ans, c'est l'âge le plus représenté :
+%       \begin{tabular}{|*{7}{C{0.4}|}}
+%         \hline
+%         5 & 5 & 5 & 7 & 8 & 8 & \textcolor{white}{7} \\
+%         \hline
+%      \end{tabular}
+%      \smallskip
+%      \item l'âge moyen est de 8 ans. Soit $a$ l'âge de l'aîné, on a : \\ [1mm]
+%      $\dfrac{5+5+5+7+8+8+a}{7} =8 \iff \dfrac{38+a}{7} =8 \iff 38+a =8\times7 \iff a =56-38 \iff a =18$. \\ [1mm] 
+%    \end{itemize}
+%   {\blue Mon aîné à 18 ans.} \\
+%\end{corrige}
+
+%\begin{exercice*}[CRPE 2014 G1]
+%   Le cross du collège a eu lieu. 200 élèves de troisième ont franchi la ligne d'arrivée. Voici les indicateurs des performances réalisées en minutes.
+%   \begin{center}
+%   \begin{ltableau}{0.8\linewidth}{6}
+%      \hline
+%      Minimum & Premier quartile & Médiane & Troisième quartile & Moyenne & Étendue \\
+%      \hline
+%      12,5 & 14,8 & 15,7 & 16,3 & 15,4 & 4,2 \\
+%      \hline
+%   \end{ltableau}  
+%   \end{center}
+%   Répondre aux questions suivantes en justifiant.
+%   \begin{enumerate}
+%      \item Quelle est la performance en minutes du dernier arrivé ?
+%      \item Quelle est la somme des 200 performances en minutes ?
+%      \item Ariane est arrivée treizième. Donner l'encadrement le plus précis possible de sa performance en minutes.
+%      \item L'affirmation suivante est-elle vraie ? \\
+%         Affirmation : Plus de 50\,\% des élèves ont mis un temps supérieur au temps moyen.
+%   \end{enumerate}
+%\end{exercice*}
+%
+%\begin{corrige}
+%\ \\ [-5mm]
+%\begin{enumerate}
+%   \item Le dernier arrivé a mis 4,2 minutes de plus que le premier arrivé, soit 12,5 min + 4,2 min = 16,7 min. \\
+%   {\blue Le dernier arrivé a mis 16,7 minutes}.
+%   \item La somme des 200 performances en minutes se calcule en multipliant le nombre d'élèves par la moyenne, soit $200\times15,4 =3\,080$. {\blue La somme des 200 performances est de 3\,080 minutes}.
+%   \item Il y a 200 enfants, donc le premier quartile englobe les 50 premiers enfants, d'où {\blue Ariane a mis entre 12,5 minutes et 14,8 minutes}.
+%   \item Le temps moyen est de 15,4 min et la médiane est de 15,7 min donc, au moins la moitié des élèves ont mis plus de 15,7 min, ce qui est plus que la moyenne. {\blue L'affirmation est vraie}.
+%\end{enumerate}
+%\end{corrige}
+
+%\begin{exercice*}[Étude statistique d'un échantillon de notes]
+%   Le tableau suivant résume les résultats obtenus par une classe  lors d'une évaluation.
+%   \begin{center}
+%   \begin{lctableau}{0.9\linewidth}{14}
+%      \hline
+%      {\small Notes} & 3 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 17 & 18 \\
+%      \hline
+%      {\small Eff.} & 1 & 2 & 1 & 3 & 3 & 5 & 6 & 4 & 2 & 1 & 2 & 2 & 1 \\
+%      \hline
+%  \end{lctableau}
+%   \end{center}
+%   \begin{enumerate}
+%      \item Combien y a-t-il d'élèves dans cette classe ? Déterminer l'étendue de la série de notes. 
+%      \item Quel est le pourcentage d'élèves ayant obtenu une note inférieure ou égale à 8 ?
+%      \item Déterminer la moyenne et la médiane de la série de notes.
+%      \item Cette évaluation était le quatrième de la période. Toutes les évaluations ont le même coefficient et jusqu'alors Bastien avait 9 de moyenne ; après ce devoir, il a 9,5 de moyenne. Quelle note a-t-il obtenue à ce devoir ? 
+%   \end{enumerate}
+%\end{exercice*}
+%
+%\begin{corrige}
+%\ \\ [-5mm]
+%\begin{enumerate}
+%      \item $1+2+1+3+3+5+6+4+2+1+2+2+1 =33$. Donc, {\blue il y a 33 élèves dans cette classe.} \\
+%      $18-3 =15$. Donc, {\blue l'étendue est de 15.}
+%      \smallskip
+%      \item $p =\dfrac{1+2+1+3+3}{33}\times100 =\dfrac{10}{33}\times100 \approx30,3$. \\ [1mm]
+%      Donc, le pourcentage d'élèves ayant obtenu une note inférieure ou égale à 8 est d'environ {\blue 30,3\,\%.} \\
+%      \item
+%      \begin{itemize}
+%         \item $\overline{m} =\dfrac{1\times3+2\times5\dots\times2\times17+1\times18}{33} =\dfrac{330}{33} =10$.
+%         \item $33\times0,25 =8,25$ ; le premier quartile correspond à la 9\up{ième} valeur, c'est à dire 8.
+%         \smallskip
+%         \item La médiane correspond à la valeur centrale, c'est-à-dire la 17\up{ième}, c'est 10.
+%         \item $33\times0,75 =24,75$ ; le troisième quartile correspond à la 25\up{ième} valeur, c'est à dire 11.
+%         \smallskip
+%      \end{itemize}
+%      La calculatrice nous donne également {\blue $\overline{m} = 10$ ; $Q_1 =8$ ; Méd $= 10$ ; $Q_3 =11$.} \\
+%      \item Soit $n$ la note obtenue au quatrième devoir, on a  : \\
+%      $\dfrac{3\times9+n}{4} =9,5 \iff 27+n =9,5\times4 \iff n=38-27\iff n=11$. \\ [1mm]
+%     {\blue Bastien a obtenu 11 au dernier devoir.}
+%  \end{enumerate}
+%\end{corrige}

@@ -1,0 +1,80 @@
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item
+         \begin{enumerate}
+            \item On a les deux configurations suivantes selon si les angles droits sont consécutifs ou non : \\
+               \begin{pspicture}(-3,-0.2)(8,3.5)
+                  \pspolygon(0,0)(3,0)(2,2)(0,2)
+                  \psframe(0,0)(0.3,0.3)
+                  \psframe(0,2)(0.3,1.7)
+                  \rput(1.25,1){1}
+                  \pspolygon(4,0)(8,0)(5,3)(4,2)
+                  \psframe(4,0)(4.3,0.3)
+                  \pspolygon(5,3)(5.2,2.8)(5,2.6)(4.8,2.8)
+                  \rput(5.5,1){2}
+               \end{pspicture}
+            \item En ajoutant la deuxième contrainte, on obtient : \\
+               \begin{minipage}{8cm}
+                  \begin{pspicture}(-1,-0.7)(4,3.2)
+                     \pspolygon[linewidth=0.5mm](0,0)(3,0)(1.33,2)(0,2)
+                     \rput(-0.3,-0.3){A}
+                     \rput(3.3,-0.3){B}
+                     \rput(-0.3,2.3){D}
+                     \rput(1.25,2.3){C}
+                     \psframe(0,0)(0.3,0.3)
+                     \psframe(0,2)(0.3,1.7)
+                     \psline(0,2)(3,0)
+                     \psline(0,0)(2,3)
+                     \psline(0,2)(3,2)
+                     \rput{-123}(0.92,1.38){\psframe(0,0)(0.3,0.3)}
+                  \end{pspicture}
+               \end{minipage}
+               \begin{minipage}{8cm}
+                  \begin{pspicture}(-1,-0.8)(4,3)
+                     \pspolygon[linewidth=0.5mm](0,0)(3,0)(1.85,2.77)(0,2)
+                     \rput(-0.3,-0.3){A}
+                     \rput(3.3,-0.3){B}
+                     \rput(-0.3,2.3){D}
+                     \rput(2.2,2.8){C}
+                     \psframe(0,0)(0.3,0.3)
+                     \psline(0,2)(3,0)
+                     \psline(0,0)(2,3)
+                     \rput(0.46,0.69){\bf+}
+                     \rput(1.38,2.08){\bf+}
+                     \rput{-123}(0.92,1.38){\psframe(0,0)(0.3,0.3)}
+                  \end{pspicture}
+               \end{minipage}
+           \item Programmes de construction : \\ [1mm]
+              \begin{minipage}{8cm}
+                  \begin{itemize}
+                     \item Tracer un segment [AB].
+                     \item Tracer un segment [AD] perpendiculaire à (AB).
+                     \item Tracer le segment [BD].
+                     \item Placer le point C à l'intersection de la droite perpendiculaire à (AD) passant par D et de la perpendiculaire à (BD) passant par A.
+                     \item Tracer le quadrilatère ABCD. \\
+                  \end{itemize}
+               \end{minipage}
+               \begin{minipage}{8cm}
+                  \begin{itemize}
+                     \item Tracer un segment [AB].
+                     \item Tracer un segment [AD] perpendiculaire à (AB).
+                     \item Tracer le segment [BD].
+                     \item Placer le point C symétrique du point A par rapport à (BD).
+                    \item Tracer le quadrilatère ABCD. \\ [6mm]
+                  \end{itemize}
+               \end{minipage}
+         \end{enumerate}
+         \setcounter{enumi}{1}
+         \item Compatibilité avec l'étiquette \fbox{Deux côtés parallèles seulement} :
+         \begin{itemize}
+            \item \fbox{Deux angles droits seulement} : oui, tout trapèze rectangle qui n'est pas un rectangle convient. \medskip
+            \item \fbox{Côtés égaux deux à deux} : oui, si ABCD est un rectangle, ABDC est un quadrilatère croisé qui convient. \medskip
+            \item \fbox{Quatre côtés égaux} : non, un quadrilatère à quatre côtés égaux est un losange, dont les côtés opposés sont parallèles deux à deux. \medskip
+            \item \fbox{Diagonales perpendiculaires} : oui, le trapèze rectangle de la configuration 1, question (b) convient. \medskip
+            \item \fbox{Quatre angles droits} : non, un quadrilatère à quatre angles droits est un rectangle, dont les côtés opposés sont parallèles  deux à deux. \medskip
+            \item \fbox{Deux côtés égaux seulement} : oui, un trapèze dont deux côtés consécutifs sont égaux et dont les autres côtés ont des mesures différentes convient. \medskip
+            \item \fbox{Côtés opposés parallèles} : non, implicitement, cela veut dire que les côtés opposés sont parallèles deux à deux. \medskip
+            \item \fbox{Diagonales égales} : oui, un trapèze isocèle non rectangle convient. \medskip
+            \item \fbox{Diagonales se rencontrant en leur milieu} : non, un quadrilatère dont les diagonales se coupent en leur milieu est un parallélogramme, dont les côtés opposés sont parallèles deux à deux.
+         \end{itemize}
+   \end{enumerate}

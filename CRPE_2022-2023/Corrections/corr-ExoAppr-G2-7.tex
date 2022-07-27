@@ -1,0 +1,23 @@
+\ \\ [-5mm]
+\begin{enumerate}
+   \item On a par exemple la figure suivante : \\
+   \begin{minipage}{4cm}
+   {\psset{unit=0.8}
+      \begin{pspicture}(-0.5,0)(5,3.7)
+         \pstGeonode[CurveType=polygon,PosAngle={180,0,45,90,135}](0.5,0.5){A}(3,1){B}(3,3){C}(2,3){D}(0,2){E}
+         \pstLineAB[linecolor=B2]{A}{C}
+         \pstLineAB[linecolor=B2]{A}{D}
+      \end{pspicture}}
+   \end{minipage}
+   \begin{minipage}{11cm}
+   Tout pentagone convexe $ABCDE$ peut être décomposé en trois triangles, par exemple  $BAC$, $CAD$ et $DAE$. Or, la sommes des angles d'un triangle vaut $180$\degre. La somme des angles du pentagone vaut donc $3\times 180^\circ = 540^\circ$. \\
+   L'affirmation est \bm{vraie.}
+   \end{minipage}
+   \item
+   \begin{itemize}
+      \item Le triangle ACD est isocèle rectangle en C donc, $\widehat{\text{CDA}} =45$\degres.
+      \item Le triangle ABD est isocèle en B donc, $\widehat{\text{ADB}} =\widehat{\text{DAB}} =50$\degres.
+      \item Dans le triangle BDE, la somme des angles faisant 180\degres, on a $\widehat{\text{BDE}} =180\degres-90\degres-25\degres =65\degres$.
+   \end{itemize}
+   On a alors : $\widehat{\text{CDA}}+\widehat{\text{ADB}}+\widehat{\text{BDE}} =45\degres+50\degres+65\degres =160\degres\not=180\degres$. \bm{Les points C, D et E ne sont pas alignés.}
+\end{enumerate}

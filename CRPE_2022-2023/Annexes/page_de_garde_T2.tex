@@ -1,0 +1,154 @@
+\pagestyle{empty}
+
+% Couleurs blue, brown, cyan, green, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, black, gray, yellow
+\tikzset{fondA/.style=green}
+\tikzset{fondB/.style=purple}
+\tikzset{fondPostit/.style={color= yellow!40}}
+\tikzset{ombrePunaise/.style={color={blue!10!gray}}}
+\tikzset{ombrePostit/.style={color={black},opacity=.5}}
+\tikzset{punaise/.style={ball color=red}}
+
+% \epingle{point}{angle}{échelle}
+\newcommand{\epingle}[3]{
+\coordinate[rotate=#2,yshift={#3*0.375cm}] (e) at #1;
+\coordinate[shift={++(60:0.75)}] (g) at (e);
+\begin{scope} [scale=1.5]
+ \begin{scope}[rotate=-30]
+   \coordinate[shift={++(30:0.75)}] (h) at (e);
+   \draw[ombrePunaise,line cap=round,line width=4pt] (e) -- ++(60:0.75);
+   \fill [ombrePunaise,rotate=-30,scale=0.5] (h) ellipse (.65 and .3) ;
+   \fill [ombrePunaise,rotate=60,scale=0.5] (h) ++(0.4,0) ellipse (.4 and .3);
+   \fill [ombrePunaise,rotate=60,scale=0.5] (h) ++(0.8,0) ellipse (.2 and .4);
+ \end{scope}
+ \draw[line cap=round,line width=4pt] (e) -- ++(60:0.75);
+ \fill [punaise,rotate=-30,scale=0.5] (g) ellipse (.65cm and .3cm) ;
+ \fill [punaise,rotate=60,scale=0.5] (g) ++(0.4,0) ellipse (.4 and .3);
+ \fill [punaise,rotate=60,scale=0.5] (g) ++(0.8,0) ellipse (.2 and .4);
+\end{scope}}
+
+% \postIt{(point)}{angle}{échelle}{ligne 1}{ligne 2}{ligne 3}}
+\newcommand{\postIt}[6]
+{\begin{scope} [rotate=#2,scale=0.8]
+\fill [red,ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.25,-2.4)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\fill [ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.2,-2.35)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\fill [ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.15,-2.3)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\fill [fondPostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.2,0.1)$).. ++($#3*(0.1,-2.25)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\end{scope}
+\epingle{#1}{#2}{#3}
+\draw #1 node [scale=#3,rotate=#2] {#4};
+\draw #1 node [scale=#3,rotate=#2,below={#3*0.2cm}] {#5};
+\draw #1 node [scale=#3,rotate=#2,below={#3*0.4cm}] {#6};}
+
+%=======================================
+\begin{tikzpicture}[remember picture,overlay]
+% fond bicolore
+\coordinate (cp) at (current page);
+\coordinate (cpc) at (current page.center);
+\coordinate (cpe) at ($ (current page.east) + (1.7cm,0cm) $);
+\coordinate (cpne) at ($ (current page.north east) + (1.7cm,2.9cm) $);
+\coordinate (cpn) at ($ (current page.north) + (1.5cm,2.9cm) $);
+\coordinate (cpnw) at ($ (current page.north west) + (-0.2cm,2.9cm) $);
+\coordinate (cpw) at ($ (current page.west) + (-0.2cm,0cm) $);
+\coordinate (cpsw) at ($ (current page.south west) + (-0.2cm,-0.2cm) $);
+\coordinate (cps) at ($ (current page.south) + (1.5cm,-0.2cm) $);
+\coordinate (cpse) at ($ (current page.south east) + (1.7cm,-0.2cm) $);
+\fill[fondA] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpnw)  -- (cpsw) -- cycle;
+\fill[fondB] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpne)  -- (cpse) -- cycle;
+
+%\fill[fondA] (cpsw) .. controls (cpw) and (cpe) .. (cpne) -- (cpnw) -- cycle;
+%\fill[fondB] (cpsw) .. controls (cpw) and (cpe) .. (cpne) -- (cpse) -- cycle;
+
+% Titre
+\draw (cp)  node [xshift=-3.2cm,yshift=12cm,scale=8] {K{\color{red}\textit{i}}T};
+\draw (cp)  node [xshift=-3cm,yshift=9.5cm,scale=3.5] {de survie pour le CRPE};
+\draw (cp)  node [xshift=-3.2cm,yshift=5.5cm,scale=3.5] {\cursive\textcolor{purple}{ Tome 2 :}};
+\draw (cp)  node [xshift=-3.2cm,yshift=3.5cm,scale=3.5] {\cursive\textcolor{purple}{préparation}};
+\draw (cp)  node [xshift=-3.2cm,yshift=2.3cm,scale=3.5] {\cursive\textcolor{purple}{à l'oral}};
+
+% post'it
+\coordinate[xshift=-5.5cm,yshift=-8.5cm] (postit) at (cp);
+\postIt{(postit)}{-16}{2} {\footnotesize\cursive Nathalie Daval}{\footnotesize INSPE Montpellier}{\footnotesize 2022-2023}
+  
+ % triangle de penrose
+    % \a and \b are two macros defining characteristic dimensions of the Penrose triangle.		
+    \pgfmathsetmacro{\a}{1}
+    \pgfmathsetmacro{\b}{0.9}
+    \tikzset{%
+      apply style/.code     = {\tikzset{#1}},
+      triangle_edges/.style = {thick,draw=black}
+    }
+    \foreach \theta/\facestyle in {%
+        0/{triangle_edges,  fill = green!10},
+      120/{triangle_edges,  fill = green!30},
+      240/{triangle_edges,  fill = green!50}%
+    }{
+      \begin{scope}[xshift= 12.5cm,yshift=-18.5cm,rotate=\theta,scale=1]
+        \draw[apply style/.expand once=\facestyle]
+          ({-sqrt(3)/2*\a},{-0.5*\a})                     --
+          ++(-\b,0)                                       --
+            ({0.5*\b},{\a+3*sqrt(3)/2*\b})                -- % higher point	
+            ({sqrt(3)/2*\a+2.5*\b},{-.5*\a-sqrt(3)/2*\b}) -- % rightmost point
+          ++({-.5*\b},-{sqrt(3)/2*\b})                    -- % lower point
+            ({0.5*\b},{\a+sqrt(3)/2*\b})                  --
+          cycle;
+        \end{scope}
+      }
+   \draw (cp) node [xshift=4.9cm,yshift=-9.1cm,scale=1.8] {\sffamily\small\green Nombres et calculs};  
+   \draw (cp) node [xshift=2.5cm,yshift=-5.2cm,scale=1.8,rotate=60] {\sffamily\small\green Espace et g{é}om{é}trie};
+   \draw (cp) node [xshift=7cm,yshift=-5.1cm,scale=1.8,rotate=-60] {\sffamily\small\green Grandeurs et mesures};  
+\end{tikzpicture}
+
+
+\pagebreak
+
+Ce manuel est à destination des {\small AED} et {\small AESH} de l'académie de Montpellier, inscrits à la préparation au concours de professeur des écoles, dans le cadre de la formation proposée par la {\small DAFPEN} et préparée à la {\small FDE}. \\
+
+Cette version de 2022-2023 a été écrite avec \LaTeX{} et la classe \href{https://www.ctan.org/pkg/sesamanuel}{\blue sesamanuel} distribuée librement par l'association \href{http://www.sesamath.net}{\blue Sesamath}. Si vous y trouvez des coquilles ou erreurs, merci de me les signaler à l'adresse suivante : \\
+\href{mailto:nathalie.daval@umontpellier.fr}{nathalie.daval@umontpellier.fr} \\
+
+Le tome 2 propose dans un premier temps de revenir sur le fonctionnement de l'épreuve orale de leçon français/maths du concours {\small CRPE} (admission), puis des 8 thèmes didactiques pouvant tomber en mathématiques.
+
+Chaque thème suit la trame suivante : \\ [2mm]
+   -- {\textcolor{B2}{\sffamily\bfseries Dans les programmes}} : les connaissances et compétences des programmes institutionnels, suivant les derniers BO (ce qui est attendu en fin d'école maternelle pour le cycle 1, et les programmes pour les cycles 2 et 3). \\ [2mm]
+   -- \colorbox{A2}{\textcolor{white}{\sffamily\bfseries Repères didactiques}} : un résumé des différents concepts pour chaque thème, ponctués de repères de progressivités sur les trois cycles ainsi que les obstacles et erreurs des élèves. \\ [2mm]
+   -- \colorbox{G1}{\textcolor{white}{\sffamily\bfseries Vu au CRPE 2022}} : un exemple d'oral portant sur le thème, choisi parmi les sujets officiels de 2022 ou des sujets préparatifs. \\ [2mm]
+   -- \colorbox{red}{\textcolor{white}{\sffamily\bfseries Analyse de documents}} : des exercices ou parties d'exercices corrigés issus du {\small CRPE} \og ancien modèle \fg{} permettant d'analyser des supports et des productions d'élèves. \\  [2mm]
+    -- \colorbox{PartieStatistique}{\textcolor{white}{\sffamily\bfseries Activités à faire en classe}} : des exemples de séquences, séances ou activités qu'il est possible de faire en classe sur le thème.
+
+   \vfill
+   
+   Pour information, voilà une petite étude statistique sur les sujets tombés à la session 2022 pour l'académie de Montpellier (chapitres de ce kit).
+   
+   \begin{center}
+      {\hautab{1.5}
+      \begin{tabular}{|p{2.3cm}|*{8}{C{1}|}}
+         \hline
+         Chapitres & Num1 & Num2 & Num3 & Num4 & Géo5 & Géo6 & Grm7 & Tra8 \\
+         \hline
+         Sujets & 1 & 2 & (2) & 1 & & & & 2  \\
+         \hline
+         Cycle & C1 & C2 & (C2) & C3 & & & & C3 \\
+         \hline
+      \end{tabular}}
+   \end{center}
+
+Toutes les notions abordées sont dans le domaine du numérique, dont deux dans le cadre de la proportionnalité et deux lors de la résolution de problèmes. Ce qui ne veut pas dire, of course, qu'il faut faire l'impasse sur l'espace, la géométrie, les grandeurs et les mesures ;-) \\
+
+Bon courage à tous pour la session 2023 !!! \\
+
+\begin{center}
+   \includegraphics[width=3cm]{Annexes/Images/Licence}
+\end{center}
+

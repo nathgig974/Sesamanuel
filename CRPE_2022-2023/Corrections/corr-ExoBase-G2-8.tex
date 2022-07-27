@@ -1,0 +1,38 @@
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item À l'échelle \ucm{1} pour \um{5}, \um{30}, \um{40} et \um{50} sont représentés par des segments de longueurs respectives \ucm{6}, \ucm{8} et \ucm{10}. \\
+      {\psset{unit=2}
+         \begin{pspicture}(-2,-0.25)(5,5.25)
+            \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={0,180,180,0},](4,0){L}(0,0){S}(0,5){R}(3,5){M}
+            \pstRightAngle{L}{S}{R}
+            \pstRightAngle{S}{R}{M}
+            \rput{-90}(0.2,2.5){Mur}
+            \pstMiddleAB[PosAngle=45]{M}{L}{T}
+            \pstMediatorAB[CodeFig=true,CodeFigColor=black,PointSymbol=none,PointName=none,linestyle=dashed,nodesep=-1]{L}{M}{A}{B}
+            \pstInterLL[PosAngle=180]{T}{B}{R}{S}{C}
+         \end{pspicture}}
+      \item
+      \begin{enumerate}
+         \item Voir figure.
+              \item Le point $C$ appartient à la droite perpendiculaire au segment $[ML]$ passant par son milieu $T$, il appartient donc à la médiatrice de $[ML]$ et est situé à égale distance de $M$ et de $L$. \\
+                 Par conséquent, {\blue $C$ est le point de contact cherché}.
+              \item On mesure la longueur demandée, on obtient $RC \approx\ucm{6,4}$ sur le plan. Or, $6,4\times5 =32$ donc, \\
+              {\blue la distance entre les points $R$ et $C$ dans le cour est de \um{32}}.
+      \end{enumerate}
+      \setcounter{enumi}{2}
+      \item
+      \begin{enumerate}
+         \item $\bullet$ Dans le triangle $CRM$ rectangle en $R$, on utilise le théorème de Pythagore avec des mesures en mètre : \\
+            $MC^2 =MR^2+RC^2 =30^2+x^2$ \\
+            \hspace*{2.9cm} $=x^2+900$. \\
+            $\bullet$ Dans le triangle $CSL$ rectangle en $S$, on utilise le théorème de Pythagore avec des mesures en mètre : \\
+            $LC^2 =LS^2+SC^2 =40^2+(50-x)^2$ \\
+            \hspace*{2.53cm} $=1\,600+(2\,500-100x+x^2)$ \\
+            \hspace*{2.53cm} $=x^2-100x+4\,100$. \\ [1mm]
+            On a donc {\blue $MC =\sqrt{x^2+900}$ et $LC =\sqrt{x^2-100x+4\,100}$}.
+         \item Le point $C$ est à égale distance de $M$ et de $L$, on a donc $MC =CL$, on encore $MC^2 =CL^2$. \\
+            $\cancel{x^2}+900 =\cancel{x^2}-100x+4\,100 \iff 100x =4\,100-900 =3\,200$ \\
+            \hspace*{4.15cm} $\iff x =32$ \\
+            {\blue On retrouve bien une distance de \um{32} entre les points $R$ et $C$}.
+      \end{enumerate}
+   \end{enumerate}

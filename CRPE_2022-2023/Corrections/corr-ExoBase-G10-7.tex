@@ -1,0 +1,57 @@
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item
+         \begin{enumerate}
+            \item le point C$_1$ est sur le segment [AB], donc entre A et B. On a alors : BC$_1$ = BA $-$ AC$_1$. \\
+               D'où les équivalences : BC$_1$ = 2AC$_1 \iff$ BA $-$ AC$_1$ = 2AC$_1 \iff$ BA = 3AC$_1 \iff$ AC$_1 = \dfrac13$ AB. \\
+               Or, AB = \ucm{6}, donc : {\blue la longueur du segment [AC$_1$] est de \ucm{2}}.
+         \item Si BC$_2$ = 2 AC$_2$ et C$_2$ distinct de C$_1$, alors BC$2$ est plus grand que AC$_2$ et donc le point C$_2$ est en dehors du segment [AB], du côté de A. On a alors : BC$_2$ = BA + AC$_2$. D'où les équivalences : \\
+            BC$_2$ = 2AC$_2 \iff$ BA + AC$_2$ = 2AC$_2 \iff$ BA = AC$_2$. \\
+            Donc : {\blue la longueur du segment [AC$_2$] est de \ucm{6}}.
+         \item Une figure possible : \\
+            {\psset{unit=0.7}
+            \begin{pspicture}(-3,-6.2)(16,6.2)
+               \psgrid[subgriddiv=10, gridlabels=0, gridwidth=0.4pt, subgridwidth=0.4pt,gridcolor=brown!80,subgridcolor=brown!40](-1,-6)(16,6)
+               \psline(-1,0)(16,0)
+               \psline[linewidth=0.05cm](6,0)(12,0)
+               \psline[linewidth=0.05cm](6,0)(6.75,2.9)(12,0)
+               \psline[linewidth=0.05cm](6,0)(6.75,-2.9)(12,0)
+               \psdots(6,0)(12,0)(0,0)(8,0)
+               \psdots[linecolor=A1](6.75,-2.9)(6.75,2.9)
+               \psdots[linecolor=B2](2.75,3.8)(2.75,-3.8)
+               \pscircle[linecolor=B2](6,0){5}
+               \psarc[linecolor=B2](12,0){10}{143}{-143}
+               \pscircle[linecolor=A1](6,0){3}
+               \psarc[linecolor=A1](12,0){6}{48}{-48}
+               \rput[bl](6.1,0.3){A}
+               \rput[bl](12,0.3){B}
+               \rput[bl](8,0.3){C$_1$}
+               \rput[bl](0,0.3){C$_2$}
+               \rput[bl](2,4){\textcolor{B2}{$C_3$}}
+               \rput[bl](2,-4.4){\textcolor{B2}{$C_4$}}
+               \rput[bl](6.3,-3.7){\textcolor{A1}{$C_6$}}
+               \rput[bl](6.3,3.4){\textcolor{A1}{$C_5$}}
+            \end{pspicture}}
+         \end{enumerate}
+      \setcounter{enumi}{1}
+      \item Si AC $=x$, alors BC $=2x$. De plus, si C existe, A, B et C ne sont pas alignés et forment donc un triangle.
+         \begin{enumerate}
+            \item Si $x=9$, alors AC = \ucm{9} et BC = \ucm{18}. Or, AB = \ucm{6}, et $6+9 =15$ donc, BA + AC < BC, ce qui signifie qu'on ne peut pas construire un triangle. \\
+            {\blue Il n'existe pas de point C pour $x=9$}.
+            \item Si $x=5$, alors AC = \ucm{5} et BC = \ucm{10}. Or, AB = \ucm{6}, et $6+5 =11$ donc, BA + AC > BC, ce qui signifie que l'on peut construire un triangle. Dans ce cas, C est sur le cercle de centre A de rayon \ucm{5} et sur le cercle de centre B de rayon \ucm{10}. Ces deux cercles sont sécants en deux points C$_3$ et C$_4$. \\
+            {\blue Il existe deux points C pour $x=5$}.
+         \end{enumerate}
+      \setcounter{enumi}{2}
+      \item D'après le théorème de Pythagore, dans le triangle ABC rectangle en C, on a : \\
+         $\text{AB}^2 =\text{AC}^2+\text{BC}^2 \iff 6^2 =x^2+(2x)^2 \iff 36 =5x^2 \iff x^2 =\dfrac{36}{5} \Longrightarrow x=\dfrac{6}{\sqrt5} =\dfrac{6}{5}\sqrt5$. \\
+         {\blue Pour $x=\dfrac65\sqrt5$, le triangle ABC est rectangle en C}. \smallskip
+       \item Vérifions les cas où le triangle peut-être isocèle :
+          \begin{itemize}
+            \item Supposons qu'il soit isocèle en C, alors AC = BC $\iff x =2x \iff x=0$, ce qui est impossible.
+            \item Supposons qu'il soit isocèle en A, alors CA = BA = \ucm{6} et BC = \ucm{12}. \\
+               Mais dans ce cas, BA + AC = BC, donc A, B et C sont alignés, ce qui est contraire à l'énoncé.
+             \item Supposons qu'il soit isocèle en B, alors AB = CB = \ucm{6} et AC = \ucm{3}. \\
+               Dans ce cas, BA + AC > BC, donc, il existe deux points C$_5$ et C$_6$ tels que le triangle ABC soit isocèle en B.
+          \end{itemize}
+         {\blue Il existe une seule valeur de $x$ (qui vaut 3) pour laquelle le triangle ABC est isocèle}.
+   \end{enumerate}

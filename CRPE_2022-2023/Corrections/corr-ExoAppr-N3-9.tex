@@ -1,0 +1,25 @@
+\ \\ [-5mm]
+  \begin{enumerate}
+      \item La mesure de la taille des dalles doit diviser à la fois la largeur de l'allée de 120 cm, la longueur totale du sol de 1\,040 cm ($800+2\times120$) et la largeur totale du sol de 740 cm ($500+2\times120$). \\
+      Décomposons en produit de facteurs premiers ces trois valeurs :
+      \begin{itemize}
+         \item $120 =2^3\times3\times5$ ;
+         \item $1\,040 =2^4\times5\times13$ ;
+         \item $740 =2^2\times5\times37$.
+      \end{itemize}
+      Le PGCD de 120, 1\,040 et 740 est $2^2\times5 =20$. \\
+      Donc, la taille des dalles divise 20. Or, les diviseurs de 20 sont 1;\,2;\,4;\,5;\,10;\,20. \\
+      \bm{Les longueurs possibles des dalles sont 1 cm, 2 cm, 4 cm, 5 cm, 10 cm et 20 cm.}
+      \item
+      \begin{enumerate}
+         \item On peut considérer que l'on a deux types d'allées : deux allées A de 1\,040 cm par 120 cm et deux allées B de 500 cm par 120 cm.
+         \begin{itemize}
+            \item A : on peut poser $1\,040\text{ cm }\div20 \text{ cm/dalle}=52$ dalles dans la longueur et $120\text{ cm }\div20\text{ cm/dalle} =6$ dalles dans la largeur, ce qui donne donc 312 dalles sur toute la surface ($52\times6$).
+            \item B : on peut poser $500\text{ cm }\div20 \text{ cm/dalle}=25$ dalles dans la longueur et $120\text{ cm }\div20\text{ cm/dalle} =6$ dalles dans la largeur, ce qui donne donc $150$ dalles sur toute la surface ($25\times6$).
+         \end{itemize}
+         Au total, on a donc $2\times312$ dalles + $2\times150$ dalles = 924 dalles. \\
+         \bm{M. Durand aura besoin de 924 dalles de 20 cm de côté pour couvrir son pourtour de piscine.}
+         \item On a besoin de 16 dalles de 5 cm de côté pour couvrir une dalle de 20 cm de côté (la longueur du côté étant divisée par 4, son aire est divisée par $4^2$). Il faut donc 16 fois plus de dalles de 5 cm pour couvrir la même surface. Or, $924\times16 =14\,784$, d'où : \\
+         \bm{M. Durand aura besoin de 14\,784 dalles de 5 cm de côté pour couvrir son pourtour de piscine.}
+      \end{enumerate}
+   \end{enumerate}

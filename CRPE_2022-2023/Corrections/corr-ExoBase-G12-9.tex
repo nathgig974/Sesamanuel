@@ -1,0 +1,31 @@
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item I, J et K sont les milieux respectifs des segments [FE], [FG] et [FB] qui sont des arêtes du cube. \\
+         On a donc FI = FJ = FK = \ucm{3}. De plus, F est un sommet du cube ce qui signifie que les angles $\widehat{\text{IFK}}, \widehat{\text{KFJ}}$ et $\widehat{\text{JFI}}$ sont droits. Les triangles IFK, KFG et JFI sont donc isométriques et IK = KJ = JI d'où : \\
+         {\blue Le triangle IJK est un triangle équilatéral.} \\
+      \item On a $V_{\text{tétraèdre}} =\dfrac13\times\mathcal{A}_{\text{FIJ}}\times\text{ FK} =\dfrac13\times\dfrac{\ucm{3}\times\ucm{3}}{2}\times\ucm{3} =\ucmc{4,5}$. \\ [1mm]
+         {\blue Le volume du tétraèdre FIJK est de \ucmc{4,5}.} \\
+      \item Patron à l'échelle 3/4 : \\
+      {\psset{unit=0.75}
+         \begin{pspicture}(-6,-0.75)(7.5,6.5)
+            \psline(0,3)(6,3)
+            \psline(3,6)(3,0)(0,3)(3,6)(6,3)(7.1,7.1)(3,6)
+            \rput(3.3,2.7){F}
+            \rput(-0.3,3){I}
+            \rput(3,-0.3){K}
+            \rput(3,6.3){J}
+            \rput(6.3,2.7){K}
+            \rput(7.4,7.4){I}
+            \psframe(3,3)(3.3,3.3)
+         \end{pspicture}
+      }
+      \item On peut démontrer de manière analogue à la question 1. que toutes les arêtes du cuboctaèdre sont de même longueur et donc que tous les tétraèdre ôtés sont isométriques.
+         \begin{enumerate}
+            \item $\mathcal{V}_{\text{cuboctaèdre}} =\mathcal{V}_{\text{cube}}-8\,\mathcal{V}_{\text{tétraèdre}} =(\ucmc{6})-8\times\ucmc{4,5} =\ucmc{180}$. \\ [1mm]
+               {\blue Le volume du cuboctaèdre est de \ucmc{180}}. \\
+            \item Le cuboctaèdre possède 3 arêtes à chaque \og coin \fg{} ôté du cube, soit $8\times3$ arêtes = 24 arêtes. \\
+               Calculons par exemple IK : dans le triangle IFK rectangle en F, d'après le théorème de Pythagore avec des mesures en centimètre on a $\text{IK}^2 =\text{IF}^2+\text{FK}^2 =3^2+3^2 =18$, donc $\text{IK} =\sqrt{18} =3\sqrt2$. \\
+               D'où, la longueur totale des arêtes vaut $24\times3\sqrt2 =72\sqrt2 \approx101,82$ et \\
+               {\blue la longueur totale des arêtes du cuboctaèdre vaut environ \ucm{101,8}}.
+         \end{enumerate}
+   \end{enumerate}

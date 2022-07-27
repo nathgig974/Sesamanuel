@@ -1,0 +1,36 @@
+{\bf Aire des figures :} \\
+l'aire du carré vaut $8\,u.l.\times8\,u.l. =64\,u.a.$ et l'aire du rectangle vaut $13\,u.l.\times5\,u.l. =65\,u.a.$ \\
+On a donc \og 64 = 65 \fg{} et on a \og gagné \fg{} un carré unité entre les deux configurations. \\
+{\bf Explication du paradoxe :} \\
+Dans le deuxième puzzle, on se place au niveau du trapèze gris et du triangle bleu que l'on schématise :
+\begin{center}
+{\psset{unit=0.5}
+   \begin{pspicture}(0,-1)(13,5.5)
+      \psgrid[subgriddiv=1,gridlabels=0](0,0)(13,5)
+      \pspolygon[linewidth=0.8mm,linecolor=B1](0,0)(5,0)(5,3)(0,5)
+      \psline[linewidth=0.8mm,linecolor=B1](5,0)(13,0)(5,3)
+      \rput(-0.5,-0.5){$C$}
+      \rput(5,-0.5){$B$}
+      \rput(13.5,0){$A$}
+      \rput(-0.5,5){$E$}
+      \rput(5.5,3.5){$D$}
+   \end{pspicture}}
+\end{center}
+On a : $\dfrac{AB}{AC} =\dfrac8{13}$ et $\dfrac{BD}{CE} =\dfrac35$. Or, $\dfrac8{13}\neq\dfrac35$, donc, l'une des hypothèses du théorème de Thalès n'est pas vérifiée.
+\smallskip
+\begin{itemize}
+   \item Les droites $(CE)$ et $(BD)$ sont parallèles puisque le quadrilatère $CBDE$ est un trapèze.
+   \item Le triangle $DBA$ est rectangle en $B$ donc, $(BD) \perp (BA)$ et le quadrilatère $CBDE$ est rectangle en $B$ et $C$ donc, $(BD) \perp (BC)$, d'où $(BA)$ est parallèle à $(BC)$ et les points $A, B, C$ sont alignés dans cet ordre.
+   \item Par conséquent, la seule condition non vérifiée est que les points $A, D, E$ ne sont pas alignés, et le carré unité supplémentaire se situe \og autour \fg{} de la diagonale $AE$.
+\end{itemize}
+{\bf Visuel :} \\
+Si on affine le contour des figures, on \og voit \fg{} bien où se situe le problème.
+\begin{center}
+\begin{pspicture}(0,0)(13,5)
+   \pspolygon[fillstyle=solid,fillcolor=FondTableaux,linewidth=0.1mm](0,0)(5,0)(5,3)(0,5)
+   \pspolygon[fillstyle=solid,fillcolor=G1,linewidth=0.1mm](13,0)(13,5)(8,5)(8,2)
+   \pspolygon[fillstyle=solid,fillcolor=BleuOuv,linewidth=0.1mm](5,0)(13,0)(5,3)
+   \pspolygon[fillstyle=solid,fillcolor=B2,linewidth=0.1mm](0,5)(8,5)(8,2)
+   \psgrid[subgriddiv=1,gridlabels=0](0,0)(13,5)
+\end{pspicture}
+\end{center}

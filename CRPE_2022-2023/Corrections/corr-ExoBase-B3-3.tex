@@ -1,0 +1,23 @@
+\ \\ [-5mm]
+\begin{minipage}{7cm}
+   Le chapeau peut être découpé dans un disque de rayon $R =10$ cm, longueur de la génératrice du cône. \\
+   De plus, l'arc de cercle du développement doit correspondant à 21 cm (tour de tête). \\
+   Pour calculer l'angle $\alpha$ de la section, on sait que le périmètre du cercle de rayon $R$ vaut \\
+   $2\pi R$ cm $=20 \pi$ cm ce qui correspond à 360$^{\circ}$. \\ [5pt]
+   Donc, 21 cm correspondent à un angle de \\ [1mm]
+   $\dfrac{21\text{ cm}\times360^{\circ}}{20\pi \text{ cm}}\approx 120^{\circ}$.
+\end{minipage}
+\qquad
+\begin{minipage}{8cm}
+   {\psset{unit=0.7}
+   \begin{pspicture}(-6,-6)(6,6)
+      \pscircle(0,0){5}
+      \pswedge[fillstyle=solid,fillcolor=lightgray](0,0){5}{-120}{0}
+      \psline{<->}(0,0.2)(5,0.2)
+      \rput(2.5,0.5){$R =10$ cm}
+      \psarc{<->}(0,0){5.3}{-120}{0}
+      \psarc{<->}(0,0){0.5}{-120}{0}
+      \rput(0.7,-0.7){$\alpha =120$\degre}
+      \pstextpath{\psarc[linestyle=none](0,0){5.6}{-70}{-30}}{21 cm}
+   \end{pspicture}}
+\end{minipage}
