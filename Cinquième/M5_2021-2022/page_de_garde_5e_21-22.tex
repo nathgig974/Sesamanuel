@@ -1,0 +1,193 @@
+\usetikzlibrary{calc}
+
+% Couleurs blue, brown, cyan, green, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, black, gray, yellow
+\tikzset{fondA/.style=cyan}
+\tikzset{fondB/.style=green}
+\tikzset{fondPostit/.style={color= yellow!40}}
+\tikzset{ombrePunaise/.style={color={blue!10!gray}}}
+\tikzset{ombrePostit/.style={color={black},opacity=.5}}
+\tikzset{punaise/.style={ball color=red}}
+
+% \epingle{point}{angle}{échelle}
+\newcommand{\epingle}[3]{
+\coordinate[rotate=#2,yshift={#3*0.375cm}] (e) at #1;
+\coordinate[shift={++(60:0.75)}] (g) at (e);
+\begin{scope} [scale=1.5]
+ \begin{scope}[rotate=-30]
+   \coordinate[shift={++(30:0.75)}] (h) at (e);
+   \draw[ombrePunaise,line cap=round,line width=4pt] (e) -- ++(60:0.75);
+   \fill [ombrePunaise,rotate=-30,scale=0.5] (h) ellipse (.65 and .3) ;
+   \fill [ombrePunaise,rotate=60,scale=0.5] (h) ++(0.4,0) ellipse (.4 and .3);
+   \fill [ombrePunaise,rotate=60,scale=0.5] (h) ++(0.8,0) ellipse (.2 and .4);
+ \end{scope}
+ \draw[line cap=round,line width=4pt] (e) -- ++(60:0.75);
+ \fill [punaise,rotate=-30,scale=0.5] (g) ellipse (.65cm and .3cm) ;
+ \fill [punaise,rotate=60,scale=0.5] (g) ++(0.4,0) ellipse (.4 and .3);
+ \fill [punaise,rotate=60,scale=0.5] (g) ++(0.8,0) ellipse (.2 and .4);
+\end{scope}}
+
+% \postIt{(point)}{angle}{échelle}{ligne 1}{ligne 2}{ligne 3}}
+\newcommand{\postIt}[6]
+{\begin{scope} [rotate=#2,scale=0.8]
+\fill [red,ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.25,-2.4)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\fill [ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.2,-2.35)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\fill [ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.15,-2.3)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\fill [fondPostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.2,0.1)$).. ++($#3*(0.1,-2.25)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\end{scope}
+\epingle{#1}{#2}{#3}
+\draw #1 node [scale=#3,rotate=#2] {#4};
+\draw #1 node [scale=#3,rotate=#2,below={#3*0.2cm}] {#5};
+\draw #1 node [scale=#3,rotate=#2,below={#3*0.4cm}] {#6};}
+
+
+%=======================================
+\begin{tikzpicture}[remember picture,overlay]
+% fond bicolore
+\coordinate (cp) at (current page);
+\coordinate (cpc) at (current page.center);
+\coordinate (cpe) at ($ (current page.east) + (1.7cm,0cm) $);
+\coordinate (cpne) at ($ (current page.north east) + (1.7cm,2.9cm) $);
+\coordinate (cpn) at ($ (current page.north) + (1.5cm,2.9cm) $);
+\coordinate (cpnw) at ($ (current page.north west) + (-0.2cm,2.9cm) $);
+\coordinate (cpw) at ($ (current page.west) + (-0.2cm,0cm) $);
+\coordinate (cpsw) at ($ (current page.south west) + (-0.2cm,-0.2cm) $);
+\coordinate (cps) at ($ (current page.south) + (1.5cm,-0.2cm) $);
+\coordinate (cpse) at ($ (current page.south east) + (1.7cm,-0.2cm) $);
+\fill[fondA] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpnw)  -- (cpsw) -- cycle;
+\fill[fondB] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpne)  -- (cpse) -- cycle;
+
+
+% Titre
+\draw (cp)  node [xshift=-2cm,yshift=9cm,scale=8] {\textcolor{white}{Manuel}};
+\draw (cp)  node [xshift=-2cm,yshift=6.5cm,scale=3.5] {\textcolor{white}{de Mathématiques}};
+\draw (cp)  node [xshift=-2cm,yshift=4cm,scale=8] {\textcolor{green}{5\up{e}}};
+\draw (cp)  node [xshift=-6cm,yshift=-1.5cm]{\psHomothetie[linecolor=white](0,0){1.5}{\psBill}};
+
+\draw (cp)  node [xshift=5.5cm,yshift=0cm]{\psKangaroo[linecolor=green,fillcolor=blue]{3}};
+\draw (cp)  node [xshift=6.9cm,yshift=0cm]{\psKangaroo[linecolor=green,fillcolor=orange]{3}};
+\draw (cp)  node [xshift=7.63cm,yshift=-1.5cm,xscale=-1]{\psKangaroo[linecolor=green,fillcolor=violet]{3}};
+\draw (cp)  node [xshift=6.23cm,yshift=-1.5cm,xscale=-1]{\psKangaroo[linecolor=green,fillcolor=red]{3}};
+\draw (cp)  node [xshift=4.82cm,yshift=-1.5cm,xscale=-1]
+{\psKangaroo[linecolor=green,fillcolor=gray]{3}};
+\draw (cp)  node [xshift=5cm,yshift=-5cm,scale=3] {\textcolor{black}{\cursive Montpellier}};
+\draw (cp)  node [xshift=5cm,yshift=-7cm,scale=3] {\textcolor{black}{\cursive Collège Simone Veil}};
+
+% post'it
+\coordinate[xshift=-5.5cm,yshift=-9.5cm] (postit) at (cp);
+\postIt{(postit)}{-17}{1.75} {\footnotesize\cursive Nathalie Daval}{\footnotesize année}{\footnotesize 2021-2022}
+
+
+\end{tikzpicture}
+
+\pagebreak
+
+\ \vfill
+
+\pagebreak
+
+Ce manuel est composé de l'ensemble des activités, cours, exercices pour les classes de 5\up{e} du collège Simone Veil de Montpellier que j'ai à ma charge durant l'année 2021-2022. \\ [1mm]
+Il a été écrit en \LaTeX{} avec la classe \href{https://www.ctan.org/pkg/sesamanuel}{\blue sesamanuel} distribuée librement par l'association \href{http://www.sesamath.net}{\blue sesamath}. Si vous y voyez des erreurs ou des coquilles, même minimes, vous pouvez me les signaler à cette adresse : \href{mailto:nathalie.daval@ac-montpellier.fr}{nathalie.daval@ac-montpellier.fr} \\
+Je remercie à ce propos Jean-Félix Navarro qui a effectué une relecture attentive de ce livret. \\ [10mm]
+
+La progression est dite spiralée, c'est-à-dire que chaque \og chapitre \fg{} est décomposé en plusieurs courtes séquences conçues pour durer une semaine en moyenne, ce qui permet de revoir les notions plusieurs fois dans l'année. La page suivante propose une programmation possible sur les cinq périodes (P1, P2, P3, P4 et P5) de l'année 2021-2022.
+
+Chaque séquence du présent manuel est composée de la manière suivante : \\
+\begin{itemize}
+   \item \textcolor{B2}{\sffamily\bfseries Connaissances et compétences associées} : les connaissances et compétences associées au cycle 4 définies par le \href{https://cache.media.eduscol.education.fr/file/A-Scolarite_obligatoire/37/5/Programme2020_cycle_3_comparatif_1313375.pdf}{programme en vigueur à compter de la rentrée de l'année scolaire 2018-2019}. \\
+   \item \textcolor{C1}{\sffamily\bfseries Débat} : un petit texte culturel illustré permettant d'échanger sur un thème en rapport au chapitre. Un morceau d'histoire, de l'étymologie, du vocabulaire, une curiosité mathématique\dots{} le tout agrémenté d'une courte vidéo de vulgarisation scientifique. \\
+   \item \textcolor{PartieGeometrie}{\sffamily\bfseries Cahier de compétences} : les pages correspondant au chapitre dans le cahier MYRIADE. Chaque élève pourra, s'il le souhaite, travailler en autonomie en classe ou à la maison sur ce cahier. \\
+   \item \colorbox{G2}{\textcolor{white}{\sffamily\bfseries Activité d'approche}} : une activité à faire en classe permettant de découvrir une notion du chapitre. \\
+   \item \colorbox{A2}{\textcolor{white}{\sffamily\bfseries Trace écrite}} : l'essentiel du cours à connaître. \\
+   \item \colorbox{C2}{\textcolor{white}{\sffamily\bfseries Entraînement}} : les exercices à faire en priorité.  \\   
+   \item \colorbox{PartieStatistique}{\textcolor{white}{\sffamily\bfseries Récréation, énigmes}} : une activité ludique liée au chapitre.
+   \item
+\end{itemize}
+
+\ \\ [10mm]
+
+En complément de ce manuel, nous travaillerons sur le {\it Cahier de compétence - maths, collection Myriade} de chez Bordas de manière plus individuelle comme outil d'entraînement, de réinvestissement, d'approfondissement, d'évaluation. Mais surtout, en cas de période de confinement total ou partiel, il permettra une meilleure continuité pédagogique en plus des heures de classes virtuelles.
+
+\vfill
+
+\pagebreak
+
+\newcommand\gm[2]{\rput(2,#1){\begin{minipage}{6cm}\centering\textcolor{cyan}{#2}\end{minipage}}}
+\newcommand\nc[2]{\rput(6,#1){\begin{minipage}{6cm}\centering\textcolor{red}{#2}\end{minipage}}}
+\newcommand\eg[2]{\rput(10,#1){\begin{minipage}{6cm}\centering\textcolor{blue}{#2}\end{minipage}}}
+\newcommand\ogd[2]{\rput(14,#1){\begin{minipage}{6cm}\centering\textcolor{violet}{#2}\end{minipage}}}
+
+{\psset{xunit=1,yunit=0.7}
+
+\begin{pspicture}(-1,0)(16,33.8)
+   \rput(0.5,35){\includegraphics[width=1cm]{Images/gm}}
+   \gm{35}{\bf Grandeurs\\\& mesures}
+   \rput(4.5,35){\includegraphics[width=1cm]{Images/nc}}
+   \nc{35}{\bf Nombres\\\& calculs}
+   \rput(8.5,35){\includegraphics[width=1cm]{Images/eg}}
+   \eg{35}{\bf Espace \&\\géométrie}
+   \rput(12.3,35){\includegraphics[width=1cm]{Images/ogd}}
+   \ogd{35}{\bf Organisation\\\& gestion\\de données}
+   \multido{\n=-1+1}{35}{\psline[linestyle=dotted,linecolor=gray](0,\n)(16,\n)}
+   \psline(-1,34)(16,34)
+   \rput(-0.5,30){P1}
+   \psline(-1,26)(16,26)
+   \rput(-0.5,23){P2}
+   \psline(-1,20)(16,20)
+   \rput(-0.5,16.5){P3}
+   \psline(-1,13)(16,13)
+   \rput(-0.5,9.5){P4}
+   \psline(-1,6)(16,6)
+   \rput(-0.5,2.5){P5}
+%%%%%%%%% P1
+   {\small
+   \rput(8,33.5){Semaine de rentrée}
+   \nc{32.5}{Nombres et calculs 1\\Enchaînement d'opérations}
+   \eg{31.5}{Figures et configurations 1\\Les angles}
+   \gm{30.5}{Grandeurs mesurables 1\\Aires et périmètres}
+   \nc{29.5}{Nombres et calculs 2\\Nombres relatifs}
+   \eg{28.5}{Représenter l'espace 1\\Repérage et déplacements}
+   \ogd{27.5}{Statistiques et probabilités 1\\Interpréter, représenter des données}
+   \rput(8,26.5){Semaine de rattrapage}
+%%%%%%%%% P2
+   \gm{25.5}{Grandeurs mesurables 2\\Horaires et durées}
+   \nc{24.5}{Calcul littéral 1\\Expressions littérales}
+   \eg{23.5}{Figures et configurations 2\\Somme des angles d'un triangle}
+   \ogd{22.5}{Statistiques et probabilités 2\\Probabilités}
+   \nc{21.5}{Arithmétique 1\\Multiples et diviseurs}
+   \eg{20.5}{Transformations 1\\La symétrie centrale}
+   %%%%%%%%% P3
+   \gm{19.5}{Grandeurs mesurables 3\\Calcul d'aires}
+   \nc{18.5}{Nombres et calculs 3\\Comparaison et égalité de fractions}
+   \eg{17.5}{Figures et configurations 3\\Inégalité triangulaire}
+   \ogd{16.5}{Proportionnalité 1\\Proportionnalité}
+   \nc{15.5}{Calcul littéral 2\\Distributivité}
+   \eg{14.5}{Représenter l'espace 2\\Reconnaître des solides}
+   \rput(8,13.5){Semaine de rattrapage}
+   %%%%%%%%% P4  
+   \gm{12.5}{Grandeurs mesurables 4\\Volumes et capacités} 
+   \nc{11.5}{Nombres et calculs 4\\Somme et différence de nombres relatifs}
+   \eg{10.5}{Figures et configurations 4\\Le parallélogramme}
+   \ogd{9.5}{Statistiques et probabilités 3\\Traiter des données}
+   \nc{8.5}{Arithmétique 2\\Les nombres premiers}
+   \eg{7.5}{Représenter l'espace 3\\Représenter les solides}
+   \rput(8,6.5){Semaine de rattrapage}
+   %%%%%%%%% P5
+   \gm{5.5}{Grandeurs mesurables 5\\L'aire du parallélogramme}
+   \nc{4.5}{Nombres et calculs 5\\Somme et différence de fractions}
+   \eg{2.67}{Figures et configurations 5\\Les droites du triangle}
+   \ogd{1.83}{Proportionnalité 2\\Le ratio} 
+   \nc{0.5}{Calcul littéral 3\\Introduction aux équations}
+   \gm{-0.5}{Transformations 2\\Transformations et grandeurs}}
+\end{pspicture}}

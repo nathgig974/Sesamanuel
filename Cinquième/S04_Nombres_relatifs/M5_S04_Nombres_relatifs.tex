@@ -1,0 +1,825 @@
+\themaN
+\graphicspath{{../../S04_Nombres_relatifs/Images/}}
+
+\chapter{Nombres relatifs}
+\label{S04}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{prerequis}
+   \begin{itemize}
+      \item Nombres décimaux négatifs.
+      \item Notion d'opposé.
+      \item[\com] Repérage sur une droite graduée.
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\def\thermo{\pspolygon[linearc=0.1,fillstyle=solid](-0.1,6.8)(-0.1,0.6)(-0.2,0.4)(-0.2,-0.1)(0.2,-0.1)(0.2,0.4)(0.1,0.6)(0.1,6.8) \pspolygon[linecolor=B1, linearc=0.1, fillstyle=solid, fillcolor=B1](0,5)(0,0.5)(-0.1,0.3)(-0.1,0)(0.1,0)(0.1,0.3)(0,0.5) \pscircle(0,6.7){0.05}}
+            
+\begin{debat}[Débat : les unités de mesure de température]
+   Il existe trois échelles principales de température :
+   \begin{itemize}
+      \item l'échelle Farenheit, créée en 1720 par le scientifique allemand {\bf Gabriel Farenheit} et allant de \udeg{32}F à \udeg{212}F ;
+      \item l'échelle Celsius, créée en 1741 par le physicien suédois {\bf Anders Celsius}  dans laquelle \udeg{0}C correspond au point de congélation de l'eau et \udeg{100}C à son point d'ébullition ;
+      \item l'échelle de Kelvin, créée à la fin du {\small XIX}\up{e} siècle par {\bf Lord Kelvin} pour laquelle le point 0 correspond au zéro absolu, c'est-à-dire à la plus basse température existante.
+   \end{itemize}
+   \begin{center}
+      {\psset{yunit=0.7}
+      \begin{pspicture}(0,0)(8,7)
+         \textcolor{B1}{
+         \rput(1,0){\thermo}
+         \rput[l](1.2,1){\udeg{-459}F}
+         \rput[l](1.2,6){\udeg{212}F}
+         \rput[l](1.2,4.66){\udeg{32}F}
+         \rput(3.5,0){\thermo}
+         \rput[l](3.7,1){\udeg{-273}C} 
+         \rput[l](3.7,4.66){\udeg{0}C}
+         \rput[l](3.7,6){\udeg{100}C}
+         \rput(6,0){\thermo}
+         \rput[l](6.2,1){\udeg{0}K} 
+         \rput[l](6.2,4.66){\udeg{273}K}  
+         \rput[l](6.2,6){\udeg{373}K} }          
+      \end{pspicture}}
+   \end{center}
+   \bigskip
+   \begin{cadre}[B2][F4]
+      \begin{center}
+         Vidéo : \href{https://www.youtube.com/watch?v=nzirDkQN99M}{\bf Celsius et Farenheit}, chaîne YouTube {\it Ma deuxième école}, épisode de la série {\it Culture G}.
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+\vfill
+
+\textcolor{PartieGeometrie}{\sffamily\bfseries Cahier de compétences} : chapitre 3, exercices 1 à 16. ; 19 ; 21.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Carrés magiques]
+   {\bf Objectifs : } résoudre un problème avec des nombres ; montrer que, pour résoudre un problème, il est parfois nécessaire d’inventer de nouveaux nombres, des nombres négatifs.
+   \begin{QCM}
+      \begin{minipage}{10cm}
+         Un carré magique est un tableau carré tel que la somme pour chaque ligne, chaque colonne et chaque diagonale soit la même.
+      \end{minipage}
+      \qquad
+      \begin{minipage}{5cm}
+         \begin{pspicture}(-0.5,-1.5)(4,3.25)
+            \psgrid[griddots=50, subgriddiv=0, gridlabels=0](0,0)(3,3)
+            \rput(0.5,0.5){4}
+            \rput(1.5,0.5){3}
+            \rput(2.5,0.5){8}
+            \rput(0.5,1.5){9}
+            \rput(1.5,1.5){5}
+            \rput(2.5,1.5){1}
+            \rput(0.5,2.5){2}
+            \rput(1.5,2.5){7}
+            \rput(2.5,2.5){6}
+            \rput(0.5,-0.3){$\downarrow$}
+            \rput(0.5,-0.7){15}
+            \rput(1.5,-0.3){$\downarrow$}
+            \rput(1.5,-0.7){15}
+            \rput(2.5,-0.3){$\downarrow$}
+            \rput(2.5,-0.7){15}
+            \rput(3.3,0.5){$\rightarrow$}
+            \rput(3.7,0.5){15}
+            \rput(3.3,1.5){$\rightarrow$}
+            \rput(3.7,1.5){15}
+            \rput(3.3,2.5){$\rightarrow$}
+            \rput(3.7,2.5){15}
+            \rput(3.3,-0.3){$\searrow$}
+            \rput(3.7,-0.7){15}
+            \rput(-0.3,-0.3){$\swarrow$}
+            \rput(-0.7,-0.7){15}
+         \end{pspicture}
+      \end{minipage} \\
+      Compléter les carrés suivants pour les rendre magiques en commençant par déterminer la somme commune.
+      \begin{center}
+      {\psset{unit=1.5,griddots=50, subgriddiv=0, gridlabels=0}
+      \large
+         \begin{pspicture}(0,-0.5)(4,4)
+            \psgrid(0,0)(3,3)
+            \rput(0.5,0.5){4}
+            \rput(0.5,2.5){8}
+            \rput(1.5,1.5){5}
+            \rput(2.5,0.5){2}
+            \rput(1,3.5){Somme = \pf}
+         \end{pspicture}
+         \begin{pspicture}(-1,-0.5)(3,4)
+            \psgrid(0,0)(3,3)
+            \rput(2.5,2.5){24}
+            \rput(0.5,2.5){18}
+            \rput(1.5,1.5){15}
+            \rput(2.5,0.5){12}
+            \rput(1,3.5){Somme = \pf}
+         \end{pspicture}
+      
+          \begin{pspicture}(0,-0.5)(4,4)
+            \psgrid(0,0)(3,3)
+            \rput(1.5,2.5){7}
+            \rput(0.5,2.5){2}
+            \rput(1.5,1.5){3}
+            \rput(2.5,0.5){4}
+            \rput(1,3.5){Somme = \pf}
+         \end{pspicture}
+         \begin{pspicture}(-1,-0.5)(3,4)
+            \psgrid(0,0)(3,3)
+            \rput(2.5,2.5){4}
+            \rput(0.5,0.5){10}
+            \rput(1.5,1.5){7}
+            \rput(1.5,2.5){1}
+            \rput(1,3.5){Somme = \pf}
+         \end{pspicture}}
+      \end{center}   
+   \end{QCM}
+   \vfill\hfill{\footnotesize\it Source : Une introduction des nombres relatifs en 5\up{e} - PLOT 45, APMEP 2014.}
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+%%%%%%%%%%%%%
+\section{Nombres relatifs}
+
+\begin{definition}
+   Un {\bf nombre relatif} est un nombre positif ($+$) ou négatif ($-$). Le nombre sans son signe correspond à sa distance à l'origine 0.
+\end{definition}
+
+\begin{exemple*1}
+   Les étages d'un immeuble sont  repérés par rapport à un niveau 0 : le rez-de-chaussée. Les étages au-dessus sont les étages positifs et les étages en dessous (cave, garages) sont les étages négatifs.
+\end{exemple*1}
+
+\begin{exemple*1}
+   Le signe de $+3$ est $+$ et sa distance à l'origine 0 est 3. \\
+   Le signe de $-7$ est $-$ et sa distance à l'origine 0 est 7.  
+\end{exemple*1}
+
+\bigskip
+
+\begin{definition}
+   L'{\bf opposé} d'un nombre relatif est le nombre de signe contraire et de même	
+distance à 0.
+\end{definition}
+
+\begin{exemple*1}
+   L'opposé de $-3$ est $+3$ et l'opposé de $+2$ est $-2$ .
+\end{exemple*1}
+
+\begin{remarque}
+   De manière usuelle, on omet le signe \og $+$ \fg{} devant les nombres positifs.
+\end{remarque}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Droite graduée et comparaison}
+
+\begin{definition}
+   Sur une droite graduée, on repère chaque point par un nombre : son abscisse. \\
+   D'un côté de l'origine 0, on place les nombres négatifs et de l'autre les nombres positifs.
+   \begin{center}
+      \begin{pspicture}(-5,-0.5)(5,0.8)
+         \psaxes[yAxis=false]{->}(0,0)(-5,0)(5,0)
+         \psline[linecolor=B1]{<->}(-5,0.3)(0,0.3)
+         \rput(-2.5,0.6){\textcolor{B1}{nombres négatifs}}
+         \psline[linecolor=A1]{<->}(0,0.3)(5,0.3)
+         \rput(2.5,0.6){\textcolor{A1}{nombres positifs}}
+      \end{pspicture}
+   \end{center}
+\end{definition}
+
+\medskip
+
+\begin{exemple*1}
+   L'abscisse de A est $-3$, on note A($-3$) ; l'abscisse de B est 0 et l'abscisse de C est $+4$.
+   \begin{center}
+      \begin{pspicture}(-5,-0.5)(5,0.5)
+         \psaxes[yAxis=false]{->}(0,0)(-5,0)(5,0)
+         \rput(-3,0.5){A}
+         \rput(0,0.5){B}
+         \rput(4,0.5){C}
+         \psline[linecolor=B1]{<->}(-3,-0.9)(0,-0.9)
+         \rput(-1.5,-1.2){\textcolor{B1}{\small distance à l'origine : 3}}
+         \psline[linecolor=A1]{<->}(0,-0.9)(4,-0.9)
+         \rput(2,-1.2){\textcolor{A1}{\small distance à l'origine : 4}}
+      \end{pspicture}
+   \end{center}
+\end{exemple*1}
+
+\medskip
+
+\begin{propriete}
+   \begin{itemize}
+      \item Deux nombres relatifs négatifs sont rangés dans l'ordre inverse de leur
+distance à zéro.
+      \item Un nombre relatif négatif est inférieur à un nombre relatif positif.
+      \item Deux nombres relatifs positifs sont rangés dans l'ordre de leur distance à zéro. \\ [-8mm]
+   \end{itemize}  
+\end{propriete}
+
+\begin{exemple*1}
+   $-4<-2$ car $4>2$ \qquad ; \quad $-4<2$ car $-4<0$ et $2>0$ \qquad ; \quad $+4>+2$ car $4>2$.
+\end{exemple*1}
+
+\medskip
+
+\begin{remarque}
+   les nombres négatifs sont rangés \og dans le sens inverse \fg{} des nombres positifs.
+\end{remarque}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+\serie{Nombres relatifs} %%%
+
+\begin{exercice} %1
+   Quelle est la température indiquée par chacun des thermomètres ?
+   \begin{center}
+      \begin{pspicture}(-0.1,-1.2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \psframe[fillcolor=gray](0.2,0)(0.4,2.6)
+         \multido{\r=0+0.2}{21}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,1){\small $-5$}
+         \rput(0.85,2){\small 0}
+         \rput(0.85,3){\small 5}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+      \end{pspicture}
+      \;
+      \begin{pspicture}(-0.1,-1.2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \psframe[fillcolor=gray](0.2,0)(0.4,0.8)
+         \multido{\r=0+0.1}{41}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,2){\small 0}
+         \rput(0.85,3){\small 10}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+      \end{pspicture}
+      \;
+      \begin{pspicture}(-0.1,-1.2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \psframe[fillcolor=gray](0.2,0)(0.4,2.6)
+         \multido{\r=0+0.2}{21}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,1){\small $-1$}
+         \rput(0.85,2){\small 0}
+         \rput(0.85,3){\small 1}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+      \end{pspicture}
+      \;
+      \begin{pspicture}(-0.1,-1.2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \psframe[fillcolor=gray](0.2,0)(0.4,2.2)
+         \multido{\r=0+0.1}{41}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,1){\small $-1$}
+         \rput(0.85,2){\small 0}
+         \rput(0.85,3){\small 1}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+      \end{pspicture}
+      \;
+      \begin{pspicture}(-0.1,-1.2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \psframe[fillcolor=gray](0.2,0)(0.4,1.4)
+         \multido{\r=0+0.1}{41}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,1){\small $-1$}
+         \rput(0.85,2){\small 0}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+      \end{pspicture}
+   \end{center}
+\end{exercice}
+
+\begin{corrige}
+   On peut lire les températures suivantes : \\ \smallskip
+   {\hautab{1.5}
+   \begin{tabular}{|*{5}{C{1}|}}
+      \hline
+         \textcolor{blue}{\udegc{3}} & \textcolor{blue}{\udegc{-12}} & \textcolor{blue}{\udegc{0,6}} & \textcolor{blue}{\udegc{0,2}} & \textcolor{blue}{\udegc{-0.6}} \\
+      \hline
+   \end{tabular}}
+   \ \\
+\end{corrige}
+
+\medskip
+
+\begin{exercice} %2
+   Colorier les thermomètres jusqu'à la graduation correspondant à la température donnée.
+   \begin{center}
+      \begin{pspicture}(-0.1,-1.2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \multido{\r=0+0.1}{41}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,1){\small $-10$}
+         \rput(0.85,2){\small 0}
+         \rput(0.85,3){\small 10}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+         \rput(0.55,-0.85){\udegc{17}}
+      \end{pspicture}
+      \;
+      \begin{pspicture}(-0.1,-1.2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \multido{\r=0+0.2}{21}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,1){\small $-1$}
+         \rput(0.85,2){\small 0}
+         \rput(0.85,3){\small 1}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+         \rput(0.55,-0.85){\udegc{-1,2}}
+      \end{pspicture}
+      \;
+      \begin{pspicture}(-0.1,-1.2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \multido{\r=0+0.1}{41}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,2){\small 0}
+         \rput(0.85,3){\small 1}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+         \rput(0.55,-0.85){\udegc{-0,5}}
+      \end{pspicture}
+      \;
+      \begin{pspicture}(-0.1,-1.2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \multido{\r=0+0.1}{41}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,1){\small $-1$}
+         \rput(0.85,2){\small 0}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+         \rput(0.55,-0.85){\udegc{1,2}}
+      \end{pspicture}
+      \;
+      \begin{pspicture}(-0.1,-1.2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \multido{\r=0+0.1}{41}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,1){\small $-5$}
+         \rput(0.85,2){\small 0}
+         \rput(0.85,3){\small 5}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+         \rput(0.55,-0.85){\udegc{-7,5}}
+      \end{pspicture}
+   \end{center}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-3mm]
+   {\psset{unit=0.95}
+      \begin{pspicture}(-0.1,-2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \psframe[fillcolor=blue](0.2,0)(0.4,3.7)
+         \multido{\r=0+0.1}{41}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,1){\small $-10$}
+         \rput(0.85,2){\small 0}
+         \rput(0.85,3){\small 10}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+         \rput(0.55,-0.85){\udegc{17}}
+      \end{pspicture}
+      \;
+      \begin{pspicture}(-0.1,-2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \psframe[fillcolor=blue](0.2,0)(0.4,0.8)
+         \multido{\r=0+0.2}{21}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,1){\small $-1$}
+         \rput(0.85,2){\small 0}
+         \rput(0.85,3){\small 1}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+         \rput(0.55,-0.85){\udegc{-1,2}}
+      \end{pspicture}
+      \;
+      \begin{pspicture}(-0.1,-2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \psframe[fillcolor=blue](0.2,0)(0.4,1.5)
+         \multido{\r=0+0.1}{41}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,2){\small 0}
+         \rput(0.85,3){\small 1}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+         \rput(0.55,-0.85){\udegc{-0,5}}
+      \end{pspicture}
+      \;
+      \begin{pspicture}(-0.1,-2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \psframe[fillcolor=blue](0.2,0)(0.4,3.2)
+         \multido{\r=0+0.1}{41}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,1){\small $-1$}
+         \rput(0.85,2){\small 0}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+         \rput(0.55,-0.85){\udegc{1,2}}
+      \end{pspicture}
+      \;
+      \begin{pspicture}(-0.1,-2)(1.2,4.2)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=lightgray!25](-0.1,-0.6)(1.2,4.2)
+         \psframe(0.2,0)(0.4,4)
+         \pscircle[fillcolor=gray](0.3,-0.17){0.2}
+         \psframe[fillcolor=blue](0.2,0)(0.4,0.5)
+         \multido{\r=0+0.1}{41}{\psline[linecolor=gray](0.45,\r)(0.6,\r)}
+         \multido{\n=0+1}{5}{\psline(0.45,\n)(0.65,\n)}
+         \rput(0.85,1){\small $-5$}
+         \rput(0.85,2){\small 0}
+         \rput(0.85,3){\small 5}
+         \psframe[linecolor=gray](-0.1,-1.2)(1.2,-0.5)
+         \rput(0.55,-0.85){\udegc{-7,5}}
+      \end{pspicture}}
+\end{corrige}
+
+\medskip
+
+\begin{exercice} %3
+   Entourer en bleu les nombres positifs et en rouge les nombres négatifs.
+   \begin{center}
+       {\hautab{2}
+       \begin{tabular}{|*{5}{C{1}|}}
+         \hline
+         $12$ & $+\pi$ & $-\dfrac{12}{13}$ & $-17$ & $+0,001$ \\
+         \hline
+         $-54,2$ & $\dfrac{1}{10}$ & $-0,14$ & $\dfrac{3}{7}$ & $100,01$ \\
+         \hline
+         $12,6$ & $-1,18$ & $-3^2$ & $0,1$ & $48\,000$ \\
+         \hline
+      \end{tabular}}
+   \end{center}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-3mm]
+   {\hautab{2}
+      \begin{tabular}{|*{5}{C{1.05}|}}
+         \hline
+         \fcolorbox{blue}{white}{$12$} & \fcolorbox{blue}{white}{$+\pi$} & \fcolorbox{red}{white}{$-\dfrac{12}{13}$} & \fcolorbox{red}{white}{$-17$} & \!\!\fcolorbox{blue}{white}{$+0,001$} \\
+         \hline
+         \fcolorbox{red}{white}{$-54,2$} & \fcolorbox{blue}{white}{$\dfrac{1}{10}$} & \fcolorbox{red}{white}{$-0,14$} & \fcolorbox{blue}{white}{$\dfrac{3}{7}$} & \fcolorbox{blue}{white}{$100,01$} \\
+         \hline
+         \fcolorbox{blue}{white}{$12,6$} & \fcolorbox{red}{white}{$-1,18$} & \fcolorbox{red}{white}{$-3^2$} & \fcolorbox{blue}{white}{$0,1$} & \fcolorbox{blue}{white}{$48\,000$} \\
+         \hline
+      \end{tabular}}
+\end{corrige}
+
+\medskip
+
+\begin{exercice} %4
+   Compléter le tableau suivant :
+   \begin{center}
+      {\hautab{1.3}
+      \begin{Ctableau}{0.95\linewidth}{7}{c}
+         \hline
+         Nombre & 2,5 & & 0 & \!\!$-5$ & & 7,1 \\
+         \hline
+         Opposé & & \!\!$-2,7$ & & & 1 & \\
+         \hline 
+      \end{Ctableau}}
+   \end{center}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-3mm]
+      {\hautab{1.3}
+      \begin{Ctableau}{1\linewidth}{7}{c}
+         \hline
+         Nombre & 2,5 & \textcolor{blue}{2,7} & 0 & \!\!$-5$ & \textcolor{blue}{$-1$} & 7,1 \\
+         \hline
+         Opposé & \!\!\textcolor{blue}{$-2,5$} & \!\!$-2,7$ & \textcolor{blue}{0} & \textcolor{blue}{5} & 1 & \!\!\textcolor{blue}{$-7,1$} \\
+         \hline 
+      \end{Ctableau}}
+\end{corrige}
+
+\medskip
+
+%%%%%%%%%%%
+\serie{Droite graduée et comparaison}
+
+\begin{exercice} %5
+   Reproduire l'axe chronologique ci-dessous puis placer le plus précisément possible ces évènements :
+   \begin{itemize}
+      \item T : le temple de Jérusalem est détruit en 70 après Jésus-Christ ;
+      \item J : Jules César naît en 100 avant J.-C. ;
+      \item C : Constantin crée Constantinople en 324 ;
+      \item A : Alexandre le Grand meurt en 324 avant J.-C.
+   \end{itemize}
+   {\psset{unit=0.8}
+   \begin{pspicture}(-5,-0.6)(5,1)
+      \psaxes[yAxis=false,labels=none]{->}(0,0)(-5,0)(5,0)
+      \rput(0,-0.5){0}
+      \rput(1,-0.5){100}
+   \end{pspicture}}
+\end{exercice}
+
+\begin{corrige}
+   Droite graduée complétée : \\
+   {\psset{unit=0.7}
+   \begin{pspicture}(-5,-1)(5,1)
+      \psaxes[yAxis=false,labels=none]{->}(0,0)(-5,0)(5,0)
+      \rput(0,-0.5){0}
+      \rput(1,-0.5){100}
+      \rput(0.7,0.5){\blue T}
+      \rput(0.7,0){\blue |}
+      \rput(-1,0.5){\blue J}
+      \rput(-1,0){\blue |}
+      \rput(3.24,0.5){\blue C}
+      \rput(3.24,0){\blue |}
+      \rput(-3.24,0.5){\blue A}
+      \rput(-3.24,0){\blue |}
+   \end{pspicture}}
+\end{corrige}
+
+\medskip
+
+\begin{exercice} %6 
+   Construire une droite graduée dont l'origine est au milieu du cahier et l'unité vaut \ucm{1} puis répondre aux questions suivantes.
+   \begin{enumerate}
+      \item Sur la droite graduée, placer les points : \\
+         A($+8$), B($-2$), C($+3$), D($-5$) et E($+2$).
+      \item En examinant la position des points A, B, C, D et E sur cette droite graduée, comparer : \\ [-9mm]
+         \begin{multicols}{3}
+            $+2$ et $-2$ \\ \smallskip
+            $-2$ et $-5$ \\ \smallskip
+            $+2$ et $-5$ \\
+            $+8$ et $-2$ \\
+            $+3$ et $+8$ \\
+            $-5$ et $+3$
+         \end{multicols}
+         \ \\ [-15mm]
+      \item Ranger dans l'ordre croissant : $+8 ; -2 ; +3 ; -5$ et $+2$.
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item Droite graduée complétée : \\
+      {\psset{unit=0.5}
+      \begin{pspicture}(0,-1.2)(15,1.5)
+         \psaxes[yAxis=false,labels=none]{->}(0,0)(15,0)
+         \rput(6,-0.8){0}
+         \rput(7,-0.8){1}
+         \rput(14,-0.8){8}
+         \rput(4,-0.8){-2}
+         \rput(9,-0.8){3}
+         \rput(1,-0.8){-5}
+         \rput(8,-0.8){2}
+         \rput(14,0.8){\blue A}
+         \rput(4,0.8){\blue B}
+         \rput(9,0.8){\blue C}
+         \rput(1,0.8){\blue D}
+         \rput(8,0.8){\blue E}
+      \end{pspicture}}
+      \item \vspace*{-5mm}
+         \begin{multicols}{3}
+            $+2 \; {\blue >} \, -2$ \\ \smallskip
+            $-2  \; {\blue >} \, -5$ \\ \smallskip
+            $+2 \; {\blue >} \, -5$ \\
+            $+8 \; {\blue >} \, -2$ \\
+            $+3 \; {\blue <} \, +8$ \\
+            $-5 \; {\blue <} \, +3$
+         \end{multicols}
+         \vspace*{-3mm}
+      \item \blue$-5<-2<+2<+3<+8$.
+   \end{enumerate}
+\end{corrige}
+
+\medskip
+
+\begin{exercice} %7
+   Compléter par <, > ou =.
+   \begin{colenumerate}{2}
+      \item $+5,34 \pfh +3,54$
+      \item $0,05 \pfh 1$
+      \item $-8,51 \pfh -8,5$
+      \item $11,9 \pfh +11,9$
+      \item $3,14 \pfh -1,732$
+      \item $-9,27 \pfh -9,272$
+      \item $+8,64 \pfh -8,64$
+      \item $-19,2 \pfh +9,2$
+      \item $-14,39 \pfh +14,4$
+      \item $-0,99 \pfh -0,909$
+   \end{colenumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{colenumerate}{2}
+      \item $+5,34 \; {\blue >} \, +3,54$
+      \item $0,05 \; {\blue <} \, 1$
+      \item $-8,51 \; {\blue <} \, -8,5$
+      \item $11,9 \; {\blue =} \, +11,9$
+      \item $3,14 \; {\blue >} \, -1,732$
+      \item $-9,27 \; {\blue >} \, -9,272$
+      \item $+8,64 \; {\blue >} \, -8,64$
+      \item $-19,2 \; {\blue <} \, +9,2$
+      \item $-14,39 \; {\blue <} \, +14,4$
+      \item $-0,99 \; {\blue <} \, -0,909$
+   \end{colenumerate}
+\end{corrige}
+
+\medskip
+
+\begin{exercice} %8
+   Chasser l'intrus dans chacun des cas suivants.
+   \begin{enumerate}
+      \item $-9,84 < -9,72 < -9,67 < -9,78 < -9,18$
+      \item $+1,5 < +1,51 < +1,499 < +1,54 < +1,55$
+      \item $-10,1 > -10,02 > -10,2 > -10,22 > -10,222$
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item $-9,84 < -9,72 < -9,67 < {\blue\cancel{-9,78}} < -9,18$ \smallskip
+      \item $+1,5 < +1,51 < {\blue\cancel{+1,499}} < +1,54 < +1,55$ \smallskip
+      \item ${\blue\cancel{-10,1}} > -10,02 > -10,2 > -10,22 > -10,222$ \\ \smallskip
+         ou $-10,1 > {\blue\cancel{-10,02}} > -10,2 > -10,22 > -10,222$ \smallskip
+   \end{enumerate}
+\end{corrige}
+
+\medskip
+
+\begin{exercice} %9
+   Ranger dans l'ordre croissant et simplifier.
+   \begin{enumerate}
+      \item $+3 \; ; \; -7 \;;\;-8 \;;\; +7 \;; \;+14\; ;\; +8 \;;\; -9$.
+      \item $+5,0\; ; \;+2,7 \;;\; -2,6\; ; \;-3,1\; ; \;+7,1\; ; \;-8,3\; ;\; -0,2$.
+      \item $-10,6 \;; \;+14,52\; ;\; -8,31 \;; \;-3,8 \;; \;+4,2 \;; \;+14,6\; ;\; -8,3$.
+   \end{enumerate}  
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+    \begin{enumerate}
+      \item \blue $-9<-8<-7<+3<+7<+8<+14$. \smallskip
+      \item \blue $-8,3<-3,1<-2,6<-0,2<2,7<5<7,1$. \smallskip
+      \item \blue$-10,6<-8,31<-8,3<-3,8<4,2<14,52$ \\
+      \hfill $<14,6$. \smallskip
+   \end{enumerate}  
+\end{corrige}
+
+\medskip
+
+\begin{exercice} %10
+   Donner tous les entiers relatifs compris entre :
+   \begin{colenumerate}{2}
+      \item $-2$ et $+5$.
+      \item $-15$ et $-20$.
+   \end{colenumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item Entre $-2$ et $+5$ : {\blue$-1 \; ; \; 0 \; ; \; 1 \; ; \; 2 \; ; \; 3 \; ; \; 4$}. \smallskip
+      \item Entre $-15$ et $-20$ : {\blue $-19 \; ; \; -18 \; ; \; -17 \; ; \; -16$}. \smallskip
+   \end{enumerate}
+ 
+\vspace*{2cm}
+  
+\corec{Nombres croisés}
+
+\medskip
+
+\begin{center}
+   {\hautab{1.95}
+   \begin{tabular}{|*{7}{C{0.57}|}}
+      \hline
+      & \cellcolor{J2}{a} & \cellcolor{J2}{b} & \cellcolor{J2}{c} & \cellcolor{J2}{d} & \cellcolor{J2}{e} & \cellcolor{J2}{f} \\
+      \hline
+      \cellcolor{J2}{1} & \textcolor{blue}{9} & \cellcolor{black!70} & \textcolor{blue}{1} & \textcolor{blue}{3} & \cellcolor{black!70} & \textcolor{blue}{$-$} \\
+      \hline
+      \cellcolor{J2}{2} & \textcolor{blue}{1} & \textcolor{blue}{2} & \textcolor{blue}{0} & \cellcolor{black!70} & \textcolor{blue}{$-$} & \textcolor{blue}{1} \\
+      \hline
+      \cellcolor{J2}{3} & \textcolor{blue}{8} & \cellcolor{black!70} & \cellcolor{black!70} & \textcolor{blue}{7} & \textcolor{blue}{4} & \cellcolor{black!70} \\
+      \hline
+      \cellcolor{J2}{4} & \cellcolor{black!70} & \textcolor{blue}{$-$} & \textcolor{blue}{9} & \cellcolor{black!70} & \cellcolor{black!70} & \textcolor{blue}{$-$} \\
+      \hline
+      \cellcolor{J2}{5} & \textcolor{blue}{$-$} & \textcolor{blue}{1} & \cellcolor{black!70} & \textcolor{blue}{$-$} & \textcolor{blue}{1} & \textcolor{blue}{6} \\
+      \hline
+      \cellcolor{J2}{6} & \textcolor{blue}{3} & \cellcolor{black!70} & \textcolor{blue}{4} & \textcolor{blue}{2} & \textcolor{blue}{1} & \cellcolor{black!70} \\
+      \hline
+   \end{tabular}}
+   \end{center}
+\end{corrige}
+
+\vspace*{-5mm}
+
+\flushright{\footnotesize\it D'après Les cahiers Sésamath 5e. Magnard-Sesamath 2019}
+
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\enigme[Nombres croisés]
+   Compléter cette grille de nombres croisés à l'aide de chiffres et de signes \og $+$ \fg{} ou \og $-$ \fg{} grâce aux indications données.
+   \begin{center}
+   {\hautab{1.95}
+   \begin{tabular}{|*{7}{C{0.57}|}}
+      \hline
+      & \cellcolor{J2}{a} & \cellcolor{J2}{b} & \cellcolor{J2}{c} & \cellcolor{J2}{d} & \cellcolor{J2}{e} & \cellcolor{J2}{f} \\
+      \hline
+      \cellcolor{J2}{1} & & \cellcolor{black!70} & & & \cellcolor{black!70} & \\
+      \hline
+      \cellcolor{J2}{2} & & & & \cellcolor{black!70} & & \\
+      \hline
+      \cellcolor{J2}{3} & & \cellcolor{black!70} & \cellcolor{black!70} & & & \cellcolor{black!70} \\
+      \hline
+      \cellcolor{J2}{4} & \cellcolor{black!70} & & & \cellcolor{black!70} & \cellcolor{black!70} & \\
+      \hline
+      \cellcolor{J2}{5} & & & \cellcolor{black!70} & & & \\
+      \hline
+      \cellcolor{J2}{6} & & \cellcolor{black!70} & & & & \cellcolor{black!70} \\
+      \hline
+   \end{tabular}}
+   \end{center}
+   \bigskip
+   \begin{multicols}{2}
+   {\bf Horizontalement} \\
+   \begin{enumerate}
+      \item Valeur du plus grand chiffre. \\
+         Opposé de l'entier compris entre $-12,2$ et $-13,9$. \\
+         Les nombres négatifs sont précédés de ce signe. \\
+      \item Résultat du calcul $8\times20-(12+28)$. \\
+         Nombre entier compris entre $-1,8$ et $-0,2$. \\
+      \item Opposé de l’opposé de $+8$. \\
+         Nombre entier supérieur à $73,01$ et inférieur $74,99$. \\
+      \item Sur une droite graduée de $3$ en $3$, je suis placé à trois graduations à gauche de l'origine. \\
+         Signe de l’opposé d'un nombre positif. \\
+      \item Nombre entier le plus proche et supérieur à $-1,4$.
+         Nombre entier inférieur à $-15,154$ et supérieur à $-16,98$. \\
+      \item Diviseur commun à $12$, $24$ et $33$. \\
+         Mon chiffre des centaines est le double de mon chiffre des dizaines qui est lui-même le double de mon chiffre des unités. \\ [1mm]
+      \end{enumerate}
+      
+   {\bf Verticalement} \\
+   \begin{enumerate}
+      \item[\textcolor{B1}{\bf a)}] Résultat du calcul $9\times(100+2)$. \\
+         Nombre relatif se situant avant zéro et se trouvant à 5 unités du nombre $+2$. \\
+      \item[\textcolor{B1}{\bf b)}] J'ai la même distance à zéro que le nombre $-2$. \\
+         Nombre opposé de la moitié de 2. \\
+      \item[\textcolor{B1}{\bf c)}] Le chiffre des unités est l'abscisse de l'origine et le chiffre des dizaines est le premier nombre entier positif non nul. \\
+         Opposé de l'entier compris entre $-9,12$ et $-8,93$. \\
+         Nombre relatif se situant après zéro et se trouvant à $11$ unités du nombre $-7$. \\
+      \item[\textcolor{B1}{\bf d)}] Distance à zéro de l'opposé de $-\dfrac{33}{11}$. \\ [1mm]
+         Opposé de $-42\div6$. \\
+         Nombre négatif se trouvant à deux unités de l'origine. \\
+      \item[\textcolor{B1}{\bf e)}] Nombre se trouvant à 8 unités de $-12$. \\ [1mm]
+         Distance à zéro de $+\dfrac{22}{2}$. \\
+      \item[\textcolor{B1}{\bf f)}] Opposé de $+1$. \\
+         Nombre entier le plus proche et supérieur à $-6,98$.
+   \end{enumerate}
+\end{multicols}
+

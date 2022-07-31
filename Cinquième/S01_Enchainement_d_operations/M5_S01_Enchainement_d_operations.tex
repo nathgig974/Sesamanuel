@@ -1,0 +1,925 @@
+\themaN
+\graphicspath{{../../S01_Enchainement_operations/Images/}}
+
+\chapter{Enchaînement\\d'opérations}
+\label{S01}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{prerequis}
+   \begin{itemize}
+      \item Nombres décimaux positifs.
+      \item Sommes, différences, produits, quotients de nombres décimaux.
+      \item et \com{} Utiliser diverses représentations d'un même nombre.
+      \item[\com] Comparer, ranger, encadrer des nombres décimaux.
+      \item[\com] Calculer avec des nombres décimaux.
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\begin{debat}[Débat : un peu d'histoire]
+   Le système de numération que nous employons actuellement et qui nous semble si naturel est le fruit d'une longue évolution des concepts mathématiques. En effet, un nombre est une entité abstraite qui peut surprendre : on a déjà vu {\bf un} élève, {\bf un} animal donné, on sait ce qu'est {\bf un} jour, mais qu'est-ce que {\bf un} ? C'est une entité qui, prise seule, n'a pas vraiment de sens. De nombreuses civilisations ont imaginé des systèmes de numération plus ou moins compliqués, plus ou moins pratiques : des systèmes utilisant des bases différentes, des systèmes utilisant le principe additif\dots{} jusqu'à notre système de numération positionnel de base dix maintenant utilisé de manière universelle. \\
+   \begin{center}
+      \textcolor{B1}{{\huge 19\textcircled{\Large 0}1\textcircled{\Large 1}7\textcircled{\Large2}8\textcircled{\Large 3}} \\ [3mm]
+      \it Notation décimale de Simon Stevin \\
+      représentant le nombre 19,178.}
+   \end{center}
+   \bigskip
+   \begin{cadre}[B2][F4]
+      \begin{center}
+         Vidéo : \href{https://www.youtube.com/watch?v=bkGMa1EJkSA}{\bf Histoire de la virgule}, chaîne Youtube de {\it Maths 28}.
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+\vfill
+
+\textcolor{PartieGeometrie}{\sffamily\bfseries Cahier de compétences} : chapitre 1, exercices 1 à 38.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Construction et repérage d'une droite graduée]
+   {\bf Objectifs :} comprendre et utiliser le principe de construction d'une graduation en dixièmes et en centièmes ; savoir situer des nombres décimaux sous différentes écritures ; ordonner, encadrer, intercaler des nombres décimaux.
+   \begin{QCM}
+      \partie[construction d'une droite graduée]
+         \begin{enumerate}
+            \item Tracer au stylo une droite la plus longue possible sur la bande de papier fournie.
+            \item Placer à gauche sur cette droite le repère de l'origine, inscrire la valeur 0 en dessous. 
+            \item Grâce à la petite bande de couleur \og $\dfrac1{10}$ \fg, qui correspond à un dixième d'une unité, placer le nombre 1.
+            \begin{center}
+               \begin{pspicture}(-1,-0.25)(5,1.75)
+                  \multido{\n=0+0.5}{11}{\psline(\n,0)(\n,0.5)}
+                  \psframe[fillstyle=solid,fillcolor=J1](0,0.5)(5,1.5)
+                  \psline(0,0)(5,0)
+                  \rput(2.5,1){\white\small $\dfrac1{10}$}
+               \end{pspicture}
+            \end{center}
+            \item Placer ensuite les nombres 2 et 3, toujours en dessous de la droite.
+         \end{enumerate}
+      \partie[placer des nombres décimaux sur la droite graduée]
+         \begin{enumerate}
+            \item Sur la droite graduée, placer au crayon à papier et au-dessus les nombres suivants : \\ [1mm]
+               $\dfrac{8}{10} \hfill 0,3 \hfill \text{cinq dixièmes} \hfill \dfrac{23}{10} \hfill 1,7 \hfill 2+\dfrac{1}{10} \hfill \text{douze dixièmes} \hfill$ \smallskip
+            \item Trouver un moyen pour placer $\dfrac{143}{100}$ sur la droite graduée. \smallskip
+            \item Placer au crayon les nombres suivants : $\hfill \dfrac{255}{100} \hfill 0,23 \hfill \text{cent-six centièmes} \hfill 1+\dfrac{9}{10}+\dfrac{8}{100} \hfill$
+         \end{enumerate}
+      \partie[ordonner, encadrer, intercaler des nombres décimaux]
+         \begin{enumerate}
+            \item Écrire dans l'ordre croissant les quinze nombres inscrits sur la droite graduée. \\ [2mm]
+               $\bullet$ \pfh \medskip
+            \item Encadrer chacun des nombres suivants par deux nombres entiers consécutifs. \medskip
+            \begin{colitemize}{3}
+               \item \pfh < $\dfrac{8}{10}$ < \pfh \medskip
+               \item \pfh < 0,3 < \dashrulefill[0.5mm]{4 2}{0.15}  \medskip
+               \item \pfh < {\small cinq dixièmes} < \pfh \medskip
+               \item \pfh < $\dfrac{23}{10}$ < \pfh  \medskip
+               \item \pfh < 1,7 < \pfh \medskip
+               \item \pfh < $2+\dfrac{1}{10}$ < \pfh \medskip
+               \item \pfh < {\small douze dixièmes} < \pfh \medskip
+               \item \pfh < $\dfrac{143}{100}$ < \pfh \medskip
+               \item \pfh < $\dfrac{255}{100}$ < \pfh \medskip
+               \item \pfh < 0,23 < \pfh \medskip
+               \item \pfh < {\small 106 centièmes} < \pfh \medskip
+               \item \pfh < $1+\dfrac{9}{10}+\dfrac{8}{100}$ < \pfh \medskip
+            \end{colitemize}
+            \item Intercaler un nombre vérifiant chacune des inégalités. \medskip
+            \begin{colitemize}{3}
+               \item {\small cinq dixièmes} < \pfh < $\dfrac{8}{10}$ \\
+               \item 2 < \pfh < $2+\dfrac{1}{10}$ \\
+               \item 0,23 < \pfh < 0,3
+            \end{colitemize}
+         \end{enumerate}
+      \vspace*{-3mm}
+   \end{QCM}
+   \vfill\hfill{\it\footnotesize Source : Apprentissages numériques et résolution de problèmes au CM2, Ermel, Hatier 2001}.
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+\section{Rappels sur les nombres décimaux}
+
+\begin{definition}
+   Une {\bf fraction décimale} est une fraction dont le dénominateur est  1, 10, 100, 1\,000 \dots \\
+   Un {\bf nombre décimal} est un nombre qui peut s'écrire sous forme d'une fraction décimale.
+\end{definition}
+
+\medskip
+
+Un nombre a une seule valeur numérique mais a plusieurs écritures.
+   
+\begin{exemple*1}
+   Voilà plusieurs écritures du nombre seize et quatre-vingt-deux centièmes : \par\smallskip
+    {\hautab{1.5}
+    \begin{tabular}{cp{13cm}}
+      16,82 & $=16+\dfrac{82}{100} =\dfrac{1\,682}{100}$ \\
+      & $=1\times10+6\times1+8\times\dfrac{1}{10}+2\times\dfrac{1}{100} = 1\times10+6\times1+8\times0,1+2\times0,01$ \\ [-5mm]
+   \end{tabular}}
+\end{exemple*1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Priorités dans les calculs}
+
+\begin{definition}
+   \begin{itemize}
+      \item Lorsqu'on effectue l'addition de deux {\bf termes}, le résultat est une {\bf somme}.
+      \item Lorsqu'on effectue la soustraction de deux {\bf termes}, le résultat est une {\bf différence}.
+      \item Lorsqu'on effectue la multiplication de deux {\bf facteurs}, le résultat est un {\bf produit}.
+      \item Lorsqu'on effectue la division d'un {\bf dividende} par un {\bf diviseur}, le résultat est un {\bf quotient}. \\ [-10mm]
+   \end{itemize}
+\end{definition}
+
+\bigskip
+
+{\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{*{7}{c}|*{7}{c}|*{8}{c}|*{10}{c}}
+   12 & $+$ & 3 & = &15 &&&& 12 & $-$ & 3 & = & 9 &&& 12 & $\times$ & 3 & = & 36 &&&&& 12 & $\div$ & 3  & = & $\dfrac{12}{3}$ & = & 4 & \\
+   \multicolumn{3}{c}{$\nwarrow \quad \nearrow$} & & $\uparrow$ &&&& \multicolumn{3}{c}{$\nwarrow \quad \nearrow$} & & $\uparrow$ &&& \multicolumn{3}{c}{$\nwarrow \quad \nearrow$} & & $\uparrow$ &&&&& $\uparrow$ & & $\uparrow$ & & & & $\uparrow$ & \\
+   \multicolumn{3}{c}{\small termes} & \multicolumn{3}{c}{\small somme} &&& \multicolumn{3}{c}{\small termes} & \multicolumn{3}{c|}{\small différence} && \multicolumn{3}{c}{\small facteurs} & \multicolumn{4}{c|}{\small produit} & \multicolumn{3}{c}{\small dividende} & \multicolumn{3}{c}{\small diviseur} & & \multicolumn{3}{c}{\small quotient} \\
+\end{tabular}}
+
+\bigskip
+
+\begin{methode}[Priorités opératoires]
+   Dans un calcul, on effectue dans l'ordre :
+   \begin{itemize}
+      \item les calculs entre parenthèses, en commençant par les plus intérieures ;
+      \item les multiplications et les divisions ;
+      \item les additions et soustractions.
+   \end{itemize}
+   Les calculs s'effectuent généralement de gauche à droite, mais une expression comportant uniquement des multiplications ou des additions peut s'effectuer dans l'ordre que l'on veut.
+   \exercice
+      Calculer la valeur de $A$ : \\
+      $A =8\times5+3\times((15-9)\times2)$
+   \correction
+      $A =8\times5+3\times(\underline{(15-9)}\div2)$ \\
+      $\phantom{A} =8\times5+3\times\underline{(\psframebox*[fillcolor=yellow]{6}\div2)}$ \\
+      $\phantom{A} =\underline{8\times5}+\underline{3\times\psframebox*[fillcolor=yellow]{3}}$ \\
+      $\phantom{A} =\underline{\psframebox*[fillcolor=yellow]{40}+\psframebox*[fillcolor=yellow]{9}}$ \\
+      $A = \psframebox*[fillcolor=yellow]{49}$
+\end{methode}
+
+\begin{remarque}
+   une expression qui figure au numérateur et/ou au dénominateur d'un quotient est considérée comme une expression entre parenthèses : \\
+   $\dfrac{8+4}{3,5+2,5} = (8+4)\div(3,5+2,5) =12\div6 =2$.
+\end{remarque}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+\serie{Rappels sur les nombres décimaux} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\medskip
+
+\begin{exercice} %1
+   Associer chaque nombre de la colonne de gauche à un nombre de la colonne de droite.
+   \begin{center}
+      \begin{tabular}{rp{1cm}l}
+         143 dixièmes \quad $\bullet$ & & $\bullet$ \quad 143 \\
+         1\,430 millièmes \quad $\bullet$ & & $\bullet$ \quad 14\,300 \\
+         1\,430 dixièmes \quad $\bullet$ & & $\bullet$ \quad 1,43 \\
+         143 millièmes \quad $\bullet$ & & $\bullet$ \quad 0,014\,3 \\
+         143 dix-millièmes \quad $\bullet$ & & $\bullet$ \quad 0,143 \\
+         143 centaines \quad $\bullet$ & & $\bullet$ \quad 14,3 \\      \end{tabular}  
+   \end{center}
+\end{exercice}
+
+\begin{corrige}
+      \begin{tabular}[t]{rp{1cm}l}
+         143 dixièmes \quad \rnode{a}{$\bullet$} & & \rnode{1}{$\bullet$} \quad 143 \\
+         1\,430 millièmes \quad \rnode{b}{$\bullet$} & & \rnode{2}{$\bullet$} \quad 14\,300 \\
+         1\,430 dixièmes \quad \rnode{c}{$\bullet$} & & \rnode{3}{$\bullet$} \quad 1,43 \\
+         143 millièmes \quad \rnode{d}{$\bullet$} & & \rnode{4}{$\bullet$} \quad 0,014\,3 \\
+         143 dix-millièmes \quad \rnode{e}{$\bullet$} & & \rnode{5}{$\bullet$} \quad 0,143 \\
+         143 centaines \quad \rnode{f}{$\bullet$} & & \rnode{6}{$\bullet$} \quad 14,3 \\ [6mm]
+      \end{tabular}
+      \psset{linecolor=blue}
+      \ncline{a}{6}
+      \ncline{b}{3}
+      \ncline{c}{1}
+      \ncline{d}{5}
+      \ncline{e}{4}
+      \ncline{f}{2}
+\end{corrige}
+
+\bigskip
+
+\begin{exercice} %2
+   Décomposer les nombres suivants ainsi : $$\frac{736}{100} =7+\frac{3}{10}+\frac{6}{100} =7,36$$
+   \begin{colenumerate}{4}
+      \item $\dfrac{8\,725}{1\,000}$
+      \item $\dfrac{1\,253}{100}$
+      \item $\dfrac{32}{100}$
+      \item $\dfrac{908}{10}$
+   \end{colenumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item $\dfrac{8\,725}{1\,000} =\blue 8+\dfrac{7}{10}+\dfrac{2}{100}+\dfrac{5}{1\,000} =8,725$ \medskip
+      \item $\dfrac{1\,253}{100} =\blue 12+\dfrac{5}{10}+\dfrac{3}{100} =12,53$ \medskip
+      \item $\dfrac{32}{100} =\blue \dfrac{3}{10}+\dfrac{2}{100} =0,32$ \medskip
+      \item $\dfrac{908}{10} =\blue 90+\dfrac{8}{10} =90,8$
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %3
+   Compléter avec les signes < ou >. \bigskip
+   \begin{colenumerate}{2}
+      \item $\dfrac{32}{100} \pfh \dfrac{40}{100}$ \bigskip
+      \item $\dfrac{7}{10} \pfh \dfrac{7}{100}$ \bigskip
+      \item $\dfrac{43}{100} \pfh \dfrac{4}{10}$ \bigskip
+      \item $\dfrac{85}{100} \pfh \dfrac{9}{10}$
+      \item $\dfrac{37}{100} \pfh \dfrac{307}{1\,000}$
+      \item $5+\dfrac{8}{10} \pfh 5+\dfrac{8}{100}$
+   \end{colenumerate}
+\end{exercice}
+
+\begin{corrige}
+   \begin{colenumerate}{2}
+      \item $\dfrac{32}{100} {\blue\,<\,} \dfrac{40}{100}$ \medskip
+      \item $\dfrac{7}{10} {\blue\,>\,} \dfrac{7}{100}$ \medskip
+      \item $\dfrac{43}{100} {\blue\,>\,} \dfrac{4}{10}$ \medskip
+      \item $\dfrac{85}{100} {\blue\,<\,} \dfrac{9}{10}$
+      \item $\dfrac{37}{100} {\blue\,>\,} \dfrac{307}{1\,000}$
+      \item $5+\dfrac{8}{10} {\blue\,>\,} 5+\dfrac{8}{100}$
+   \end{colenumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %4
+   Ranger chaque série de nombres :
+   \begin{enumerate}
+      \item dans l'ordre croissant ; \\ [1mm]
+        \fbox{0,7} \; \fbox{0,07} \; \fbox{0,707} \; \fbox{0,007} \; \fbox{0,77} \; \fbox{0,077} \medskip
+      \item dans l'ordre décroissant. \\ [1mm]
+        \fbox{5,3} \; \fbox{3,5} \; \fbox{5,35} \; \fbox{3,53} \; \fbox{5,353} \; \fbox{3,535} \medskip
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item \blue 0,007 \, < \, 0,07 \, < \, 0,077 \, < \, 0,7 \, < \, 0,707 \, < \, 0,77 \smallskip
+      \item 5,353 \, > \, 5,35 \, > \, 5,3 \, > \, 3,535 \, > \, 3,53 \, > \, 3,5
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %5
+   Gavin souhaite classer dans l'ordre croissant l'ensemble de ces lettes afin de trouver le mot mystère. Comment peut-on l'aider ? \smallskip
+   \begin{colitemize}{3}
+      \item O = 65,165
+      \item R = $\dfrac{655}{10}$
+      \item A = $\dfrac{6\,503}{100}$
+   \end{colitemize}
+   \begin{colitemize}{2}
+      \item T = $56+\dfrac{6}{100}$
+      \item H = $50+6+\dfrac{65}{1\,000}$
+      \item G = $\dfrac{651}{10}+\dfrac{3}{100}$
+      \item Y = $56+\dfrac{5}{100}$
+   \end{colitemize}
+   \begin{colitemize}{1}
+      \item E = $(6\times10)+(5\times1)+(6\times0,1)$
+      \item P = 56 unités et 6 millièmes
+   \end{colitemize}
+\end{exercice}
+
+\begin{corrige}
+   \begin{colitemize}{3}
+      \item \blue O = 65,165 \smallskip
+      \item \blue R = 65,5 \smallskip
+      \item \blue A = 65,03 \medskip
+      \item \blue T = 56,06
+      \item \blue G = 65,13
+      \item \blue H = 56,065
+      \item \blue Y = 56,05
+      \item \blue E = 65,6
+      \item \blue P = 56,006
+   \end{colitemize}
+   On a {\blue $56,006 < 56,05 < 56,06 < 56,065 < 65,03 < 65,13 < 65,165 < 65,5 < 65,6$}. \\
+   Conclusion : le mot mystère est \blue PYTHAGORE. \\
+\end{corrige}
+
+\bigskip
+
+
+\serie{Priorités dans les calculs} %%%%%%%%%%%%
+
+\medskip
+
+\begin{exercice}%6
+   Traduire par une expression mathématique les phrases suivantes puis calculer :
+   \begin{enumerate}
+      \item La somme de 7 et du produit de 2 par 3.
+      \item Le produit de 7 et de la somme de 2 et de 3.
+      \item Le quotient de la différence de 7 et de 2 par 3.
+      \item La différence de la somme de 7 et de 2 et du produit de 3 par 1.
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item \blue $7+2\times3$
+      \item \blue $7\times(2+3)$ \smallskip
+      \item \blue $\dfrac{7-2}{3}$ \medskip
+      \item \blue $(7+2)-(3\times1)$
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %7
+  Calculer, en donnant les étapes intermédiaires :
+   \begin{colenumerate}{2}
+      \item $24-19+5$
+      \item $45\div5\times8$
+      \item $24+3\times7$
+      \item $720\div9+4$
+      \item $60-14+5\times3+2$
+      \item $37-12\times2+5$
+      \item $18-[4\times(5-3)+2]$
+      \item \, $1+[3+5\times(2+1)]\times2$
+\end{colenumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item $\underline{24-19}+5 =5+5 =\blue 10$ \smallskip
+      \item $\underline{45\div5}\times8 =9\times8 =\blue 72$ \smallskip
+      \item $24+\underline{3\times7} =24+21 =\blue 45$ \smallskip
+      \item $\underline{720\div9}+4 =80+4 =\blue 84$ \smallskip
+      \item $60-14+\underline{5\times3}+2 =\underline{60-14}+15+2$ \\
+         \quad $=\underline{46+15}+2 =61+2 =\blue 63$ \smallskip
+      \item $37-\underline{12\times2}+5 =\underline{37-24}+5 =13+5 =\blue 18$ \smallskip
+      \item $18-[4\times(\underline{5-3})+2] =18-(\underline{4\times2}+2)$ \\
+         \quad $=18-(\underline{8+2}) =18-10 =\blue 8$ \smallskip
+      \item \, $1+[3+5\times(\underline{2+1})]\times2 =1+(3+\underline{5\times3})\times2$ \\
+         \quad $=1+(\underline{3+15})\times2 =1+\underline{18\times2} =1+36 =\blue 37$
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %8
+   Calculer les nombres suivants :
+   \begin{colenumerate}{3}
+      \item $\dfrac{18}{3}+6$ \bigskip
+      \item $\dfrac{18+6}{3}$
+      \item $18+\dfrac{6}{3}$
+      \item $\dfrac{18}{6+3}$
+      \item $\dfrac{\dfrac{18}{6}}{3}$
+      \item $\dfrac{18}{\dfrac{6}{3}}$
+   \end{colenumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item $\dfrac{18}{3}+6 =\underline{18\div3}+6 =6+6 =\blue 12$ \medskip
+      \item $\dfrac{18+6}{3} =\dfrac{24}{3} =24\div3 =\blue 8$ \medskip
+      \item $18+\dfrac{6}{3} =18+\underline{6\div3} =18+2 =\blue 20$ \medskip
+      \item $\dfrac{18}{6+3} =\dfrac{18}{9} =18\div9 =\blue 2$ \medskip
+      \item $\dfrac{\dfrac{18}{6}}{3} =\dfrac{18\div6}{3} =\dfrac{3}{3} =3\div3 =\blue 1$ \medskip
+      \item $\dfrac{18}{\dfrac{6}{3}} =\dfrac{18}{6\div3} =\dfrac{18}{2} =18\div2 =\blue 9$
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %9
+   On considère les calculs suivants faits par Tom :
+   \begin{colitemize}{2}
+      \item A. \;$50-10\div2 =20$
+      \item B. \;$24-8+2 =14$
+      \item C. \;$8+2\times3 =30$
+      \item D. \;$10+8-6 =12$
+      \item E. \;$100\div2\times5 =10$
+      \item F. \;$5\times6\div3 =10$
+   \end{colitemize}
+   \  \\ [-10mm]
+   \begin{enumerate}
+      \item Retrouver les calculs qui sont justes.
+      \item Corriger les calculs faux.
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item Les calculs justes sont les calculs {\blue D} et {\blue F}. \smallskip
+      \item A. $50-10\div2 =50-5 ={\blue 45}$ \\ [1mm]
+         B. $24-8+2 =16+2 ={\blue 18}$ \\ [1mm]
+         C. $8+2\times3 =8+6 ={\blue 14}$ \\ [1mm]
+         E. $100\div2\times5 =50\times5 = {\blue 250}$
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice}%11
+   Compléter les calculs suivants pour que chaque égalité soit vraie.
+   \begin{enumerate}
+      \item Avec les signes $+, -$ ou $\times$ : \medskip
+      \begin{itemize}
+         \item $3 \pfh 3 \pfh 3 \pfh 3 = 6$ \medskip
+         \item $3 \pfh 3 \pfh 3 \pfh 3 = 81$ \medskip
+      \end{itemize}
+      \item Avec les signes $+, -$ ou $\times$ et des parenthèses : \medskip
+      \begin{itemize}
+         \item $\pfh 3 \pfh 3 \pfh 3 \pfh 3 \pfh = 9$ \medskip
+         \item $\pfh 3 \pfh 3 \pfh 3 \pfh 3 \pfh = 27$ \medskip
+      \end{itemize}
+      \item Avec les signes $+, -,\times$ ou $\div$ et des parenthèses :\medskip
+      \begin{itemize}
+         \item $\pfh 3 \pfh 3 \pfh 3 \pfh 3 \pfh = 1$ \medskip
+         \item $\pfh 3 \pfh 3 \pfh 3 \pfh 3 \pfh = 12$
+      \end{itemize}
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item $3 {\blue \,+\,} 3 {\blue \,+\,} 3 {\blue \,-\,} 3 = 6$ \\
+         $3 {\blue \,\times\,} 3  {\blue \,\times\,} 3  {\blue \,\times\,} 3 = 81$ \smallskip
+      \item ${\blue (} 3 {\blue \,+\,} 3 {\blue \,-\,} 3 {\blue )\,\times\,} 3 = 9$ \\
+         ${\blue (} 3 {\blue \,+\,} 3 {\blue \,+\,} 3 {\blue )\,\times\,} 3 = 27$ \smallskip
+      \item ${\blue (} 3 {\blue \,+\,} 3 {\blue \,-\,} 3 {\blue )\,\div\,} 3 = 1$ \\
+         ${\blue (} 3 {\blue \,+\,} 3 {\blue \,\div\,} 3 {\blue )\,\times\,} 3 = 12$
+   \end{enumerate}
+
+\Coupe % correction des énigmes
+
+\corec{Nombres en cases}
+
+\setcounter{partie}{0}
+\partie \bigskip
+         {\hautab{2}
+         \begin{tabular}{|*{7}{C{0.6}|}}
+            \hline
+            2 & $+$ & 3 & $\times$ & \textcolor{blue}{5} & $=$ & 17 \\
+            \hline
+            $\times$ & \cellcolor{gray} & $+$ & \cellcolor{gray} & $+$ & \cellcolor{gray} & $\times$ \\
+            \hline
+            \textcolor{blue}{39} & $\times$ & \textcolor{blue}{9} & $-$ & 201 & $=$ & 150 \\
+            \hline
+            $=$ & \cellcolor{gray} & $=$ & \cellcolor{gray} & $=$ & \cellcolor{gray} & $=$ \\
+            \hline
+            \textcolor{blue}{78} & $+$ & 12 & $\times$ & \textcolor{blue}{206} & $=$ & \textcolor{blue}{2\,550} \\
+            \hline
+         \end{tabular}}
+
+\bigskip
+
+\partie \bigskip
+
+      {\hautab{2}
+         \begin{tabular}{|*{7}{C{0.6}|}}
+            \cline{1-1} \cline{3-5} \cline{7-7}
+            \textcolor{blue}{5} & & \textcolor{blue}{2} & $-$ & 6 & & 66 \\
+            \cline{1-1} \cline{3-5} \cline{7-7}
+            $+$ & & $\times$ & & $-$ && $=$ \\
+            \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
+            13 & &12 & &11 & &10 \\
+             \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
+             $\times$ & & $+$ & & $+$ && $-$ \\
+            \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
+            \textcolor{blue}{3} & & 7 & & 9 & & \textcolor{blue}{4} \\
+            \cline{1-3} \cline{5-7}
+            $\div$ & \textcolor{blue}{1} & $+$ & & $\times$ & 8 & $\div$ \\
+            \cline{1-3} \cline{5-7}
+         \end{tabular}}
+
+\Coupe
+   
+\partie \bigskip
+
+   \begin{pspicture}(7,9)
+     \psgrid[subgriddiv=0,gridlabels=0,gridcolor=gray](7,9)
+     \psset{fillstyle=solid,fillcolor=gray,linecolor=gray}
+     \psframe(1,1)(2,3)
+     \psframe(5,1)(6,3)
+     \psframe(3,0)(4,2)
+     \psframe(0,4)(1,5)
+     \psframe(6,4)(7,5)
+     \psframe(1,6)(2,8)
+     \psframe(5,6)(6,8)
+     \psframe(3,8)(4,9)
+     \psframe(2,4)(5,5)
+     \psframe(3,3)(4,7)
+     \rput(0.5,0.5){\blue 1}
+     \rput(1.05,0.5){+}
+     \rput(1.5,0.5){7}
+     \rput(2,0.5){=}
+     \rput(2.5,0.5){\blue 8}
+     \rput(4.5,0.5){\blue 4}
+     \rput(5,0.5){\footnotesize\ding{53}}
+     \rput(5.5,0.5){\blue 2}
+     \rput(6,0.5){=}
+     \rput(6.5,0.5){\blue 8}
+     \rput(0.5,1.5){\blue 1}
+     \rput(2.5,1.5){1}
+     \rput(4.5,1.5){2}
+     \rput(6.5,1.5){2}
+     \rput(0.5,2){=}
+     \rput(2.5,2){=}
+     \rput(4.5,2){=}
+     \rput(6.5,2){=}
+     \rput(0.5,2.5){9}
+     \rput(2.5,2.5){\blue 9}
+     \rput(3,2.5){--}
+     \rput(3.5,2.5){1}
+     \rput(4,2.5){=}
+     \rput(4.5,2.5){\blue 8}
+     \rput(6.5,2.5){\blue 4}
+     \rput(0.5,3.05){+}
+     \rput(2.5,3.05){+}
+     \rput(4.5,3){\footnotesize\ding{53}}
+     \rput(6.5,3){\footnotesize\ding{53}}
+     \rput(0.5,3.5){\blue 2}
+     \rput(1.05,3.5){+}
+     \rput(1.5,3.5){\blue 7}
+     \rput(2,3.5){=}
+     \rput(2.5,3.5){9}
+     \rput(4.5,3.5){\blue 3}
+     \rput(5.05,3.5){+}
+     \rput(5.5,3.5){\blue 4}
+     \rput(1.5,4){=}
+     \rput(6.5,3.5){\blue 7}
+     \rput(5.5,4){=}
+     \rput(1.5,4.5){5}
+     \rput(5.5,4.5){1}
+     \rput(1.5,5.05){+}
+     \rput(5.5,5){\footnotesize\ding{53}}
+     \rput(0.5,5.5){2}
+     \rput(1,5.5){\footnotesize\ding{53}}
+     \rput(1.5,5.5){\blue 2}
+     \rput(2,5.5){=}
+     \rput(2.5,5.5){4}
+     \rput(4.5,5.5){4}
+     \rput(5,5.5){--}
+     \rput(5.5,5.5){\blue 4}
+     \rput(6,3.5){=}
+     \rput(6.5,5.5){\blue 0}
+     \rput(6,5.5){=}
+     \rput(0.5,6.5){1}
+     \rput(2.5,6.5){1}
+     \rput(4.5,6.5){1}
+     \rput(0.5,7){=}
+     \rput(6.5,6.5){\blue 1}
+     \rput(2.5,7){=}
+     \rput(4.5,7){=}
+     \rput(6.5,7){=}
+     \rput(0.5,7.5){6}
+     \rput(2.5,7.5){\blue 7}
+     \rput(3,7.5){\footnotesize\ding{53}}
+     \rput(3.5,7.5){1}
+     \rput(4,7.5){=}
+     \rput(4.5,7.5){\blue 7}
+     \rput(6.5,7.5){2}
+     \rput(0.5,8.05){+}
+     \rput(2.5,8.05){+}
+     \rput(4.5,8){\footnotesize\ding{53}}
+     \rput(6.5,8){\footnotesize\ding{53}}
+     \rput(0.5,8.5){\blue 6}
+     \rput(1.05,8.5){+}
+     \rput(1.5,8.5){1}
+     \rput(2,8.5){=}
+     \rput(2.5,8.5){\blue 7}
+     \rput(4.5,8.5){\blue 2}
+     \rput(5.05,8.5){+}
+     \rput(5.5,8.5){3}
+     \rput(6,8.5){=}
+     \rput(6.5,8.5){\blue 5}
+  \end{pspicture}
+
+  \begin{pspicture}(7,10)
+     \psgrid[subgriddiv=0,gridlabels=0,gridcolor=gray](7,9)
+     \psset{fillstyle=solid,fillcolor=gray,linecolor=gray}
+     \psframe(1,1)(2,3)
+     \psframe(5,1)(6,3)
+     \psframe(3,0)(4,2)
+     \psframe(0,4)(1,5)
+     \psframe(6,4)(7,5)
+     \psframe(1,6)(2,8)
+     \psframe(5,6)(6,8)
+     \psframe(3,8)(4,9)
+     \psframe(2,4)(5,5)
+     \psframe(3,3)(4,7)
+     \rput(0.5,0.5){\blue 5}
+     \rput(1,0.5){--}
+     \rput(1.5,0.5){2}
+     \rput(2,0.5){=}
+     \rput(2.5,0.5){\blue 3}
+     \rput(4.5,0.5){\blue 4}
+     \rput(5.05,0.5){+}
+     \rput(5.5,0.5){\blue 1}
+     \rput(6,0.5){=}
+     \rput(6.5,0.5){\blue 5}
+     \rput(0.5,1.5){3}
+     \rput(2.5,1.5){\blue 6}
+     \rput(4.5,1.5){1}
+     \rput(6.5,1.5){4}
+     \rput(0.5,2){=}
+     \rput(2.5,2){=}
+     \rput(4.5,2){=}
+     \rput(6.5,2){=}
+     \rput(0.5,2.5){7}
+     \rput(2.5,2.5){\blue 7}
+     \rput(3,2.5){--}
+     \rput(3.5,2.5){5}
+     \rput(4,2.5){=}
+     \rput(4.5,2.5){\blue 2}
+     \rput(6.5,2.5){\blue 9}
+     \rput(0.5,3){\footnotesize\ding{53}}
+     \rput(2.5,3){\footnotesize\ding{53}}
+     \rput(4.5,3){\footnotesize\ding{53}}
+     \rput(6.5,3){\footnotesize\ding{53}}
+     \rput(0.5,3.5){\blue 5}
+     \rput(1.05,3.5){+}
+     \rput(1.5,3.5){\blue 4}
+     \rput(2,3.5){=}
+     \rput(2.5,3.5){\blue 9}
+     \rput(4.5,3.5){7}
+     \rput(5,3.5){--}
+     \rput(5.5,3.5){\blue 2}
+     \rput(6,3.5){=}
+     \rput(6.5,3.5){\blue 5}
+     \rput(1.5,4){=}
+     \rput(5.5,4){=}
+     \rput(1.5,4.5){2}
+     \rput(5.5,4.5){2}
+     \rput(1.5,5){--}
+     \rput(5.5,5.05){+}
+     \rput(0.5,5.5){\blue 0}
+     \rput(1.05,5.5){+}
+     \rput(1.5,5.5){\blue 6}
+     \rput(2,5.5){=}
+     \rput(2.5,5.5){6}
+     \rput(4.5,5.5){2}
+     \rput(5.05,5.5){+}
+     \rput(5.5,5.5){\blue 0}
+     \rput(6,5.5){=}
+     \rput(6.5,5.5){\blue 2}
+     \rput(0.5,6.5){1}
+     \rput(2.5,6.5){1}
+     \rput(4.5,6.5){1}
+     \rput(6.5,6.5){\blue 1}
+      \rput(0.5,7){=}
+     \rput(2.5,7){=}
+     \rput(4.5,7){=}
+     \rput(6.5,7){=}
+     \rput(0.5,7.5){3}
+     \rput(2.5,7.5){\blue 8}
+     \rput(3,7.5){--}
+     \rput(3.5,7.5){4}
+     \rput(4,7.5){=}
+     \rput(4.5,7.5){\blue 4}
+     \rput(6.5,7.5){3}
+     \rput(0.5,8.05){+}
+     \rput(2.5,8.05){+}
+     \rput(4.5,8){\footnotesize\ding{53}}
+     \rput(6.5,8){\footnotesize\ding{53}}
+     \rput(0.5,8.5){\blue 7}
+     \rput(1.05,8.5){+}
+     \rput(1.5,8.5){1}
+     \rput(2,8.5){=}
+     \rput(2.5,8.5){\blue 8}
+     \rput(4.5,8.5){\blue 3}
+     \rput(5.05,8.5){+}
+     \rput(5.5,8.5){1}
+     \rput(6,8.5){=}
+     \rput(6.5,8.5){\blue 4}
+   \end{pspicture}
+\end{corrige}
+
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\begin{enigme}[Nombres en cases]
+   \begin{minipage}{8cm}
+      \partie[nombres croisés]
+         Compléter le tableau suivant pour que les égalités soient vraies en ligne et en colonne. \\ [1mm]
+         {\hautab{2}
+         \begin{tabular}{|*{7}{C{0.6}|}}
+            \hline
+            2 & $+$ & 3 & $\times$ & & $=$ & 17 \\
+            \hline
+            $\times$ & \cellcolor{gray} & $+$ & \cellcolor{gray} & $+$ & \cellcolor{gray} & $\times$ \\
+            \hline
+            & $\times$ & & $-$ & 201 & $=$ & 150 \\
+            \hline
+            $=$ & \cellcolor{gray} & $=$ & \cellcolor{gray} & $=$ & \cellcolor{gray} & $=$ \\
+            \hline
+            & $+$ & 12 &  $\times$ & & $=$ & \\
+            \hline
+         \end{tabular}}
+   \end{minipage}
+   \hfill
+   \begin{minipage}{8cm}
+      \partie[serpent des nombres]
+      Compléter le serpent suivant sachant que seuls les nombres 1, 2, 3, 4 et 5 doivent être utilisés une seule fois seulement en respectant les priorités d'opérations. \\ [1mm]
+      {\hautab{2}
+         \begin{tabular}{|*{7}{C{0.6}|}}
+            \cline{1-1} \cline{3-5} \cline{7-7}
+            & & & $-$ & 6 & & 66 \\
+            \cline{1-1} \cline{3-5} \cline{7-7}
+            $+$ & & $\times$ & & $-$ && $=$ \\
+            \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
+            13 & &12 & &11 & &10 \\
+             \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
+             $\times$ & & $+$ & & $+$ && $-$ \\
+            \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
+            & & 7 & & 9 & & \\
+            \cline{1-3} \cline{5-7}
+            $\div$ & & $+$ & & $\times$ & 8 & $\div$ \\
+            \cline{1-3} \cline{5-7}
+         \end{tabular}}
+   \end{minipage}
+   
+   \partie[le garam]
+   Le Garam est un jeu de logique mathématique à base d'opérations simples. \\
+   Remplir chaque case avec un seul chiffre de sorte que chaque ligne et chaque colonne forment une opération correcte. \\
+   Le résultat d'une opération verticale est un nombre à deux chiffres si deux cases suivent le symbole égal. \\ [1mm]
+   {\psset{unit=1.1}
+   \begin{pspicture}(7,9)
+     \psgrid[subgriddiv=0,gridlabels=0,gridcolor=gray](7,9)
+     \psset{fillstyle=solid,fillcolor=gray,linecolor=gray}
+     \psframe(1,1)(2,3)
+     \psframe(5,1)(6,3)
+     \psframe(3,0)(4,2)
+     \psframe(0,4)(1,5)
+     \psframe(6,4)(7,5)
+     \psframe(1,6)(2,8)
+     \psframe(5,6)(6,8)
+     \psframe(3,8)(4,9)
+     \psframe(2,4)(5,5)
+     \psframe(3,3)(4,7)
+     \large
+     \rput(1.05,0.5){+}
+     \rput(1.5,0.5){7}
+     \rput(2,0.5){=}
+     \rput(5,0.5){\normalsize\ding{53}}
+     \rput(6,0.5){=}
+     \rput(2.5,1.5){1}
+     \rput(4.5,1.5){2}
+     \rput(6.5,1.5){2}
+     \rput(0.5,2){=}
+     \rput(2.5,2){=}
+     \rput(4.5,2){=}
+     \rput(6.5,2){=}
+     \rput(0.5,2.5){9}
+     \rput(3,2.5){--}
+     \rput(3.5,2.5){1}
+     \rput(4,2.5){=}
+     \rput(0.5,3.05){+}
+     \rput(2.5,3.05){+}
+     \rput(4.5,3){\normalsize\ding{53}}
+     \rput(6.5,3){\normalsize\ding{53}}
+     \rput(1.05,3.5){+}
+     \rput(2,3.5){=}
+     \rput(2.5,3.5){9}
+     \rput(5.05,3.5){+}
+     \rput(1.5,4){=}
+     \rput(5.5,4){=}
+     \rput(1.5,4.5){5}
+     \rput(5.5,4.5){1}
+     \rput(1.5,5.05){+}
+     \rput(5.5,5){\normalsize\ding{53}}
+     \rput(0.5,5.5){2}
+     \rput(1,5.5){\normalsize\ding{53}}
+     \rput(2,5.5){=}
+     \rput(2.5,5.5){4}
+     \rput(4.5,5.5){4}
+     \rput(5,5.5){--}
+     \rput(6,3.5){=}
+     \rput(6,5.5){=}
+     \rput(0.5,6.5){1}
+     \rput(2.5,6.5){1}
+     \rput(4.5,6.5){1}
+      \rput(0.5,7){=}
+     \rput(2.5,7){=}
+     \rput(4.5,7){=}
+     \rput(6.5,7){=}
+     \rput(0.5,7.5){6}
+     \rput(3,7.5){\normalsize\ding{53}}
+     \rput(3.5,7.5){1}
+     \rput(4,7.5){=}
+     \rput(6.5,7.5){2}
+     \rput(0.5,8.05){+}
+     \rput(2.5,8.05){+}
+     \rput(4.5,8){\normalsize\ding{53}}
+     \rput(6.5,8){\normalsize\ding{53}}
+     \rput(1.05,8.5){+}
+     \rput(1.5,8.5){1}
+     \rput(2,8.5){=}
+     \rput(5.05,8.5){+}
+     \rput(5.5,8.5){3}
+     \rput(6,8.5){=}
+  \end{pspicture}
+  \hfill
+  \begin{pspicture}(7,9)
+     \psgrid[subgriddiv=0,gridlabels=0,gridcolor=gray](7,9)
+     \psset{fillstyle=solid,fillcolor=gray,linecolor=gray}
+     \psframe(1,1)(2,3)
+     \psframe(5,1)(6,3)
+     \psframe(3,0)(4,2)
+     \psframe(0,4)(1,5)
+     \psframe(6,4)(7,5)
+     \psframe(1,6)(2,8)
+     \psframe(5,6)(6,8)
+     \psframe(3,8)(4,9)
+     \psframe(2,4)(5,5)
+     \psframe(3,3)(4,7)
+     \large
+     \rput(1,0.5){--}
+     \rput(1.5,0.5){2}
+     \rput(2,0.5){=}
+     \rput(5.05,0.5){+}
+     \rput(6,0.5){=}
+     \rput(0.5,1.5){3}
+     \rput(4.5,1.5){1}
+     \rput(6.5,1.5){4}
+     \rput(0.5,2){=}
+     \rput(2.5,2){=}
+     \rput(4.5,2){=}
+     \rput(6.5,2){=}
+     \rput(0.5,2.5){7}
+     \rput(3,2.5){--}
+     \rput(3.5,2.5){5}
+     \rput(4,2.5){=}
+     \rput(0.5,3){\normalsize\ding{53}}
+     \rput(2.5,3){\normalsize\ding{53}}
+     \rput(4.5,3){\normalsize\ding{53}}
+     \rput(6.5,3){\normalsize\ding{53}}
+     \rput(1.05,3.5){+}
+     \rput(2,3.5){=}
+     \rput(4.5,3.5){7}
+     \rput(5,3.5){--}
+     \rput(6,3.5){=}
+     \rput(1.5,4){=}
+     \rput(5.5,4){=}
+     \rput(1.5,4.5){2}
+     \rput(5.5,4.5){2}
+     \rput(1.5,5){--}
+     \rput(5.5,5.05){+}
+     \rput(1.05,5.5){+}
+     \rput(2,5.5){=}
+     \rput(2.5,5.5){6}
+     \rput(4.5,5.5){2}
+     \rput(5.05,5.5){+}
+     \rput(6,5.5){=}
+     \rput(0.5,6.5){1}
+     \rput(2.5,6.5){1}
+     \rput(4.5,6.5){1}
+      \rput(0.5,7){=}
+     \rput(2.5,7){=}
+     \rput(4.5,7){=}
+     \rput(6.5,7){=}
+     \rput(0.5,7.5){3}
+     \rput(3,7.5){--}
+     \rput(3.5,7.5){4}
+     \rput(4,7.5){=}
+     \rput(6.5,7.5){3}
+     \rput(0.5,8.05){+}
+     \rput(2.5,8.05){+}
+     \rput(4.5,8){\normalsize\ding{53}}
+     \rput(6.5,8){\normalsize\ding{53}}
+     \rput(1.05,8.5){+}
+     \rput(1.5,8.5){1}
+     \rput(2,8.5){=}
+     \rput(5.05,8.5){+}
+     \rput(5.5,8.5){1}
+     \rput(6,8.5){=}
+   \end{pspicture}}
+\end{enigme}
+
+   
