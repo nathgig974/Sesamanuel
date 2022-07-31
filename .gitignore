@@ -1,0 +1,7 @@
+# Pour ignorer certains fichiers du suivi git
+*.aux
+*.cor
+*.dvi
+*.log
+*.out
+*.ps
