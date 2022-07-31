@@ -1,0 +1,348 @@
+\themaN
+\graphicspath{{../Ch2_Nombres_entiers_et_decimaux/Images/}}
+
+\chapter{Fractions et\\nombres décimaux}
+\label{C03}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{prerequis}[Connaissances et compétences abordées]
+   \begin{itemize}
+      \item Connaître les unités de la numération décimale (unités simples, dixièmes, centièmes, millièmes) et les relations qui les lient.
+      \item Connaître la valeur des chiffres en fonction de leur rang.
+      \item Connaître et utiliser diverses désignations orales et écrites d’un nombre décimal (fractions décimales, écritures à virgule, décompositions additives et multiplicatives).
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\begin{debat}[Débat : un peu d'histoire]
+   Le système de numération que nous employons actuellement et qui nous semble si naturel est le fruit d'une longue évolution des concepts mathématiques. En effet, un nombre est une entité abstraite qui peut surprendre : on a déjà vu {\bf un} élève, {\bf un} animal donné, on sait ce qu'est {\bf un} jour, mais qu'est-ce que {\bf un} ? C'est une entité qui, prise seule, n'a pas vraiment de sens. De nombreuses civilisations ont imaginé des systèmes de numération plus ou moins compliqués, plus ou moins pratiques : des systèmes utilisant des bases différentes, des systèmes utilisant le principe additif\dots{} jusqu'à notre système de numération positionnel de base dix maintenant utilisé de manière universelle. \\
+   \begin{center}
+      \textcolor{B1}{{\huge 19\textcircled{\Large 0}1\textcircled{\Large 1}7\textcircled{\Large2}8\textcircled{\Large 3}} \\ [3mm]
+      \it Notation décimale de Simon Stevin \\
+      représentant le nombre 19,178.}
+   \end{center}
+   \bigskip
+   \begin{cadre}[B2][F4]
+      \begin{center}
+         Vidéo : \href{https://www.youtube.com/watch?v=bkGMa1EJkSA}{\bf Histoire de la virgule}, chaîne Youtube de {\it Maths 28}.
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+\vfill
+
+\textcolor{PartieGeometrie}{\large\sffamily\bfseries Cahier de compétences} : chapitre 1 pages 8 et 9 exercices 2 à 16. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[La droite graduée]
+   {\bf Objectifs :} comprendre et utiliser le principe de construction d'une graduation régulière en dixièmes et en centièmes ; savoir situer des nombres décimaux sous différents écritures. \\
+\begin{QCM}
+      \partie[construction d'une droite graduée]
+         \begin{enumerate}
+            \item Sur la bande de papier fournie, tracer au stylo une droite la plus longue possible. \\
+            \item Placer à gauche sur cette droite le repère de l'origine puis inscrire la valeur 0 en dessous. \\
+            \item Combien faut-il aligner de petites bandes de valeur \og $\dfrac1{10}$ \fg{} pour obtenir 1 ? Justifier. \\ [3mm]
+            \pf \\
+            \begin{center}
+               \begin{pspicture}(0,-0.25)(5,1.75)
+                  \multido{\n=0+0.5}{11}{\psline(\n,0)(\n,0.5)}
+                  \psframe[fillstyle=solid,fillcolor=J1](0,0.5)(5,1.5)
+                  \psline(0,0)(5,0)
+                  \rput(2.5,1){\white $\dfrac1{10}$}
+               \end{pspicture}
+            \end{center}
+            \item Grâce cette petite bande de couleur, placer le nombre 1. \\
+            \item Placer ensuite les nombres 2 et 3 de la même manière, toujours en dessous de la droite. \medskip
+         \end{enumerate}
+         
+      \partie[placer des nombres décimaux sur la droite graduée]
+         \begin{enumerate}
+            \setcounter{enumi}{5}
+            \item Sur la droite graduée, placer au crayon à papier et au-dessus les nombres suivants :
+               $$\dfrac{8}{10} \hspace{2cm} \dfrac{23}{10} \hspace{2cm} 2+\dfrac{1}{10}$$
+            \item Sur la droite graduée, placer au crayon à papier et au-dessus les nombres suivants :
+               $$\text{cinq dixièmes} \hspace{2cm} \text{douze dixièmes}$$
+            \item Sur la droite graduée, placer au crayon à papier et au-dessus les nombres suivants :
+               $$0,3 \hspace{2cm} 1,7$$
+            \item Trouver un moyen pour placer $\dfrac{143}{100}$ sur la droite graduée. \\
+            \item \, Placer au crayon les nombres suivants :
+               $$\dfrac{255}{100} \hspace{2cm} \text{cent-six centièmes} \hspace{2cm} 1+\dfrac{9}{10}+\dfrac{8}{100} \hspace{2cm} 0,23$$
+         \end{enumerate}
+      \end{QCM}
+   \vfill\hfill{\it\footnotesize Source : Apprentissages numériques et résolution de problèmes au CM2, Ermel, Hatier 2001}.
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+\section{Des fractions décimales aux nombres décimaux}
+
+\begin{definition}
+   Une {\bf fraction décimale} est une fraction dont le dénominateur est  1, 10, 100, 1\,000 \dots \\
+   Un {\bf nombre décimal} est un nombre qui peut s'écrire sous forme d'une fraction décimale.
+\end{definition}
+
+\begin{exemple*1}
+   \begin{itemize}
+      \item Les fractions décimales les plus \og simples \fg{} sont $\dfrac{1}{10} \; ; \; \dfrac{1}{100} \; ; \;\dfrac{1}{1\,000}, \; ; \;\dfrac{1}{10\,000}$ \dots{}
+      \item  Mais $\dfrac{7}{10} \; ; \; \dfrac{32}{1\,000}  \; ; \; \dfrac{99\,999}{100\,000}$ sont également des fractions décimales.
+      \item 1,8 est un nombre décimal car il peut s'écrire sous la forme $\dfrac{18}{10}$. \\ [-9mm]
+   \end{itemize}
+\end{exemple*1}
+
+\begin{remarque}
+   tout nombre entier est un nombre décimal \og caché \fg : par exemple $\dfrac{3}{1} =3$.
+\end{remarque}
+
+Un nombre a une seule valeur numérique mais a plusieurs écritures.
+   
+\begin{exemple*1}
+   Voilà plusieurs écritures du nombre 16,82 : \par\medskip
+    {\hautab{1.5}
+    \begin{tabular}{cp{7cm}p{4cm}}
+      16,82 & $=\dfrac{1\,682}{100}$ & fraction décimale \\
+      & $=16+\dfrac{82}{100}$ & décompositions additives \\
+      & $=(1\times10)+(6\times1)+\left(8\times\dfrac{1}{10}\right)+\left(2\times\dfrac{1}{100}\right)$ & \\
+      & $= (1\times10)+(6\times1)+(8\times0,1)+(2\times0,01)$ & \\  
+   \end{tabular}}
+\end{exemple*1}
+
+
+\section{Écrire des nombres décimaux} %%%%%%%%%%
+
+\begin{propriete}
+   On peut écrire un nombre décimal dans un tableau de numération comportant une partie entière identique aux nombres entiers à laquelle on ajoute une partie décimale :
+   \begin{center}
+      {\hautab{1.5}
+      \begin{Ltableau}{0.9\linewidth}{16}{c}
+         \hline
+        \multicolumn{12}{|c@{\bf , }}{\bf partie entière} & \multicolumn{4}{c|}{\bf partie décimale} \\
+         \hline
+         \multicolumn{3}{|c|}{classe des} & \multicolumn{3}{c|}{classe des} & \multicolumn{3}{c|}{classe des} & \multicolumn{3}{c|}{classe des} & \multirow{3}*{\rotatebox{90}{dixièmes}} & \multirow{3}*{\rotatebox{90}{centièmes}} & \multirow{3}*{\rotatebox{90}{millièmes}} & \multirow{3}*{\rotatebox{90}{dix-millièmes}} \\
+         \multicolumn{3}{|c|}{milliards} & \multicolumn{3}{c|}{millions} & \multicolumn{3}{c|}{milliers} & \multicolumn{3}{c|}{unités} & & & & \\
+         c & d & u & c & d & u & c & d & u & c & d & u & & & & \\
+         \hline
+         & & 1 & 0 & 3 & 0 & 2 & 8 & 8 & 0 & 1 & 6 & 8 & 0 & 7 & \\
+         \hline
+      \end{Ltableau}}
+   \end{center}  
+\end{propriete}
+
+\begin{exemple}
+   Dans le nombre 1\,030\,288\,016,807 :
+   \correction
+   \textcolor{white}{.} \\[-29pt]
+   \begin{itemize}
+      \item le chiffre des dizaines de millions est 3 ;
+      \item le chiffre des dixièmes est 8 ;
+      \item le chiffre des centièmes est 0 ;
+      \item le chiffre des millièmes est 7.
+   \end{itemize}
+\end{exemple}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+\serie{Construction des nombres décimaux} %%%%%%%%%%%%%%%%%%%%
+
+\begin{exercice}
+   Associer chaque fraction décimale à son écriture décimale.
+   \begin{center}
+      \begin{tabular}{rp{1cm}l}
+         $\dfrac{24}{100} \quad \bullet$ & & $\bullet \quad 204$ \\ [4mm]
+         $\dfrac{2\,040}{10} \quad \bullet$ & & $\bullet \quad 2,4$ \\ [4mm]
+         $\dfrac{204}{100} \quad \bullet$ & & $\bullet \quad 0,24$ \\ [4mm]
+         $\dfrac{24}{10} \quad \bullet$ & & $\bullet \quad 2,04$ \\
+      \end{tabular}
+   \end{center}
+\end{exercice}
+
+\smallskip
+
+\begin{exercice}
+   Donner l'écriture décimale des nombres suivants :
+   \begin{center}
+      $\dfrac{45}{100} \; ; \; \dfrac{186}{10} \; ; \; \dfrac{5}{1\,000} \; ; \; \dfrac{6\,921}{100} \; ; \; \dfrac{850}{10} \; ; \; \dfrac{204}{1\,000}$
+   \end{center}
+\end{exercice}
+
+\smallskip
+
+\begin{exercice}
+   Donner l'écriture en fraction décimale des nombres suivants :
+   \begin{center}
+      1,7 \; ; \; 25,04 \; ; \; 0,37 \; ; \; 4,005 \; ; \; 0,0592 \; ; \; 9,067
+   \end{center}
+\end{exercice}
+
+\smallskip
+
+\begin{exercice}
+   Compléter le tableau suivant :
+   \begin{center}
+      {\hautab{1.8}
+      \begin{ltableau}{0.97\linewidth}{4}
+         \hline
+         partie entière & partie décimale & fraction décimale & nombre décimal \\
+         \hline
+         51 &  2 & $\dfrac{512}{10}$ & $51,2$ \\
+         \hline
+         3 &  72 &  & \\
+         \hline
+         &  & & 0,81 \\
+         \hline
+         & & $\dfrac{330}{100}$ & \\
+         \hline
+         & & & 64,615 \\
+         \hline
+      \end{ltableau}}
+   \end{center}
+\end{exercice}
+
+\smallskip
+
+\begin{exercice}
+   Associer chaque nombre de la première colonne à un nombre de la deuxième colonne.
+   \begin{center}
+      \begin{tabular}{rp{1cm}l}
+         67 dixièmes \quad $\bullet$ & & $\bullet$ \quad 67 \\
+         670 millièmes \quad $\bullet$ & & $\bullet $\quad 6\,700 \\
+         670 dixièmes \quad $\bullet$ & & $\bullet$ \quad 0,67 \\
+         67 millièmes \quad $\bullet$ & & $\bullet $\quad 0,006\,7 \\
+         67 dix-millièmes \quad $\bullet$ & & $\bullet $\quad 0,067 \\
+         67 centaines \quad $\bullet$ & & $\bullet $\quad 6,7 \\
+      \end{tabular}
+   \end{center}
+\end{exercice}
+
+\begin{exercice}
+Dans le nombre 4 091,807 :
+   \begin{enumerate}
+      \item le chiffre des dixièmes est \pfb
+      \item le chiffre des unités est \pfb
+      \item le chiffre des millièmes est \pfb
+      \item le chiffre des centaines est \pfb
+      \item 409 est le nombre de \pfb
+      \item 4 091 807 est le nombre de \pfb
+      \item 40 est le nombre de \pfb
+      \item 40 918 est le nombre de \pfb
+   \end{enumerate}
+\end{exercice}
+
+\smallskip
+
+\begin{exercice}
+   Réécrire les nombres suivants en supprimant les zéros inutiles : \\
+   5,00 \, ; \, 0204,02 \, ; \,0,230 \, ; \, 05\,020 \, ; \,1000,0800 \, ; \,00,010.
+\end{exercice}
+
+\smallskip
+
+\serie{Composer/décomposer des nombres} %%%%%%%%%%%%%%%%%%%
+
+\begin{exercice}
+   Décomposer ainsi : $\dfrac{736}{100} =7+\dfrac{3}{10}+\dfrac{6}{100}$.
+   \begin{center}
+      $\dfrac{8\,725}{1\,000}$ \; ; \; $\dfrac{1\,253}{100}$ \; ; \; $\dfrac{32}{100}$ \; ; \; $\dfrac{908}{10}$
+   \end{center}
+\end{exercice}
+
+\begin{exercice}
+   Écrire sous forme d'une fraction décimale. \smallskip
+   \begin{colenumerate}{2}
+      \item $7+\dfrac{6}{10}$ \smallskip
+      \item $45+\dfrac{8}{10}$ \smallskip
+      \item $9+\dfrac{7}{1\,000}$ \smallskip
+      \item $80+\dfrac{3}{10}+\dfrac{1}{100}$ \smallskip
+      \item $3+\dfrac{2}{100}+\dfrac{5}{10}$ \smallskip
+      \item $\dfrac{6}{10}+\dfrac{1}{1\,000}$ \smallskip
+      \item $7+\dfrac{4}{10}+\dfrac{7}{100}+\dfrac{9}{1\,000}$ \smallskip
+      \item $123+\dfrac{2}{1\,000}+\dfrac{4}{100}$
+   \end{colenumerate}
+\end{exercice}
+
+\begin{exercice}
+   Parmi ces écritures, quelles sont celles qui sont égales à 123,45 ? \smallskip
+   \begin{colenumerate}{3}
+      \item $12+\dfrac{345}{1\,000}$ \smallskip
+      \item \small$123+\dfrac{4}{10}+\dfrac{5}{100}$ \smallskip
+      \item $123+0,45$ \smallskip
+      \item $\dfrac{12\,345}{10\,000}$ \smallskip
+      \item $\dfrac{1\,234}{1\,000}+\dfrac{5}{100}$ \smallskip 
+      \item $\dfrac{1\,234}{10}+5$ \smallskip
+      \item $\dfrac{1\,234}{10}+\dfrac{5}{1\,000}$ \smallskip
+      \item $1+\dfrac{2\,345}{100}$ \smallskip
+      \item $123+\dfrac{45}{100}$
+   \end{colenumerate}
+\end{exercice}
+
+\begin{exercice}
+   Je suis un nombre qui peut s'écrire avec quatre chiffres et une virgule ; mon chiffre des unités est le double de mon chiffre des centièmes ; mon chiffre des dizaines est le triple de mon chiffre des dixièmes ; mon chiffre des centièmes est quatre ; lorsqu'on ajoute mes quatre chiffres, on obtient le nombre d'heures qu'il y a dans une journée. Qui suis-je ?
+\end{exercice}
+
+\end{colonne*exercice}
+
+\begin{flushright}
+   {\it\footnotesize Sources : Les cahiers Sesamath 6\up{e}. Magnard-Sésamath 2017 \& Delta Maths 6\up{e}. Magnard 2016.}
+\end{flushright}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\enigme[L'abaque romain\dots{} bis repetita]
+      \partie[construction d'un l'abaque \og décimal \fg]
+         À la manière de l'abaque romain construit dans le chapitre 1 (Nombres entiers), nous allons construire un abaque décimal \og moderne \fg. \\
+         Reproduire cet abaque au verso de l'abaque romain toujours en mode paysage : sachant qu'il y a six colonnes, quelle peut être la largeur d'une colonne ? \pfb
+         \begin{center}
+            {\psset{unit=0.5}
+            \begin{pspicture}(0,-0.5)(30,15)
+               \multido{\i=0+5}{7}{\psline(\i,0)(\i,13)}
+               \psset{linewidth=0.6mm}
+               \psline(0,0)(0,14)(30,14)(30,0)
+               \psline(15,0)(15,14)
+               \psline(0,12)(30,12)
+               \textcolor{B1}{\texttt{
+               \rput(27.5,12.5){\large{millièmes}}
+               \rput(22.5,12.5){\large{centièmes}}
+               \rput(17.5,12.5){\large{dixièmes}}
+               \rput(22.5,13.5){partie décimale}}}
+               \textcolor{A1}{\texttt{
+               \rput(12.5,12.5){\large\texttt{unités}}
+               \rput(7.5,12.5){\large\texttt{dizaines}}
+               \rput(2.5,12.5){\large\texttt{centaines}}
+               \rput(7.5,13.5){partie entière}}}
+            \end{pspicture}}
+         \end{center}
+         
+      \partie[utilisation de l'abaque]
+         \begin{enumerate}
+            \item Rappeler les règles d'utilisation de l'abaque : qu'est-ce qui le différencie de l'abaque au recto ?
+            \item Prendre un jeton et le placer dans l'une des colonnes de l'abaque. Quel nombre est représenté ? \\ [1mm]
+               \pf \medskip
+            \item Combien de nombres différents peut-on représenter avec un jeton ? Les lister en donnant la forme fractionnaire décimale et la forme décimale. \\ [2mm]
+               \pf \\ [4mm]
+               \pf \bigskip
+            \item Combien de nombres différents peut-on représenter avec deux jetons ? En donner cinq sous forme fractionnaire et décimale. \\ [2mm]
+               \pf \bigskip
+            \item Représenter les nombres suivants :
+               \begin{colitemize}{2}
+                  \item 1,23
+                  \item trente-six et deux dixièmes et trois millièmes
+                  \item 0,317
+                 \item cent-vingt-quatre centièmes                    
+               \end{colitemize}
+            \item Quels sont les nombres représentés sur l'abaque au tableau ? \\ [2mm]
+               \pf
+         \end{enumerate}
+

@@ -1,0 +1,308 @@
+\themaG
+\graphicspath{{../Ch25_La_symetrie_axiale/Images/}}
+
+\chapter{Propriétés\\des symétries}
+\label{C32}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{prerequis}[Connaissances et compétences abordées]
+   \begin{itemize}
+      \item Propriétés de conservation de la symétrie axiale.
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\begin{debat}[Débat : des films pour les vacances]
+   Pour clore cette année, voici une liste de films à base mathématique fondés sur des histoires vraies.
+   \begin{itemize}
+       \item {\bf Les figures de l'ombre} (2017) : le destin extraordinaire des trois femmes scientifiques afro-américaines qui ont permis aux États-Unis de prendre la tête de la conquête spatiale.
+       \item {\bf Imitation game} (2015) : l'histoire d'Alan Turing, mathématicien, qui contribua à changer le cours de la Seconde Guerre mondiale et de l’Histoire en étant chargé par le gouvernement britannique de percer le secret de la célèbre machine de cryptage allemande Enigma, réputée inviolable.
+           \item {\bf L'homme qui défiait l'infini} (2015) : la vie de Srinivasa Ramanujan, un des plus grands mathématiciens de notre temps. Élevé à Madras en Inde, il intègre la prestigieuse université de Cambridge en Angleterre pendant la Première Guerre mondiale et y développe de nombreuses théories mathématiques.
+      \item {\bf Le monde de Nathan} (2014) : les aventures de Nathan, un adolescent souffrant de troubles autistiques et prodige en mathématiques. Brillant mais asocial, il tisse une amitié étonnante avec son professeur anticonformiste qui le pousse à intégrer l’équipe britannique et participer aux Olympiades Internationales de Mathématiques.
+   \end{itemize}
+\end{debat}
+
+\vfill
+
+\textcolor{PartieGeometrie}{\sffamily\bfseries Cahier de compétences} : chapitre 9, exercices 27 à 29.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Propriétés de la symétries axiale]
+   {\bf Objectifs :} observer l'effet d'une symétrie axiale sur les longueurs, les angles, le parallélisme, l'alignement, les aires ; utiliser un logiciel de géométrie dynamique.
+   \begin{QCM}
+      \partie[construction de la figure]
+         Ouvrir {\bf Geogebra} et choisir l'onglet \textbf{Géométrie}.
+         \begin{center}
+            {\newcolumntype{M}{>{\itshape\footnotesize}p{4.5cm}}
+            \small
+            \hautab{1.3}
+            \begin{tabular}{|c|p{5.5cm}|p{3cm}|M|}
+               \hline
+               & Objet à tracer & Outils & Instructions \\
+               \hline
+               1 & \multicolumn{3}{l|}{Construction de la {\bf figure}} \\
+               & Tracer un segment $[AB]$ & Segment & cliquer en deux points du plan \\
+               & Tracer le cercle de centre $C$ passant par $A$ & Cercle (centre-point) & cliquer en un point quelconque puis sur $A$ \\
+               & Tracer la parallèle à $(AB)$ passant par $C$ & Parallèle & cliquer sur le segment $[AB]$ puis sur $C$ \\
+               & Tracer la perpendiculaire à $(AB)$ passant par $B$ & Perpendiculaire & cliquer sur le segment $[AB]$ puis sur $B$ \\
+               & Les deux droites se coupent en $D$ & Intersection & cliquer sur les deux droites \\
+               & Construire le quadrilatère $ABDC$ & Polygone & cliquer successivement sur $A, B, D$ et $C$ \\
+               & Effacer les droites $(BD)$ et $(CD)$ & Clic droit sur la droite & décocher \og Afficher objet \fg \\
+               \hline
+               2 & \multicolumn{3}{l|}{Construction de la figure {\bf symétrique} par rapport à la droite $(EF)$} \\
+               & Tracer en rouge la droite $(EF)$ & Droite & cliquer en deux points puis propriétés \\
+               & Tracer le symétrique du cercle & Symétrie axiale & sélectionner le cercle puis la droite $(EF)$ \\
+               & Tracer le symétrique du quadrilatère & Symétrie axiale & sélectionner le quadrilatère puis $(EF)$ \\
+               \hline
+               3 & \multicolumn{3}{l|}{Faire apparaître différentes {\bf mesures}} \\
+               & Mesurer la longueur de $[AB]$ et de $[A'B']$ & Distance & cliquer sur les segments $[AB]$ et $[A'B']$ \\
+               & Mesurer les angles $\widehat{ACD}$ et $\widehat{A'C'D'}$ & Angle & cliquer sur les trois points de l'angle \\
+               & Mesurer l'aire de $ABDC$ et de $A'B'C'D'$ & Aire & cliquer à l'intérieur des quadrilatères \\
+               \hline
+            \end{tabular}}
+         \end{center} \medskip
+         
+      \partie[observations]
+      \ \\[-9mm]
+         \begin{enumerate}
+            \item Observer ce qu'il se passe lorsque l'on déplace l'un des points du quadrilatère $ABCD$ ou de l'axe de symétrie. \smallskip
+            \item En quelle figure géométrique est transformé un segment ? un cercle ? un quadrilatère ? \pfb \smallskip
+            \item Comparer la longueur des segments $[AB]$ et $[A'B']$ : \pfb \smallskip
+            \item Comparer la mesure des angles $\widehat{ACD}$ et $\widehat{A'C'D'}$ : \pfb \smallskip
+            \item Comparer l'aire des deux quadrilatères : \pfb \smallskip
+            \item Les deux droites parallèles / perpendiculaires dans la figure d'origine le restent-elles dans la figure symétrique ? \smallskip
+         \end{enumerate}
+         
+      \partie[conjectures]
+         Conjecturer des propriétés de symétrie centrale : \pf \\ [2mm]
+         \pf \\ [2mm]
+         \pf \\
+   \end{QCM}
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+%%%%%%%%%%%%%%%
+\section{Propriétés de conservation par symétrie centrale}
+
+\begin{propriete}
+   Par une symétrie axiale :
+   \begin{itemize}
+      \item un segment est transformé en un segment de même longueur ;
+      \item un cercle est transformé en un cercle de même rayon ;
+      \item un angle est transformé en un angle de même mesure ;
+      \item le parallélisme et la perpendicularité sont conservés ;
+      \item une figure est transformée en une figure de même aire.
+   \end{itemize}
+\end{propriete}
+
+\begin{pspicture}(1,1)(8,8)
+   \pstGeonode[PointSymbol=none,PointName=none](4,1){M}(6,7){N}
+   \pstGeonode[PosAngle={50,-130}](3.5,6){A}(2,4){B}
+   \pstLineAB[linecolor=B1]{M}{N}
+   \pstOrtSym[CodeFig=true,CodeFigColor=J1,PosAngle={95,-85}]{M}{N}{A,B}[A',B']
+   \pstSegmentMark[SegmentSymbol=pstslashhh]{A}{B}
+   \pstSegmentMark[SegmentSymbol=pstslashhh,linecolor=A1]{A'}{B'}
+\end{pspicture}
+\begin{pspicture}(0,2)(9,8.8)
+   \pstGeonode[PointSymbol=none,PointName=none](6,2){M}(4,8){N}(4,6){P}
+   \pstGeonode[PosAngle=150](3,5){O}
+   \pstLineAB[linecolor=B1]{M}{N}
+   \pstCircleOA{O}{P}   
+   \pstOrtSym[CodeFig=true,CodeFigColor=J1,CodeFigColor=J1]{M}{N}{O}[O']
+   \pstOrtSym[CodeFig=false,PointSymbol=none,PointName=none]{M}{N}{P}[P']
+   \pstCircleOA{O'}{P'}  
+\end{pspicture}
+
+\begin{pspicture}(0,0)(9,8)
+   \pstTriangle(1,4){A}(1,6){B}(6,6){C}
+   \pstGeonode[PointName=none,PointSymbol=none](0,3){G}(8,4){H}
+   \pstLineAB[linecolor=B1]{G}{H}     
+   \pstOrtSym[CodeFig=true,CodeFigColor=J1,CodeFigColor=J1,PosAngle={160,-90,0}]{G}{H}{A,B,C}[A',B',C']
+   \pstRightAngle{A}{B}{C}
+   \pstMarkAngle[MarkAngleRadius=1,MarkAngleType=double]{B}{C}{A}{}
+   \psset{linecolor=A1}
+   \pstLineAB{A'}{B'}
+   \pstLineAB{B'}{C'}
+   \pstLineAB{C'}{A'}
+   \pstRightAngle{A'}{B'}{C'}
+   \pstMarkAngle[MarkAngleRadius=1,MarkAngleType=double]{A'}{C'}{B'}{}
+\end{pspicture}
+\begin{pspicture}(0,0)(8,9)
+   {\psset{unit=0.9}
+   \pspolygon[fillstyle=solid,fillcolor=A1](1,1)(3,1)(3,2)(4,3)(2,3)(2,5)(1,5)
+   \psline[linecolor=B1](0,8)(8,0)
+   \psline[fillstyle=solid,fillcolor=B1](7,7)(3,7)(3,6)(5,6)(5,4)(6,5)(7,5)
+   \psgrid[subgriddiv=0, gridlabels=0,gridcolor=lightgray](0,0)(8,8)}
+\end{pspicture}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+\serie{Propriétés des symétries} %%%%%%%
+
+\begin{exercice} %1
+   Suivre le programme de construction suivant puis répondre aux questions.
+   \begin{enumerate}
+      \item Programme de construction.
+      \begin{enumerate}
+         \item Tracer un triangle $MOP$ tel que: $OM = 2,5$ cm; $OP = 3$ cm et $\widehat{POM} = 70$\degre
+         \item Tracer la droite $(d)$ perpendiculaire à la droite $(OP)$ passant par le point $P$.
+         \item Tracer le symétrique du triangle $MOP$ par rapport à la droite $(d)$ : on notera $M'$ le symétrique de $M$ par rapport à la droite $(d)$, $O'$ celui de $O$.
+      \end{enumerate}
+      \item Propriétés de la figure symétrique.
+      \begin{enumerate}
+         \item Rappeler les propriétés de conservation dans une symétrie.
+         \item Quelle devrait-être la mesure de $PO'$ ? Vérifier sur le dessin.
+         \item Quelle devrait-être la mesure de $M'O'$ ? Vérifier sur le dessin.
+         \item Quelle devrait-être la mesure de $\widehat{PO'M'}$ ? Vérifier sur le dessin. \\
+       \end{enumerate}
+   \end{enumerate}
+\end{exercice}
+
+\bigskip
+
+\begin{exercice} %2
+   Un quadrilatère $ABCD$ est appelé isocerfvolant en $A$ si l'angle $\widehat{BAD}$ est droit et si la droite $(AC)$ est un axe de symétrie.
+   \begin{center}
+      \begin{pspicture}(-1,-2.5)(7,2.5)
+         \pstGeonode[PointSymbol=none,CurveType=polygon,PosAngle={135,-90,45,90}]{A}(2,-2){B}(6,0){C}(2,2){D}
+         \psline[linewidth=0.5mm](-1,0)(7,0)
+         \pstRightAngle{D}{A}{B}
+      \end{pspicture}
+   \end{center}
+\begin{enumerate}
+   \item
+   \begin{enumerate}
+      \item Démontrer que $\widehat{DAC} =\widehat{BAC}$
+      \item En déduire la mesure de l'angle $\widehat{DAC}$
+      \item Quelle est la position relative des droites $(BD)$ et $(AC)$ ?
+   \end{enumerate}
+   \item
+   \begin{enumerate}
+      \item Construire un quadrilatère $ABCD$ qui soit un isocerfvolant en $A$.
+      \item Construire un quadrilatère qui admette un axe de symétrie et qui ne soit pas un isocerfvolant.
+   \end{enumerate}
+   \item Les affirmations suivantes sont-elles vraies ou fausses ? Justifier les réponses.
+   \begin{enumerate}
+      \item Tous les carrés sont des isocerfvolants.
+      \item Tous les rectangles sont des isocerfvolants.
+   \end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+\bigskip
+
+\begin{exercice} %3
+   \begin{enumerate}
+      \item Tracer un cercle $\mathcal{C}$ de centre $O$. Un diamètre de ce cercle est $[AS]$ tel que $AS = 8$ cm.
+      \item Placer un point $R$ sur le cercle $\mathcal{C}$ tel que
+$\widehat{RAS} = 45$\degre.
+      \item Construire le point $T$, symétrique du point $R$ par rapport à la droite $(AS)$.
+      \item Tracer le triangle $RAT$
+      \item Mesurer l'angle $\widehat{TAS}$.
+      \item Quelle est la nature du triangle $RAT$? Justifier.
+   \end{enumerate}
+\end{exercice}
+
+\bigskip
+
+\begin{exercice} %4
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item Reproduire deux fois cette figure sur le cahier.
+         \begin{center}
+            \begin{pspicture}(-1,0)(6,8)
+               {\psset{fillstyle=solid,fillcolor=A2}
+               \pstGeonode[CurveType=polygon,PointName=none,PointSymbol=none](1,4){A}(2.5,4){B}(2.5,6){C}
+               \pstGeonode[CurveType=polygon,PointName=none,PointSymbol=none,fillcolor=B2](1,4){A}(2.5,6){C}(0.5,7.5){D}
+               \pstGeonode[PointName=none,PointSymbol=none](0,1){E}(5,4){F}
+               \pstOrtSym[CodeFig=false,PointSymbol=none,PointName=none,CurveType=polygon]{E}{F}{A,B,C}[A',B',C']}
+            \end{pspicture}
+         \end{center}
+      \item On souhaite compléter la figure de telle sorte qu'elle ait un axe de symétrie. Proposer une méthode avec la règle non graduée et le compas.
+      \item Proposer une autre méthode avec uniquement une règle non graduée.
+   \end{enumerate}
+\end{exercice}
+
+\end{colonne*exercice}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\enigme[Pavage]
+   \begin{minipage}{12cm}
+      Un {\bf pavage du plan} est un ensemble de portions du plan qui, lorsqu'on les met les unes à côté des autres, forment le plan tout entier, sans recouvrement. Par exemple, lorsque l'on pose du carrelage, on effectue un pavage de la pièce. Ce carrelage peut être de forme carrée, rectangulaire, hexagonale\dots \\
+      On considère le carrelage carré ci-contre qui dispose de huit axes de symétrie. \\
+      Effectuer un pavage du plan ci-dessous avec ce carrelage en commençant par l'un des coins puis le colorier.
+   \end{minipage}
+   \qquad
+   \begin{minipage}{4.5cm}
+      {\psset{unit=0.5,CurveType=polygon,PointSymbol=none,PointName=none}
+      \begin{pspicture}(-5,-5)(5,5)
+         \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](-5,-5)(5,5)
+         \pstGeonode{A}(3,3){B}(3,4){C}(2,5){D}(1,5){E}(0,4){F}(-1,5){G}(-2,5){H}(-3,4){I}(-3,3){J}
+         \pstSymO{A}{A,B,C,D,E,F,G,H,I,J}[A',B',C',D',E',F',G',H',I',J']
+         \pstOrtSym{A}{B}{A,B,C,D,E,F,G,H,I,J}
+         \pstOrtSym{A}{J}{A,B,C,D,E,F,G,H,I,J}
+         \pstGeonode(0,1){K}(2,3){L}(2,4){M}(1,4){N}(0,3){O}(-1,4){P}(-2,4){Q}(-2,3){R}
+         \pstSymO{A}{K,L,M,N,O,P,Q,R}[K',L',M',N',O',P',Q',R']
+         \pstOrtSym{A}{B}{K,L,M,N,O,P,Q,R}
+         \pstOrtSym{A}{J}{K,L,M,N,O,P,Q,R}
+         \pspolygon(-5,4)(-4,4)(-4,5)
+         \pspolygon(-5,-4)(-4,-4)(-4,-5)
+         \pspolygon(5,4)(4,4)(4,5)
+         \pspolygon(5,-4)(4,-4)(4,-5)
+      \end{pspicture}}
+   \end{minipage}
+   \begin{center}
+      {\psset{unit=0.5}
+      \begin{pspicture}(0,0)(30,31.5)
+         \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(30,30)
+         \psframe[linewidth=1mm](0,0)(30,30)
+       \end{pspicture}}
+   \end{center}
+   
+   
+\annexe{}
+
+\pagebreak
+
+\ \\
+
+\pagebreak
+
+\tikzset{fondA/.style=Cyan}
+\tikzset{fondB/.style=blue}
+
+%=======================================
+\begin{tikzpicture}[remember picture,overlay]
+% fond bicolore
+\coordinate (cp) at (current page);
+\coordinate (cpc) at (current page.center);
+\coordinate (cpe) at ($ (current page.east) + (1.7cm,0cm) $);
+\coordinate (cpne) at ($ (current page.north east) + (1.7cm,2.9cm) $);
+\coordinate (cpn) at ($ (current page.north) + (1.5cm,2.9cm) $);
+\coordinate (cpnw) at ($ (current page.north west) + (-0.2cm,2.9cm) $);
+\coordinate (cpw) at ($ (current page.west) + (-0.2cm,0cm) $);
+\coordinate (cpsw) at ($ (current page.south west) + (-0.2cm,-0.2cm) $);
+\coordinate (cps) at ($ (current page.south) + (1.5cm,-0.2cm) $);
+\coordinate (cpse) at ($ (current page.south east) + (1.7cm,-0.2cm) $);
+\fill[fondA] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpnw)  -- (cpsw) -- cycle;
+\fill[fondB] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpne)  -- (cpse) -- cycle;
+
+\end{tikzpicture}
+

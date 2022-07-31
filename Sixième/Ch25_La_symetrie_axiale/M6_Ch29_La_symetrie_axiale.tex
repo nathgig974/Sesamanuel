@@ -1,0 +1,464 @@
+\themaG
+\graphicspath{{../Ch25_La_symetrie_axiale/Images}}
+
+\chapter{La symétrie axiale}
+\label{C29}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{prerequis}[Connaissances et compétences abordées]
+   \begin{itemize}
+      \item Compléter une figure par symétrie axiale.
+      \item Construire le symétrique d’un point, d’un segment, d’une droite par rapport à un axe donné : figure symétrique.
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\begin{debat}[Débat : c'est WOW]
+   Dans la nature, on trouve de nombreux objets ayant une {\bf symétrie axiale} : animaux, paysages, monuments\dots{} regardez et observez autour de vous !
+   \begin{center} 
+      {\psset{unit=0.8}
+      \begin{pspicture}(-3,-0.5)(9,4)
+         %\psgrid[subgriddiv=0, gridlabels=0,gridcolor=lightgray](-1,-1)(9,4)
+         \psframe(-1,0)(3,2)
+         \psline(-1,2)(0,3)(3,2)
+         \psframe(1,0)(2,1)
+         \psline[linecolor=A1,linewidth=0.5mm](4,-1)(4,4)
+         \psframe[linecolor=B2](5,0)(9,2)
+         \psline[linecolor=B2](5,2)(8,3)(9,2)
+         \psframe[linecolor=B2](6,0)(7,1)
+      \end{pspicture}}
+   \end{center}
+   \bigskip
+   \begin{cadre}[B2][F4]
+      \begin{center}
+         Vidéo : \href{https://www.tfo.org/fr/univers/cest-wow/100378804/la-symetrie}{\bf La symétrie}, chaîne {\it TFO}, série {\it c'est WOW}, vidéo de 1\!:00 à 5\!:00.
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+\vfill
+
+\textcolor{PartieGeometrie}{\sffamily\bfseries Cahier de compétences} : chapitre 29, exercices 11 à 26. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Les napperons]
+   {\bf Objectif :} construire une figure complexe par découpage à l'aide de symétries. 
+   \begin{QCM}
+      \partie[pliage rosace]
+         Comme dans le chapitre 21, effectuer le pliage ci-dessous dans une feuille carrée de \ucm{10} de côté.
+         \begin{center}
+            \begin{pspicture}(-0.5,-0.5)(3.5,3.3)
+               \rput(-0.3,1.5){1)}
+               \psframe(0,0)(3,3)
+               \psline[linestyle=dashed](1.5,0)(1.5,3)
+               \psarc{<-}(1.5,1.5){0.75}{0}{180}
+               \rput(3.3,1.5){$\Rightarrow$}
+            \end{pspicture}
+            \begin{pspicture}(0,-0.5)(2,3.3)
+               \psframe(0,0)(1.5,3)
+            \end{pspicture}
+            \begin{pspicture}(-0.5,-0.5)(2,3.3)
+               \rput(-0.3,1.5){2)}
+               \psframe(0,0)(1.5,3)
+               \psline[linestyle=dashed](0,1.5)(1.5,1.5)
+               \psarc{->}(0.75,1.5){0.5}{90}{-90}
+               \rput(1.8,0.75){$\Rightarrow$}
+            \end{pspicture}
+            \begin{pspicture}(0,-0.5)(2,3.3)
+               \psframe(0,0)(1.5,1.5)
+            \end{pspicture}
+            \begin{pspicture}(-0.5,-0.5)(2,3.3)
+               \rput(-0.3,1.5){3)}
+               \psframe(0,0)(1.5,1.5)
+               \psline[linestyle=dashed](0,1.5)(1.5,0)
+               \psarc{->}(0.75,0.75){0.4}{45}{-135}
+               \rput(1.8,0.75){$\Rightarrow$}
+            \end{pspicture}
+            \begin{pspicture}(0,-0.5)(2,3.3)
+               \pspolygon(0,0)(0,1.5)(1.5,0)
+            \end{pspicture}
+         \end{center}
+    
+      \partie[un joli napperon]
+         Utiliser maintenant le pliage rosace pour réaliser le napperon ci-dessous.
+         \begin{center}
+            \begin{pspicture}(-5,-5.5)(5,5.5)
+            \pspolygon(-5,-5)(-0.5,-5)(0,-4)(0.5,-5)(5,-5)(5,-0.5)(4,0)(5,0.5)(5,5)(0.5,5)(0,4)(-0.5,5)(-5,5)(-5,0.5)(-4,0)(-5,-0.5)
+            \psset{PointSymbol=none,PointName=none}
+            \pstGeonode{O}(5,0){Z}(0,5){Y}(5,-5){X}
+            \pstTriangle(-4,-3){M}(-3,-4){N}(-3,-3){C}
+            \pstTriangle(-3,-2){D}(-2,-3){E}(-2,-2){F}
+            \psset{CurveType=polygon}
+            \pstSymO{O}{M,N,C}
+            \pstSymO{O}{D,E,F}
+            \pstOrtSym{O}{Z}{M,N,C}
+            \pstOrtSym{O}{Z}{D,E,F}
+            \pstOrtSym{O}{Y}{M,N,C}
+            \pstOrtSym{O}{Y}{D,E,F}
+            \pstGeonode(-3.25,0){G}(-2.75,-0.5){H}(-2.25,0){I}(-2.75,0.5){J}
+            \pstSymO{O}{G,H,I,J}
+            \pstOrtSym{O}{X}{G,H,I,J}
+            \pstSymO{O}{G',H',I',J'}
+            \pspolygon(-1,-0.5)(-0.5,-0.5)(-0.5,-1)(0,-0.5)(0.5,-1)(0.5,-0.5)(1,-0.5)(0.5,0)(1,0.5)(0.5,0.5)(0.5,1)(0,0.5)(-0.5,1)(-0.5,0.5)(-1,0.5)(-0.5,0)
+         \end{pspicture}
+      \end{center}
+   \end{QCM}
+   \vfill\hfill{\it\footnotesize Source : inspiré de l'article \href{https://irem.univ-grenoble-alpes.fr/medias/fichier/68n3_1555658318837-pdf}{Le napperon, un problème pour travailler la symétrie axiale}, Grand N n\degre68, Marie-Lise Peltier, 2001}.
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+%%%%%%%%%%%%%%%
+\section{Symétrie axiale}
+
+\begin{definition}
+   Deux figures sont {\bf symétriques} par rapport à un axe de symétrie si elles se superposent par pliage de long de cet axe.
+\end{definition}
+ 
+\medskip
+  
+Pour construire la figure symétrique d'une figure, on construit le symétrique de chaque point qui compose la figure.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tracer le symétrique d'une figure par rapport à un axe}
+
+\begin{methode*1}
+   Pour tracer le symétrique d'un point par rapport à un axe, on peut :
+   \begin{itemize}
+      \item utiliser l'équerre et la règle ou le compas ;
+      \item utiliser uniquement le compas ;
+      \item utiliser un quadrillage.
+   \end{itemize}
+   \exercice
+      {\psset{unit=0.63}
+      \small
+         {\bf Équerre et règle graduée ou compas.} \\
+         \begin{tabular}{C{3.5}C{3.5}C{3.5}C{3.5}}   
+            \begin{pspicture}(0,-0.5)(4,4)
+               \pstGeonode[PosAngle=180](1,3){A}
+               \pstGeonode[PointSymbol=none,PointName=none](0,0){B}(4,3){C}
+               \pstLineAB[linecolor=B1]{B}{C}
+               \rput(3.85,2.4){\textcolor{B1}{$(d)$}}
+            \end{pspicture}
+            &
+            \begin{pspicture}(0,-0.5)(4,4)
+               \pstGeonode[PosAngle=180](1,3){A}
+               \pstGeonode[PointSymbol=none,PointName=none](0,0){B}(4,3){C}
+               \pstLineAB[linecolor=B1]{B}{C}
+               \equerre{1.73}{1.32}{37}{1.2}
+               \rput(3.85,2.4){\textcolor{B1}{$(d)$}}
+            \end{pspicture} 
+            &
+            \begin{pspicture}(0,-0.5)(4,4)
+               \pstGeonode[PosAngle=180](1,3){A}
+               \pstGeonode[PointSymbol=none,PointName=none](0,0){B}(4,3){C}
+               \psline[linecolor=H1](0.64,3.5)(3.6,-0.5)
+               \pstLineAB[linecolor=B1]{B}{C}
+               \rput(3.85,2.4){\textcolor{B1}{$(d)$}}     
+            \end{pspicture}
+            &
+            \begin{pspicture}(0,-0.5)(4,4)
+               \pstGeonode[PosAngle=180](1,3){A}
+               \pstGeonode[PointSymbol=none,PointName=none](0,0){B}(4,3){C}
+               \pstLineAB[linecolor=B1]{B}{C}
+               \pstGeonode[PointSymbol=none,PointName=none](0,0){B}(4,3){C}
+               \pstOrtSym[CodeFig=true,CodeFigColor=H1]{B}{C}{A}[A']
+               \rput(3.85,2.4){\textcolor{B1}{$(d)$}}
+            \end{pspicture}
+            \\
+            symétrique de $A$ par rapport à $(d)$ :
+            &
+            construire la perpendiculaire à $(d)$ passant par $A$,
+            &
+            prolonger la perpendiculaire de l'autre côté de $(d)$,
+            &
+            reporter la distance de $A$ à $(d)$ de l'autre côté de la droite.
+            \\
+         \end{tabular} \\
+         {\bf Compas uniquement.} \\
+            \begin{tabular}{C{5}C{5}C{5}}   
+               \begin{pspicture}(0,-0.5)(4,3.8)
+                  \pstGeonode[PosAngle=180](1,3){A}
+                  \pstGeonode[PointSymbol=none,PointName=none](0,0){B}(4,3){C}
+                  \pstLineAB[linecolor=B1]{B}{C}
+                  \rput(3.85,2.4){\textcolor{B1}{$(d)$}}
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,-0.5)(4,3.8)
+                  \pstGeonode[PosAngle=180](1,3){A}
+                  \pstGeonode[PointSymbol=none,PointName=none](0,0){B}(4,3){C}
+                  \pstLineAB[linecolor=B1]{B}{C}
+                  \psarc[linecolor=cyan,linestyle=dashed](1,3){2}{260}{350}
+                  \pstGeonode[PointName=none](1.34,1.02){M}(2.76,2.07){N}
+                  \rput(3.85,2.4){\textcolor{B1}{$(d)$}}
+               \end{pspicture} 
+               &
+               \begin{pspicture}(0,-0.5)(4,3.8)
+                  \pstGeonode[PosAngle=180](1,3){A}
+                  \pstGeonode[PointSymbol=none,PointName=none](0,0){B}(4,3){C}
+                  \pstLineAB[linecolor=B1]{B}{C}
+                  \psarc[linecolor=cyan,linestyle=dashed](1.34,1.02){2}{310}{350}
+                  \psarc[linecolor=cyan,linestyle=dashed](2.76,2.07){2}{260}{300}
+                  \pstGeonode[PointName=none](1.34,1.02){M}(2.76,2.07){N}
+                  \pstOrtSym{B}{C}{A}[A']
+                  \rput(3.85,2.4){\textcolor{B1}{$(d)$}}     
+               \end{pspicture}
+               \\
+               symétrique de $A$ par rapport à $(d)$ :
+               &
+               tracer un arc de cercle qui coupe $(d)$ en deux points,
+               &
+               depuis chaque point, tracer un arc de cercle avec le même écart.
+               \\
+               \end{tabular} \\ [3mm]
+               {\bf Dans un quadrillage :} si l'axe est horizontal ou vertical, il suffit de reporter le nombre de carreaux séparant le point de l'axe de l'autre côté de cet axe. Si le quadrillage est en diagonale : \\
+               \psset{unit=0.8}
+               \begin{tabular}{C{5}C{5}C{5}}   
+                  \begin{pspicture}(0,0)(6,5.5)
+                     \psgrid[subgriddiv=0,gridlabels=0pt,gridcolor=lightgray](0,0)(6,5)
+                     \psline[linecolor=B1](1,0)(6,5)
+                     \psdot(1,4)
+                     \rput(0.7,3.7){$A$}
+                     \rput(5,4.6){\textcolor{B1}{$(d)$}}
+                  \end{pspicture}
+                  &
+                  \begin{pspicture}(0,0)(6,5.5)
+                     \psgrid[griddots=8,subgriddiv=0,gridlabels=0pt,gridcolor=gray](0,0)(6,5)
+                     \psline[linecolor=B1](1,0)(6,5)
+                     \psdot(1,4)
+                     \rput(0.7,3.7){$A$}
+                     \rput(5,4.6){\textcolor{B1}{$(d)$}}
+                     \psset{linecolor=cyan}
+                     \psline(1,4)(3,2)
+                     \psarc{<-}(1.5,3.5){0.65}{-45}{135}
+                     \psarc{<-}(2.5,2.5){0.65}{-45}{135}
+                     \rput(1.65,3.75){\textcolor{cyan}{1}}
+                     \rput(2.65,2.75){\textcolor{cyan}{2}}
+                  \end{pspicture}
+                  &
+                  \begin{pspicture}(0,0)(6,5.5)
+                     \psgrid[griddots=8,subgriddiv=0,gridlabels=0pt,gridcolor=gray](0,0)(6,5)
+                     \psline[linecolor=B1](1,0)(6,5)
+                     \psdots(1,4)(5,0)
+                     \rput(0.7,3.7){$A$}
+                      \rput(5,4.6){\textcolor{B1}{$(d)$}}
+                     \psset{linecolor=cyan}
+                     \psline(1,4)(3,2)
+                     \psarc{<-}(1.5,3.5){0.65}{-45}{135}
+                     \psarc{<-}(2.5,2.5){0.65}{-45}{135}
+                     \rput(1.65,3.75){\textcolor{cyan}{1}}
+                     \rput(2.65,2.75){\textcolor{cyan}{2}}
+                     \psset{linecolor=H1}
+                     \psline(5,0)(3,2)
+                     \psarc{<-}(3.5,1.5){0.65}{-45}{135}
+                     \psarc{<-}(4.5,0.5){0.65}{-45}{135}
+                     \rput(3.65,1.75){\textcolor{H1}{1}}
+                     \rput(4.65,0.75){\textcolor{H1}{2}}
+                      \rput(5.6,0){$A'$}
+                  \end{pspicture} \\
+                  symétrique du point $A$ par rapport à $(d)$ :
+                  &
+                  compter le nombre de diagonales entre le point et la droite,
+                  &
+                  reporter ce nombre de l'autre côté en diagonal. \\
+               \end{tabular}}
+               \vspace*{-5mm}
+\end{methode*1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+\serie{Figures symétriques} %%%%%%%%%%%
+
+\begin{exercice} %1
+   Pour chacune des figures suivantes, dire s'il s'agit ou pas d'une symétrie axiale. Si oui, tracer l'axe de symétrie.
+   \begin{center}
+      \begin{pspicture}(8,7.5)
+         \def\cocottea{\pspolygon(0,0)(0.5,0)(0.75,0.25)(1,0)(1,0.5)(0.75,0.75)(1,1)(0.5,1)(0.5,0.5)}
+         \def\cocotteb{\pspolygon[fillstyle=solid,fillcolor=lightgray](0,0)(0.5,0)(0.75,0.25)(1,0)(1,0.5)(0.75,0.75)(1,1)(0.5,1)(0.5,0.5)}
+         \def\cocottec{\pspolygon[fillstyle=solid,fillcolor=lightgray](0,0)(-0.5,0)(-0.75,0.25)(-1,0)(-1,0.5)(-0.75,.75)(-1,1)(-0.5,1)(-0.5,0.5)}
+         \psframe(0,0)(8,7.5)
+         \psline(4,0)(4,7.5)
+         \psline(8,0)(8,7.5)
+         \psline(0,2.5)(8,2.5)
+         \psline(0,5.5)(8,5.5)
+         \rput(0.5,6){\cocottea} \rput(3.5,6){\cocottec}
+         \rput{90}(6,6){\cocotteb} \rput(6,6){\cocottea} 	
+         \rput(1.5,4){\cocottea} \rput(1.5,2.75){\cocotteb}
+         \rput(5.75,4.25){\cocotteb} \rput{180}(6,4){\cocottea}                         
+         \rput(0.5,1){\cocottea} \rput(3.25,0.5){\cocottec}     
+         \rput{-30}(4.25,0.75){\cocottea} \rput{80}(7.5,2.25){\cocottec}	               
+      \end{pspicture}
+   \end{center}
+\end{exercice}
+
+\begin{exercice} %2
+   Sur la figure ci-dessous, $DEFG$ est un rectangle de centre $L$. Les points $R, C, N$ et $S$ sont les milieux respectifs des côtés $[DE], [EF], [FG]$ et $[GD]$.
+   \begin{center}
+      {\psset{xunit=0.5}
+      \small
+         \begin{pspicture}(-1,0)(8.5,4.5)
+            \psframe(0,0)(8,4)
+            \pspolygon(4,0)(8,2)(4,4)(0,2)
+            \psline(0,4)(8,0)
+            \psline(0,0)(8,4)
+            \psline(0,2)(8,2)
+            \psline(4,0)(4,4)
+   \pstGeonode[PosAngle={-135,-90,-45,-90,-90,180,70,0,90,90,135,90,45},PointSymbol=none](0,0){E}(4,0){C}(8,0){F}(2,1){Y}(6,1){P}(0,2){R}(4,2){L}(8,2){N}(2,3){H}(6,3){K}(0,4){D}(4,4){S}(8,4){G}
+         \end{pspicture}}
+   \end{center}
+   \begin{enumerate}
+      \item Colorier en rouge le symétrique du triangle $DHS$ par rapport à la droite $(RN)$.
+      \item Colorier en orange le symétrique du triangle $DHS$ par rapport à la droite $(SC)$.
+      \item Colorier en bleu le symétrique du triangle $DHS$ par rapport à la droite $(LK)$.
+      \item Colorier en vert le symétrique du triangle $DHS$ par rapport à la droite $(DF)$.
+      \item Colorier en noir le symétrique du triangle $DHS$ par rapport à la droite $(RS)$.
+   \end{enumerate}
+\end{exercice}
+
+\begin{exercice} %3
+   Tracer la figure symétrique de toutes les figures par rapport à la droite.
+   {\psset{unit=0.45}
+   \begin{center}
+      \begin{pspicture}(18,18)
+         \psgrid[gridlabels=0,gridcolor=lightgray,subgriddiv=0](18,18)
+         \psline(0,0)(18,18)
+          \psset{linewidth=1.5pt}
+         \pspolygon(1,8)(2,9)(3,8)(5,8)(6,9)(5,9)(6,10)(5,11)(3,11)(2,10)(1,11)
+         \pspolygon(1,13)(3,17)(7,17)(9,13)
+         \pscircle(5,15){1}
+         \psdot(5,10)
+         \psline(7,13)(7,17)
+         \psline(3,13)(3,17)
+         \psarc(2,2){1.41}{45}{225}
+         \psarc(3,3){1.41}{45}{225}
+         \pscircle(3,6){1}
+         \pscircle(3,5){1.41}
+         \pspolygon(10,14)(13,14)(14,15)(10,15)
+         \psline(12,15)(12,18)(11,16)(12,16)
+      \end{pspicture}
+   \end{center}}
+\end{exercice}
+
+\begin{exercice} %4
+   Reproduire chaque lettre et la droite sur le cahier puis construire le symétrique par rapport à la droite.
+   \begin{center}
+      {\psset{unit=0.45}
+      \begin{pspicture}(3,3)
+        \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](-1,0)(2,3)
+        \psset{linewidth=0.6mm}
+        \psline(0,1)(0,3)(1,3)(1,1)
+        \psline(0,2)(1,2)
+        \psline[linecolor=B1](-1,0)(2,0)  
+     \end{pspicture}
+     \begin{pspicture}(-1,0)(2,3)
+        \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](-1,0)(1,3)
+        \psset{linewidth=0.6mm}
+        \psline(1,1)(0,1)(0,3)(1,3)
+        \psline(0,2)(1,2)
+        \psline[linecolor=B1](-1,0)(-1,3)
+     \end{pspicture}
+     \begin{pspicture}(4,3)
+        \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(3,3)
+        \psset{linewidth=0.6mm}
+        \psline(0,1)(0,3)
+        \psline(0,2)(1,2)
+        \psline(1,1)(1,3)
+        \psline[linecolor=B1](1,0)(3,2)
+     \end{pspicture}
+     \begin{pspicture}(4,3)
+        \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(3,3)
+        \psset{linewidth=0.6mm}
+        \psline(1,2)(1,0)(2,0)
+        \psline[linecolor=B1](0,3)(3,0)
+     \end{pspicture}
+     \begin{pspicture}(2,3)
+        \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,3)
+        \psset{linewidth=0.6mm}
+        \pscircle(1,1){1}
+        \psline[linecolor=B1](0,2)(2,2)
+     \end{pspicture}}
+   \end{center}
+\end{exercice}  
+
+\begin{exercice} %5
+   Trouver les erreurs dans les tracés de symétriques suivants (la figure d'origine est dans la partie grise).
+   \begin{center}
+   {\psset{unit=0.3}
+      \begin{pspicture}(12,17.5)
+         \psframe[fillstyle=solid,fillcolor=lightgray!50,linewidth=0](12,8)
+         \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](12,18)
+         \psline(0,8)(12,8)
+         \psset{linewidth=0.3mm}
+         \pspolygon(4,0)(10,5)(5,3)(2,4)
+         \pspolygon(2,12)(10,11)(5,13)(4,16)
+         \psdots(2,12)(10,11)(5,13)(4,16)
+      \end{pspicture}
+      \begin{pspicture}(12,17)
+         \psframe[fillstyle=solid,fillcolor=lightgray!50,linewidth=0](12,8)
+         \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](12,18)
+         \psline(0,8)(12,8)
+         \psset{linewidth=0.3mm}
+         \pspolygon(4,0)(10,5)(5,3)(2,4)
+         \pspolygon(2,12)(5,13)(10,11)(4,18)
+      \end{pspicture}
+      
+      \begin{pspicture}(0,0)(18,9)
+         \pspolygon[fillstyle=solid,fillcolor=lightgray!50,linewidth=0](14,0)(18,0)(18,8)(6,8)
+         \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](0,0)(18,8)
+         \psline(14,0)(6,8)
+         \psset{linewidth=0.4mm}
+         \psline(13,5)(10,5)(10,7)
+         \psline(11,5)(11,6)
+         \psline(6,1)(9,4)(7,5)
+         \psline(8,3)(7,4)
+      \end{pspicture}}
+   \end{center}
+\end{exercice}
+
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\enigme[Multi-symétries]
+   Dans les deux quadrillages suivants, construire le symétrique de la figure par rapport à tous les axes tracés.
+   \begin{center}
+      {\psset{unit=0.5}
+      \begin{pspicture}(-11,-8)(11,8)
+         \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](-11,-8)(11,8)
+         \psline(-11,0)(11,0)
+         \psline(0,-8)(0,8)
+         \psset{linewidth=1mm}
+         \psarc(3,0){3}{0}{180}
+         \psarc(7,0){1}{0}{180}
+         \psarc(0,3){3}{-90}{90}
+         \psline(8,0)(8,2)(10,4)(10,0)
+      \end{pspicture} \\ [10mm]
+      \begin{pspicture}(-11,-11)(11,11)
+         \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](-11,-11)(11,11)
+         \psline(-11,0)(11,0)
+         \psline(0,-11)(0,11)
+         \psline(-11,-11)(11,11)
+         \psline(-11,11)(11,-11)
+         \psset{linewidth=1mm}
+         \psline(0,0)(2,0)(2,1)(3,1)(3,2)(4,2)(4,3)(5,3)(5,4)(6,4)(6,5)(7,5)(7,6)(8,6)(10,0)(7,0)(5,2)(3,0)
+      \end{pspicture} } 
+\end{center}
+

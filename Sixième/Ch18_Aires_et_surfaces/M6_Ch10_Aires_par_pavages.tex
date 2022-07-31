@@ -1,0 +1,416 @@
+\themaM
+\graphicspath{{../Ch18_Aires_et_surfaces/Images/}}
+
+\chapter{Aires par pavages}
+\label{C10}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{prerequis}[Connaissances et compétences associées]
+   \begin{itemize}
+      \item Différencier périmètre et aire d’une figure.
+      \item Comparer des surfaces selon leurs aires sans avoir recours à la mesure, par superposition ou par découpage et recollement.
+      \item Déterminer la mesure de l’aire d’une surface à partir d’un pavage simple.
+      \item Unités usuelles d’aire et leurs relations : multiples et sous-multiples du m$^2$.
+      \item Estimer la mesure d’une aire et l’exprimer dans une unité adaptée.
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\begin{debat}[Débat : le SI (Système International)]
+   En 1795, il existe en France plus de 700 {\bf unités de mesures différentes} qui varient d'une ville à l'autre. Source d'erreurs et de fraudes lors des transactions commerciales, politiques et scientifiques vont tenter de réformer cet état de fait : leur idée est d'assurer l'invariabilité des mesures en les rapportant à un étalon universel emprunté à un phénomène naturel. Le 26 mars 1791 nait le mètre (du grec {\it metron}, mesure), dont la longueur est établie comme égale à la dix-millionième partie du quart du méridien terrestre. L'unité de mesure de base étant déterminée, il suffit désormais d'établir toutes les autres unités de mesure qui en découlent : le mètre carré et le mètre cube, le litre, le gramme\dots{} Le système international des unités (SI) est né en 1960. En 2018, les unités de base sont redéfinies à partir de sept constantes physiques. \\
+   \begin{center}
+      {\psset{unit=0.8}
+      \begin{pspicture}(-2.5,-2)(2.5,1.8)
+         \pscircle*[linecolor=gray](0,0){2.5}
+         \pswedge*[linecolor=orange](0,0){2}{0}{51}
+         \rput(1.25;25){\large\white m}
+         \pswedge*[linecolor=red](0,0){2}{51}{103}
+         \rput(1.25;75){\large\white kg}
+         \pswedge*[linecolor=magenta](0,0){2}{103}{154}
+         \rput(1.25;126){\large\white cd}
+         \pswedge*[linecolor=violet](0,0){2}{154}{205}
+         \rput(1.25;176){\large\white mol}
+         \pswedge*[linecolor=blue](0,0){2}{205}{257}
+         \rput(1.25;228){\large\white K}
+         \pswedge*[linecolor=cyan](0,0){2}{257}{308}
+         \rput(1.25;280){\large\white A}
+         \pswedge*[linecolor=green](0,0){2}{308}{360}
+         \rput(1.25;334){\large\white s}
+      \end{pspicture}}
+   \end{center}
+   \bigskip
+   \begin{cadre}[B2][F4]
+      \begin{center}
+         Vidéo : \href{https://www.youtube.com/watch?time_continue=2&v=bInHclEN6zQ&feature=emb_logo}{\bf Système International d'unités. L'épopée}, {\it Laboratoire national de métrologie et d'essais}. 
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+\vfill
+
+\textcolor{PartieGeometrie}{\sffamily\bfseries Cahier de compétences} : chapitre 11, exercices 12 ; 26 à 28 ; 30 à 35 ; 42.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Curvica]
+   {\bf Objectif :} différencier aire et périmètre ; comparer des périmètres ; comparer des aires.
+   \begin{QCM}
+      \partie[présentation]
+         À partir d’un carré, on obtient une pièce du puzzle Curvica en \og creusant \fg, en \og bombant \fg{} ou en \og laissant droit \fg{} les côtés. Par exemple, voici une pièce de Curvica : \\
+         \begin{center}
+           \curvica{}
+            \begin{pspicture}(0,-0.25)(2,2.25)
+               \rput(1,1){$\Longrightarrow$}
+            \end{pspicture}
+            \curvica{
+               \psline(0,0)(2,0)(2,2)
+               \psarc(1,4){2.24}{-116.6}{-63.4}
+               \psarc(2,1){2.24}{153.4}{-153.4}}
+            \begin{pspicture}(-1.5,-0.25)(2.5,2.25)
+               \rput(1,1.75){\it\small tous les arcs de cercles}
+               \rput(1,1.25){\it\small (creusés et bombés) reliant}
+               \rput(1,0.75){\it\small deux sommets du carré}
+               \rput(1,0.25){\it\small sont superposables.} 
+            \end{pspicture}
+         \end{center}
+         \bigskip
+      \partie[défis]
+         Construire deux pièces différentes (non superposables par rotation, déplacement ou retournement) telles que : \\ [8mm]
+         \parbox{5cm}{les deux pièces ont la même aire mais des périmètres différents}\parbox{1.5cm}{\phantom{}}\parbox{5cm}{\curvica{}}\parbox{5cm}{\curvica{}} \\ [10mm]
+         \parbox{5cm}{les deux pièces ont le même périmètre mais des aires différentes.}\parbox{1.5cm}{\phantom{}}\parbox{5cm}{\curvica{}}\parbox{5cm}{\curvica{}} \\ [10mm]
+         \parbox{5cm}{les deux pièces ont le même périmètre et la même aire} \parbox{1.5cm}{\phantom{}}\parbox{5cm}{\curvica{}}\parbox{5cm}{\curvica{}} \\ [5mm] 
+   \end{QCM}
+   \vfill\hfill {\footnotesize\it Source : Yves Martin. Curvica - activités mathématiques ludiques. 2015, pp.75. hal-01502901}
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Surface et aire}
+
+\begin{definition}
+   La \textbf{surface} d'une figure est la partie située à l'intérieur de son contour. \\
+   Sa mesure s'appelle l'\textbf{aire}, qui est le nombre d'unités d'aire que la figure contient.
+\end{definition}
+
+\begin{remarque}
+   attention à ne pas confondre avec le périmètre qui est une mesure de longueur !
+\end{remarque}
+
+Pour déterminer l'aire d'une surface, on peut découper la figure en figure simples ou utiliser un pavage simple de la figure.
+
+\begin{exemple*1}
+\ \\
+   {\psset{unit=0.8}
+   \begin{pspicture}(-3,-0.5)(10,6.6)
+      \put(1,1){\pspolygon[fillstyle=solid,fillcolor=B2,linewidth=0.1](0,0)(2,0)(2,3)(0,3)(0,2)(1,2)(1,1)(0,1)(0,0)}
+      \put(4,1){\pspolygon[fillstyle=solid,fillcolor=A2,linewidth=0.1](1,0)(2,0)(2,2)(1,2)(1,3)(0,3)(0,1)}
+      \put(7,1){\pspolygon[fillstyle=solid,fillcolor=J2,linewidth=0.1](1,0)(1.5,0.5)(2,0)(2,1)(3,1)(2.5,1.5)(3,2)(2,2)(2,3)(1.5,2.5)(1,3)(1,2)(0,2)(0.5,1.5)(0,1)(1,1)(1,0)}
+      \rput(2.5,2.4){\textbf{A}}
+      \rput(5,2.4){\textbf{B}}
+      \rput(8.5,2.4){\textbf{C}}
+      \rput(1.5,5.5){{$u_1$}} 
+      \psframe[fillstyle=solid,fillcolor=darkgray,linewidth=0.1](2,5)(3,6)
+      \rput(4.5,5.5){{$u_2$}}
+      \pspolygon[fillstyle=solid,fillcolor=darkgray,linewidth=0.1](6,5)(6,6)(5.5,5.5)
+      \rput(7.5,5.5){{$u_3$}}\pspolygon[fillstyle=solid,fillcolor=darkgray,linewidth=0.1](8,5)(9,5)(8,6)
+      \psgrid[subgriddiv=0,gridlabels=0pt,gridwidth=0.02,gridcolor=darkgray](11,7)
+      \multido{\i=0+1}{5}{%
+	\FPeval{a}{\i+7}
+	\psline[linecolor=darkgray,linewidth=0.02](\i,0)(\a,7)
+	\psline[linecolor=darkgray,linewidth=0.02](\i,7)(\a,0)
+	}
+      \multido{\i=1+1}{6}{%
+	\FPeval{b}{7-\i}
+	\FPeval{c}{4+\i}
+	\psline[linecolor=darkgray,linewidth=0.02](0,\i)(\b,7)
+	\psline[linecolor=darkgray,linewidth=0.02](\i,0)(0,\i)
+	\psline[linecolor=darkgray,linewidth=0.02](\c,0)(11,\b)
+	\psline[linecolor=darkgray,linewidth=0.02](\c,7)(11,\i)
+	}
+   \end{pspicture}}
+   \correction   
+   Lorsque l'on n'a pas une unité d'aire entière $u_1$, on prend une partie de l'unité : 
+   \begin{itemize}
+      \item $u_2$ correspond à la moitié d'un carré $=\dfrac12 =0,5$ ;
+      \item $u_3$ correspond au quart d'un carré $=\dfrac14 =0,25$. \smallskip
+   \end{itemize}
+   On peut aussi \og découper \fg{} une partie de la figure afin de la déplacer ailleurs pour former une unité d'aire.
+   \begin{center}
+      \begin{cltableau}{0.9\linewidth}{4}
+         \hline
+         Unité & fig. A & fig. B & fig. C \\
+         \hline
+            $u_1$ & $5$ & $4,5$ & $4$ \\
+         \hline
+         $u_2$ & $20$ & $18$ & $16$ \\
+         \hline
+         $u_3$ & $10$ & $9$ & $8$ \\
+         \hline
+      \end{cltableau}
+   \end{center}
+\end{exemple*1}
+
+
+\section{Unités de mesure d'aires}
+
+Pour désigner une aire, on utilise le mètre carré (\umq{}) et ses multiples et sous-multiples. Pour les mesures agraires, on utilise l'are (a) qui équivaut à \umq{100} et l'hectare (ha) qui vaut 100 ares, c'est-à-dire \umq{10000}.
+
+\begin{center}
+   \renewcommand{\arraystretch}{1}
+   \begin{ltableau}{0.8\linewidth}{14}
+      \hline
+      \multicolumn{2}{|c|}{\ukmq{}} & \multicolumn{2}{c|}{\uhmq{}} & \multicolumn{2}{c|}{\udamq{}} & \multicolumn{2}{c||}{\umq{}} & \multicolumn{2}{c|}{\udmq{}} & \multicolumn{2}{c|}{\ucmq{}} & \multicolumn{2}{c|}{\ummq{}} \\
+      \hline
+      & & & & & $3$ & $7$ & \multicolumn{1}{C{0.5}||}{$0$} & $1$ & $5$ & $0$ & $4$ & & \\
+      \hline
+   \end{ltableau}
+\end{center}
+
+\begin{exemple*1}
+   \umq{370,1504} = \udmq{37015,04} = \ummq{370150400} = \udamq{3,701504}.
+\end{exemple*1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+\serie{Différencier aire et périmètre}
+
+\begin{exercice} %1
+   On choisit comme unité de longueur $u.\ell.$ la longueur du côté d'un carreau du cahier et comme unité d'aire $u.a.$ la surface d'un carreau.
+   \begin{enumerate}
+      \item Construire cinq polygones de périmètre 10 $u.\ell.$ \\
+         Ont-ils tous la même aire ?
+      \item Construire huit polygones d'aire 5 $u.a.$ \\
+         Ont-ils tous le même périmètre ?
+   \end{enumerate}
+\end{exercice}
+
+\medskip
+
+\begin{exercice} %2
+   On considère les deux figures A et B suivantes :
+   \begin{center}
+      {\psset{unit=0.5}
+      \begin{pspicture}(-1,-1)(8,3)
+         \pspolygon[fillstyle=solid,fillcolor=A2,linecolor=gray](0,0)(3,0)(1,2)(0,2)
+         \pspolygon[fillstyle=solid,fillcolor=B2,linecolor=gray](4,0)(7,0)(7,1)(6,1)(6,2)(4,2)
+         \psgrid[subgriddiv=1,gridlabels=0,gridcolor=gray](-1,-1)(8,3)
+         \rput(1,1){A}
+         \rput(5,1){B}
+      \end{pspicture}}
+   \end{center}
+   Dans toute la suite, les sommets des polygones doivent être des noeuds du quadrillage.
+   \begin{enumerate}
+      \item Construire une figure différente de A mais de même périmètre que A.
+      \item Construire une figure différente de B mais de même périmètre que B.
+      \item Construire une figure de même aire que la figure A.
+      \item Construire une figure de même aire que la figure B.
+      \item Construire trois figures différentes qui ont à la fois le même périmètre que la figure A et la même aire que la figure B.
+   \end{enumerate}
+\end{exercice}
+
+\medskip
+
+\begin{exercice} %3
+   On considère les figures 1 et 2 :
+   \begin{center}
+      {\psset{unit=0.5}
+      \begin{pspicture}(0,-5.5)(10,7)
+         \psgrid[subgriddiv=1,gridlabels=0,gridcolor=gray](0,-6)(10,7)
+         \pspolygon[linewidth=0.5mm](1,1)(3,1)(3,2)(4,1)(8,1)(9,2)(9,4)(8,5)(6,5)(6,4)(4,6)(1,6)(1,5)(2,4)(1,3)
+         \rput(5,3){figure 1}
+         \pspolygon[linewidth=0.5mm](1,0)(9,0)(9,-2)(8,-3)(7,-2)(6,-3)(7,-4)(6,-5)(5,-4)(3,-4)(2,-5)(1,-4)(1,-3)(2,-3)(2,-1)(1,-1)
+         \rput(4.5,-2){figure 2}
+      \end{pspicture}}
+   \end{center}
+   \begin{enumerate}
+      \item Comparer le périmètre de ces deux figures sans les calculer.
+      \item Comparer l'aire de ces deux figures sans les calculer.
+    \end{enumerate}
+\end{exercice}
+
+
+%%%%%%%
+\serie{Calculer des aires}
+
+\begin{exercice} %4
+   Sachant que l'unité d'aire est le carreau, déterminer l'aire de chaque figure suivante.
+   \begin{center}
+      {\psset{unit=0.5}
+      \begin{pspicture}(0,-5)(15,10)
+         \psgrid[subgriddiv=0,gridlabels=0pt,gridcolor=gray](0,-5)(15,10)
+         \psset{linewidth=0.5mm}
+         \psframe(1,1)(4,3)
+         \rput(2.5,2){\bf 1}
+         \pspolygon(5,0)(11,0)(10,4)(8,4)(5,2)
+         \rput(8,2){\bf 4}
+         \pspolygon(1,4)(1,9)(5,9)(5,8)(2,8)(2,7)(4,7)(4,6)(2,6)(2,4)
+         \rput(1.5,6.5){\bf 2}
+         \pspolygon(6,7)(12,9)(6,9)
+         \rput(7.5,8.4){\bf 3}
+         \pspolygon(5,4)(5,6)(12,6)(12,8)(14,8)(14,4)(13,3)(14,2)(14,1)(12,1)(11,3)(12,5)(6,5)
+         \rput(13,5.5){\bf 5}
+         \psline(3,-2)(1,-2)(1,-4)(2,-4)
+         \psarc(3,-4){1}{0}{180}
+         \psline(4,-4)(6,-4)(6,-2)(5,-2)
+         \psarc(4,-2){1}{0}{180}
+         \rput(4,-2.5){\bf 6} 
+         \psline(7,-1)(14,-1)
+         \psline(7,-4)(14,-4)
+         \psline(8,-2)(8,-3)
+         \psline(13,-2)(13,-3)
+         \psarc(8,-4){1}{90}{180}
+         \psarc(8,-1){1}{180}{-90}
+         \psarc(13,-4){1}{0}{90}
+         \psarc(13,-1){1}{-90}{0}
+         \pscircle(10,-2.5){1}
+         \rput(12,-2.5){\bf 7}
+      \end{pspicture}}
+   \end{center}
+\end{exercice}
+
+\begin{exercice} %5
+   Quelle est l'aire, en \ucmq{}, de la figure grisée sachant que \begin{pspicture}(3,2)(4,3)
+         \psframe[fillstyle=solid,fillcolor=lightgray](3,2)(4,3)
+         \psline(3,2)(4,3)
+         \psline(3,3)(4,2)
+      \end{pspicture} vaut \ucmq{1} ? Expliquer.
+   \begin{center}
+      \begin{pspicture*}(5,0)(10,5)
+         \pspolygon[fillstyle=solid,fillcolor=lightgray](6,0)(9,0)(9,1)(10,2)(8,4)(9,4)(8,5)(7,5)(6,4)(7,4)(5,2)(6,1)
+         \pspolygon[fillstyle=solid,fillcolor=white](6.5,0.5)(7.5,1.5)(8.5,0.5)(9,1)(9,2)(8,2)(7.5,2.5)(8,3)(7.5,3.5)(8,4)(7,4)(7.5,3.5)(7,3)(7.5,2.5)(7,2)(6,2)(6,1)
+         \psgrid[subgriddiv=1](5,0)(10,5)
+         \multido{\i=10+-1}{10}{%
+	   \FPeval{a}{\i+5}
+	   \psline(\i,0)(\a,5)
+	   \psline(\i,5)(\a,0)}
+      \end{pspicture*}
+   \end{center}
+\end{exercice}
+
+\begin{exercice} %6
+   Estimer l'aire de la figure suivante :
+   \begin{center}
+      {\psset{unit=0.6,linewidth=0.5mm}
+      \small
+         \begin{pspicture}(0,-3)(10,3)
+            \psgrid[subgriddiv=0,gridlabels=0pt,gridcolor=gray](0,-3)(10,3)
+            \psarc(2,0){2}{180}{0}
+            \psarc(3,0){3}{180}{0}
+            \psarc(8,0){2}{0}{180}
+            \psarc(7,0){3}{0}{180}
+            \psline{<->}(8,-1)(9,-1)
+            \rput(8.5,-1.5){2 cm}
+         \end{pspicture}}
+   \end{center}
+\end{exercice}
+
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\vspace*{-5mm}
+
+\enigme[Le retour du Curvica !]
+
+   \partie[les 24 formes du Curvica] \smallskip
+
+   \curvica{\rput(1,1){\textcolor{B1}{a}} \psline(0,0)(0,2) \psline(0,2)(2,2) \psline(2,2)(2,0) \psarc(1,-2){2.24}{63.4}{116.6}}
+   \curvica{\rput(1,1){\textcolor{B1}{b}} \psline(0,0)(0,2) \psline(0,2)(2,2) \psarc(4,1){2.24}{153.4}{-153.4} \psarc(1,2){2.24}{-116.6}{-63.4}}
+   \curvica{\rput(1,1){\textcolor{B1}{c}} \psarc(2,1){2.24}{153.4}{-153.4} \psline(2,0)(2,2) \psline(0,2)(2,2) \psarc(1,2){2.24}{-116.6}{-63.4}}
+   \curvica{\rput(1,1){\textcolor{B1}{d}} \psline(0,0)(0,2) \psline(2,0)(2,2) \psline(0,2)(2,2) \psline(0,0)(2,0)} \\ [1mm]
+   
+   \curvica{\rput(1,1){\textcolor{B1}{e}} \psline(0,0)(0,2) \psline(2,0)(2,2) \psarc(1,0){2.24}{63.4}{116.6} \psarc(1,2){2.24}{-116.6}{-63.4}}
+   \curvica{\rput(1,1){\textcolor{B1}{f}} \psline(0,0)(0,2) \psline(2,0)(2,2) \psarc(1,4){2.24}{-116.6}{-63.4} \psarc(1,2){2.24}{-116.6}{-63.4}}
+   \curvica{\rput(1,1){\textcolor{B1}{g}} \psline(0,0)(0,2) \psline(2,0)(2,2) \psarc(1,4){2.24}{-116.6}{-63.4} \psarc(1,-2){2.24}{63.4}{116.6}}
+   \curvica{\rput(1,1){\textcolor{B1}{h}} \psline(0,0)(0,2) \psline(2,0)(2,2) \psline(0,2)(2,2) \psarc(1,2){2.24}{-116.6}{-63.4}} \\ [1mm]
+   
+   \curvica{\rput(1,1){\textcolor{B1}{i}} \psline(0,0)(0,2) \psarc(1,4){2.24}{-116.6}{-63.4} \psarc(4,1){2.24}{153.4}{-153.4} \psarc(1,2){2.24}{-116.6}{-63.4}} 
+   \curvica{\rput(1,1){\textcolor{B1}{j}} \psarc(2,1){2.24}{153.4}{-153.4} \psarc(1,4){2.24}{-116.6}{-63.4} \psarc(4,1){2.24}{153.4}{-153.4} \psarc(1,-2){2.24}{63.4}{116.6}}
+   \curvica{\rput(1,1){\textcolor{B1}{k}} \psarc(2,1){2.24}{153.4}{-153.4} \psarc(0,1){2.24}{-26.6}{26.6} \psarc(1,0){2.24}{63.4}{116.6} \psarc(1,2){2.24}{-116.6}{-63.4}}
+   \curvica{\rput(1,1){\textcolor{B1}{l}} \psarc(-2,1){2.24}{-26.6}{26.6} \psline(2,0)(2,2) \psarc(1,4){2.24}{-116.6}{-63.4} \psarc(1,-2){2.24}{63.4}{116.6}} \\ [1mm]
+   
+   \curvica{\rput(1,1){\textcolor{B1}{m}} \psline(0,0)(0,2) \psarc(0,1){2.24}{-26.6}{26.6} \psarc(1,4){2.24}{-116.6}{-63.4} \psarc(1,-2){2.24}{63.4}{116.6}} 
+   \curvica{\rput(1,1){\textcolor{B1}{n}} \psarc(-2,1){2.24}{-26.6}{26.6} \psarc(4,1){2.24}{153.4}{-153.4} \psarc(1,0){2.24}{63.4}{116.6} \psarc(1,2){2.24}{-116.6}{-63.4}}
+   \curvica{\rput(1,1){\textcolor{B1}{o}} \psarc(2,1){2.24}{153.4}{-153.4} \psarc(1,4){2.24}{-116.6}{-63.4} \psarc(4,1){2.24}{153.4}{-153.4} \psarc(1,2){2.24}{-116.6}{-63.4}}
+   \curvica{\rput(1,1){\textcolor{B1}{p}} \psarc(2,1){2.24}{153.4}{-153.4} \psline(2,0)(2,2) \psarc(1,0){2.24}{63.4}{116.6} \psarc(1,-2){2.24}{63.4}{116.6}} \\ [1mm]
+   
+      \curvica{\rput(1,1){\textcolor{B1}{q}} \psline(0,0)(0,2) \psarc(4,1){2.24}{153.4}{-153.4} \psarc(1,0){2.24}{63.4}{116.6} \psarc(1,2){2.24}{-116.6}{-63.4}}
+      \curvica{\rput(1,1){\textcolor{B1}{r}} \psarc(2,1){2.24}{153.4}{-153.4} \psarc(0,1){2.24}{-26.6}{26.6} \psarc(1,4){2.24}{-116.6}{-63.4} \psarc(1,2){2.24}{-116.6}{-63.4}}
+      \curvica{\rput(1,1){\textcolor{B1}{s}} \psarc(-2,1){2.24}{-26.6}{26.6} \psarc(1,4){2.24}{-116.6}{-63.4} \psarc(4,1){2.24}{153.4}{-153.4} \psarc(1,-2){2.24}{63.4}{116.6}}
+      \curvica{\rput(1,1){\textcolor{B1}{t}} \psarc(2,1){2.24}{153.4}{-153.4} \psline(2,0)(2,2) \psarc(1,0){2.24}{63.4}{116.6} \psarc(1,2){2.24}{-116.6}{-63.4}} \\ [1mm]
+      
+      \curvica{\rput(1,1){\textcolor{B1}{u}} \psline(0,0)(0,2) \psarc(1,4){2.24}{-116.6}{-63.4} \psarc(4,1){2.24}{153.4}{-153.4} \psline(0,0)(2,0)} 
+      \curvica{\rput(1,1){\textcolor{B1}{v}} \psarc(2,1){2.24}{153.4}{-153.4} \psarc(1,4){2.24}{-116.6}{-63.4} \psarc(4,1){2.24}{153.4}{-153.4} \psline(0,0)(2,0)}
+      \curvica{\rput(1,1){\textcolor{B1}{w}} \psarc(2,1){2.24}{153.4}{-153.4} \psarc(1,0){2.24}{63.4}{116.6} \psarc(4,1){2.24}{153.4}{-153.4} \psline(0,0)(2,0)}
+      \curvica{\rput(1,1){\textcolor{B1}{x}} \psarc(2,1){2.24}{153.4}{-153.4} \psarc(1,4){2.24}{-116.6}{-63.4} \psline(2,0)(2,2) \psline(0,0)(2,0)}
+
+\pagebreak
+
+\partie[la grille réponse] \bigskip
+
+{\hautab{1.75}
+\begin{tabular}{|p{11cm}|C{3}|C{1}|}
+   \hline
+   Défis & Réponses & Points \\
+   \hline
+   \multicolumn{2}{|c|}{Niveau facile} & 1 pt \\
+   \hline
+   1. Trouver la pièce dont l'aire est la plus grande. & & \\
+   \hline
+   2. Trouver la pièce dont le périmètre est le plus petit. & & \\
+   \hline
+   3. Assembler deux pièces pour obtenir un rectangle. & & \\
+   \hline
+   4. Trouver la pièce de plus grand périmètre et de plus petite aire. & & \\
+   \hline
+   5. Trouver une pièce ayant un seul axe de symétrie. & & \\
+   \hline
+   6. Trouver une pièce ayant exactement deux axes de symétrie. & & \\
+   \hline
+   7. Trouver deux pièces de même périmètre mais d'aires différentes. & & \\
+   \hline
+   \hline
+   \multicolumn{2}{|c|}{Niveau moyen} & 1,5 pt \\
+   \hline
+   8. Trouver deux pièces de même aire mais de périmètres différents. & & \\
+   \hline
+   9. Trouver deux pièces de même aire et de même périmètre. & & \\
+   \hline
+   10. Assembler quatre pièces pour obtenir un carré. & & \\
+   \hline
+   11. Trouver deux pièces ayant même aire, même périmètre et au moins un axe de symétrie chacune. & & \\
+   \hline
+   12. Trouver deux pièces dont l'une a un périmètre plus grand que l'autre mais une aire plus petite. & & \\
+   \hline
+   13. Assembler deux pièces pour obtenir une figure dont l'aire et le périmètres sont les plus grands possibles. & & \\
+   \hline
+   \hline
+   \multicolumn{2}{|c|}{Niveau difficile} & 2 pts \\
+   \hline
+   14. Trouver deux pièces ayant ni axe de symétrie, ni même périmètre, ni même aire. & & \\
+   \hline
+   15. Assembler cinq ou six pièces pour obtenir un rectangle. & & \\
+   \hline
+   \hline
+   \multicolumn{2}{|r|}{Total sur 20 points} & \\
+   \hline
+\end{tabular}}
+

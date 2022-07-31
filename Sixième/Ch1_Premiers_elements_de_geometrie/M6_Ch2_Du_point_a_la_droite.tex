@@ -1,0 +1,567 @@
+\themaG
+\graphicspath{{../Ch1_Premiers_elements_de_geometrie/Images/}}
+
+\chapter{Du point à la droite}
+\label{C02}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{prerequis}[Connaissances et compétences abordées]
+   \begin{itemize}
+      \item Alignement, appartenance.
+      \item Segment de droite.
+      \item Vocabulaire associé au milieu et à ses propriétés.
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\begin{debat}[Débat : les définition d'Euclide]
+   La mathématicien grec {\it Euclide}, considéré comme le père de la géométrie, définit les objets géométriques au III\up{e} siècle av. J.-C. Son 1\up{er} livre comprend notamment les définitions suivantes :
+   \begin{itemize}
+      \item le {\bf point} est ce dont la partie est nulle ;
+      \item une {\bf ligne} est une longueur sans largeur ;
+      \item la {\bf ligne droite} est celle qui est également placée entre ses points.
+   \end{itemize}
+   \begin{pspicture}(-4,-0.25)(9,2.75)
+      \psset{linecolor=B1}
+      \psdot(0,1)
+      \psbezier(2,0)(3,2)(4,0.5)(5,2)
+      \psline(6,0)(9,2)
+   \end{pspicture}
+   \bigskip
+   \begin{cadre}[B2][F4]
+      \begin{center}
+         Vidéo : \href{https://www.youtube.com/watch?v=enZpq8jvFEs}{\bf L'axiomatique. Les éléments d'Euclide}, chaîne YouTube de {\it Monsieur Phi}, de 2 min 30 s à 8 min.
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+\vfill
+
+\textcolor{PartieGeometrie}{\large\sffamily\bfseries Cahier de compétences} : $\varnothing$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Faisceaux de traits]
+   {\bf Objectifs :} employer des relations d'incidence comme l'appartenance d'un point
+à un ou deux segments ou droites, intersection, alignement ; mise en place d'une chronologie de tracé. 
+   \begin{QCM}
+      \partie[première construction]
+         {\psset{unit=0.7}
+         \begin{pspicture}(-5,-1)(15,11)
+            \pstGeonode[PointName=none,linewidth=1mm,PointSymbol=+](2,9){Z}(3.5,3){Y}(6,3.5){C}(8,6){D}(4,1){E}(5.42,4.27){F}(11,4.5){G}
+            \pstLineAB[nodesepA=-4,nodesepB=-5]{C}{D}
+            \pstLineAB[nodesepA=-1,nodesepB=-3]{Z}{Y}
+            \pstLineAB[nodesepA=-4,nodesepB=-7]{Y}{D}
+            \pstLineAB[nodesepA=-4,nodesepB=-8]{Y}{C}
+            \pstLineAB[nodesepA=-1,nodesepB=-4]{Z}{C}
+            \pstLineAB[nodesepA=-1,nodesepB=-7]{Z}{D}
+         \end{pspicture}} \\
+         Reproduire la figure ci-dessus en s'aidant des points d'intersection déjà placés. \\
+         \begin{pspicture}(-4,0)(15,10)
+            \pstGeonode[PointName=none,linewidth=1mm,PointSymbol=+](2,9){Z}(3.5,3){Y}(6,3.5){C}(8,6){D}
+         \end{pspicture}
+   \end{QCM}
+
+   \begin{QCM}
+      \partie[seconde construction]
+       Reproduire la figure projetée au tableau en s'aidant des points d'intersection déjà placés. \\
+         \begin{pspicture}(0.5,0)(15,19)
+            \pstGeonode[PointName=none,linewidth=1mm,PointSymbol=+](9.5,5){Z}(10,6.5){Y}(10.5,13){C}(12.5,14){D}(15.5,2.5){E}
+         \end{pspicture}
+   \end{QCM}
+
+\pagebreak
+
+   Figure à projeter : \\
+   \begin{pspicture}(0,0)(16,19) %PointName=none,
+      \pstGeonode[linewidth=1mm,PointSymbol=+,PointName=none](9.5,5){A}(10,6.5){B}(10.5,13){C}(12.5,14){D}(15.5,2.5){E}
+      \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{A}{E}{C}{D}{F}
+      \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{B}{E}{C}{D}{G}
+      \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{A}{G}{B}{F}{H}
+      \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{B}{D}{C}{E}{I}
+      \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{H}{D}{B}{G}{J}
+      \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{B}{C}{G}{I}{K}
+      \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{E}{C}{D}{H}{L}
+      \pstLineAB[nodesepA=-10,nodesepB=-2]{A}{E}
+      \pstLineAB[nodesepA=-10,nodesepB=-2]{B}{E}
+      \pstLineAB[nodesepA=-3,nodesepB=-2]{A}{D}
+      \pstLineAB[nodesepA=-12,nodesepB=-2]{C}{D}
+      \pstLineAB[nodesepA=-3,nodesepB=-2]{C}{E}
+      \pstLineAB{A}{G}
+      \pstLineAB{B}{F}
+      \pstLineAB{B}{F}
+      \pstLineAB{H}{D}
+      \pstLineAB{G}{I}
+   \end{pspicture}
+\end{activite}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+\section{Droites, demi-droites, segments} %%%%%%%%%
+
+\begin{definition}
+   \begin{itemize}
+      \item Une {\bf droite} est une ligne rectiligne infinie. On peut noter une droite de différentes façons : \\
+      \begin{pspicture}(-0.5,-0.7)(13,1)
+         \pstGeonode[PosAngle=-90,PointSymbol=+](0,0){A}(3,0.5){B}
+         \pstLineAB[nodesep=-0.5,linecolor=A1]{A}{B}
+         \pstLabelAB{A}{B}{\small droite $(AB)$}
+         \psline[linecolor=A1](4,0.25)(8,0)
+         \rput(7.25,-0.35){$(d)$}
+         \rput{-4}(6,0.5){\small droite $(d)$}
+         \psline[linecolor=A1](8.5,-0.25)(12.5,0.5)
+         \rput(9,-0.15){+}
+         \rput(9,-0.5){$T$}
+         \rput(12,0.2){$u$}
+         \rput{9}(10.5,0.5){\small droite $(Tu)$}
+      \end{pspicture}
+      \item Une {\bf demi-droite} est une portion de droite limitée d'un seul côté par un point appelé origine. La demi-droite d'origine $A$ passant par $B$ se note $[AB)$. \\
+      \begin{pspicture}(-5,-0.2)(5,1)
+         \pstGeonode[PosAngle=180,PointSymbol=+](0,0){A}
+         \pstGeonode[PosAngle=-90,PointSymbol=+](4,0.5){B}
+         \pstLineAB[nodesepB=-1,linecolor=A1]{A}{B}
+         \pstLabelAB{A}{B}{\small demi-droite $[AB)$}
+      \end{pspicture}
+      \item Un \textbf{segment} est une portion de droite limitée par deux points appelés extrémités. Le segment d'extrémités $A$ et $B$ se note $[AB]$ ou $[BA]$. \\
+      \begin{pspicture}(-5,0.4)(5,1.2)
+         \pstGeonode[PosAngle={180,-90},PointSymbol=+](0,0.2){A}(4,0.7){B}
+         \pstLineAB[linecolor=A1]{A}{B}
+         \pstLabelAB{A}{B}{\small segment $[AB]$}
+      \end{pspicture}
+   \end{itemize}
+\end{definition}
+
+\begin{exemple*1}
+   \begin{minipage}{5cm}
+      \begin{pspicture}(-1,-0.25)(4,1.8)
+         \pstGeonode[PosAngle=-90,PointSymbol=+](0,0){A}(3,0){B}(2,1.25){C}
+         \pstLineAB[nodesep=-0.5]{A}{B}
+         \pstLineAB[nodesepB=-0.75]{A}{C}
+         \pstLineAB{C}{B}
+      \end{pspicture}
+   \end{minipage}
+   \begin{minipage}{6.5cm}
+   \begin{itemize}
+      \item $(AB)$ est une droite ;
+      \item $[AC)$ est la demi-droite d'origine $A$ passant par $C$ ;
+      \item $[CB]$ est le segment d'extrémités $C$ et $B$.
+   \end{itemize}
+   \end{minipage}
+\end{exemple*1}
+
+
+\section{Points particuliers} %%%%%%%%%
+
+\begin{definition}
+   Trois points sont {\bf alignés} s'ils appartiennent à une même droite.
+   \begin{center}
+   \begin{pspicture}(-2,-0.3)(11,-0.1)
+      \pstGeonode[PosAngle=-90,PointSymbol=+](0,0){A}(4,0){B}(1.5,0){C}
+      \pstLineAB[nodesep=-1]{A}{B}
+      \rput(8,0){\small les points $A, B$ et $C$ sont alignés.}
+   \end{pspicture}
+   \end{center}
+\end{definition}
+
+\begin{notation}
+   le symbole $\in$ signifie \og {\bf appartient} à \fg{} et $\not\in$ signifie \og n'appartient pas à \fg.
+\end{notation}
+
+\begin{exemple*1}
+   On a par exemple $C\in(AB)$ et $B\in(AC)$ mais $A\notin[CB)$ et $B\notin[AC]$.
+\end{exemple*1}
+
+\begin{definition}
+   Le {\bf milieu} $I$ du segment $[AB]$ est le point de ce segment qui est équidistant de $A$ et de $B$.
+\end{definition}
+
+\begin{remarque}
+   la longueur d'un segment $[AB]$ se note $AB$, et pour indiquer que l'on a des mesures égales, c'est à dire $AI =IB$, on effectue un codage de la figure. \\
+   Exemples de codes que l'on peut utiliser : \textcolor{B1}{\textsf x, +, o, /\!\!/} \dots
+\end{remarque}
+
+\begin{exemple*1}
+   \begin{pspicture}(-1,1.5)(5,2) 
+      \psline[linecolor=A1]{|-|}(0,1.5)(5,1.5)
+      \psline[linecolor=B1](2.5,1.4)(2.5,1.6)
+      \rput(0,1.9){$F$}
+      \rput(2.5,1.9){$I$}
+      \rput(5,1.9){$L$}
+      \rput(1.25,1.5){\textcolor{B1}{\Large$\times$}}
+      \rput(3.75,1.5){\textcolor{B1}{\Large$\times$}}
+   \end{pspicture}
+\end{exemple*1}
+
+\medskip
+
+\begin{definition}
+   Deux droites sont {\bf sécantes} lorsqu'elles se coupent en un point appelé {\bf point d'intersection}.
+\end{definition}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+\serie{Droites, demi-droites, segments} %%%%%%%%%%%%%%%%%%%%%
+ 
+\begin{exercice} %1
+   Repasser en rouge la partie de la droite correspondant aux écritures mathématiques.
+   \begin{enumerate}
+      \item \begin{pspicture}(0,-0.1)(7,0.4)
+                  \small
+                  \psline(0,0)(6,0)
+                  \pstGeonode[PointSymbol=+,PosAngle=-90](1,0){A}(2,0){B}(3,0){C}(4,0){D}(5,0){E}
+                  \rput(7,0){$[AC)$}
+               \end{pspicture}               
+      \item \begin{pspicture}(0,-0.1)(7,0.7)
+                  \small
+                  \psline(0,0)(6,0)
+                  \pstGeonode[PointSymbol=+,PosAngle=-90](1,0){D}(2.3,0){R}(3.1,0){O}(4.5,0){I}
+                  \rput(5.7,-0.2){t}
+                  \rput(7,0){$[IR]$}
+               \end{pspicture}
+      \item \begin{pspicture}(0,-0.1)(7,0.7)
+                  \small
+                  \psline(0,0)(6,0)
+                  \pstGeonode[PointSymbol=+,PosAngle=-90](1.2,0){A}(2.2,0){U}(3.2,0){C}(4.2,0){H}(5.2,0){E}
+                  \rput(0.2,-0.2){$g$}
+                  \rput(7,0){$(gH]$}
+               \end{pspicture} \\
+   \end{enumerate}
+\end{exercice}
+ 
+\bigskip
+ 
+\begin{exercice} %2
+   Nommer la partie de la droite qui a été repassée en gras de deux manières différentes.
+   \begin{enumerate}
+      \item \begin{pspicture}(0,-0.1)(7,0.4)
+                  \small
+                  \psline(0,0)(6,0)
+                  \pstGeonode[PointSymbol=+,PosAngle=-90](1,0){A}(2,0){B}(3,0){C}(4,0){D}(5,0){E}
+                  \pstLineAB[linewidth=0.5mm]{C}{B}
+               \end{pspicture}               
+      \item \begin{pspicture}(0,-0.1)(7,0.7)
+                  \small
+                  \psline(0,0)(6,0)
+                  \pstGeonode[PointSymbol=+,PosAngle=-90](1,0){D}(2.3,0){R}(3.1,0){O}(4.5,0){I}
+                  \rput(5.7,-0.2){t}
+                  \psline[linewidth=0.5mm](3.1,0)(6,0)
+               \end{pspicture}
+      \item \begin{pspicture}(0,-0.1)(7,0.7)
+                  \small
+                  \psline(0,0)(6,0)
+                  \pstGeonode[PointSymbol=+,PosAngle=-90](1.2,0){A}(2.2,0){U}(3.2,0){C}(4.2,0){H}(5.2,0){E}
+                  \rput(0.2,-0.2){$g$}
+                  \psline[linewidth=0.5mm](0,0)(2.2,0)
+               \end{pspicture} \\ [-1mm]
+   \end{enumerate}
+\end{exercice}
+
+\bigskip
+
+\begin{exercice} %3
+   On considère la droite suivante : \\
+   \begin{pspicture}(-1,-0.4)(7,0.4)
+      \small
+      \psline(0,0)(6,0)
+      \pstGeonode[PointSymbol=+,PosAngle=-90](1,0){A}(2.25,0){B}(3.5,0){C}(5,0){D}
+   \end{pspicture}           
+   \begin{enumerate}
+      \item Écrire tous les noms possibles pour cette droite.
+      \item Combien y aurait-il de noms en plus si on avait placé cinq points sur la droite ?
+      \item Combien faut-il de points pour que la droite ait six noms possibles ?
+   \end{enumerate}
+\end{exercice}
+
+\bigskip
+
+\serie{Points particuliers} %%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercice} %4
+   Compléter les phrases à l'aide de la figure. \\
+   {\psset{yunit=0.6}
+   \small
+   \begin{pspicture}(-0.3,-0.3)(8,5.3)
+      \pstGeonode[PointSymbol=none,PosAngle={90,110,90,100,120,90}](1,4){A}(3.5,4){B}(7,4){C}(3,2.8){D}(2.5,1.3){E}(4,2.2){F}
+      \pstLineAB[nodesepA=-1,nodesepB=-1]{A}{C}
+      \pstLineAB[nodesepA=-0.8,nodesepB=-1.3]{B}{E}
+      \pstLineAB[nodesepA=-1,nodesepB=-3]{A}{F}
+      \pstLineAB[nodesepA=-1,nodesepB=-2]{C}{E}
+      \rput(6.5,1.1){$(d_1)$}
+      \rput(0.4,3.6){$(d_2)$}
+      \rput(1,0.8){$(d_3)$}
+      \rput(2.6,0.3){$(d_4)$}
+   \end{pspicture}}
+   \begin{enumerate}
+      \item Les droites $(d_1)$ et $(d_2)$ se coupent en \pfb
+      \item Le point d'intersection de $(d_1)$ et $(d_3)$ est \pfb
+      \item $C$ est le point d'intersection de \pfb et \pfb
+      \item Le point $B$ est à l'intersection de \pfb et \pfb
+   \end{enumerate}
+\end{exercice}
+
+\bigskip
+
+\begin{exercice} %5
+   Compléter avec $\in$ ou $\notin$. \\
+   \begin{pspicture}(-0.3,-0.1)(7,0.6)
+      \small
+      \psline(0,0)(7.5,0)
+      \pstGeonode[PointSymbol=+,PosAngle=90](1,0){O}(3,0){U}(6,0){F}
+   \end{pspicture}  
+   \begin{colenumerate}{3}
+      \item $O \pfb [UF]$
+      \item $O \pfb [UF)$
+      \item $O \pfb (UF)$
+      \item $U \pfb [FO)$
+      \item $U \pfb [OF)$
+      \item $F \pfb (OU)$
+   \end{colenumerate}
+\end{exercice}
+
+\bigskip
+
+\begin{exercice} %6
+   Compléter avec $\in$ ou $\notin$. \\
+   {\psset{yunit=0.6}
+   \begin{pspicture}(-0.5,0.6)(8,5.2)
+      \pstGeonode[PointSymbol=+,PosAngle={90,110,90,100,120,90}](1,4){Q}(5,4){X}(7,4){M}(3.63,2.52){O}(2.5,1.3){L}(6,1.2){Z}(1,2){V}
+      \pstLineAB[nodesepA=-1,nodesepB=-0.5]{Q}{M}
+      \pstLineAB[nodesepA=-0.8,nodesepB=-1]{Q}{Z}
+      \pstLineAB[nodesepB=-1]{L}{X}
+   \end{pspicture}}
+   \begin{colenumerate}{3}
+      \item $X \pfb (QM)$
+      \item $X \pfb [QM]$
+      \item $Q \pfb [XM]$
+      \item $X \pfb [QM)$
+      \item $Q \pfb (OZ)$
+      \item $O \pfb [LX]$
+      \item $L \pfb [XO)$
+      \item $V \pfb (OM)$
+      \item $L \pfb [OX)$
+   \end{colenumerate}
+\end{exercice}
+
+\bigskip
+
+\begin{exercice} %7
+   Vrai (V) ou faux (F) ?
+   \begin{enumerate}
+      \item Si $C \in (AB)$ alors $A \in (BC)$.
+      \item Si $E \in [DF]$ alors $D \in [EF]$.
+      \item Si $C \in [AB)$ mais $C \notin [AB]$ alors $A \in [CB)$.
+      \item Si $C \in [BA)$ mais $C \notin [AB]$ alors $B \in [AC)$.
+   \end{enumerate}
+\end{exercice}
+
+\bigskip
+
+\begin{exercice} %8
+   En s'aidant des points déjà marqués, placer les points $H, I, L$ et $M$. \\
+   {\psset{yunit=0.5}
+   \begin{pspicture}(-0.5,0)(8,5.5)
+      \pstGeonode[PointSymbol=+,PosAngle=90](1.5,4){A}(3.5,2){B}(5.5,4){C}(7,1){D}(0.5,0.5){E}
+   \end{pspicture}}
+   \begin{colenumerate}{2}
+      \item $H \in [AB)$ et $H \in [ED]$
+      \item $I \in [CB)$ et $I \in [ED]$
+      \item $L \in [BD]$ et $L \in [CH]$
+      \item $M \in [AI)$ et $M \in [DH)$
+   \end{colenumerate}
+\end{exercice}
+
+\bigskip
+
+\begin{exercice}
+   Construire le milieu de chaque segment sans utiliser d'instrument de géométrie. Coder la figure.
+   \begin{center}
+   \psset{xunit=0.5,yunit=0.4}
+      \begin{pspicture}(0,0)(13,9)
+         \psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](0,0)(13,9)
+         \pstGeonode[PointSymbol=+,dotangle=45,PosAngle=-80](1,2){A}(7,2){B}(1,4){C}(2,8){D}(8,8){E}(12,2){F}(4,5){G}(8,4){H}
+         \pstLineAB{A}{B}
+         \pstLineAB{C}{D}
+         \pstLineAB{E}{F}
+         \pstLineAB{G}{H}
+      \end{pspicture}
+   \end{center}
+\end{exercice}
+
+\flushright{\it\footnotesize Source : Les cahiers Sesamath 6\up{e}. Magnard-Sésamath 2017.}
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\enigme[La pipopipette]
+   \partie[présentation du jeu]
+      La pipopipette ou \og jeu des petits carrés \fg{} est un jeu se pratiquant à deux joueurs en tour par tour dont l'idée serait attribuée à des élèves de l'École polytechnique à la fin du {\small XIX}\up{e} siècle : pipo désignait à l'époque cette école en argot. \\
+      {\bf But du jeu :} former des carrés. Le gagnant est celui qui a fermé le plus de carrés. \\
+      {\bf Règles du jeu :}
+         \begin{itemize}
+            \item À chaque tour, chaque joueur trace un petit segment suivant le quadrillage de la feuille.
+            \item Chaque fois qu'un joueur peut fermer un carré, il marque le carré de son signe rejoue.
+            \item Quand la grille est remplie, on compte le nombre de carrés fermés pour chaque joueur.
+         \medskip
+         \end{itemize}
+      {\bf Exemple avec un terrain de 2 $\times$ 2:}
+         \begin{center}
+         {\psset{unit=0.7}
+            \begin{tabular}{*{6}{C{2.4}}}
+               \begin{pspicture}(0,0)(2,1.8)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm}
+                  \psline[linecolor=A1](0,2)(1,2)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,1.8)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(0,2)(1,2)
+                  \psset{linecolor=B1}
+                  \psline(1,0)(2,0)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,1.8)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(1,0)(2,0)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,1.8)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(0,0)(2,0)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,1.8)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(0,1)(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(0,0)(2,0)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,1.8)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(0,1)(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(0,0)(2,0)(2,1)
+               \end{pspicture} \\
+               \textcolor{A1}{joueur 1} & \textcolor{B1}{joueur 2} & \textcolor{A1}{joueur 1} & \textcolor{B1}{joueur 2} & \textcolor{A1}{joueur 1} & \textcolor{B1}{joueur 2} \\ [5mm]
+               \begin{pspicture}(0,0)(2,2)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(1,1)(0,1)(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(0,0)(2,0)(2,1)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,2)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(1,1)(0,1)(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(0,0)(2,0)(2,1)
+                  \psline(1,1)(1,2)
+                  \psdot[dotstyle=+](0.5,1.5)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,2)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(1,1)(0,1)(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(0,1)(0,0)(2,0)(2,1)
+                  \psline(1,1)(1,2)
+                  \psdot[dotstyle=+](0.5,1.5)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,2)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(1,0)(1,1)(0,1)(0,2)(2,2)
+                  \psdot[dotstyle=*](0.5,0.5)
+                  \psset{linecolor=B1}
+                  \psline(0,1)(0,0)(2,0)(2,1)
+                  \psline(1,1)(1,2)
+                  \psdot[dotstyle=+](0.5,1.5)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,2)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(1,0)(1,1)(0,1)(0,2)(2,2)
+                  \psline(1,1)(2,1)
+                  \psdots[dotstyle=*](0.5,0.5)(1.5,0.5)
+                  \psset{linecolor=B1}
+                  \psline(0,1)(0,0)(2,0)(2,1)
+                  \psline(1,1)(1,2)
+                  \psdot[dotstyle=+](0.5,1.5)
+               \end{pspicture}
+               &
+                \begin{pspicture}(0,0)(2,2)
+                 \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(1,0)(1,1)(0,1)(0,2)(2,2)
+                  \psline(1,1)(2,1)(2,2)
+                  \psdots[dotstyle=*](0.5,0.5)(1.5,0.5)(1.5,1.5)
+                  \psset{linecolor=B1}
+                  \psline(0,1)(0,0)(2,0)(2,1)
+                  \psline(1,1)(1,2)
+                  \psdot[dotstyle=+](0.5,1.5)
+               \end{pspicture}
+               \\
+               \textcolor{A1}{joueur 1} & \textcolor{B1}{joueur 2} & \textcolor{B1}{joueur 2} & \textcolor{A1}{joueur 1} & \textcolor{A1}{joueur 1} & \textcolor{A1}{joueur 1} \\
+            \end{tabular}}
+         \end{center}
+      Le \textcolor{A1}{joueur 1} a pris possession de trois carrés alors que le \textcolor{B1}{joueur 2} en a un seul, c'est donc le \textcolor{A1}{joueur 1} qui gagne. \\
+
+   \partie[à vous de jouer !!!]
+      En binôme, compléter  ces grilles.
+      \begin{center}
+         \begin{tabular}{C{2}C{3.1}C{4.2}C{5}}
+            \begin{pspicture}(0,0)(2,2)
+               \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+            \end{pspicture}
+            &
+            \begin{pspicture}(0,0)(3,3)
+               \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(3,3)
+            \end{pspicture}
+            &
+            \begin{pspicture}(0,0)(4,4)
+               \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(4,4)
+            \end{pspicture}
+           &
+           \begin{pspicture}(0,0)(5,4.5)
+               \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(5,5)
+            \end{pspicture} \\ [5mm]
+         \end{tabular} \\
+         \begin{tabular}{C{6.2}C{9}}
+            \begin{pspicture}(0,0)(6,3)
+               \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(6,3)
+            \end{pspicture}
+            &
+            \begin{pspicture}(0,0)(9,3.5)
+               \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(9,4)
+            \end{pspicture} \\
+         \end{tabular}
+      \end{center}
+

@@ -1,0 +1,490 @@
+\themaN
+\graphicspath{{../Ch24_Comparaison_de_fractions/Images/}}
+
+\chapter{Calcul avec\\des fractions}
+\label{C20}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{prerequis}[Connaissances et compétences abordées]
+   \begin{itemize}
+      \item Encadrer une fraction par deux nombres entiers consécutifs.
+      \item Comparer deux fractions de même dénominateur.
+      \item Ecrire une fraction comme somme d’un entier et d’une fraction inférieure à 1.
+      \item Connaître des égalités entre des fractions usuelles (exemples : 5/10 = 1/2 ; 10/100 = 1/10 ; 2/4 = 1/2).
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\begin{debat}[Débat : l'\oe il d'Oudjat, ou \oe il d'Horus] 
+   Dans la mythologie égyptienne, on trouve une histoire liée aux fractions : {\it Seth}, dieu de la violence et incarnation du mal, arrache l’{\bf œil} à {\bf Horus}. {\it Seth} le partage en six morceaux et les répand à travers l’Egypte. {\it Thot}, dieu magicien, reconstitue l’œil, symbole du bien contre le mal. Chacune de ses parties symbolise une fraction de numérateur 1 et de dénominateurs 2, 4, 8, 16, 32 et 64. Il accordera le 64\up{e} manquant à tout scribe recherchant et acceptant sa protection.
+   \begin{center}
+      \includegraphics[width=6cm]{Horus}
+   \end{center}
+   \bigskip
+   \begin{cadre}[B2][F4]
+      \begin{center}
+         Vidéo : \href{https://www.youtube.com/watch?v=yHft4m1Gi7k}{\bf La légende de l'\oe il d'Horus}, chaîne YouTube {\it Ma deuxième école}, épisode de la série {\it Culture G}.
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+\vfill
+
+\textcolor{PartieGeometrie}{\sffamily\bfseries Cahier de compétences} : chapitre 4, exercices 16 à 30 ; 37 à 42 ; 48 à 50.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Décomposer une fraction]
+   {\bf Objectifs :} représenter des fractions ; écrire une fraction sous la forme de la somme d'un entier et d'une fraction inférieure à 1.
+   \begin{QCM}
+      \partie[des toasts en entrée]
+         Pour faire des toasts à ses amis, Mattis coupe des tranches de pain de mie en quatre, avant de les garnir. \\
+         Samy mange onze de ces petits toasts. Quelle fraction de grande tranche de pain de mie Samy a-t-il mangée ?
+         \begin{center}
+            {\psset{xunit=0.9,yunit=0.8}
+            \begin{pspicture}(0,0)(3,1.5)
+               \psframe[fillstyle=solid,fillcolor=B3](0,0)(2,1.5)
+               \psline(1,0)(1,1.5)
+               \psline(0,0.75)(2,0.75)
+            \end{pspicture}
+            \begin{pspicture}[fillstyle=solid,fillcolor=B3](0,0)(3,1.5)
+               \psframe(0,0)(2,1.5)
+               \psline(1,0)(1,1.5)
+               \psline(0,0.75)(2,0.75)
+            \end{pspicture}
+            \begin{pspicture}(0,0)(3,1.5)
+               \psframe(0,0)(2,1.5)
+               \pspolygon[fillstyle=solid,fillcolor=B3](0,0)(1,0)(1,0.75)(2,0.75)(2,1.5)(0,1.5)
+               \psline(1,0)(1,1.5)
+               \psline(0,0.75)(2,0.75)
+            \end{pspicture}
+            \begin{pspicture}(0,0)(3,1.5)
+               \psframe(0,0)(2,1.5)
+               \psline(1,0)(1,1.5)
+               \psline(0,0.75)(2,0.75)
+            \end{pspicture}
+            \begin{pspicture}(0,0)(3,1.5)
+               \psframe(0,0)(2,1.5)
+               \psline(1,0)(1,1.5)
+               \psline(0,0.75)(2,0.75)
+            \end{pspicture}}
+         \end{center}
+         Il a mangé 11 fois $\dfrac14$ de grande tranche, donc $\dfrac{11}4$ de grande tranche, ce qui fait 2 tranches et $\dfrac34$ de tranche. \\ [2mm]
+On peut écrire : \hspace{40mm} $\dfrac{11}4 =2+\dfrac34$. \\ [2mm]
+         Meryem, elle, a mangé 17 petits toasts. Colorier ce que cela représente ci-dessous.
+         \begin{center}
+            {\psset{xunit=0.9,yunit=0.8}
+            \begin{pspicture}(0,0)(3,1.5)
+               \psframe(0,0)(2,1.5)
+               \psline(1,0)(1,1.5)
+               \psline(0,0.75)(2,0.75)
+            \end{pspicture}
+            \begin{pspicture}(0,0)(3,1.5)
+               \psframe(0,0)(2,1.5)
+               \psline(1,0)(1,1.5)
+               \psline(0,0.75)(2,0.75)
+            \end{pspicture}
+            \begin{pspicture}(0,0)(3,1.5)
+               \psframe(0,0)(2,1.5)
+               \pspolygon(0,0)(1,0)(1,0.75)(2,0.75)(2,1.5)(0,1.5)
+               \psline(1,0)(1,1.5)
+               \psline(0,0.75)(2,0.75)
+            \end{pspicture}
+            \begin{pspicture}(0,0)(3,1.5)
+               \psframe(0,0)(2,1.5)
+               \psline(1,0)(1,1.5)
+               \psline(0,0.75)(2,0.75)
+            \end{pspicture}
+            \begin{pspicture}(0,0)(3,1.5)
+               \psframe(0,0)(2,1.5)
+               \psline(1,0)(1,1.5)
+               \psline(0,0.75)(2,0.75)
+            \end{pspicture}}
+         \end{center} \medskip
+         Compléter l'égalité  : \hspace{30mm} $\dfrac{17}{4} = \hdashrule{1.1cm}{0.15pt}{4pt 2pt} + \dfrac{\hdashrule{1cm}{0.15pt}{4pt 2pt}}{\hdashrule{1cm}{0.15pt}{4pt 2pt}}$ \\
+
+      \partie[des \og flam \fg{} en plat principal]
+         Pour poursuivre, Mattis propose à ses amis de manger des flammekueches (flam). \\
+         \begin{minipage}{7.75cm}
+            \begin{pspicture}(-1.2,-1)(1,1)
+               \pscircle[fillstyle=solid,fillcolor=J2](0,0){0.7}
+               \multido{\n=0+72}{5}{\psline(0,0)(0.7;\n)}
+            \end{pspicture}
+            \begin{pspicture}(-0.7,-1)(1,1)
+               \pscircle(0,0){0.7}
+               \pswedge[fillstyle=solid,fillcolor=J2](0,0){0.7}{72}{288}
+               \multido{\n=0+72}{5}{\psline(0,0)(0.7;\n)}
+            \end{pspicture}
+            \begin{pspicture}(-0.7,-1)(1,1)
+               \pscircle(0,0){0.7}
+               \multido{\n=0+72}{5}{\psline(0,0)(0.7;\n)}
+            \end{pspicture}
+            \begin{pspicture}(-0.7,-1)(1,1)
+               \pscircle(0,0){0.7}
+               \multido{\n=0+72}{5}{\psline(0,0)(0.7;\n)}
+            \end{pspicture} \\
+            Une part de flam représente $\dfrac{\hdashrule{1cm}{0.15pt}{4pt 2pt}}{\hdashrule{1cm}{0.15pt}{4pt 2pt}}$ de flam. \\ [3mm]
+            $\dfrac{\hdashrule{1cm}{0.15pt}{4pt 2pt}}{\hdashrule{1cm}{0.15pt}{4pt 2pt}}$ de flam est colorié. \\ [3mm]
+            Donc, $\dfrac{\hdashrule{1cm}{0.15pt}{4pt 2pt}}{\hdashrule{1cm}{0.15pt}{4pt 2pt}} ={\hdashrule{1cm}{0.15pt}{4pt 2pt}} + \dfrac{\hdashrule{1cm}{0.15pt}{4pt 2pt}}{\hdashrule{1cm}{0.15pt}{4pt 2pt}}$ \\ [2mm]
+         \end{minipage}
+         \qquad
+         \begin{minipage}{7.75cm}
+            \begin{pspicture}(-1.2,-1)(1,1)
+               \pscircle(0,0){0.7}
+               \multido{\n=0+45}{8}{\psline(0,0)(0.7;\n)}
+               \end{pspicture}
+               \begin{pspicture}(-0.7,-1)(1,0.8)
+               \pscircle(0,0){0.7}
+               \multido{\n=0+45}{8}{\psline(0,0)(0.7;\n)}
+               \end{pspicture}
+               \begin{pspicture}(-0.7,-1)(1,1)
+               \pscircle(0,0){0.7}
+               \multido{\n=0+45}{8}{\psline(0,0)(0.7;\n)}
+               \end{pspicture}
+               \begin{pspicture}(-0.7,-1)(1,1)
+               \pscircle(0,0){0.7}
+               \multido{\n=0+45}{8}{\psline(0,0)(0.7;\n)}
+               \end{pspicture} \\
+               Une part de flam représente $\dfrac{\hdashrule{1cm}{0.15pt}{4pt 2pt}}{\hdashrule{1cm}{0.15pt}{4pt 2pt}}$ de flam. \\
+               Colorier $\dfrac{13}{8}$ de flam. \\ [1mm]
+               Donc, $\dfrac{13}{8} ={\hdashrule{1cm}{0.15pt}{4pt 2pt}}+\dfrac{\hdashrule{1cm}{0.15pt}{4pt 2pt}}{\hdashrule{1cm}{0.15pt}{4pt 2pt}}$ \\ [2mm]
+         \end{minipage}
+
+      \partie[Des éclairs en dessert]
+         Julie a mangé $\dfrac{73}9$ de mini-éclairs au chocolat, trouver une manière de décomposer cette fraction en la somme \\ [1mm]
+         d'un nombre entier et d'une fraction inférieure à 1. \\ [22mm]
+   \end{QCM}
+   \vfill\hfill{\it\footnotesize{Inspiré de \href{http://ww2.ac-poitiers.fr/dsden86-pedagogie/sites/dsden86-pedagogie/IMG/pdf/groupe4_c13.pdf}{Écrire une fraction sous la forme d'un entier et d'une fraction inférieure à 1}, académie de Poitiers.}}
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Comparer des fractions}
+
+\begin{methode}[Comparer des fractions de même dénominateur]
+   Pour comparer deux fractions ayant le même dénominateur, il suffit de comparer les numérateurs : la fraction ayant le plus grand numérateur est la plus grande.
+   \exercice \smallskip
+      Comparer $\dfrac26$ et $\dfrac36$.
+   \correction \smallskip
+      $2<3$ donc $\dfrac26<\dfrac36$
+      {\psset{unit=0.6}
+      \begin{pspicture}(-1.8,-0.5)(1,0.2)
+         \pscircle(0,0){1}
+         \pswedge[fillstyle=solid,fillcolor=B2](0,0){1}{60}{180}
+         \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+         \rput(1.25,0){$<$}
+      \end{pspicture}
+      \begin{pspicture}(-1.5,-0.5)(1,0.2)
+         \pscircle(0,0){1}
+         \pswedge[fillstyle=solid,fillcolor=B2](0,0){1}{0}{180}
+         \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+      \end{pspicture}}
+\end{methode}
+
+\begin{remarque}
+   cela revient à dire que lorsque l'on partage une quantité en un nombre de parts égales, plus on prend de parts plus le nombre est grand.
+\end{remarque}
+
+\begin{methode}[Comparer une fraction à 1]
+   Pour savoir si une fraction $\dfrac{a}{b}$ est inférieure, égale ou supérieure à 1, on compare le numérateur $a$ au dénominateur $b$ :
+   \begin{center}
+      \begin{tabular}{|c|C{1.5}|C{1.5}|C{1.5}|}
+         \hline
+         si & $a<b$ & $a=b$ & $a>b$ \\
+         \hline
+         alors & $\dfrac{a}{b}<1$ & $\dfrac{a}{b}=1$ & $\dfrac{a}{b}>1$ \\ [1mm]
+         \hline
+      \end{tabular}
+   \end{center}
+   \exercice \smallskip
+      Comparer $\dfrac36$, $\dfrac86$ et $\dfrac66$ à 1.
+   \correction
+      dans $\dfrac36$, on a $3<6$ donc, $\dfrac36<1$
+      {\psset{unit=0.6}
+      \begin{pspicture}(-3,-0.5)(1,0.2)
+         \pscircle(0,0){1}
+         \pswedge[fillstyle=solid,fillcolor=B2](0,0){1}{0}{180}
+         \multido{\n=0+60}{6}{\psline(0,0)(0.98;\n)}
+      \end{pspicture}} \\
+      dans $\dfrac86$, on a $8>6$ donc, $\dfrac86>1$
+      {\psset{unit=0.6}
+      \begin{pspicture}(-1.5,-0.3)(1,0.8)
+         \pscircle[fillstyle=solid,fillcolor=B2](0,0){1}
+         \multido{\n=0+60}{6}{\psline(0,0)(0.98;\n)}
+      \end{pspicture}
+      \begin{pspicture}(-1.9,-0.3)(1,0.8)
+         \pscircle(0,0){1}
+         \pswedge[fillstyle=solid,fillcolor=B2](0,0){1}{60}{180}
+         \multido{\n=0+60}{6}{\psline(0,0)(0.98;\n)}
+      \end{pspicture}} \\
+      dans $\dfrac66$, on a $6=6$ donc, $\dfrac66=1$
+      {\psset{unit=0.6}
+      \begin{pspicture}(-3,0)(1,1)
+         \pscircle[fillstyle=solid,fillcolor=B2](0,0){1}
+         \multido{\n=0+60}{6}{\psline(0,0)(0.98;\n)}
+      \end{pspicture}} \\
+\end{methode}
+
+%\begin{remarque}
+%   cela revient à dire que lorsque l'on partage une quantité en un nombre de parts égales, si on prend un nombre de parts plus petit que le nombre total, on a une quantité plus petite qu'un entier ; si on en prend autant on a la quantité en totalité et si on en prend plus, on a plus qu'un entier.
+%\end{remarque}
+   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Décomposer une fraction}
+
+\begin{methode}[Décomposer une fraction]
+   Pour décomposer une fraction en somme d'un entier et d'une fraction inférieure à 1, on effectue la division euclidienne du numérateur par le dénominateur. Le quotient nous donne le nombre entier et la fraction inférieure à 1 s'obtient en prenant comme numérateur le reste et comme dénominateur le diviseur.
+   \exercice \smallskip
+   Décomposer $\dfrac{23}{6}$.
+   \correction \smallskip
+   $\opidiv{23}{6}$ \qquad donc, \qquad $23 =6\times3+5$ \quad et \quad $\dfrac{23}{6} =3+\dfrac56$
+\end{methode}
+
+\bigskip
+
+\begin{minipage}{8cm}
+   Cette décomposition permet d'encadrer facilement \\
+   un nombre entre deux entiers consécutifs : \\ [2mm]
+   par exemple, $\dfrac{23}{6} =3+\dfrac56$ donc $3<\dfrac{23}{6}<4$.
+\end{minipage}
+\begin{minipage}{8cm}
+  {\psset{unit=0.6}
+  \begin{pspicture}(-2,-1)(1.5,1)
+      \pscircle[fillstyle=solid,fillcolor=B2](0,0){1}
+      \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+   \end{pspicture}
+   \begin{pspicture}(-1,-1)(1.5,1)
+      \pscircle[fillstyle=solid,fillcolor=B2](0,0){1}
+      \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+   \end{pspicture}
+   \begin{pspicture}(-1,-1)(1.5,1)
+      \pscircle[fillstyle=solid,fillcolor=B2](0,0){1}
+      \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+   \end{pspicture}
+   \begin{pspicture}(-1,-1)(1,1)
+      \pscircle(0,0){1}
+      \pswedge[fillstyle=solid,fillcolor=B2](0,0){1}{60}{360}
+      \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+   \end{pspicture}}
+\end{minipage}
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+%%%%%%%%%%%%%
+\serie{Comparer des fractions}
+
+\begin{exercice}
+   Comparer les fractions suivantes : \medskip
+   \begin{colenumerate}{2}
+      \item $\dfrac{1}{9}$ et $\dfrac{12}{9}$ \bigskip
+      \item $\dfrac{5}{3}$ et $\dfrac{2}{3}$ \bigskip
+      \item $\dfrac{18}{17}$ et $\dfrac{17}{17}$ \bigskip
+      \item $\dfrac{7}{129}$ et $\dfrac{17}{129}$
+      \item $\dfrac{123}{6}$ et $\dfrac{211}{6}$
+      \item $\dfrac{181}{13}$ et $\dfrac{118}{13}$
+   \end{colenumerate}
+\end{exercice}
+
+\medskip
+
+\begin{exercice}
+   Pour chaque fraction, dire si elle est inférieure, égale ou supérieure à 1. \medskip
+   \begin{colenumerate}{3}
+      \item $\dfrac72$ \bigskip
+      \item $\dfrac22$ \bigskip
+      \item $\dfrac{11}3$ \bigskip
+      \item $\dfrac53$
+      \item $\dfrac{122}{132}$
+      \item $\dfrac{15}{14}$
+      \item $\dfrac{13}{14}$
+      \item $\dfrac{14}{14}$
+      \item $\dfrac{154}{145}$
+   \end{colenumerate}
+\end{exercice}
+
+\medskip
+
+\begin{exercice}
+   Les élèves font le cross du collège par équipes de classe. Les professeurs d'EPS ont écrit le temps de chaque équipe sous la forme d'une fraction d'heure. \ \medskip
+   \begin{colitemize}{3}
+      \item 6A : $\dfrac{13}{6}$ h \bigskip
+      \item 6B : $\dfrac86$ h \bigskip
+      \item 6C : $\dfrac{10}{15}$ h \bigskip
+      \item 6D : $\dfrac{45}{60}$ h \bigskip
+      \item 6E : $\dfrac{11}3$ h
+      \item 6F : $\dfrac73$ h
+   \end{colitemize}
+   \vspace*{-5mm}
+   \begin{enumerate}
+      \item Quelles classes ont mis moins d'une heure ?
+      \item Quelles classes ont mis entre une et deux heures ?
+      \item Quelles classes ont mis plus de deux heures ?
+      \item Établir un classement.
+   \end{enumerate}
+\end{exercice}
+
+\medskip
+
+%%%%%%%%%%%%%
+\serie{Décomposer des fractions}
+
+\begin{exercice}
+   Écrire chaque fraction sous la forme de la somme d'un nombre entier et d'une fraction inférieure à 1 en faisant le calcul mentalement. \medskip
+   \begin{colenumerate}{3}
+      \item $\dfrac72$ \bigskip
+      \item $\dfrac98$
+      \item $\dfrac13$
+      \item $\dfrac53$
+      \item $\dfrac{11}{4}$
+      \item $\dfrac{13}{4}$
+   \end{colenumerate}
+\end{exercice}
+
+\medskip
+
+\begin{exercice}
+   Écrire chaque fraction sous la forme de la somme d'un nombre entier et d'une fraction inférieure à 1 en posant la division euclidienne. \medskip
+   \begin{colenumerate}{3}
+      \item $\dfrac{27}2$ \bigskip
+      \item $\dfrac{92}8$ \bigskip
+      \item $\dfrac{13}{3}$
+      \item $\dfrac{53}{3}$
+      \item $\dfrac{119}{4}$
+      \item $\dfrac{127}{4}$
+   \end{colenumerate}
+\end{exercice}
+
+\medskip
+
+\begin{exercice}
+   Encadrer chacune des fractions suivantes par deux nombres entiers consécutifs. \medskip
+    \begin{colenumerate}{3}
+      \item $\dfrac72$ \bigskip
+      \item $\dfrac98$ \bigskip
+      \item $\dfrac13$ \bigskip
+      \item $\dfrac53$ \bigskip
+      \item $\dfrac{11}{4}$
+      \item $\dfrac{13}{4}$
+      \item $\dfrac{27}2$
+      \item $\dfrac{92}8$
+      \item $\dfrac{13}{3}$
+      \item \, $\dfrac{53}{3}$
+      \item \, $\dfrac{119}{4}$
+      \item \, $\dfrac{127}{4}$
+   \end{colenumerate}
+\end{exercice}
+
+\medskip
+
+\begin{exercice}
+   Répondre aux petits défis suivante : \medskip
+   \begin{enumerate}
+      \item Combien faut-il ajouter à $\dfrac23$ pour obtenir 1 ? \bigskip
+      \item Combien faut-il ajouter à $\dfrac74$ pour obtenir 2 ? \bigskip
+      \item Combien faut-il ajouter à $\dfrac3{10}$ pour obtenir 2 ? \bigskip
+      \item Combien faut-il ajouter à $\dfrac{12}7$ pour obtenir 3 ? \bigskip
+   \end{enumerate}
+\end{exercice}
+
+\medskip
+
+\begin{exercice}
+   Relier chaque fraction à une fraction égale. \\ [2mm]
+   \begin{tabular}{rcp{2cm}cp{2cm}}
+      $\dfrac{5}{10}$ & $\bullet$ & & $\bullet$ & $\dfrac{1}{10}$ \\ [4mm]
+      $\dfrac{10}{100}$ & $\bullet$ & & & \\ [4mm]
+      $\dfrac{2}{4}$ & $\bullet$ & & $\bullet$ & $\dfrac{1}{5}$ \\ [4mm]
+      $\dfrac{100}{1\,000}$ & $\bullet$ & & & \\ [4mm]
+      $\dfrac{2}{10}$ & $\bullet$ & & $\bullet$ & $\dfrac{1}{2}$ \\
+   \end{tabular}
+\end{exercice} 
+
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\enigme[Sudofractions]
+   \begin{minipage}{7.5cm}
+      \begin{itemize}
+         \item Pour chaque fraction ou nombre décimal, déterminer le nombre entier immédiatement inférieur.
+         \item Placer ce nombre entier dans la grille vierge ci-contre, exactement au même endroit que sur la grille de calculs.
+         \item Compléter la grille selon les règles du Sudoku.
+      \end{itemize}
+      {\it Par exemple, $\dfrac{5}{2} =2+\dfrac{1}{2} (=2,5)$ donc, \\ [1mm]
+         la troisième case de la ligne du haut comporte un 2}.
+   \end{minipage}
+   \qquad
+   \begin{minipage}{7cm}
+  {\hautab{1.8}
+      \begin{tabular}{|*{3}{C{0.5}|}|*{3}{C{0.5}|}|*{3}{C{0.5}|}}
+         \hline
+         & & {\bf 2} & & & & & & \\
+         \hline
+         & & & & & & & & \\
+         \hline
+         & & & & & & & & \\
+         \hline
+         \hline
+         & & & & & & & & \\
+         \hline
+         & & & & & & & & \\
+         \hline
+         & & & & & & & & \\
+         \hline
+         \hline
+         & & & & & & & & \\
+         \hline
+         & & & & & & & & \\
+         \hline
+         & & & & & & & & \\
+         \hline
+      \end{tabular}}
+   \end{minipage}
+  \vfill
+   \begin{center}
+   {\hautab{3.44}
+   \footnotesize
+      \begin{tabular}{|*{3}{C{0.9}|}|*{3}{C{0.9}|}|*{3}{C{0.9}|}}
+         \hline
+          \!$\dfrac{13}{2}$\! & $\dfrac{27}{5}$ & $\dfrac{5}{2}$ & & 8,73 & 7,99 & $\dfrac{39}{4}$ & & \!$\dfrac{43}{10}\!$ \\
+         \hline
+          $\dfrac{77}{10}$ & $\dfrac{7}{6}$ & & 4,5 & & & $\dfrac{25}{7}$ & & \\
+         \hline
+          & & $\dfrac{17}{2}$ & $1,001$ & & & & & $\dfrac{38}{5}$\\
+          \hline
+          \hline
+          8,25 & 2,89 & & & $\dfrac{33}{10}$ & & & & $6,7$ \\
+          \hline
+          5,55 & & & $\dfrac{21}{9}$ & & & & 3,199 & \\
+         \hline
+          & & & $\dfrac{80}{9}$ & & & 5,356 & 2,1 & \\
+         \hline
+         \hline
+          & $\dfrac{845}{100}$ & $\dfrac{60}{8}$ & 5,2 & 2,8 & & $\dfrac{13}{2}$ & $\dfrac{25}{6}$ & \\
+         \hline
+          \!$\dfrac{30}{11}$\! & $\dfrac{25}{8}$ & & 6,001 & & 8,81 & & $\dfrac{65}{7}$ & \\
+         \hline
+          $\dfrac{29}{3}$ & & & & 4,909 & & & & \\
+         \hline
+      \end{tabular}}
+   \end{center}
+

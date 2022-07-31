@@ -1,0 +1,444 @@
+\themaN
+\graphicspath{{../Ch12_Additions_et_soustractions/Images/}}
+
+\chapter{Additions et\\soustractions}
+\label{C08}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{prerequis}[Connaissances et compétences abordées]
+   \begin{itemize}
+      \item Connaître des procédures élémentaires de calcul, notamment : rechercher le complément à l’entier supérieur.
+      \item Connaître des propriétés de l’addition, de la soustraction et notamment la commutativité et l'associativité.
+      \item Connaître et mettre en œuvre un algorithme de calcul posé pour effectuer l’addition, la soustraction de nombres entiers ou décimaux.
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\begin{debat}[Débat : levez vos ardoises !] 
+   {\bf Claude Martin} (1735-1800) est un soldat français. À sa mort, il lègue une grande partie de sa fortune à la création d'écoles \og La Martinière \fg{} à Lyon, Lucknow et Calcutta. À Lyon, on invente une technique d’utilisation de l’ardoise portant son nom : il s'agit de la méthode \og La Martinière \fg{} dont voici une description tirée du manuel de CM2 de 1969 :
+   \begin{itemize}
+      \item les enfants ont devant eux leur ardoise et un morceau de craie ;
+      \item le maître pose la question et la répète une fois ;
+      \item le maître laisse les élèves réfléchir quelques instants ;
+      \item au signal (coup de règle), les enfants écrivent la réponse ;
+      \item au second coup de règle, les élèves doivent lever l’ardoise ;
+      \item le maître contrôle les résultats et on fait la correction. \\ [-15mm]
+   \end{itemize}
+   \begin{center}
+      \begin{pspicture}(0,-0.5)(3.5,3.8)
+         \psset{fillstyle=solid}
+         \psframe[fillcolor=brown!50,framearc=.1](0,0)(3.5,2.5)
+         \psframe[fillcolor=black!90,framearc=.1](0.3,0.3)(3.2,2.2)
+         \rput(1.75,1.25){\textcolor{white}{\large $1+1=2$}}
+      \end{pspicture}
+   \end{center}
+   \begin{cadre}[B2][F4]
+      \begin{center}
+         Vidéo : \href{https://www.dailymotion.com/video/x2j0wh1}{\bf Plickers : une méthode la Martinière \og moderne \fg}, académie d'{\it Orléans Tours}.
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+\vfill
+
+\textcolor{PartieGeometrie}{\large\sffamily\bfseries Cahier de compétences} : chapitre 2, exercices 1 à 14 et 58.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Le labyrinthe]
+   {\bf Objectifs :} effectuer une addition ou une soustraction mentalement ; manipuler les nombres entiers et décimaux.
+
+   \begin{QCM}
+      \partie[règle du jeu]
+         Pour chaque labyrinthe, l'objectif est de trouver le chemin qui mène à la sortie en effectuant l'une des opérations proposées et en passant d'une case à l'autre horizontalement ou verticalement uniquement. \\
+         Le point de départ est le nombre entouré dans la première ligne et le point d'arrivée est le nombre entouré dans la dernière ligne. \\
+         
+      \partie[à vous de jouer !]
+         \begin{center}
+            {\hautab{2.2}
+            \begin{tabular}{|*{5}{C{0.7}|}}
+               \multicolumn{5}{c}{$+6$ ou $-6$} \\
+               \hline
+               28 & \textcircledd{42} & 49 & 21 & 27 \\
+               \hline
+               32 & 36 & 30 & 24 & 30 \\
+              \hline
+               60 & 54 & 18 & 42 & 36 \\
+               \hline
+               66 & 48 & 54 & 48 & 56 \\
+               \hline
+               \textcircledd{72} & 42 & 30 & 36 & 48 \\
+               \hline
+            \end{tabular}
+            \hspace*{1cm}
+            \begin{tabular}{|*{5}{C{0.7}|}}
+               \multicolumn{5}{c}{$+9$ ou $-9$} \\
+               \hline
+               45 & 37 & 29 & \textcircledd{38} & 47 \\
+               \hline
+               56 & 65 & 56 & 47 & 29 \\
+               \hline
+               47 & 38 & 65 & 60 & 45 \\
+               \hline
+               36 & 29 & 20 & 11 & 28 \\
+               \hline
+               42 & 35 & 42 & \textcircledd{2} & 37 \\
+               \hline
+            \end{tabular}
+            \bigskip
+
+            \begin{tabular}{|*{5}{C{0.7}|}}
+               \multicolumn{5}{c}{$+0,5$ ou $-0,5$} \\
+               \hline
+               5,5 & 5 & \textcircledd{3,5} & 4 & 3,5 \\
+               \hline
+               6 & 4,5 & 4 & 3,5 & 5,5 \\
+               \hline
+               5,5 & 7 & 5,5 & 6 & 6,5 \\
+               \hline
+               5 & 4,5 & 5 & 7,5 & 7 \\
+               \hline
+               6,5 & \textcircledd{6} & 6,5 & 7 & 2,5 \\
+               \hline
+            \end{tabular}
+            \hspace*{1cm}
+            \begin{tabular}{|*{5}{C{0.7}|}}
+               \multicolumn{5}{c}{$+0,08$ ou $-0,08$} \\
+               \hline
+               1,04 & 1,14 & \textcircledd{1,22} & 10,2 & 0,99 \\
+               \hline
+               0,98 & 1,06 & 1,1 & 0,95 & 0,82 \\
+               \hline
+               1,06 & 0,98 & 1,07 & 0,9 & 0,86 \\
+               \hline
+               1,14 & 1,22 & 1,3 & 1,38 & 1,46 \\
+               \hline
+               0,86 & 0,74 & 0,82 & 0,9 & \textcircledd{1,38} \\
+               \hline
+            \end{tabular}}
+         \end{center}
+      \vspace*{1cm}
+   \end{QCM}
+   
+   \begin{flushright}
+      {\it\footnotesize Source : inspiré de 123 jeux de nombres, 8 à 13 ans, Accès Édition, 2007.}
+   \end{flushright}
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+\section{Propriétés des additions et soustractions} %%%%%%%%%%%%
+
+\begin{propriete}
+   L'addition est {\bf commutative} (on peut changer l’ordre des facteurs) et {\bf associative} (on peut regrouper les facteurs de la manière dont on veut).
+\end{propriete}
+
+\begin{exemple*1}
+   $123+234 =234+123 =357$ \\
+      $12,3+(0,7+15) =(12,3+0,7)+15 =13+15 =28$.
+\end{exemple*1}
+
+\begin{remarque}
+   attention, la soustraction n'est pas commutative, par exemple $3-2 \neq2-3$, ni associative, par exemple $(3-2)+1 \neq3-(2+1)$.
+\end{remarque}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Calcul en ligne et en colonnes}
+
+Pour effectuer une addition ou une soustraction, on peut : calculer mentalement ; calculer en ligne en posant l'opération ; calculer en colonnes en posant l'opération ; calculer grâce à une calculatrice.
+
+\begin{methode}[Priorités opératoires dans un calcul en ligne]
+   Dans un calcul comportant des parenthèses, additions et soustractions, on effectue en priorité les calculs dans les parenthèses les plus intérieures, puis les additions/soustractions de gauche à droite. S'il n'y a que des additions, on peut faire les calculs dans l'importe quel {\small ordre}
+   \exercice
+   Calculer la valeur de $A$ :
+   $A =5+3+(15-(9+2))$ \\
+   \correction
+      $A =5+3+(15-\underline{(9+2)}) =5+3+\underline{(15-\psframebox*[fillcolor=yellow]{11})}$ \\
+      $\phantom{A} =\underline{5+3}+\psframebox*[fillcolor=yellow]{4} =\underline{\psframebox*[fillcolor=yellow]{8}+4} =\psframebox*[fillcolor=yellow]{12}$
+\end{methode}
+ 
+\begin{propriete}
+   Lorsqu'on calcule une somme ou une différence en colonnes, on aligne les chiffres de même rang les uns au-dessus des autres.
+\end{propriete}
+
+\begin{exemple}
+   Calculer  : \\
+   $27,89+1\,298,7$ \\
+   $85,8-34,54$.
+   \correction
+   \opadd[voperation=center,resultstyle=\red,carrystyle=\footnotesize\blue,decimalsepsymbol={,}]{1298,7}{27,89}
+   \qquad
+   \opsub[voperation=center,resultstyle=\red,carrystyle=\footnotesize\blue,carrysub,lastcarry,columnwidth=2.5ex,offsetcarry=-0.4,decimalsepsymbol={,}]{85,8}{34,54}
+   \; ou \;
+   \opsub[voperation=center,resultstyle=\red,columnwidth=2.5ex,offsetcarry=-0.4,decimalsepsymbol={,}]{85,8}{34,54} 
+   \rput(-0.65,0.7){\textcolor{blue}{/}}
+   \rput(-0.65,1.1){\textcolor{blue}{\small 7}}
+   \rput(-0.42,0.71){\textcolor{blue}{\small 1}}
+\end{exemple}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ordre de grandeur}
+
+\begin{definition}
+   Un {\bf ordre de grandeur} d'un nombre est une valeur approchée de ce nombre.
+\end{definition}
+
+\begin{exemple*1}
+   Ordre de grandeur de $392,5+703,56$ : \\
+   une valeur approchée de 392,5 est 400 et une valeur approchée de 703,56 est 700 donc, un ordre de grandeur de $392,5+703,56$ est $400+700 =1\,100$.
+\end{exemple*1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+\serie{Techniques opératoires} %%%%%
+
+\begin{exercice}
+   Compléter les égalités suivantes.
+   \begin{colenumerate}{2}
+      \item $4,5+\pfb =5$
+      \item $7,8+\pfb=8$
+      \item $0,8+\pfb=1$
+      \item $\pfb+0,23=1$
+      \item $\pfb+5,8=6$
+      \item $\pfb-2,3 =2$
+      \item $\pfb-0,9 =4$
+      \item $\pfb-5,8 =7$
+      \item $7,3-\pfb =7$
+      \item \, $8-\pfb =7,6$
+   \end{colenumerate}
+\end{exercice}
+
+\begin{exercice}
+   Donner un ordre de grandeur pour chaque terme puis en déduire un ordre de grandeur du résultat.
+   \begin{colenumerate}{2}
+      \item $52,758+46,7$
+      \item $97,367+4,692$
+      \item $149+201+52$
+      \item $10,397-4,754$
+      \item $49,021-0,003$
+      \item $753-148-99$
+   \end{colenumerate}
+\end{exercice}
+
+\begin{exercice}
+   Calculer les sommes en effectuant des regroupements astucieux.
+   \begin{enumerate}
+      \item $6,5+12,6+1,5$
+      \item $36,99+45,74+2,01+13,26$
+      \item $9,25+8,7+5,3+16,75$
+      \item $7,42+4,2+7,8+25,58$
+      \item $3,01+2,9+6,1+7,99$
+   \end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+   Poser et effectuer les opérations suivantes :
+   \begin{colenumerate}{2}
+      \item $85\,326+40\,383$
+      \item $52,21+8,63$
+      \item $49,35+7,432+12,7$
+      \item $94\,825-732 $
+      \item $9,85-2,07$
+      \item $83-43,51$
+   \end{colenumerate}
+\end{exercice}
+
+\medskip
+
+\serie{Écriture des opérations} %%%
+
+\begin{exercice}
+   Pour chaque problème, écrire en ligne la (ou les) opération(s) à faire pour le résoudre puis effectuer le calcul à la calculatrice.
+   \begin{enumerate}
+      \item La somme de deux nombres vaut 78,92. Un des deux nombres est 29,6. Quel est le second nombre ?
+      \item La différence de deux nombres est 68,72. Un des deux nombres est 70,35. Quel est le second nombre ?
+      \item Philippe fait une randonnée de 13,7 km. Il a parcouru 8,6 km le matin.
+Combien lui reste-t-il à parcourir ?
+      \item Un manteau coûte 56,80 \euro. Le commerçant me fait une remise de 12,40 \euro. Combien vais-je payer ?
+      \item Noé veut acheter un livre. Il a 12,42 \euro{} mais il lui manque 3,45 \euro{}. Quel est le prix du livre ?   
+   \end{enumerate}
+\end{exercice}
+
+
+\serie{Défis et problèmes} %%%%%
+
+\begin{exercice}
+   Un carré magique est un tableau carré tel que la somme pour chaque ligne, chaque  colonne et chaque diagonale soit la même. Compléter les carrés suivants pour les rendre magiques.
+   \begin{center}
+      {\hautab{1.8}
+      \begin{tabular}{|C{0.5}|C{0.5}|C{0.5}|}
+         \hline
+         8 & & \\
+         \hline
+         & 5 & \\
+         \hline
+         4 & & 2 \\
+         \hline
+      \end{tabular}
+      \qquad
+      \begin{tabular}{|C{0.5}|C{0.5}|C{0.5}|}
+         \hline
+         18 & & 24 \\
+         \hline
+         & 15 & \\
+         \hline
+         & & 12 \\
+         \hline
+      \end{tabular}}
+   \end{center}
+\end{exercice}
+
+\begin{exercice}
+   Compléter les pyramides en suivant la règle suivante : le nombre d’une case est égal à la somme des deux nombres qui se trouvent dans les deux cases qui sont juste en-dessous. \\ [1mm]
+   \begin{tikzpicture}
+      \pyramidedenombres{4}
+      \pyramideplacernombre{1}{1}{32,3}
+      \pyramideplacernombre{1}{3}{31,5}
+      \pyramideplacernombre{1}{4}{16,8}
+      \pyramideplacernombre{2}{1}{63,3}
+   \end{tikzpicture}
+   \qquad
+   \begin{tikzpicture}
+      \pyramidedenombres{4}
+      \pyramideplacernombre{1}{1}{4,2}
+      \pyramideplacernombre{2}{1}{12,5}
+      \pyramideplacernombre{3}{1}{21,7}
+      \pyramideplacernombre{4}{1}{35}
+   \end{tikzpicture}
+\end{exercice}
+
+\begin{exercice}
+   Le physicien anglais Newton, né en 1642, est mort en 1727. Le mathématicien allemand Gauss, né en 1777, est mort en 1855. La mathématicienne française Sophie Saint Germain est née un an avant Gauss et a vécu trente ans de moins que Newton. En quelle année est-elle décédée ?
+\end{exercice}
+
+\begin{exercice}
+   Au restaurant avec des amis, Théo se demande si le serveur n'a pas
+fait une erreur en calculant l'addition. Voici ce qu'il a sur sa note :
+   \begin{center}
+      \fbox{\begin{minipage}{5cm}
+         3 riz cantonnais \hfill 29,70 \euro \\
+        2 poulet-frite \hfill 12, 20 \euro \\
+         2 tartes aux pommes \hfill 9,20 \euro \\
+         2 glaces à la vanille \hfill 6,40 \euro \\
+         TOTAL : \hfill 88, 70 \euro
+      \end{minipage}}
+   \end{center}
+   Calculer un ordre de grandeur de cette addition et dire si le serveur semble avoir fait une erreur.
+\end{exercice}
+
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+   \enigme[Addition à l'abaque romain]
+      \partie[introduction]
+         Pour additionner à l'abaque romain, on inscrit les deux nombres à l'abaque l'un au-dessus de l'autre puis, pour chaque rang, on dénombre les jetons en faisant éventuellement des échanges. \\ [3mm]
+         {\bf Exemple :} calcul de $63+52$. Expliquer sous chaque tableau ce qui a été fait dans l'abaque.
+         \begin{center}
+            \begin{tabular}{C{5}C{5}C{5}}
+               \begin{pspicture}(0,0)(3,4)
+                  \multido{\n=0+1}{4}{\psline(\n,0)(\n,4)}
+                  \multido{\n=3+1}{2}{\psline(0,\n)(3,\n)}
+                  \rput(0.5,3.5){C}
+                  \rput(1.5,3.5){X}
+                  \rput(2.5,3.5){I}
+                  \psdots[linecolor=A1](1.3,2.7)(1.7,2.7)(1.3,2.4)(1.7,2.4)(1.3,2.1)(1.7,2.1) %X1
+                  \psdots[linecolor=A1](2.3,2.7)(2.5,2.4)(2.7,2.1) %I1
+                  \psdots[linecolor=B1](1.3,1.3)(1.7,1.3)(1.5,1)(1.3,0.7)(1.7,0.7) %X2
+                  \psdots[linecolor=B1](2.4,1.15)(2.6,0.85) %I2
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(3,4)
+                  \multido{\n=0+1}{4}{\psline(\n,0)(\n,4)}
+                  \multido{\n=3+1}{2}{\psline(0,\n)(3,\n)}
+                  \rput(0.5,3.5){C}
+                  \rput(1.5,3.5){X}
+                  \rput(2.5,3.5){I}
+                  \psdots(1.3,2.7)(1.7,2.7)(1.3,2.4)(1.7,2.4)(1.3,2.1)(1.7,2.1) %X1
+                  \psdots(2.3,2.7)(2.5,2.4)(2.7,2.1) %I1
+                  \psdots(1.3,1.8)(1.7,1.8)(1.5,1.5)(1.3,1.2)(1.7,1.2) %X2
+                  \psdots(2.4,1.65)(2.6,1.35) %I2
+                  \pspolygon[linecolor=J1](1.1,1)(1.1,2.9)(1.9,2.9)(1.9,1.5)(1.5,1.3)(1.5,1)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(3,4)
+                  \multido{\n=0+1}{4}{\psline(\n,0)(\n,4)}
+                  \multido{\n=3+1}{2}{\psline(0,\n)(3,\n)}
+                  \rput(0.5,3.5){C}
+                  \rput(1.5,3.5){X}
+                 \rput(2.5,3.5){I}
+                  \psdot[linecolor=J1](0.5,2.4) %C1
+                  \psdots(2.3,2.7)(2.3,2.1)(2.5,2.4)(2.7,2.1)(2.7,2.7) %I1
+               \end{pspicture} \\ [3mm]
+              \pfb & \pf & \pf \\ [3mm]
+              \pfb & \pf & \pf \\ [3mm]
+              \pfb & \pf & \pf \\ [3mm]
+            \end{tabular}
+        \end{center}
+      
+      \partie[à vous de jouer]
+         Effectuer à l'abaque les additions suivantes (représenter dans les tableaux le calcul effectué).
+         \begin{center}
+            \begin{tabular}{C{3}C{3}C{4}C{5}}
+               \begin{pspicture}(0,-1)(3,4)
+                  \multido{\n=0+1}{4}{\psline(\n,-1)(\n,4)}
+                  \multido{\n=3+1}{2}{\psline(0,\n)(3,\n)}
+                  \rput(0.5,3.5){C}
+                  \rput(1.5,3.5){X}
+                  \rput(2.5,3.5){I}
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,-1)(3,4)
+                  \multido{\n=0+1}{4}{\psline(\n,-1)(\n,4)}
+                  \multido{\n=3+1}{2}{\psline(0,\n)(3,\n)}
+                  \rput(0.5,3.5){C}
+                  \rput(1.5,3.5){X}
+                  \rput(2.5,3.5){I}
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,-1)(4,4)
+                  \multido{\n=0+1}{5}{\psline(\n,-1)(\n,4)}
+                  \multido{\n=3+1}{2}{\psline(0,\n)(4,\n)}
+                  \rput(0.5,3.5){X}
+                  \rput(1.5,3.5){I}
+                  \rput(2.5,3.5){$\frac{1}{10}$}
+                  \rput(3.5,3.5){$\frac{1}{100}$}
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,-1)(5,4)
+                  \multido{\n=0+1}{6}{\psline(\n,-1)(\n,4)}
+                  \multido{\n=3+1}{2}{\psline(0,\n)(5,\n)}
+                  \rput(0.5,3.5){X}
+                  \rput(1.5,3.5){I}
+                  \rput(2.5,3.5){$\frac{1}{10}$}
+                  \rput(3.5,3.5){$\frac{1}{100}$}
+                  \rput(4.5,3.5){$\frac{1}{1000}$}
+               \end{pspicture} \\ [1mm]
+               $136+321$ & $89+23$ & $23,45+1,3$ & $34,891+59,129$ \\
+               = \pf & = \pf & = \pf & = \pf \\ [5mm]
+            \end{tabular}
+         \end{center}
+      
+      \partie[le défi de la soustraction]
+         Obélix souhaite acheter un sanglier à 234 sesterces. Il dispose d'un menhir à 1622 sesterces. Imaginer une méthode permettant de trouver le résultat sur l'abaque. \\
+         Et s'il voulait acheter un deuxième sanglier ?
+         
+

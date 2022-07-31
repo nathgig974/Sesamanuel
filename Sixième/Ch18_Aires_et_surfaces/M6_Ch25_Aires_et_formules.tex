@@ -1,0 +1,491 @@
+\themaM
+\graphicspath{{../Ch18_Aires_et_surfaces/Images/}}
+
+\chapter{Aires et formules}
+\label{C25}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{prerequis}[Connaissances et compétences associées]
+   \begin{itemize}
+      \item Déterminer la mesure de l’aire d’une surface en utilisant une formule : formules de l’aire d’un carré, d’un rectangle, d’un triangle, d’un disque.
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\begin{debat}[Débat : des aires en images]
+   Dans un triangle, on peut mettre deux triangles de même surface, son {\bf aire} correspond donc au double de l'aire de l'un de ces triangles.
+   \begin{center}
+      \begin{pspicture}(0,-0.5)(8.5,2.5)
+         \psframe[fillstyle=solid,fillcolor=A3,linecolor=A3](0.5,0)(3.5,2)
+         \psframe[fillstyle=solid,fillcolor=A3,linecolor=A3](5,0)(8.5,2)
+         \pspolygon[linecolor=B1](5,0)(8.5,0)(6,2)
+         \psline[linecolor=B1,linestyle=dashed](6,0)(6,2)
+         \psarc{<-}(5.5,1){0.3}{-45}{180}
+         \psarc{->}(7.25,1){0.3}{25}{250}
+      \end{pspicture}
+   \end{center}
+   \begin{cadre}[B2][F4]
+      \begin{center}
+         Vidéo : \href{https://www.youtube.com/watch?v=5_PiZrfLghQ}{\bf Aire de figures simples}, chaîne YouTube de {\it Science silencieuse}.
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+\vfill
+
+\textcolor{PartieGeometrie}{\sffamily\bfseries Cahier de compétences} : chapitre 11, exercices 12 à 22 ; 29 ; 35 ; 40 à 43.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites 
+
+\begin{activite}[Aire d'un triangle]
+   {\bf Objectif :} calculer l'aire d'un rectangle, d'un triangle ; déterminer la formule de l'aire d'un rectangle, d'un triangle.
+   \begin{QCM}
+      \partie[aire du rectangle]
+         \begin{enumerate}
+            \item Découper le rectangle 1 ci-dessous, puis le paver de carrés de côté \ucm{1}.
+               \begin{center}
+                  {\psset{unit=0.5}
+                  \begin{pspicture}(0,-0.3)(5,3.5)
+                     \psframe(0,0)(5,3)
+                     \psgrid[subgriddiv=0,gridlabels=0pt](0,0)(1,3)
+                     \psline(3,0)(3,1)(1,1)
+                     \psline(2,0)(2,2)(1,2)
+                  \end{pspicture}}
+                \end{center}
+             \item Combien de carrés de \ucm{1} de côté y a-t-il dans ce rectangle ? \pf \medskip
+             \item Quelle est l'aire du rectangle ? \pf \medskip
+             \item Rappeler la formule de l'aire d'un rectangle de longueur $L$ et de largeur $\ell$ : \pf
+         \end{enumerate}
+         
+      \partie[aire du triangle rectangle]
+         \begin{enumerate}
+            \setcounter{enumi}{4}
+            \item Découper le rectangle 2 puis tracer l'une de ses diagonales. \medskip
+            \item Découper le rectangle suivant la diagonale, que peut-on dire des deux triangles obtenus ? \\ [1mm]
+               \pf \medskip
+            \item Comment peut-on obtenir l'aire d'un triangle en fonction de l'aire du rectangle ? \\ [1mm]
+               \pf \medskip
+            \item En déduire la formule de l'aire d'un triangle rectangle de base $b$ et de hauteur $h$ : \pf
+         \end{enumerate}
+         
+      \partie[aire du triangle quelconque]
+         \begin{enumerate}
+            \setcounter{enumi}{8}
+            \item Découper le rectangle 3 puis placer une point A sur l'un de ses côtés. \medskip
+            \item \, Tracer le triangle de sommet A et de base le côté opposé à A, le découper. \medskip
+            \item \, Est-il possible de coller les deux morceaux restants sur le triangle à la manière d'un puzzle ? \pf \medskip
+            \item \, En déduire la formule de l'aire d'un triangle de base $b$ et de hauteur $h$. \pf
+         \end{enumerate}
+   \end{QCM}
+   \begin{center}
+      \begin{pspicture}(0,-0.5)(5.5,3)
+         \psframe(0,0)(5,3)
+         \rput(2.5,-0.5){rectangle 1}
+      \end{pspicture}
+      \begin{pspicture}(0,-0.5)(5.5,4)
+         \psframe(0,0)(5,3)
+         \rput(2.5,-0.5){rectangle 2}
+      \end{pspicture}
+      \begin{pspicture}(0,-0.5)(5,4)
+         \psframe(0,0)(5,3)
+         \rput(2.5,-0.5){rectangle 3}
+      \end{pspicture}
+   \end{center}
+
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hauteurs d'un triangle}
+
+\begin{definition}
+   Les \textbf{hauteurs} d'un triangle sont les hauteurs relatives aux sommets du triangle, c'est-à-dire les trois droites perpendiculaires aux côtés qui passent par le sommet opposé.
+\end{definition}
+
+\begin{pspicture}(-0.5,-0.5)(4,4)
+   \psset{CodeFig=true, PointSymbol=none,RightAngleSize=0.2}
+   \pstTriangle{A}(4.5,0){B}(1.5,3){C}
+   \pstProjection[PointName=none,CodeFigColor=B1]{B}{C}{A}
+   \pstLabelAB[offset=-0.3,npos=0.56]{A}{A'}{\footnotesize \textcolor{B1}{hauteur issue de A}}
+   \pstLineAB[linecolor=A1,linewidth=0.5mm]{C}{B}
+   \pstLabelAB{C}{B}{\footnotesize \textcolor{A1}{base relative à la hauteur issue de A}}
+\end{pspicture}
+\begin{pspicture}(-1.5,-0.5)(4,4)
+   \psset{CodeFig=true, PointSymbol=none,RightAngleSize=0.2}
+   \pstTriangle{A}(4.5,0){B}(1.5,3){C}
+   \pstProjection[PointName=none,CodeFigColor=B1]{C}{A}{B}
+   \pstLabelAB[offset=-0.3,npos=0.4]{B'}{B}{\footnotesize \textcolor{B1}{hauteur issue de B}}
+   \pstLineAB[linecolor=A1,linewidth=0.5mm]{A}{C}
+   \pstLabelAB[offset=0.5]{A}{C}{\footnotesize \textcolor{A1}{base relative à la hauteur issue de B}}
+\end{pspicture}
+\begin{pspicture}(-1.5,-0.5)(4,4)
+   \psset{CodeFig=true, PointSymbol=none,RightAngleSize=0.2}
+   \pstTriangle{A}(4.5,0){B}(1.5,3){C}
+   \pstProjection[PointName=none,CodeFigColor=B1]{B}{A}{C}
+   \pstLabelAB[offset=-0.3,npos=0.45]{C'}{C}{\footnotesize \textcolor{B1}{hauteur issue de C}}
+   \pstLineAB[linecolor=A1,linewidth=0.5mm]{A}{B}
+   \pstLabelAB[offset=-0.3]{A}{B}{\footnotesize \textcolor{A1}{base relative à la hauteur issue de C}}
+\end{pspicture}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Aires usuelles}
+
+\medskip
+
+\begin{Ltableau}{\linewidth}{4}{C{4}|p{2.6cm}|C{3.5}|p{5cm}}
+   \hline 
+   Figure plane & Mesures & Exemple & Calcul \\
+   \hline
+   \begin{pspicture}(0,0)(4,4) % rectangle
+      {\footnotesize
+      \pstGeonode[PointName=none,linecolor=B2,PointSymbol=none](0.5,1){A}(3.5,1){B}(3.5,3){C}(0.5,3){D}
+      \pstSegmentMark[linecolor=B1]{A}{B}
+      \pstSegmentMark[SegmentSymbol=MarkCros,linecolor=A1]{B}{C}
+      \pstSegmentMark[linecolor=B1]{C}{D}
+      \pstSegmentMark[SegmentSymbol=MarkCros,linecolor=A1]{D}{A}
+      \rput(2,2){\small rectangle}
+      \rput(2,0.6){\textcolor{B1}{$L$}}
+      \rput(2,3.5){\textcolor{B1}{$L$}}
+      \rput(0.1,2){\textcolor{A1}{$\ell$}}
+      \rput(3.8,2){\textcolor{A1}{$\ell$}}}
+   \end{pspicture}
+   &
+   \begin{minipage}[b]{3cm}
+      $\mathcal{A} =L\times \ell$ \\ [4mm]
+      Pour un carré \\
+      de côté $c$, on a : \\
+      $\mathcal{A} =c\times c =c^2$ \\ [3mm]
+   \end{minipage}
+   &
+   \begin{pspicture}(0,-0.2)(4,3)
+      {\footnotesize
+      \psframe[fillstyle=solid,fillcolor=lightgray!50](1,0.5)(3,3.5)
+      \psline[linestyle=dashed]{<->}(1,0.2)(3,0.2)
+      \rput(2,-0.1){\udm{0,2}}
+      \psline[linestyle=dashed]{<->}(0.7,0.5)(0.7,3.5)
+      \rput{90}(0.4,2){\udm{0,3}}}
+   \end{pspicture}
+   &
+   \begin{minipage}[b]{5cm}
+      $\mathcal{A}=\udm{0,2}\times\udm{0,3} =\udmq{0,06}$ \\ [12mm]
+   \end{minipage} \\
+   \hline
+      {\footnotesize
+      \begin{pspicture}(0,0)(4,4) % triangles
+      \pstGeonode[PointName=none,PointSymbol=none](0.5,0.5){A}(3.5,0.5){B}(1,3.5){C}(1,0.5){H}
+      \pstLineAB[linecolor=A1]{A}{B}
+      \pstLineAB{A}{C}
+      \pstLineAB{C}{B}
+      \pstLineAB[linecolor=B1]{C}{H}
+      \pstRightAngle[linecolor=B1]{B}{H}{C}
+      \rput(1.9,1.2){\small triangle}
+      \rput(2,0.2){\textcolor{A1}{$b$}}
+      \rput(1.2,2){\textcolor{B1}{$h$}}
+   \end{pspicture}}
+   &
+   \begin{minipage}[b]{3cm}
+      $\mathcal{A} =\dfrac{b\times h}{2}$ \\ [10mm]
+   \end{minipage}
+   &
+   \begin{pspicture}(0,0)(4,4)
+      {\footnotesize
+      \pspolygon[fillstyle=solid,fillcolor=lightgray!50](0.5,3)(3.2,3)(2.5,0.4)
+      \psline[linestyle=dashed]{<->}(0.5,3.3)(3.2,3.3)
+      \psline(2.2,3)(2.2,2.7)(2.5,2.7)
+      \rput(2,3.6){\umm{27}}
+      \psline[linestyle=dashed]{<->}(2.5,0.4)(2.5,3)
+      \rput{90}(2.15,2){\umm{26}}}
+   \end{pspicture}
+   &
+   \begin{minipage}[b]{5cm}
+      $\mathcal{A} =\dfrac{\umm{27}\times\umm{26}}{2} =\ummq{351}$ \\ [12mm]
+   \end{minipage} \\ 
+   \hline
+   \begin{pspicture}(0,0.4)(4,3.7) %disque
+      {\footnotesize
+      \pscircle(2,2){1.3}
+      \psdots(2,2)
+      \psline[linecolor=B1,arrowsize=0.2]{<->}(2,2)(3.3,2)
+      \rput(2.75,2.2){\textcolor{B1}{$r$}}
+      \rput(2,1.6){\small disque}}
+   \end{pspicture}
+   &
+   \begin{minipage}[b]{3cm}
+      $\mathcal{A} =\pi\times r\times r$ \\
+      $\mathcal{A} =\pi\times r^2$ \\ [7mm]
+   \end{minipage}
+   &
+   \begin{pspicture}(0.2,0.4)(4,3.7)
+      \footnotesize
+      \pscircle[fillstyle=solid,fillcolor=lightgray](2,2){1.3}
+      \psline[linestyle=dashed,arrowsize=0.2]{<->}(2,2)(3.3,2)
+      \rput(2.65,2.35){\ucm{1,2}}
+   \end{pspicture}
+   &
+   \begin{minipage}[b]{5cm}
+      $\mathcal{A} =\pi\times(\ucm{1,2})^2\approx\ucmq{4,52}$ \\ [8mm]
+   \end{minipage} \\
+   \hline
+\end{Ltableau}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+\serie{Aire de polygones} %%%
+
+\begin{exercice} %1
+   Calculer l'aire des figures suivantes. \\ [1mm]
+   {\psset{unit=0.6}
+   \small
+   \begin{pspicture}(-1.5,-0.5)(5,4)
+      \psframe(0,0)(4,3)
+      \psframe(0,0)(0.3,0.3)
+      \rput(2,0){x}
+      \rput(2,3){x}
+      \rput(0,1.5){=}
+      \rput(4,1.5){=}
+      \rput(2,-0.5){\um{6}}
+      \rput{90}(-0.5,1.5){\um{4}}
+      \rput(2,1.5){\ding{182}}
+   \end{pspicture}
+   \begin{pspicture}(-1,0)(4,4.5)
+      \psframe(0,0)(4,4)
+      \psframe(0,0)(0.3,0.3)
+      \rput(2,0){x}
+      \rput(2,4){x}
+      \rput(0,2){x}
+      \rput(4,2){x}
+      \rput(2,-0.5){\ucm{27}}
+      \rput(2,2){\ding{183}}
+   \end{pspicture}
+   
+    \begin{pspicture}(7.5,0)(14,5)
+      \pspolygon(8,2)(14,2)(8,5)
+      \rput(11,1.5){\umm{83}}
+      \rput{90}(7.5,3.5){\umm{25}}
+      \rput{-30}(11,4){\umm{86,68}}
+      \psframe(8,2)(8.3,2.3)
+      \rput(9.5,3){\ding{184}}
+   \end{pspicture}
+   \begin{pspicture}(1,0)(4,7)
+      \pspolygon(1,5)(7,5)(6,1)
+      \psline(6,1)(6,5)
+      \psframe(6,5)(6.3,4.7)
+      \rput{-40}(3.2,2.5){\ucm{6,9}}
+      \rput{78}(7,3){\ucm{4,6}}
+      \rput(4.5,5.5){\ucm{6,6}}
+      \rput{90}(5.5,2.9){\ucm{4,4}}
+      \rput(4,4){\ding{185}}
+   \end{pspicture}}
+\end{exercice}
+
+\begin{exercice} %2
+   Compléter le tableau où $c$ est la longueur du côté du carré et $\mathcal{A}$ son aire.
+   \begin{center}
+      {\hautab{1.3}
+      \begin{Ctableau}{0.9\linewidth}{5}{c}
+         \hline
+         $c$ & \ucm{3} & \udm{7} & & \\
+         \hline
+         $\mathcal{A}$ & & & \ummq{64} & \ukmq{36} \\
+         \hline  
+      \end{Ctableau}} \medskip
+   \end{center}
+\end{exercice}
+
+\begin{exercice} %3
+   Compléter le tableau où $L$ est la longueur du côté du rectangle, $\ell$ sa largeur et $\mathcal{A}$ son aire.
+   \begin{center}
+      {\hautab{1.3}
+      \begin{Ctableau}{0.9\linewidth}{5}{c}
+         \hline
+         $L$ &\udm{ 3,5} & \umm{7,4} & & \um{7,2} \\
+         \hline
+         $\ell$ & \udm{2,8} & \umm{21} & \ukm{3,75} & \\
+         \hline
+         $\mathcal{A}$ & & & \ukmq{23} & \umq{25,6} \\
+         \hline  
+      \end{Ctableau}}
+   \end{center}
+\end{exercice}
+
+\begin{exercice} %4
+   Compléter le tableau où $b$ est la base du triangle, $h$ sa hauteur et $\mathcal{A}$ son aire.
+   \begin{center}
+      {\hautab{1.3}
+      \begin{Ctableau}{0.9\linewidth}{5}{c}
+         \hline
+         $b$ &\ucm{ 3} & \udm{7,4} & & \um{5,4} \\
+         \hline
+         $h$ & \ucm{8} & \udm{2,1} & \ukm{4} & \\
+         \hline
+         $\mathcal{A}$ & & & \ukmq{12} & \umq{13,5} \\
+         \hline  
+      \end{Ctableau}}
+   \end{center}
+\end{exercice}
+
+\medskip
+
+\serie{Aire de disques} %%%%%%%%%%%%%%%%
+
+\begin{exercice} %2
+   Compléter le tableau où $r$ est le rayon du disque, $d$ son diamètre et $\mathcal{A}$ son aire.
+   \begin{center}
+      {\hautab{1.3}
+      \begin{Ctableau}{0.9\linewidth}{5}{c}
+         \hline
+         $r$ & \ucm{5} & \udm{7,5} & & \\
+         \hline
+         $d$ & & & \umm{8} & \ukm{61} \\
+         \hline
+         $\mathcal{A}$ & & & & \\
+         \hline  
+      \end{Ctableau}} \medskip
+   \end{center}
+\end{exercice}
+
+\begin{exercice} %4
+   Calculer l'aire des figures suivantes. \\
+   {\psset{unit=0.5}
+   \small
+    \begin{pspicture}(-1.5,0)(6,6)
+      \pscircle(3,3){2}
+      \psline(3,3)(5,3)
+      \rput(4,2.5){15 km}
+      \rput(2.5,3){\ding{182}}
+   \end{pspicture}
+   \begin{pspicture}(9.5,0)(14,6)
+      \pscircle(12,3){2}
+      \psline(10,3)(14,3)
+      \rput(12,3.5){5,6 m}
+      \rput(12,2.5){\ding{183}}
+   \end{pspicture}
+   
+   \begin{pspicture}(7,1)(14,5)
+      \psarc(11,2){3}{0}{180}
+      \psline(8,2)(14,2)
+      \rput(11,1.5){\umm{8,3}}
+      \rput(11,3){\ding{184}}
+   \end{pspicture}
+   \begin{pspicture}(-2.5,0)(4,4)
+      \psframe(0,0)(4,4)
+      \psarc(4,2){2}{-90}{90}
+      \rput(2,0.8){\ucm{20}}
+      \psdots(0,2)(2,4)(2,0)(4,2)
+      \rput(3,2){\ding{185}}
+   \end{pspicture}
+   }
+\end{exercice}
+
+\bigskip
+
+%%%%%%%
+\serie{Problèmes}
+
+\begin{exercice}
+   Le rectangle suivant a pour longueur $AC =\ucm{30}$ et pour largeur $AG =\ucm{20}$.
+   \begin{center}
+   {\footnotesize
+      \begin{pspicture}(0,0)(3,2.5)
+         \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={-135,-90,-45,0,45,90,135,180}]{G}(1.9,0){F}(3,0){E}(3,0.9){D}(3,2){C}(0.9,2){B}(0,2){A}(0,0.7){H}
+         \pspolygon(1.9,0)(3,0.9)(0.9,2)(0,0.7)
+         \pstLabelAB{A}{B}{\ucm{9}}
+         \pstLabelAB{C}{D}{\ucm{11}}
+         \pstLabelAB[offset=-0.3]{F}{E}{\ucm{11}}
+         \pstLabelAB{H}{A}{\ucm{13}}
+      \end{pspicture}}
+   \end{center}
+   \begin{enumerate}
+      \item En utilisant les données de la figure, calculer la mesure de $BC, DE, GF$ et $GH$.
+      \item Déterminer l'aire des triangles $HAB, BCD, DEF$ et $FGH$.
+      \item En déduire l'aire du quadrilatère $BDFH$.
+   \end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+   On considère la figure suivante : \\
+   {\psset{unit=0.7,linewidth=0.5mm}
+   \small
+    \begin{pspicture}(-4,-1)(8,4.5)
+      \psgrid[subgriddiv=0,gridlabels=0pt,gridcolor=lightgray](-1,-1)(8,4)
+      \psarc(3,0){3}{90}{180}
+      \psarc(3,1){2}{0}{90}
+      \psarc(4,1){1}{-90}{0}
+      \psline(0,0)(4,0)
+      \psline{<->}(6,2)(7,2)
+      \rput(6.5,1.5){\ucm{4}}
+      \psset{linewidth=0.4mm}
+      \psline(3,0)(3,3)
+      \psline(3,1)(5,1)
+      \psline(4,0)(4,1)
+   \end{pspicture}}
+   \begin{enumerate}
+      \item De quoi est composée cette figure ?
+      \item Déterminer alors son aire.
+   \end{enumerate}
+\end{exercice}
+
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\enigme[La formule de Pick]
+   On travaille dans un réseau pointé à maille carrée. On note $u.\ell.$ l'unité de longueur et $u.a.$ l'unité d'aire. \\
+   On appelle polygone de Pick, un polygone non aplati construit sur un tel réseau et dont chacun des sommets est un point du réseau. On considère la figure $FORMULES$ suivante :
+   \begin{center}
+      \small
+      {\psset{unit=0.5}
+      \begin{pspicture}(6,0)(22,11.5)
+         \pstGeonode[fillstyle=solid,fillcolor=lightgray!30,CurveType=polygon,PosAngle={90,135,-135,-45,-45,45,45}](9,10){R}(7,6){O}(7,1){F}(12,1){S}(12,3){E}(16,3){L}(16,6){U}(12,6){M}
+         \psframe[fillstyle=solid,fillcolor=lightgray!30](20,5)(21,6)
+         \psgrid[griddots=1,gridlabels=0,subgriddiv=1,gridwidth=0.5mm](6,0)(22,11)
+         \rput(20.5,4.5){1 $u.a.$}
+         \psline{<->}(20,9)(21,9)
+         \rput(20.5,8.5){1 $u.\ell.$}      
+      \end{pspicture}}
+   \end{center}
+
+   \partie[avec les formules classiques]
+      \begin{enumerate}
+         \item Décomposer la figure $FORMULES$ en figures connues dont on connait les formules de calcul d'aire ? \\ [2mm]
+            \pf \\
+         \item Calculer alors l'aire du polygone $FORMULES$, en unités d'aire, en détaillant les étapes du raisonnement. \\ [3mm]
+            \pf \\ [3mm]
+            \pf \\ [3mm]
+            \pf
+      \end{enumerate}
+
+   \partie[avec la formule de Pick]
+      La formule de Pick permet de calculer l'aire $\mathcal{A}$ d'un polygone de Pick, à partir du nombre $i$ de points du réseau strictement intérieurs à ce polygone et du nombre $b$ de points du réseau sur le bord du polygone : \fbox{$\mathcal{A} =i+\dfrac{b}{2}-1$}. 
+      \begin{enumerate}
+      \setcounter{enumi}{2}
+          \item Appliquer cette formule au polygone $FORMULES$. \\ [3mm]
+            $i =\pfb \quad b =\pfb$ \quad donc, $\mathcal{A} = \pfb$ \\
+          \item Appliquer la formule de Pick aux trois polygones de Pick $MOFS$, $MOR$ et $MULE$. \\
+         Vérifier que la somme des résultats obtenus est égale à l'aire totale de la figure. \\ [3mm]
+         $MOFS : \;\; i =\pfb \quad b =\pfb$ \quad donc, $\mathcal{A}_1 = \pfb$ \\ [3mm]
+         $MOR : \quad i =\pfb \quad b =\pfb$ \quad donc, $\mathcal{A}_2 = \pfb$ \\ [3mm]
+         $MULE : \; i =\pfb \quad b =\pfb$ \quad donc, $\mathcal{A}_3 = \pfb$ \\ [3mm]
+         Aire totale : \pf
+      \end{enumerate}
+
+
