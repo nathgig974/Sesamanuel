@@ -1,0 +1,130 @@
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item Voici le tableau complété : \\ \smallskip
+         {\footnotesize
+         \hautab{2}
+         \begin{tabular}{|*{7}{c|}}
+            \hline
+             & & Sport & \pscircle[fillstyle=solid,fillcolor=Gold](0,0.1){0.2} & \pscircle[fillstyle=solid,fillcolor=lightgray](0,0.1){0.2} & \pscircle[fillstyle=solid,fillcolor=brown](0,0.1){0.2} & T. \\
+            \hline
+            1 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S1} & {\blue Escrime} & \, {\blue 32} \, & \, 51 \, & \, 35 \, & \, {\bf 118} \, \\
+            \hline
+            2 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S2} & {\blue Cyclisme} & 41 & {\blue 27} & 23 & {\bf 91} \\
+            \hline
+            3 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S3} & {\blue Athlétisme} & 14 & 25 & {\blue 29} & {\bf 68} \\
+            \hline
+            4 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S4} & {\blue Équitation} & 14 & 13 & 10 & {\blue \bf 37} \\
+            \hline
+            5 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S5} & {\blue Judo} & 14 & 10 & {\blue 25} & {\bf 49} \\
+            \hline
+            6 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S6} & {\blue Voile} & 13 & {\blue 11} & 17 & {\bf 41} \\
+            \hline
+            7 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S7} & {\blue Tir} & {\blue 9} & 14 & 10 & {\bf 33} \\
+            \hline
+            8 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S8} & {\blue Haltérophilie} & 9 & {\blue 3} & 3 & {\bf 15} \\
+            \hline
+            9 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S9} & {\blue Natation} & 8 & 15 & {\blue 20} & {\bf 43} \\
+            \hline
+            10 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S10} & {\blue Canoé-kayak} & 8 & 9 & 19 & {\blue \bf 36} \\
+            \hline
+         \end{tabular}} \medskip
+      \item Le classement des sports est établi grâce au {\blue nombre de médailles d'or}, puis d'argent, puis de bronze.
+      \item On récapitule dans un tableau les angles : \\ \smallskip
+   \end{enumerate}
+      \small
+      {\hautab{1.5}
+      \begin{Ltableau}{0.95\linewidth}{5}{c}
+         \hline
+         Couleur & Or & Argent & Bronze & Total \\
+         \hline
+         Cyclisme & 41 & 27 & 23 & 91 \\
+         Angle & \textcolor{blue}{\udeg{162}} & \textcolor{blue}{\udeg{107}} & \textcolor{blue}{\udeg{91}} & \udeg{360} \\
+         \hline
+         Tir & 9 & 14 & 10 & 33 \\
+         Angle & \textcolor{blue}{\udeg{98}} & \textcolor{blue}{\udeg{153}} & \textcolor{blue}{\udeg{109}} & \udeg{360} \\
+         \hline
+         Canoé-kayak & 8 & 9 & 19 & 36 \\
+         Angle & \textcolor{blue}{\udeg{80}} & \textcolor{blue}{\udeg{90}} & \textcolor{blue}{\udeg{190}} & \udeg{360} \\
+        \hline
+      \end{Ltableau}}
+      {\psset{unit=0.4}
+      \begin{pspicture}(-2,-3.3)(3,3.8)
+         \pscircle(0,0){3}
+         \pswedge[fillstyle=solid,fillcolor=Gold](0,0){3}{0}{162}
+         \pswedge[fillstyle=solid,fillcolor=lightgray](0,0){3}{162}{269}
+         \pswedge[fillstyle=solid,fillcolor=brown](0,0){3}{269}{360}
+      \end{pspicture}
+      \begin{pspicture}(-3.5,-3)(3,3.5)
+         \pscircle(0,0){3}
+         \pswedge[fillstyle=solid,fillcolor=Gold](0,0){3}{0}{98}
+         \pswedge[fillstyle=solid,fillcolor=lightgray](0,0){3}{98}{251}
+         \pswedge[fillstyle=solid,fillcolor=brown](0,0){3}{251}{360}
+      \end{pspicture}
+      \begin{pspicture}(-3.5,-3)(2.5,3.5)
+         \pscircle(0,0){3}
+         \pswedge[fillstyle=solid,fillcolor=Gold](0,0){3}{0}{80}
+         \pswedge[fillstyle=solid,fillcolor=lightgray](0,0){3}{80}{170}
+         \pswedge[fillstyle=solid,fillcolor=brown](0,0){3}{170}{360}
+      \end{pspicture}} \\
+      \quad {\blue Cyclisme \hfill Tir \hfill Canoé-kayak} \hspace*{4mm} \\ \medskip
+      On remarque par exemple que chacun de ces sports à une couleur très dominante : l'or pour le cyclisme, l'argent pour le tir et le bronze pour le canoé-kayak.
+
+\Coupe
+
+\corec{Le tableur}
+
+\setcounter{partie}{0}
+\partie
+   Dans la deuxième écriture, on note la présence du {\blue signe \og = \fg{}} avant le calcul. \\
+   Cette écriture est interprétée comme un {\blue calcul que le tableur effectue} alors que la première écriture est interprétée comme un {\blue texte à afficher.}
+
+\medskip
+
+\partie
+   \begin{enumerate}
+      \item On commence par écrire 0 dans la cellule A2, puis 1 dans la cellule A3. \\
+      Puis on sélectionne les cellules A2 et A3. \\
+      Enfin, on \og tire \fg{} ces cellules vers le bas en plaçant la souris au coin à droite des cellules et en glissant vers le bas jusqu'à la cellule A10. \\
+      {\it Le tableur interprète cette action comme une répétition de l'addition permettant de passant de 0 à 1, c'est-à-dire par l'ajout de 1 à chaque cellule}.
+      \item Cette formule permet de trouver le {\blue nombre de tartelettes achetées} si on a acheté 0 muffin pour la ligne 2. \\
+         En sélectionnant la cellule et en la tirant vers le bas, le tableur répète la formule pour 1 muffin, puis 2, puis 3\dots
+      \item Cette formule permet de calculer le {\blue prix payé pour les muffins} si on en a acheté 0. \\
+         En sélectionnant la cellule et en la tirant vers le bas, le tableur répète la formule pour 1 muffin, puis 2, puis 3\dots
+      \item En D2, on peut écrire : {\blue \fbox{=2,5*B2}} pour calculer le prix des tartelettes. \\
+         On tire la cellule vers le bas pour compléter la colonne.
+      \item En E2, on peut écrire : {\blue \fbox{=C2+D2}} pour calculer le prix payé au total, somme du prix payé pour les muffins et de celui payé pour les tartelettes. \\
+         On tire la cellule vers le bas pour compléter la colonne.
+      \item On cherche, dans la colonne E, le prix de 11,50~\euro{}, on lit ce prix en E7, ce qui donne le nombre de muffins en A7 et le nombre de tartelettes en B7. \\
+         Conclusion : {\blue Adrien a acheté 5 muffins et 3 tartelettes}.
+   \end{enumerate}
+
+   \Coupe
+
+On obtient le tableau suivant : \\ [2mm]
+   \textsf{
+      \hautab{1.5}
+         \begin{tabular}{|>{\columncolor{lightgray!30}}c|C{0.9}|C{0.9}|C{0.9}|C{0.9}|C{0.9}|C{0.9}|}
+            \hline
+            \rowcolor{lightgray!30} & A & B & C & D & E \\
+            \hline
+            1 & \cellcolor{FondTableaux}{Muffins} & \cellcolor{FondTableaux}{\!\!\!Tartelettes} & \cellcolor{FondTableaux}{Prix muff.} & \cellcolor{FondTableaux}{Prix tarte.} & \cellcolor{FondTableaux}{Prix payé} \\
+            \hline
+            2 & 0 & 8 & 0 & 20 & 20 \\
+            \hline
+            3 & 1 & 7 & 0,8 & 17,5 & 18,3 \\
+            \hline
+            4 & 2 & 6 & 1,6 & 15 & 16,6 \\
+            \hline
+            5 & 3 & 5 & 2,4 & 12,5 & 14,9 \\
+            \hline
+            6 & 4 & 4 & 3,2 & 10 & 13,2 \\
+            \hline
+            7 & 5 & 3 & 4 & 7,5 & 11,5 \\
+            \hline
+            8 & 6 & 2 & 4,8 & 5 &  9,8 \\
+            \hline
+            9 & 7 & 1 & 5,6 & 2,5 & 8,1 \\
+            \hline
+            10 & 8 & 0 & 6,4 & 0 & 6,4 \\
+            \hline
+        \end{tabular}}

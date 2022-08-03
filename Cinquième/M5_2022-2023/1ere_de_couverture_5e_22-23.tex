@@ -1,0 +1,90 @@
+\usetikzlibrary{calc}
+
+% Couleurs blue, brown, cyan, green, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, black, gray, yellow
+\tikzset{fondA/.style=purple}
+\tikzset{fondB/.style=yellow}
+\tikzset{fondPostit/.style={color= yellow!40}}
+\tikzset{ombrePunaise/.style={color={blue!10!gray}}}
+\tikzset{ombrePostit/.style={color={black},opacity=.5}}
+\tikzset{punaise/.style={ball color=red}}
+
+% \epingle{point}{angle}{échelle}
+\newcommand{\epingle}[3]{
+\coordinate[rotate=#2,yshift={#3*0.375cm}] (e) at #1;
+\coordinate[shift={++(60:0.75)}] (g) at (e);
+\begin{scope} [scale=1.5]
+ \begin{scope}[rotate=-30]
+   \coordinate[shift={++(30:0.75)}] (h) at (e);
+   \draw[ombrePunaise,line cap=round,line width=4pt] (e) -- ++(60:0.75);
+   \fill [ombrePunaise,rotate=-30,scale=0.5] (h) ellipse (.65 and .3) ;
+   \fill [ombrePunaise,rotate=60,scale=0.5] (h) ++(0.4,0) ellipse (.4 and .3);
+   \fill [ombrePunaise,rotate=60,scale=0.5] (h) ++(0.8,0) ellipse (.2 and .4);
+ \end{scope}
+ \draw[line cap=round,line width=4pt] (e) -- ++(60:0.75);
+ \fill [punaise,rotate=-30,scale=0.5] (g) ellipse (.65cm and .3cm) ;
+ \fill [punaise,rotate=60,scale=0.5] (g) ++(0.4,0) ellipse (.4 and .3);
+ \fill [punaise,rotate=60,scale=0.5] (g) ++(0.8,0) ellipse (.2 and .4);
+\end{scope}}
+
+% \postIt{(point)}{angle}{échelle}{ligne 1}{ligne 2}{ligne 3}}
+\newcommand{\postIt}[6]
+{\begin{scope} [rotate=#2,scale=0.8]
+\fill [red,ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.25,-2.4)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\fill [ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.2,-2.35)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\fill [ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.15,-2.3)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\fill [fondPostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) 
+ .. controls+(0,0)and+($#3*(-0.2,0.1)$).. ++($#3*(0.1,-2.25)$)
+ .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)
+ -- cycle;
+\end{scope}
+\epingle{#1}{#2}{#3}
+\draw #1 node [scale=#3,rotate=#2] {#4};
+\draw #1 node [scale=#3,rotate=#2,below={#3*0.2cm}] {#5};
+\draw #1 node [scale=#3,rotate=#2,below={#3*0.6cm}] {#6};}
+
+
+%=======================================
+\begin{tikzpicture}[remember picture,overlay]
+% fond bicolore
+\coordinate (cp) at (current page);
+\coordinate (cpc) at (current page.center);
+\coordinate (cpe) at ($ (current page.east) + (0.75cm,0cm) $);
+\coordinate (cpne) at ($ (current page.north east) + (0.75cm,1.4cm) $);
+\coordinate (cpn) at ($ (current page.north) + (1cm,1.4cm) $);
+\coordinate (cpnw) at ($ (current page.north west) + (-0.75cm,1.4cm) $);
+\coordinate (cpw) at ($ (current page.west) + (-0.75cm,0cm) $);
+\coordinate (cpsw) at ($ (current page.south west) + (-0.75cm,-1.4cm) $);
+\coordinate (cps) at ($ (current page.south) + (1cm,-1.4cm) $);
+\coordinate (cpse) at ($ (current page.south east) + (0.75cm,-1.4cm) $);
+\fill[fondA] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpnw)  -- (cpsw) -- cycle;
+\fill[fondB] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpne)  -- (cpse) -- cycle;
+
+
+% Titre
+\draw (cp)  node [xshift=-2cm,yshift=9cm,scale=8] {\textcolor{yellow}{Manuel}};
+\draw (cp)  node [xshift=-2cm,yshift=6.5cm,scale=3.5] {\textcolor{yellow}{de Mathématiques}};
+\draw (cp)  node [xshift=-2cm,yshift=4cm,scale=8] {\textcolor{yellow}{5\up{e}}};
+\draw (cp)  node [xshift=-6cm,yshift=-1.5cm]{\psHomothetie[linecolor=white](0,0){1.5}{\psBill}};
+
+\draw (cp)  node [xshift=5.5cm,yshift=0cm]{\psKangaroo[linecolor=yellow,fillcolor=blue]{3}};
+\draw (cp)  node [xshift=6.9cm,yshift=0cm]{\psKangaroo[linecolor=yellow,fillcolor=orange]{3}};
+\draw (cp)  node [xshift=7.63cm,yshift=-1.5cm,xscale=-1]{\psKangaroo[linecolor=yellow,fillcolor=violet]{3}};
+\draw (cp)  node [xshift=6.23cm,yshift=-1.5cm,xscale=-1]{\psKangaroo[linecolor=yellow,fillcolor=red]{3}};
+\draw (cp)  node [xshift=4.82cm,yshift=-1.5cm,xscale=-1]
+{\psKangaroo[linecolor=yellow,fillcolor=gray]{3}};
+\draw (cp)  node [xshift=5cm,yshift=-5cm,scale=3] {\textcolor{black}{\cursive Montpellier}};
+\draw (cp)  node [xshift=5cm,yshift=-7cm,scale=3] {\textcolor{black}{\cursive Collège Simone Veil}};
+
+% post'it
+\coordinate[xshift=-5.5cm,yshift=-9.5cm] (postit) at (cp);
+\postIt{(postit)}{-17}{1.75} {\footnotesize\cursive Nathalie Daval}{\footnotesize année}{\footnotesize 2022-2023}
+\end{tikzpicture}

@@ -1,0 +1,55 @@
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item Schéma du terrain d'Inès : \\
+      {\psset{unit=0.7}
+   \begin{pspicture}(0,-0.5)(10,6)
+      \pstGeonode[PointSymbol=none,PointName=none](0,1){a}(10,1){b}(0,4){c}(10,4){d}(0.33,0){f}(4.5,5.5){g}(6.33,0){h}(9,5){j}
+      \pstLineAB{a}{b}
+      \pstLineAB{c}{d}
+      \pstLineAB{f}{g}
+      \pstLineAB{h}{j}
+      \pstInterLL[PosAngle=-45,PointSymbol=none,PointName=none]{a}{b}{f}{g}{S}
+      \pstInterLL[PosAngle=-45,PointSymbol=none,PointName=none]{a}{b}{h}{j}{E}
+      \pstInterLL[PosAngle=-45,PointSymbol=none,PointName=none]{c}{d}{f}{g}{I}
+      \pstInterLL[PosAngle=-45,PointSymbol=none,PointName=none]{c}{d}{h}{j}{N}
+      \pstMarkAngle{j}{N}{I}{\udeg{121}}
+      \pstMarkAngle{E}{S}{I}{\udeg{49}}
+      \pstMarkAngle{I}{N}{E}{\blue\udeg{59}}
+      \pstMarkAngle{E}{N}{d}{\blue\udeg{121}}
+      \pstMarkAngle{d}{N}{j}{\blue\udeg{59}}
+      \pstMarkAngle{b}{E}{N}{\blue\udeg{59}}
+      \pstMarkAngle{h}{E}{b}{\blue\udeg{121}}
+      \pstMarkAngle{N}{E}{S}{\blue\udeg{121}}
+      \pstMarkAngle{S}{E}{h}{\blue\udeg{59}}
+      \pstMarkAngle{f}{S}{E}{\blue\udeg{131}}
+      \pstMarkAngle{I}{S}{a}{\blue\udeg{131}}
+      \pstMarkAngle{a}{S}{f}{\blue\udeg{49}}
+      \pstMarkAngle{f}{S}{E}{\blue\udeg{131}}
+      \pstMarkAngle{I}{S}{a}{\blue\udeg{131}}
+      \pstMarkAngle{g}{I}{e}{\blue\udeg{49}}
+      \pstMarkAngle{e}{I}{f}{\blue\udeg{131}}
+      \pstMarkAngle{d}{I}{g}{\blue\udeg{49}}
+      \pstMarkAngle{f}{I}{d}{\blue\udeg{131}}
+   \end{pspicture}}
+      \item Si les droites $(IS)$ ET $(NE)$ étaient parallèles, les angles correspondants en $I$ et $N$ par exemple seraient égaux, ce qui n'est pas le cas ici (\udeg{131}$\neq$\udeg{121}) donc, {\blue ces droites ne sont pas parallèles}.
+      \item Dans le quadrilatère $INES$, les droites $(IN)$ et $(SE)$ sont parallèles, mais les droites $(IS)$ et $(EN)$ ne le sont pas donc, {\blue le quadrilatère $INES$ est un trapèze}.
+   \end{enumerate}
+
+\bigskip
+
+\corec{Eratosthène et la circonférence de la Terre} %%%%%
+
+\medskip
+
+$\bullet$ On peut commencer par calculer la distance entre Syène et Alexandrie : \\
+un chameau met 50 jours pour faire cette distance et il parcourt 100 stades chaque jour, soit au total $50\times100 \text{ stades} =5\,000$ stades. \\
+Sachant qu'un stade mesure 157,5 m, la distance entre ces villes vaut $5\,000\times\um{157,5} =\um{787500}$. \\ \smallskip
+$\bullet$ Puis on calcule l'angle $\alpha$ au centre de la Terre : \\
+les angles $\alpha$ et \udeg{7,2} sont alternes-internes et on sait que les droites portées par les rayons solaires sont parallèles donc, $\alpha =\udeg{7,2}$. \\ \smallskip
+$\bullet$ Ensuite, on calcule la circonférence de la Terre par proportionnalité : \\
+\udeg{7,2} correspondent à un arc de cercle de \um{787500}. \\
+\udeg{1} correspond donc à $\um{787500}\div7,2 =\um{109375}$. \\
+L'angle au centre d'un cercle entier mesure \udeg{360} soit $\um{109375}\times360 =\um{39375000}$. \\ \smallskip
+$\bullet$ On en déduit la différence avec les données actuelles : $\ukm{40075}-\ukm{39375} =\ukm{700}$. \\
+{\blue Ératosthène s'est trompé de \ukm{700} \og seulement \fg.}
+

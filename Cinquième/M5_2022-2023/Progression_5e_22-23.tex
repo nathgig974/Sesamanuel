@@ -1,0 +1,99 @@
+%\usetikzlibrary{calc}
+%\themaL
+%\thispagestyle{empty}
+
+Ce manuel est composé de l'ensemble des activités, cours, exercices pour les classes de 5\up{e} du collège Simone Veil de Montpellier que j'ai à ma charge durant l'année 2022-2023. \\ [1mm]
+Il a été écrit en \LaTeX{} avec la classe \href{https://www.ctan.org/pkg/sesamanuel}{\blue sesamanuel} distribuée librement par l'association \href{http://www.sesamath.net}{\blue sesamath}. Si vous y voyez des erreurs ou des coquilles, même minimes, vous pouvez me les signaler à cette adresse : \href{mailto:nathalie.daval@ac-montpellier.fr}{nathalie.daval@ac-montpellier.fr} \\
+Je remercie à ce propos Jean-Félix Navarro qui a effectué une relecture attentive de ce livret. {\red à compléter avec seb, Christophe et sa classe)}  \\ [10mm]
+
+La progression est dite spiralée, c'est-à-dire que chaque \og chapitre \fg{} est décomposé en plusieurs séquences conçues pour durer une semaine en moyenne, ce qui permet de revoir les notions plusieurs fois dans l'année. La page suivante propose une programmation possible sur les cinq périodes (P1, P2, P3, P4 et P5) de l'année 2022-2023.
+
+Chaque séquence du présent manuel est composée de la manière suivante : \\
+\begin{itemize}
+   \item \textcolor{B2}{\sffamily\bfseries Connaissances et compétences associées} : les connaissances et compétences associées au cycle 4 définies par le \href{https://cache.media.eduscol.education.fr/file/A-Scolarite_obligatoire/37/5/Programme2020_cycle_3_comparatif_1313375.pdf}{programme en vigueur à compter de la rentrée de l'année scolaire 2018-2019}. \\
+   \item \textcolor{C1}{\sffamily\bfseries Débat} : un petit texte culturel illustré permettant d'échanger sur un thème en rapport au chapitre. Un morceau d'histoire, de l'étymologie, du vocabulaire, une curiosité mathématique\dots{} le tout agrémenté d'une courte vidéo de vulgarisation scientifique. \\
+   \item \colorbox{G2}{\textcolor{white}{\sffamily\bfseries Activité d'approche}} : une activité à faire en classe permettant de découvrir une notion du chapitre. \\
+   \item \colorbox{A2}{\textcolor{white}{\sffamily\bfseries Trace écrite}} : l'essentiel du cours à connaître. \\
+   \item \colorbox{C2}{\textcolor{white}{\sffamily\bfseries Entraînement}} : les exercices à faire en priorité.  \\   
+   \item \colorbox{PartieStatistique}{\textcolor{white}{\sffamily\bfseries Récréation, énigmes}} : une activité ludique liée au chapitre.
+   \item
+\end{itemize}
+
+
+{\red plans de travail à insérer quelques part}
+
+\ \\ [10mm]
+
+\vfill
+
+\pagebreak
+
+\newcommand\gm[2]{\rput(2,#1){\begin{minipage}{6cm}\centering\textcolor{Green}{#2}\end{minipage}}}
+\newcommand\nc[2]{\rput(6,#1){\begin{minipage}{7cm} \centering\textcolor{Crimson}{#2}\end{minipage}}}
+\newcommand\eg[2]{\rput(10,#1){\begin{minipage}{6cm}\centering\textcolor{DodgerBlue}{#2}\end{minipage}}}
+\newcommand\ogd[2]{\rput(14,#1){\begin{minipage}{6cm}\centering\textcolor{violet}{#2}\end{minipage}}}
+
+{\psset{xunit=1,yunit=0.7}
+
+
+{\small
+\begin{pspicture}(-0.5,0)(17,33)
+   \rput(0.5,35){\includegraphics[width=1cm]{Images/gm}}
+   \gm{35}{\bf Grandeurs\\\& mesures}
+   \rput(4.5,35){\includegraphics[width=1cm]{Images/nc}}
+   \nc{35}{\bf Nombres\\\& calculs}
+   \rput(8.5,35){\includegraphics[width=1cm]{Images/eg}}
+   \eg{35}{\bf Espace \&\\géométrie}
+   \rput(12.3,35){\includegraphics[width=1cm]{Images/ogd}}
+   \ogd{35}{\bf Organisation\\\& gestion\\de données}
+   \multido{\n=-1+1}{35}{\psline[linestyle=dotted,linecolor=gray](0,\n)(16,\n)}
+   \psline(-1,34)(17,34)
+   \rput(-0.5,30){$P_1$}
+   \psline(-1,26)(17,26)
+   \rput(-0.5,23){$P_2$}
+   \psline(-1,20)(17,20)
+   \rput(-0.5,16.5){$P_3$}
+   \psline(-1,13)(17,13)
+   \rput(-0.5,9.5){$P_4$}
+   \psline(-1,6)(17,6)
+   \rput(-0.5,2.5){$P_5$}
+   %%%%%%%%% P1
+   \rput(8,33.5){\gray Semaine de rentrée}
+   \nc{32.5}{Nombres et calculs 1\\1. Enchaînement d'opérations}
+   \eg{31.5}{Géométrie plane, démonstrations 1\\2. Angles particuliers}
+   \rput(8,30.5){3. En route vers la programmation ({\it Introduction... puis fil rouge tout au long de l'année})}
+   \nc{29.5}{Nombres et calculs 2\\4. Nombres relatifs}
+   \eg{28.5}{Représenter l'espace 1\\5. Repérage dans le plan}
+   \ogd{27.5}{Statistiques 1\\6. Interpréter, représenter des données}
+   \rput(8,26.5){\gray Semaine de rattrapage 1}
+   %%%%%%%%% P2
+   \gm{25.5}{Grandeurs mesurables 1\\7. Horaires et durées}
+   \nc{24.5}{Calcul littéral 1\\8. Expressions algébriques}
+   \eg{23.5}{Géométrie plane, démonstrations 2\\9. Somme des angles d'un triangle}
+   \ogd{22.5}{Probabilités 1\\10. Notions de probabilités}
+   \nc{21.5}{Arithmétique 1\\11. Multiples et diviseurs}
+   \rput(8,20.5){\gray Semaine de rattrapage 2}
+   %%%%%%%%% P3
+   \eg{19.5}{Géométrie plane, démonstrations 3\\12. La symétrie centrale}
+   \gm{18.5}{Grandeurs mesurables 2\\13. Calcul d'aires}
+   \nc{17.5}{Nombres et calculs 3\\14. Comparaison et égalité de fractions}
+   \eg{16.5}{Géométrie plane, démonstrations 4\\15. L'inégalité triangulaire}
+   \ogd{15.5}{Proportionnalité 1\\16. Proportionnalité}
+   \nc{14.5}{Calcul littéral 2\\17. La distributivité simple }
+   \rput(8,13.5){\gray Semaine de rattrapage 3}
+   %%%%%%%%% P4  
+   \eg{12.5}{Représenter l'espace 2\\18. Reconnaître des solides}
+   \gm{11.5}{Grandeurs mesurables 3\\19. Volume du prisme et du cylindre} 
+   \nc{10.5}{Nombres et calculs 4\\20. Somme et différence de nombres relatifs}
+   \eg{9.5}{Géométrie plane, démonstrations 5\\21. Le parallélogramme}
+   \ogd{8.5}{Proportionnalité 2\\22. Le ratio}
+   \nc{7.5}{Arithmétique 2\\23. Nombres premiers}
+   \rput(8,6.5){\gray Semaine de rattrapage 4}
+   %%%%%%%%% P5
+   \eg{5}{Représenter l'espace 3\\24. Représenter des solides}
+   \gm{3.5}{Grandeurs mesurables 4\\25. L'aire du parallélogramme}
+   \nc{2.5}{Nombres et calculs 5\\26. Somme et différence de fractions}
+   \ogd{1.5}{Statistiques 2\\27. Fréquence et moyenne}
+   \eg{0.5}{Géométrie plane, démonstrations 6\\28. Les droites du triangle}
+   \gm{-0.5}{Effet des transformations 1\\29. Propriétés des symétries}
+\end{pspicture}}
