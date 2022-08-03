@@ -184,7 +184,7 @@
 \RequirePackage[autolanguage]{numprint}
 %\RequirePackage[T1]{fontenc} %%%%%%%%%%%%%%%%
 
-%% ajout de packages
+% ajout de packages
 %\RequirePackage{lscape}
 %\RequirePackage{xlop}
 %%\RequirePackage{cancel}
@@ -198,7 +198,7 @@
 %\RequirePackage{scratch}
 %\RequirePackage{fancybox}
 %\usepackage{dashrule}
-
+\RequirePackage{setspace}
 
 %%%%%%%%%%macros personnelles %%%%%%%%%%%%
 %\newcommand{\compas}[5] %compas
@@ -1779,8 +1779,8 @@
   \fancyhf{}
   \fancyhead[LE]{\smc@headeven{ActiviteHeadFrame}{\StringActivitesApproche}}
   \fancyhead[RO]{\smc@headodd{ActiviteHeadFrame}{\StringActivitesApproche}}
-  \fancyfoot[LE]{\smc@footpage{D1!50}\smc@foottitleeven}
-  \fancyfoot[RO]{\smc@foottitleodd\smc@footpage{D1!50}}
+  \fancyfoot[LE]{\smc@footpage{ActiviteFootColor}\smc@foottitleeven}
+  \fancyfoot[RO]{\smc@foottitleodd\smc@footpage{ActiviteFootColor}}
   \fancyfoot[RE]{\textsc{\footnotesize N. Daval}}
   \fancyfoot[LO]{\textsc{\footnotesize N. Daval}}
 }
@@ -2163,11 +2163,11 @@
 \colorlet{AECartoucheCorrVCPColor}{B2}
 \colorlet{ActiviteHeadFrame0Color}{Blanc}
 \colorlet{ActiviteHeadFrame1Color}{white}
-\colorlet{ActiviteHeadFrame2Color}{D4}
-\colorlet{ActiviteHeadFrame3Color}{D3}
-\colorlet{ActiviteHeadFrame4Color}{D2}
-\colorlet{ActiviteHeadFrame5Color}{D1}
-\colorlet{ActiviteFootColor}{D3}
+\colorlet{ActiviteHeadFrame2Color}{H4}
+\colorlet{ActiviteHeadFrame3Color}{H3}
+\colorlet{ActiviteHeadFrame4Color}{H2}
+\colorlet{ActiviteHeadFrame5Color}{H1}
+\colorlet{ActiviteFootColor}{H3}
 \colorlet{FootChapterNumColor}{U1}
 \colorlet{ActiviteSubtitleColor}{C1}
 \colorlet{ActiviteNumColor}{Blanc}
@@ -2177,7 +2177,7 @@
 \colorlet{ActiviteActiviteBottomColor}{G2}
 \colorlet{ActiviteTitleColor}{C1}
 \colorlet{ActiviteItemColor}{C1}
-\colorlet{ActivitePartieColor}{D1}
+\colorlet{ActivitePartieColor}{H1}
 \colorlet{CoursHeadFrame0Color}{Blanc}
 \colorlet{CoursHeadFrame1Color}{white}
 \colorlet{CoursHeadFrame2Color}{A4}
@@ -2229,14 +2229,14 @@
 \colorlet{ExoBaseHeadFrame4Color}{B2}
 \colorlet{ExoBaseHeadFrame5Color}{B1}
 \colorlet{ExoBaseFootColor}{B3}
-\colorlet{ExerciceColumnRuleColor}{J1}
+\colorlet{ExerciceColumnRuleColor}{B1}
 \colorlet{ExercicesTitleColor}{C1}
-\colorlet{ExercicesTitleVRuleColor}{G2}
+\colorlet{ExercicesTitleVRuleColor}{J2}
 \colorlet{ExercicesTitleSquareColor}{J1}
-\colorlet{ExercicesTitleHRuleColor}{C3}
+\colorlet{ExercicesTitleHRuleColor}{J2}
 \colorlet{ExerciceNumColor}{Blanc}
 \colorlet{ExerciceTitleColor}{C1}
-\colorlet{ExerciceNumFrameColor}{G1}
+\colorlet{ExerciceNumFrameColor}{A1}
 \colorlet{ExerciceCorrigeNumFrameColor}{J1}
 \colorlet{ExerciceItemColor}{G1}
 \colorlet{ExercicePartieColor}{J1}
@@ -2284,18 +2284,18 @@
 \colorlet{TPPartieNumColor}{Blanc}
 \colorlet{RecreationHeadFrame0Color}{Blanc}
 \colorlet{RecreationHeadFrame1Color}{white}
-\colorlet{RecreationHeadFrame2Color}{H4}
-\colorlet{RecreationHeadFrame3Color}{H3}
-\colorlet{RecreationHeadFrame4Color}{H2}
-\colorlet{RecreationHeadFrame5Color}{H1}
-\colorlet{RecreationFootColor}{H3}
-\colorlet{RecreationTitleColor}{H1}
+\colorlet{RecreationHeadFrame2Color}{Fuchsia!25}
+\colorlet{RecreationHeadFrame3Color}{Fuchsia!50}
+\colorlet{RecreationHeadFrame4Color}{Fuchsia!75}
+\colorlet{RecreationHeadFrame5Color}{Fuchsia}
+\colorlet{RecreationFootColor}{Fuchsia!50}
+\colorlet{RecreationTitleColor}{Fuchsia}
 \colorlet{RecreationItemColor}{U3}
 \colorlet{RecreationPartieColor}{J1}
 \colorlet{CorrigeHeadFrameColor}{J2}
 \colorlet{CorrigeColumnRuleColor}{J1}
 \colorlet{CorrigeAETitleColor}{F1}
-\colorlet{CorrigeExercicesBaseTitleColor}{C2}
+\colorlet{CorrigeExercicesBaseTitleColor}{C1}
 \colorlet{CorrigeExercicesApprTitleColor}{C2}
 \colorlet{CorrigeConnaissancesTitleColor}{G1}
 \colorlet{CorrigeQCMItemNumColor}{G1}
@@ -2392,7 +2392,7 @@
 \newcommand*\FootLibrePageFont{\fontsize{11}{14.4}\sffamily\bfseries}
 \newcommand*\LibreSectionTitleFont{\fontsize{14.4}{14.4}\sffamily\bfseries}
 \newcommand*\LibrePartieFont{\fontsize{10.5}{14.4}\bfseries}
-\def\SquareWidth{3mm}
+\def\SquareWidth{3mm} %%%
 \def\ItemRuleWidth{1.5mm}
 \def\ItemRuleHeight{1.5mm}
 \def\ItemRuleDepth{0mm}
@@ -2419,7 +2419,7 @@
 \def\FrameSep{3mm}
 \def\FrameLineWidth{1pt}
 \edef\FrameArc{\the\dimexpr \SquareWidth/2}
-\def\RuleWidth{1pt}
+\def\RuleWidth{0.5pt}
 \def\BeforeCadreVSpace{1.5mm}
 \def\AfterCadreVSpace{1.5mm}
 \def\BeforeTableVSpace{1.5mm}
@@ -2542,7 +2542,7 @@
 \def\QCMLabelWidth{6mm}
 \def\BeforeQCMVSpace{2mm plus1mm minus1mm}
 \def\AfterQCMVSpace{0mm plus1mm}
-\def\QCMLineWidth{1mm}
+\def\QCMLineWidth{0.5mm}
 \def\QCMFrameSep{1mm}
 \edef\QCMLineArc{\SquareWidth}
 \def\BeforeTPPartieVSpace{3mm plus1mm minus1mm}
@@ -2583,7 +2583,7 @@
 \newcommand*\StringColitemize{colitemize}
 \newcommand*\StringColenumerate{colenumerate}
 \newcommand*\StringPrerequis{Connaissances $\heartsuit$ et compétences $\diamondsuit$ du cycle 4}
-\newcommand*\StringActivitesApproche{Activit\'es d'approche}
+\newcommand*\StringActivitesApproche{Activit\'e d'approche}
 \newcommand*\StringCoursMethodes{Trace écrite}
 \newcommand*\StringExercicesBase{Entraînement}
 \newcommand*\StringExercicesAppr{Approfondir}
@@ -4274,18 +4274,18 @@
   \begin{lrbox}{\smc@boxa}
     \minipage{\dimexpr\linewidth}
       \par\null
-      \pnode(\dimexpr -\QCMFrameSep*2,
-             \dimexpr \QCMFrameSep+\QCMLineWidth/2){A}
-      \pnode(\dimexpr \linewidth+\QCMFrameSep,
-             \dimexpr +\QCMFrameSep+\QCMLineWidth/2){B}
+      \pnode(\dimexpr -\QCMFrameSep*5,
+             \dimexpr \QCMFrameSep+\QCMLineWidth){A}
+      \pnode(\dimexpr \linewidth+\QCMFrameSep*5,
+             \dimexpr +\QCMFrameSep+\QCMLineWidth){B}
       \par
 }
 {%
       \par\vspace{-\baselineskip}
-      \pnode(\dimexpr -\QCMFrameSep*2,
-             \dimexpr -\QCMFrameSep-\QCMLineWidth/2){C}
-      \pnode(\dimexpr \linewidth+\QCMFrameSep,
-             \dimexpr -\QCMFrameSep-\QCMLineWidth/2){D}
+      \pnode(\dimexpr -\QCMFrameSep*5,
+             \dimexpr -\QCMFrameSep-\QCMLineWidth*5){C}
+      \pnode(\dimexpr \linewidth+\QCMFrameSep*5,
+             \dimexpr -\QCMFrameSep-\QCMLineWidth*5){D}
       \psRelNode(A)(C){0.5}{AC}
       \psRelNode(B)(D){0.5}{BD}
     \endminipage
@@ -4679,12 +4679,12 @@
   \def\smc@currpart{CorrigeExoBase}%
   \def\smc@BeforeCorrige{%
     \par\addvspace{\BeforeCorrigePartieTitleVSpace}
-    \textcolor{CorrigeExercicesBaseTitleColor}
-              {\CorrigePartieFont \StringExercicesBase}
+    %\textcolor{CorrigeExercicesBaseTitleColor}
+             % {\CorrigePartieFont \StringExercicesBase}
     \par\nobreak
     \def\smc@BeforeCorrige{\par}%
   }%
-  \colorlet{CorrigeNumExerciceFrameBkg}{J1}%
+  \colorlet{CorrigeNumExerciceFrameBkg}{A1}%
   \colorlet{CorrigeNumExerciceFrameTxt}{Blanc}%
 }
 \newcommand\smc@corrigeexercicesappr{%
