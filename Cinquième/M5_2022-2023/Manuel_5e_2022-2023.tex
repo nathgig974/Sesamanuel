@@ -1,4 +1,4 @@
-\listfiles
+%\listfiles
 
 \PassOptionsToPackage{table}{xcolor}
 \PassOptionsToPackage{svgnames}{xcolor}
@@ -6,17 +6,19 @@
 \documentclass[nocrop]{sesamanuel_college_5e_new}
 \renewcommand\PrefixeCorrection{Corrections/}
 \usepackage{etex}
-\usepackage{ProfCollegeNewCAN}
-  
+\usepackage{ProfCollege}
+
+%\renewcommand\ListeMethodesThemes{{n}{N},{d}{D},{g}{G},{m}{M},{a}{A}}
+ 
 \begin{document}
 
 \frontmatter
-\include{1ere_de_couverture_5e_22-23}
-%
+%\include{1ere_de_couverture_5e_22-23}
+
 \mainmatter
-\include{Progression_5e_22-23}
-\include{Sommaire_5e_22-23}
-%
+%\include{Progression_5e_22-23}
+%\include{Sommaire_5e_22-23}
+
 \input{../../S01_Enchainement_d_operations/NewM5_S01_Enchainement_d_operations}
 %\input{../../S02_Les_angles/M5_S02_Les_angles}
 %\input{../../S03_Aires_et_perimetres/M5_S03_Aires_et_perimetres}
@@ -50,7 +52,9 @@
 %
 %\AfficheCorriges[2]
 %
-%\backmatter
+\include{Plans_de_travail_22-23}
+
+\backmatter
 %\include{4e_de_couverture_22-23}
 
 \end{document}

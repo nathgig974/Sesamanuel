@@ -1,5 +1,3 @@
-\usetikzlibrary{calc}
-
 \tikzset{fondA/.style=yellow}
 \tikzset{fondB/.style=purple}
 
@@ -8,14 +6,14 @@
 % fond bicolore
 \coordinate (cp) at (current page);
 \coordinate (cpc) at (current page.center);
-\coordinate (cpe) at ($ (current page.east) + (1.7cm,0cm) $);
-\coordinate (cpne) at ($ (current page.north east) + (1.7cm,2.9cm) $);
-\coordinate (cpn) at ($ (current page.north) + (1.5cm,2.9cm) $);
-\coordinate (cpnw) at ($ (current page.north west) + (-0.2cm,2.9cm) $);
-\coordinate (cpw) at ($ (current page.west) + (-0.2cm,0cm) $);
-\coordinate (cpsw) at ($ (current page.south west) + (-0.2cm,-0.2cm) $);
-\coordinate (cps) at ($ (current page.south) + (1.5cm,-0.2cm) $);
-\coordinate (cpse) at ($ (current page.south east) + (1.7cm,-0.2cm) $);
+\coordinate (cpe) at ($ (current page.east) + (0.75cm,0cm) $);
+\coordinate (cpne) at ($ (current page.north east) + (0.75cm,1.4cm) $);
+\coordinate (cpn) at ($ (current page.north) + (1cm,1.4cm) $);
+\coordinate (cpnw) at ($ (current page.north west) + (-0.75cm,1.4cm) $);
+\coordinate (cpw) at ($ (current page.west) + (-0.75cm,0cm) $);
+\coordinate (cpsw) at ($ (current page.south west) + (-0.75cm,-1.4cm) $);
+\coordinate (cps) at ($ (current page.south) + (0.75cm,-1.4cm) $);
+\coordinate (cpse) at ($ (current page.south east) + (0.75cm,-1.4cm) $);
 \fill[fondA] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpnw)  -- (cpsw) -- cycle;
 \fill[fondB] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpne)  -- (cpse) -- cycle;
 

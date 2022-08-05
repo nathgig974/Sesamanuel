@@ -1,4 +1,3 @@
-%%
 %% This is file `sesamanuel.cls',
 %% generated with the docstrip utility.
 %%
@@ -9,23 +8,7 @@
 %% sesamanuel.dtx
 %% Copyright 2014-2015 Sesamath, J.-C. Charpentier, S. Mengin
 %% Class `sesamanuel' to use with LaTeX 2e
-%% Copyright (C) 2014-2015 Sesamath, Jean-C\^ome Charpentier, S\'ebastien
-%% Mengin.
-%% \CharacterTable
-%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
-%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
-%%   Digits        \0\1\2\3\4\5\6\7\8\9
-%%   Exclamation   \!     Double quote  \"     Hash (number) \#
-%%   Dollar        \$     Percent       \%     Ampersand     \&
-%%   Acute accent  \'     Left paren    \(     Right paren   \)
-%%   Asterisk      \*     Plus          \+     Comma         \,
-%%   Minus         \-     Point         \.     Solidus       \/
-%%   Colon         \:     Semicolon     \;     Less than     \<
-%%   Equals        \=     Greater than  \>     Question mark \?
-%%   Commercial at \@     Left bracket  \[     Backslash     \\
-%%   Right bracket \]     Circumflex    \^     Underscore    \_
-%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
-%%   Right brace   \}     Tilde         \~}
+%% Copyright (C) 2014-2015 Sesamath, Jean-C\^ome Charpentier, S\'ebastien Mengin.
 %%
 \def\filedate{2015/03/03}
 \let\smcfiledate\filedate
@@ -671,13 +654,13 @@
     \smc@nbline \numexpr \smc@nbitem+\smc@nbcolumn-1
     \divide\smc@nbline \smc@nbcolumn
     \multido{\n=1+1}{\smc@nbline}{%
-      \multido{\ni=\n+\the\smc@nbline}{\smc@nbcolumn}{%
-        \unless\ifnum\ni>\smc@nbitem
+      \multido{\i=\n+\the\smc@nbline}{\smc@nbcolumn}{%
+        \unless\ifnum\i>\smc@nbitem
           \makebox[\ListLabelWidth]{\textcolor{#2}{#3}\hss}%
           \begin{minipage}[t]{\dimexpr
               (\linewidth-\ListHSep*(\smc@nbcolumn-1))%
                 /\smc@nbcolumn-\ListLabelWidth}
-            \strut\@nameuse{smc@item\ni}\strut
+            \strut\@nameuse{smc@item\i}\strut
           \end{minipage}%
           \hspace{\ListHSep}%
         \fi
@@ -1842,55 +1825,55 @@
   \fancyfoot[RO]{\smc@foottitleodd\smc@footpage{RecreationFootColor}}
 }
 \newcommand*\smc@firstheadevenannexe[1]{%
-  \begin{pspicture}(0,0)(0,0)
-    \rput(-\smc@marginleft, \dimexpr \smc@margintop-\smc@headsep){%
-      \pspolygon[linestyle=none, linewidth=0pt,
-                 fillstyle=solid, fillcolor=#1]
-                (-\smc@bleed, \smc@bleed)
-                (-\smc@bleed, \dimexpr -\smc@paperheight-\smc@bleed)
-                (\CorrigeHeadFrameWidth, \dimexpr -\smc@paperheight-\smc@bleed)
-                (\CorrigeHeadFrameWidth, -\CorrigeHeadFrameWidth)
-                (\dimexpr \CorrigeHeadFrameWidth*2, -\CorrigeHeadFrameWidth)
-                (\dimexpr \CorrigeHeadFrameWidth*2, \smc@bleed)
-    }
-  \end{pspicture}%
+%  \begin{pspicture}(0,0)(0,0)
+%    \rput(-\smc@marginleft, \dimexpr \smc@margintop-\smc@headsep){%
+%      \pspolygon[linestyle=none, linewidth=0pt,
+%                 fillstyle=solid, fillcolor=#1]
+%                (-\smc@bleed, \smc@bleed)
+%                (-\smc@bleed, \dimexpr -\smc@paperheight-\smc@bleed)
+%                (\CorrigeHeadFrameWidth, \dimexpr -\smc@paperheight-\smc@bleed)
+%                (\CorrigeHeadFrameWidth, -\CorrigeHeadFrameWidth)
+%                (\dimexpr \CorrigeHeadFrameWidth*2, -\CorrigeHeadFrameWidth)
+%                (\dimexpr \CorrigeHeadFrameWidth*2, \smc@bleed)
+%    }
+%  \end{pspicture}%
 }
 \newcommand*\smc@firstheadoddannexe[1]{%
-  \begin{pspicture}(0,0)(0,0)
-    \rput(\smc@marginright,\dimexpr \smc@margintop-\smc@headsep){%
-      \pspolygon[linestyle=none, linewidth=0pt, fillstyle=solid, fillcolor=#1]
-        (\smc@bleed, \smc@bleed)
-        (\smc@bleed, \dimexpr -\smc@paperheight-\smc@bleed)
-        (-\CorrigeHeadFrameWidth, \dimexpr -\smc@paperheight-\smc@bleed)
-        (-\CorrigeHeadFrameWidth, -\CorrigeHeadFrameWidth)
-        (\dimexpr -\CorrigeHeadFrameWidth*2, -\CorrigeHeadFrameWidth)
-        (\dimexpr -\CorrigeHeadFrameWidth*2, \smc@bleed)
-    }
-  \end{pspicture}%
+%  \begin{pspicture}(0,0)(0,0)
+%    \rput(\smc@marginright,\dimexpr \smc@margintop-\smc@headsep){%
+%      \pspolygon[linestyle=none, linewidth=0pt, fillstyle=solid, fillcolor=#1]
+%        (\smc@bleed, \smc@bleed)
+%        (\smc@bleed, \dimexpr -\smc@paperheight-\smc@bleed)
+%        (-\CorrigeHeadFrameWidth, \dimexpr -\smc@paperheight-\smc@bleed)
+%        (-\CorrigeHeadFrameWidth, -\CorrigeHeadFrameWidth)
+%        (\dimexpr -\CorrigeHeadFrameWidth*2, -\CorrigeHeadFrameWidth)
+%        (\dimexpr -\CorrigeHeadFrameWidth*2, \smc@bleed)
+%    }
+%  \end{pspicture}%
 }
 \newcommand*\smc@headevenannexe[1]{%
-  \begin{pspicture}(0,0)(0,0)
-    \rput(-\smc@marginleft, \dimexpr \smc@margintop-\smc@headsep){%
-      \pspolygon[linestyle=none, linewidth=0pt, fillstyle=solid, fillcolor=#1]
-        (-\smc@bleed, \smc@bleed)
-        (-\smc@bleed, \dimexpr -\smc@paperheight-\smc@bleed)
-        (\CorrigeHeadFrameWidth, \dimexpr -\smc@paperheight-\smc@bleed)
-        (\CorrigeHeadFrameWidth, \smc@bleed)
-    }
-  \end{pspicture}%
+%  \begin{pspicture}(0,0)(0,0)
+%    \rput(-\smc@marginleft, \dimexpr \smc@margintop-\smc@headsep){%
+%      \pspolygon[linestyle=none, linewidth=0pt, fillstyle=solid, fillcolor=#1]
+%        (-\smc@bleed, \smc@bleed)
+%        (-\smc@bleed, \dimexpr -\smc@paperheight-\smc@bleed)
+%        (\CorrigeHeadFrameWidth, \dimexpr -\smc@paperheight-\smc@bleed)
+%        (\CorrigeHeadFrameWidth, \smc@bleed)
+%    }
+%  \end{pspicture}%
 }
 \newcommand*\smc@headoddannexe[1]{%
-  \begin{pspicture}(0,0)(0,0)
-    \rput(\smc@marginright,\dimexpr \smc@margintop-\smc@headsep){%
-      \pspolygon[linestyle=none, linewidth=0pt,
-                 fillstyle=solid, fillcolor=#1]
-                (\smc@bleed,\smc@bleed)
-                (\smc@bleed, \dimexpr -\smc@paperheight-\smc@bleed)
-                (-\CorrigeHeadFrameWidth,
-                 \dimexpr -\smc@paperheight-\smc@bleed)
-                (-\CorrigeHeadFrameWidth, \smc@bleed)
-    }
-  \end{pspicture}%
+%  \begin{pspicture}(0,0)(0,0)
+%    \rput(\smc@marginright,\dimexpr \smc@margintop-\smc@headsep){%
+%      \pspolygon[linestyle=none, linewidth=0pt,
+%                 fillstyle=solid, fillcolor=#1]
+%                (\smc@bleed,\smc@bleed)
+%                (\smc@bleed, \dimexpr -\smc@paperheight-\smc@bleed)
+%                (-\CorrigeHeadFrameWidth,
+%                 \dimexpr -\smc@paperheight-\smc@bleed)
+%                (-\CorrigeHeadFrameWidth, \smc@bleed)
+%    }
+%  \end{pspicture}%
 }
 \fancypagestyle{firstcorrige}{%
   \fancyhf{}
@@ -2049,7 +2032,7 @@
 \fancypagestyle{empty}{%
   \fancyhead{}
 }
-\definecolor{A1}                {cmyk}{1.00, 0.00, 0.00, 0.50}
+\definecolor{A1}{cmyk}{1.00, 0.00, 0.00, 0.50}
 \definecolor{A2}                {cmyk}{0.60, 0.00, 0.00, 0.10}
 \definecolor{A3}                {cmyk}{0.30, 0.00, 0.00, 0.05}
 \definecolor{A4}                {cmyk}{0.10, 0.00, 0.00, 0.00}
@@ -2157,7 +2140,7 @@
 \colorlet{AETitleColor}{Blanc}
 \colorlet{AEExoNumColor}{Blanc}
 \colorlet{AEExoNumFrameColor}{J1}
-\colorlet{AEFrameColor}{FondAutoEvaluation}
+\colorlet{AEFrameColor}{J4}
 \colorlet{AECartoucheCorrBkgColor}{J2}
 \colorlet{AECartoucheCorrArrowColor}{G2}
 \colorlet{AECartoucheCorrVCPColor}{B2}
@@ -2175,8 +2158,8 @@
 \colorlet{ActiviteDebatBottomColor}{D4}
 \colorlet{ActiviteActiviteTopColor}{D3}
 \colorlet{ActiviteActiviteBottomColor}{G2}
-\colorlet{ActiviteTitleColor}{C1}
-\colorlet{ActiviteItemColor}{C1}
+\colorlet{ActiviteTitleColor}{B1}
+\colorlet{ActiviteItemColor}{B1}
 \colorlet{ActivitePartieColor}{H1}
 \colorlet{CoursHeadFrame0Color}{Blanc}
 \colorlet{CoursHeadFrame1Color}{white}
@@ -2230,15 +2213,15 @@
 \colorlet{ExoBaseHeadFrame5Color}{B1}
 \colorlet{ExoBaseFootColor}{B3}
 \colorlet{ExerciceColumnRuleColor}{B1}
-\colorlet{ExercicesTitleColor}{C1}
+\colorlet{ExercicesTitleColor}{B1}
 \colorlet{ExercicesTitleVRuleColor}{J2}
 \colorlet{ExercicesTitleSquareColor}{J1}
 \colorlet{ExercicesTitleHRuleColor}{J2}
 \colorlet{ExerciceNumColor}{Blanc}
-\colorlet{ExerciceTitleColor}{C1}
-\colorlet{ExerciceNumFrameColor}{A1}
-\colorlet{ExerciceCorrigeNumFrameColor}{J1}
-\colorlet{ExerciceItemColor}{G1}
+\colorlet{ExerciceTitleColor}{B1}
+\colorlet{ExerciceNumFrameColor}{B1}
+\colorlet{ExerciceCorrigeNumFrameColor}{B1}
+\colorlet{ExerciceItemColor}{A1}
 \colorlet{ExercicePartieColor}{J1}
 \colorlet{ExerciceRefMethodeColor}{A2}
 \colorlet{ExoApprHeadFrame0Color}{Blanc}
@@ -2284,18 +2267,18 @@
 \colorlet{TPPartieNumColor}{Blanc}
 \colorlet{RecreationHeadFrame0Color}{Blanc}
 \colorlet{RecreationHeadFrame1Color}{white}
-\colorlet{RecreationHeadFrame2Color}{Fuchsia!25}
-\colorlet{RecreationHeadFrame3Color}{Fuchsia!50}
-\colorlet{RecreationHeadFrame4Color}{Fuchsia!75}
-\colorlet{RecreationHeadFrame5Color}{Fuchsia}
-\colorlet{RecreationFootColor}{Fuchsia!50}
-\colorlet{RecreationTitleColor}{Fuchsia}
+\colorlet{RecreationHeadFrame2Color}{HotPink!25}
+\colorlet{RecreationHeadFrame3Color}{HotPink!50}
+\colorlet{RecreationHeadFrame4Color}{HotPink!75}
+\colorlet{RecreationHeadFrame5Color}{HotPink}
+\colorlet{RecreationFootColor}{HotPink!50}
+\colorlet{RecreationTitleColor}{HotPink}
 \colorlet{RecreationItemColor}{U3}
 \colorlet{RecreationPartieColor}{J1}
 \colorlet{CorrigeHeadFrameColor}{J2}
-\colorlet{CorrigeColumnRuleColor}{J1}
+\colorlet{CorrigeColumnRuleColor}{B1}
 \colorlet{CorrigeAETitleColor}{F1}
-\colorlet{CorrigeExercicesBaseTitleColor}{C1}
+\colorlet{CorrigeExercicesBaseTitleColor}{B1}
 \colorlet{CorrigeExercicesApprTitleColor}{C2}
 \colorlet{CorrigeConnaissancesTitleColor}{G1}
 \colorlet{CorrigeQCMItemNumColor}{G1}
@@ -2319,9 +2302,9 @@
 \newcommand*\ChapterTitleFont{\fontsize{40}{40}\sffamily\bfseries}
 \newcommand*\ChapAppFont{\fontsize{15}{18}\sffamily}
 \newcommand*\ChapterNumFont{\fontsize{88}{106}\sffamily}
-\newcommand*\PrerequisTitleFont{\fontsize{14.4}{17.28}\sffamily\bfseries}
+\newcommand*\PrerequisTitleFont{\fontsize{12}{14.4}\sffamily\bfseries}
 \newcommand*\PrerequisTextFont{\fontsize{9.5}{14.4}\sffamily}
-\newcommand*\AETitleFont{\fontsize{15}{18}\sffamily\bfseries}
+\newcommand*\AETitleFont{\fontsize{12}{14.4}\sffamily\bfseries}
 \newcommand*\AEExoNumFont{\fontsize{9.5}{14.4}\sffamily\bfseries}
 \newcommand*\AECartoucheCorrArrowFont{\fontsize{12}{14.4}}
 \newcommand*\AECartoucheCorrVCPFont{\fontsize{9.5}{14.4}\sffamily}
@@ -2380,7 +2363,7 @@
 \newcommand*\CorrigeQCMItemNumFont{\fontsize{9.5}{14.4}\sffamily}
 \newcommand*\FootAnnexeTxtFont{\fontsize{11}{14.4}\sffamily}
 \newcommand*\FootAnnexePageFont{\fontsize{11}{14.4}\sffamily\bfseries}
-\newcommand*\AnnexeTitleFont{\fontsize{35}{35}\sffamily}
+\newcommand*\AnnexeTitleFont{\fontsize{20}{20}\sffamily}
 \newcommand*\AnnexeSectionTitleFont{\fontsize{14.4}{14.4}\sffamily\bfseries}
 \newcommand*\ProprieteFont{\fontsize{10}{14.4}\sffamily}
 \newcommand*\NumProprieteFont{\fontsize{10}{14.4}\sffamily\bfseries}
@@ -2415,13 +2398,13 @@
 \def\FootFrameSep{1mm}
 \def\AlgoIndent{1em}
 \def\CadreSep{2mm}
-\def\CadreLineWidth{0.5mm}
+\def\CadreLineWidth{0.2mm}
 \def\FrameSep{3mm}
 \def\FrameLineWidth{1pt}
 \edef\FrameArc{\the\dimexpr \SquareWidth/2}
 \def\RuleWidth{0.5pt}
-\def\BeforeCadreVSpace{1.5mm}
-\def\AfterCadreVSpace{1.5mm}
+\def\BeforeCadreVSpace{1mm}
+\def\AfterCadreVSpace{1mm}
 \def\BeforeTableVSpace{1.5mm}
 \def\AfterTableVSpace{1.5mm}
 \def\HabillageGap{2mm}
@@ -2447,11 +2430,11 @@
 \def\ThemaBottomFrame{5.7cm}
 \def\ThemaTopFrame{6.6cm}
 \def\PrerequisTitleVSpace{1mm}
-\def\AETitleWidth{8cm}
-\edef\AETitleHeight{\the\dimexpr \SquareWidth*3}
+\def\AETitleWidth{7.5cm}
+\edef\AETitleHeight{\the\dimexpr \SquareWidth*2}
 \def\AEFrameVSep{4mm}
 \edef\AEFrameHSep{\SquareWidth}
-\edef\AEFrameRuleWidth{\the\dimexpr\SquareWidth/2}
+\edef\AEFrameRuleWidth{\the\dimexpr \SquareWidth/2}
 \edef\AEExoFrameWidth{\the\dimexpr \SquareWidth*2}
 \def\AEExoFrameTopSep{1mm}
 \def\AfterAEExoFrameHSpace{2mm}
@@ -2462,14 +2445,14 @@
 \def\AEManuelRightSpace{1mm}
 \def\AELogoManuelWidth{9mm}
 \def\AfterAEManuelVSpace{3mm}
-\def\BeforeActiviteVSpace{5mm}
+\def\BeforeActiviteVSpace{5mm} %%%%%%%%%%%%
 \newdimen\ActiviteTitleTopHeight
 \ActiviteTitleTopHeight 6mm
 \def\ActiviteTitleBottomHeight{1.5mm}
 \def\ActiviteTitleLeftSpace{2mm}
 \def\ActiviteTitleRightSpace{1mm}
 \def\AfterActiviteTitleHSpace{2mm}
-\def\AfterActiviteTitleVSpace{3mm}
+\def\AfterActiviteTitleVSpace{0mm}
 \def\BeforeActivitePartieVSpace{1.5mm}
 \def\AfterActivitePartieVSpace{1mm}
 \def\BeforeSectionVSpace{10mm}
@@ -2590,7 +2573,7 @@
 \newcommand*\StringTestConnaissances{Je teste mes connaissances}
 \newcommand*\StringConnaissances{Auto-\'evaluation QCM}
 \newcommand*\StringTravauxPratiques{Travaux pratiques}
-\newcommand*\StringAE{Auto-\'evaluation}
+\newcommand*\StringAE{Ce que sait faire l'élève en 5\up{e}}
 \newcommand*\StringVoirCorriges{Voir solutions p.}
 \newcommand*\StringManuel{Des ressources num\'eriques pour pr\'eparer le chapitre sur \textcolor{U4}{\LogoURLManuelFont manuel.sesamath.net}}
 \newcommand*\StringALGO{ALGO}
@@ -2685,41 +2668,41 @@
 }
 \def\smc@rounddiagonal(#1,#2)#3{%
   \pscircle*[linecolor=#33Color]
-          (\dimexpr #1+\SquareWidth/2,
-           \dimexpr #2+\SquareWidth/2)
-          {\dimexpr \SquareWidth/2}
+          (\dimexpr #1+\SquareWidth/3,
+           \dimexpr #2+\SquareWidth/3)
+          {\dimexpr \SquareWidth/3}
   \pscircle*[linecolor=#32Color]
-          (\dimexpr #1+\SquareWidth/2+\SquareWidth,
-           \dimexpr #2+\SquareWidth/2)
-          {\dimexpr \SquareWidth/2}
+          (\dimexpr #1+\SquareWidth/3+\SquareWidth/3*2,
+           \dimexpr #2+\SquareWidth/3)
+          {\dimexpr \SquareWidth/3}
   \pscircle*[linecolor=#31Color]
-          (\dimexpr #1+\SquareWidth/2+\SquareWidth*2,
-           \dimexpr #2+\SquareWidth/2)
-          {\dimexpr \SquareWidth/2}
+          (\dimexpr #1+\SquareWidth/3+\SquareWidth/3*4,
+           \dimexpr #2+\SquareWidth/3)
+          {\dimexpr \SquareWidth/3}
   \pscircle*[linecolor=#34Color]
-          (\dimexpr #1+\SquareWidth/2,
-           \dimexpr #2+\SquareWidth/2+\SquareWidth)
-          {\dimexpr \SquareWidth/2}
+          (\dimexpr #1+\SquareWidth/3,
+           \dimexpr #2+\SquareWidth/3+\SquareWidth/3*2)
+          {\dimexpr \SquareWidth/3}
   \pscircle*[linecolor=#33Color]
-          (\dimexpr #1+\SquareWidth/2+\SquareWidth,
-           \dimexpr #2+\SquareWidth/2+\SquareWidth)
-          {\dimexpr \SquareWidth/2}
+          (\dimexpr #1+\SquareWidth/3+\SquareWidth/3*2,
+           \dimexpr #2+\SquareWidth/3+\SquareWidth/3*2)
+          {\dimexpr \SquareWidth/3}
   \pscircle*[linecolor=#32Color]
-          (\dimexpr #1+\SquareWidth/2+\SquareWidth*2,
-           \dimexpr #2+\SquareWidth/2+\SquareWidth)
-          {\dimexpr \SquareWidth/2}
+          (\dimexpr #1+\SquareWidth/3+\SquareWidth/3*4,
+           \dimexpr #2+\SquareWidth/3+\SquareWidth/3*2)
+          {\dimexpr \SquareWidth/3}
   \pscircle*[linecolor=#35Color]
-          (\dimexpr #1+\SquareWidth/2,
-           \dimexpr #2+\SquareWidth/2+\SquareWidth*2)
-          {\dimexpr \SquareWidth/2}
+          (\dimexpr #1+\SquareWidth/3,
+           \dimexpr #2+\SquareWidth/3+\SquareWidth/3*4)
+          {\dimexpr \SquareWidth/3}
   \pscircle*[linecolor=#34Color]
-          (\dimexpr #1+\SquareWidth/2+\SquareWidth,
-           \dimexpr #2+\SquareWidth/2+\SquareWidth*2)
-          {\dimexpr \SquareWidth/2}
+          (\dimexpr #1+\SquareWidth/3+\SquareWidth/3*2,
+           \dimexpr #2+\SquareWidth/3+\SquareWidth/3*4)
+          {\dimexpr \SquareWidth/3}
   \pscircle*[linecolor=#33Color]
-          (\dimexpr #1+\SquareWidth/2+\SquareWidth*2,
-           \dimexpr #2+\SquareWidth/2+\SquareWidth*2)
-          {\dimexpr \SquareWidth/2}
+          (\dimexpr #1+\SquareWidth/3+\SquareWidth/3*4,
+           \dimexpr #2+\SquareWidth/3+\SquareWidth/3*4)
+          {\dimexpr \SquareWidth/3}
   \ignorespaces
 }
 \def\smc@roundantidiagonal(#1,#2)#3{%
@@ -2771,16 +2754,16 @@
   %\setcounter{chapter}{0}%
 }
 \newcommand*\smc@themaNColor{%
-  \def\CorrigeChapterFrameColor{Crimson}%
+  \def\CorrigeChapterFrameColor{Red}%
   \def\CorrigeChapterTextColor{Blanc}%
-  \colorlet{ChapterNumFrameColor}{Crimson}%
-  \colorlet{FootTitleHeadColor}{Crimson}%
-  \colorlet{ChapterTopFrameColor}{Crimson!50}%
-  \colorlet{ChapterNumSquare2Color}{Crimson!25}%
-  \colorlet{ChapterNumSquare3Color}{Crimson!50}%
-  \colorlet{ChapterNumSquare4Color}{Crimson!75}%
-  \colorlet{ChapterNumSquare5Color}{Crimson}%
-  \colorlet{FirstChapterFootColor}{Crimson!50}%
+  \colorlet{ChapterNumFrameColor}{Red}%
+  \colorlet{FootTitleHeadColor}{Red}%
+  \colorlet{ChapterTopFrameColor}{Red!50}%
+  \colorlet{ChapterNumSquare2Color}{Red!25}%
+  \colorlet{ChapterNumSquare3Color}{Red!50}%
+  \colorlet{ChapterNumSquare4Color}{Red!75}%
+  \colorlet{ChapterNumSquare5Color}{Red}%
+  \colorlet{FirstChapterFootColor}{Red!50}%
 }
 \newcommand*\themaG{% geometrie
   \cleardoubleoddpage
@@ -2921,6 +2904,7 @@
       \colorlet{ChapterNumSquare4Color}{#7}%
       \colorlet{ChapterNumSquare5Color}{#6}%
       \colorlet{FirstChapterFootColor}{#7}%
+      \setcounter{chapter}{0}% AjoutSeb -> Initialiser la numérotation des themes perso ajoutés avec \newThema
     }%
   \fi
 }
@@ -3066,16 +3050,16 @@
       \endminipage
     \end{smc@cadre}
   \endgroup
-  \hspace*{\stretch{1}}%
-  \begin{minipage}[b]{\AEManuelWidth}
-    \raggedright
-    \AEManuelFont
-    \StringManuel
-    \par\vspace*{\AfterAEManuelVSpace}
-  \end{minipage}%
-  \hspace{\AEManuelRightSpace}%
-  \raisebox{\AfterAEManuelVSpace}
-           {\psscaleboxto(\AELogoManuelWidth,0){\LogoManuel}}%
+%  \hspace*{\stretch{1}}%
+%  \begin{minipage}[b]{\AEManuelWidth}
+%    \raggedright
+%    \AEManuelFont
+%    \StringManuel
+%    \par\vspace*{\AfterAEManuelVSpace}
+%  \end{minipage}%
+%  \hspace{\AEManuelRightSpace}%
+%  \raisebox{\AfterAEManuelVSpace}
+%           {\psscaleboxto(\AELogoManuelWidth,0){\LogoManuel}}%
   \\[-1pt]
   \let\itemize\smc@AEitemize
   \let\enditemize\endsmc@AEitemize
@@ -3093,37 +3077,36 @@
   \def\smc@currpart{AE}%
   \begin{lrbox}{\smc@boxa}
     \minipage[b]{\dimexpr\linewidth-\AEFrameHSep*2}%
-    \ignorespaces
-}
-{%
+    \ignorespaces}
+    {%
       \par
-      \vspace*{\dimexpr\AECartoucheCorrSep+\AECartoucheCorrHeight-\SquareWidth}
-      \hspace*{\stretch{1}}%
+      %\vspace*{\dimexpr\AECartoucheCorrSep+\AECartoucheCorrHeight-\SquareWidth}
+      %\hspace*{\stretch{1}}%
     \endminipage
   \end{lrbox}%
   \psframebox[framesep=\the\dimexpr\AEFrameHSep-\AEFrameRuleWidth,
     linewidth=\AEFrameRuleWidth, linecolor=AEFrameColor]{\box\smc@boxa}%
-  \hspace*{-\AECartoucheCorrWidth}%
-  \raisebox{-\SquareWidth}{%
-    \begin{pspicture}(0,0)(\AECartoucheCorrWidth,0)
-      \psframe*[linecolor=AECartoucheCorrBkgColor,
-                cornersize=absolute, linearc=\dimexpr\SquareWidth/2]
-               (0,0)(\AECartoucheCorrWidth,\AECartoucheCorrHeight)
-      \psframe*[linecolor=AECartoucheCorrBkgColor]
-               (0,0)(\AECartoucheCorrWidth,3mm)
-      \psframe*[linecolor=AECartoucheCorrBkgColor]
-               (3mm,0)(\AECartoucheCorrWidth,\AECartoucheCorrHeight)
-      \rput(\dimexpr\AECartoucheCorrWidth/2,\dimexpr\AECartoucheCorrHeight/2)
-      {%
-        \AECartoucheCorrArrowFont
-        \textcolor{AECartoucheCorrArrowColor}
-                  {\ding{228}\ding{228}\ding{228}}
-        \AECartoucheCorrVCPFont
-        \textcolor{AECartoucheCorrVCPColor}
-                  {\StringVoirCorriges\space\pageref{toutes-solutions}}%
-      }%
-    \end{pspicture}%
-  }%
+  %\hspace*{-\AECartoucheCorrWidth}%
+  %\raisebox{-\SquareWidth}{%
+%    \begin{pspicture}(0,0)(\AECartoucheCorrWidth,0)
+%      \psframe*[linecolor=AECartoucheCorrBkgColor,
+%                cornersize=absolute, linearc=\dimexpr\SquareWidth/2]
+%               (0,0)(\AECartoucheCorrWidth,\AECartoucheCorrHeight)
+%      \psframe*[linecolor=AECartoucheCorrBkgColor]
+%               (0,0)(\AECartoucheCorrWidth,3mm)
+%      \psframe*[linecolor=AECartoucheCorrBkgColor]
+%               (3mm,0)(\AECartoucheCorrWidth,\AECartoucheCorrHeight)
+%      \rput(\dimexpr\AECartoucheCorrWidth/2,\dimexpr\AECartoucheCorrHeight/2)
+%      {%
+%        \AECartoucheCorrArrowFont
+%        \textcolor{AECartoucheCorrArrowColor}
+%                  {\ding{228}\ding{228}\ding{228}}
+%        \AECartoucheCorrVCPFont
+%        \textcolor{AECartoucheCorrVCPColor}
+%                  {\StringVoirCorriges\space\pageref{toutes-solutions}}%
+%      }%
+%    \end{pspicture}%
+ % }%
 }
 \newcounter{AEexo}[chapter]
 \newenvironment{smc@AEexercice}{%
@@ -4684,7 +4667,7 @@
     \par\nobreak
     \def\smc@BeforeCorrige{\par}%
   }%
-  \colorlet{CorrigeNumExerciceFrameBkg}{A1}%
+  \colorlet{CorrigeNumExerciceFrameBkg}{B1}%
   \colorlet{CorrigeNumExerciceFrameTxt}{Blanc}%
 }
 \newcommand\smc@corrigeexercicesappr{%
