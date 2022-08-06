@@ -1791,6 +1791,8 @@
   \fancyhead[RO]{\smc@headodd{ExoApprHeadFrame}{\StringExercicesAppr}}
   \fancyfoot[LE]{\smc@footpage{ExoApprFootColor}\smc@foottitleeven}
   \fancyfoot[RO]{\smc@foottitleodd\smc@footpage{ExoApprFootColor}}
+  \fancyfoot[RE]{\textsc{\footnotesize N. Daval}}
+  \fancyfoot[LO]{\textsc{\footnotesize N. Daval}}
 }
 \fancypagestyle{connaissances}{%
   \fancyhf{}
@@ -2036,10 +2038,12 @@
 \definecolor{A2}                {cmyk}{0.60, 0.00, 0.00, 0.10}
 \definecolor{A3}                {cmyk}{0.30, 0.00, 0.00, 0.05}
 \definecolor{A4}                {cmyk}{0.10, 0.00, 0.00, 0.00}
+\definecolor{A5}                {cmyk}{0.05, 0.00, 0.00, 0.00}
 \definecolor{B1}                {cmyk}{0.00, 1.00, 0.60, 0.40}
-\definecolor{B2}                {cmyk}{0.00, 0.85, 0.60, 0.15}
+\definecolor{B2}                {cmyk}{0.00, 0.70, 0.50, 0.15}
 \definecolor{B3}                {cmyk}{0.00, 0.20, 0.15, 0.05}
 \definecolor{B4}                {cmyk}{0.00, 0.05, 0.05, 0.00}
+\definecolor{B5}                {cmyk}{0.00, 0.03, 0.02, 0.00}
 \definecolor{C1}                {cmyk}{0.00, 1.00, 0.00, 0.50}
 \definecolor{C2}                {cmyk}{0.00, 0.60, 0.00, 0.20}
 \definecolor{C3}                {cmyk}{0.00, 0.30, 0.00, 0.05}
@@ -2060,10 +2064,10 @@
 \definecolor{H2}                {cmyk}{0.20, 0.00, 0.50, 0.05}
 \definecolor{H3}                {cmyk}{0.10, 0.00, 0.20, 0.00}
 \definecolor{H4}                {cmyk}{0.07, 0.00, 0.15, 0.00}
-\definecolor{J1}                {cmyk}{0.00, 0.50, 1.00, 0.00}
-\definecolor{J2}                {cmyk}{0.00, 0.20, 0.50, 0.00}
-\definecolor{J3}                {cmyk}{0.00, 0.10, 0.20, 0.00}
-\definecolor{J4}                {cmyk}{0.00, 0.07, 0.15, 0.00}
+\definecolor{J1}                {cmyk}{0.00, 0.50, 1.00, 0.00}%
+\definecolor{J2}                {cmyk}{0.00, 0.25, 0.35, 0.00}%{0.00, 0.20, 0.50, 0.00}
+\definecolor{J3}                {cmyk}{0.00, 0.10, 0.25, 0.00}%{0.00, 0.10, 0.20, 0.00}
+\definecolor{J4}                {cmyk}{0.00, 0.05, 0.15, 0.00}%{0.00, 0.07, 0.15, 0.00}
 \definecolor{FondOuv}           {cmyk}{0.00, 0.05, 0.10, 0.00}
 \definecolor{FondAutoEvaluation}{cmyk}{0.00, 0.03, 0.15, 0.00}
 \definecolor{FondTableaux}      {cmyk}{0.00, 0.00, 0.20, 0.00}
@@ -2122,8 +2126,8 @@
 \colorlet{ChapterNumBkgColor}{J4}
 \colorlet{ChapterNumSquare0Color}{Blanc}
 \colorlet{ChapterNumSquare1Color}{J4}
-%\colorlet{ChapterNumSquare2Color}{B2}
-%\colorlet{ChapterNumSquare3Color}{B3}
+\colorlet{ChapterNumSquare2Color}{J3}
+\colorlet{ChapterNumSquare3Color}{J2}
 \colorlet{ChapterTitleColor}{B1}
 \colorlet{ChapAppColor}{Blanc}
 \colorlet{ChapterNumColor}{Blanc}
@@ -2145,14 +2149,14 @@
 \colorlet{AECartoucheCorrArrowColor}{G2}
 \colorlet{AECartoucheCorrVCPColor}{B2}
 \colorlet{ActiviteHeadFrame0Color}{Blanc}
-\colorlet{ActiviteHeadFrame1Color}{white}
-\colorlet{ActiviteHeadFrame2Color}{H4}
-\colorlet{ActiviteHeadFrame3Color}{H3}
-\colorlet{ActiviteHeadFrame4Color}{H2}
-\colorlet{ActiviteHeadFrame5Color}{H1}
-\colorlet{ActiviteFootColor}{H3}
+\colorlet{ActiviteHeadFrame1Color}{Blanc}
+\colorlet{ActiviteHeadFrame2Color}{A5}
+\colorlet{ActiviteHeadFrame3Color}{A4}
+\colorlet{ActiviteHeadFrame4Color}{A3}
+\colorlet{ActiviteHeadFrame5Color}{A2}
+\colorlet{ActiviteFootColor}{A4}
 \colorlet{FootChapterNumColor}{U1}
-\colorlet{ActiviteSubtitleColor}{C1}
+\colorlet{ActiviteSubtitleColor}{B1}
 \colorlet{ActiviteNumColor}{Blanc}
 \colorlet{ActiviteDebatTopColor}{G4}
 \colorlet{ActiviteDebatBottomColor}{D4}
@@ -2160,7 +2164,7 @@
 \colorlet{ActiviteActiviteBottomColor}{G2}
 \colorlet{ActiviteTitleColor}{B1}
 \colorlet{ActiviteItemColor}{B1}
-\colorlet{ActivitePartieColor}{H1}
+\colorlet{ActivitePartieColor}{A2}
 \colorlet{CoursHeadFrame0Color}{Blanc}
 \colorlet{CoursHeadFrame1Color}{white}
 \colorlet{CoursHeadFrame2Color}{A4}
@@ -2225,12 +2229,12 @@
 \colorlet{ExercicePartieColor}{J1}
 \colorlet{ExerciceRefMethodeColor}{A2}
 \colorlet{ExoApprHeadFrame0Color}{Blanc}
-\colorlet{ExoApprHeadFrame1Color}{G1}
-\colorlet{ExoApprHeadFrame2Color}{G2}
-\colorlet{ExoApprHeadFrame3Color}{G4}
-\colorlet{ExoApprHeadFrame4Color}{J2}
-\colorlet{ExoApprHeadFrame5Color}{J1}
-\definecolor{ExoApprFootColor}{cmyk}{0.00, 0.25, 0.50, 0.00}
+\colorlet{ExoApprHeadFrame1Color}{Blanc}
+\colorlet{ExoApprHeadFrame2Color}{B5}
+\colorlet{ExoApprHeadFrame3Color}{B4}
+\colorlet{ExoApprHeadFrame4Color}{B3}
+\colorlet{ExoApprHeadFrame5Color}{B2}
+\colorlet{ExoApprFootColor}{B4}
 \colorlet{ConnHeadFrame0Color}{Blanc}
 \colorlet{ConnHeadFrame1Color}{A2}
 \colorlet{ConnHeadFrame2Color}{A3}
@@ -2251,7 +2255,7 @@
 \colorlet{QCMTextFrameColor}{Blanc}
 \colorlet{QCMExoNumColor}{Blanc}
 \colorlet{QCMExoNumFrameColor}{J1}
-\colorlet{QCMLineColor}{H2}
+\colorlet{QCMLineColor}{J2}
 \colorlet{TPHeadFrame0Color}{Blanc}
 \colorlet{TPHeadFrame1Color}{H1}
 \colorlet{TPHeadFrame2Color}{H2}
@@ -2266,15 +2270,15 @@
 \colorlet{TPPartieBkgColor}{C2}
 \colorlet{TPPartieNumColor}{Blanc}
 \colorlet{RecreationHeadFrame0Color}{Blanc}
-\colorlet{RecreationHeadFrame1Color}{white}
-\colorlet{RecreationHeadFrame2Color}{HotPink!25}
-\colorlet{RecreationHeadFrame3Color}{HotPink!50}
-\colorlet{RecreationHeadFrame4Color}{HotPink!75}
-\colorlet{RecreationHeadFrame5Color}{HotPink}
-\colorlet{RecreationFootColor}{HotPink!50}
-\colorlet{RecreationTitleColor}{HotPink}
+\colorlet{RecreationHeadFrame1Color}{Blanc}
+\colorlet{RecreationHeadFrame2Color}{B5}
+\colorlet{RecreationHeadFrame3Color}{B4}
+\colorlet{RecreationHeadFrame4Color}{B3}
+\colorlet{RecreationHeadFrame5Color}{B2}
+\colorlet{RecreationFootColor}{B4}
+\colorlet{RecreationTitleColor}{B1}
 \colorlet{RecreationItemColor}{U3}
-\colorlet{RecreationPartieColor}{J1}
+\colorlet{RecreationPartieColor}{B2}
 \colorlet{CorrigeHeadFrameColor}{J2}
 \colorlet{CorrigeColumnRuleColor}{B1}
 \colorlet{CorrigeAETitleColor}{F1}
@@ -2282,6 +2286,7 @@
 \colorlet{CorrigeExercicesApprTitleColor}{C2}
 \colorlet{CorrigeConnaissancesTitleColor}{G1}
 \colorlet{CorrigeQCMItemNumColor}{G1}
+\colorlet{CorrigeEnigmeTitleColor}{B1}
 \colorlet{ListeMethodeHeadFrameColor}{G3}
 \colorlet{ListeMethodeColumnRuleColor}{A1}
 \colorlet{ListeMethodeTitleColor}{B2}
@@ -2321,7 +2326,7 @@
 \newcommand*\ActiviteNumFont{\fontsize{15}{18}\sffamily\bfseries}
 \newcommand*\ActiviteSubtitleFont{\fontsize{15}{18}\sffamily\bfseries}
 \newcommand*\ActivitePartieFont{\fontsize{12}{14.4}\sffamily\bfseries}
-\newcommand*\SectionNumFont{\fontsize{21}{25}\sffamily\bfseries}
+\newcommand*\SectionNumFont{\fontsize{18}{23}\sffamily\bfseries}
 \newcommand*\SectionTitleFont{\fontsize{17.28}{21}\sffamily\bfseries}
 \newcommand*\SubsectionNumFont{\fontsize{17.28}{21}\sffamily\bfseries}
 \newcommand*\SubsectionTitleFont{\fontsize{14.4}{17.28}\sffamily\bfseries}
@@ -2350,9 +2355,9 @@
 \newcommand*\QCMItemNumFont{\fontsize{9.5}{14.4}\sffamily\bfseries}
 \newcommand*\TPPartieFont{\fontsize{12}{14.4}\sffamily\bfseries}
 \newcommand*\RecreationFont{\fontsize{20}{20}\scriptfamily\bfseries}
-\newcommand*\RecreationTitleFont{\fontsize{12}{14.4}\sffamily\bfseries}
+\newcommand*\RecreationTitleFont{\fontsize{15}{18}\sffamily\bfseries}
 \newcommand*\RecreationPartieFont{\fontsize{10}{14.4}\scshape\bfseries}
-\newcommand*\RecreationPartieTitleFont{\fontsize{10}{14.4}\bfseries}
+\newcommand*\RecreationPartieTitleFont{\fontsize{12}{14.4}\bfseries}
 \newcommand*\ListeMethodeChapterFont{\fontsize{40}{40}\sffamily}
 \newcommand*\ListeMethodeTitleFont{\fontsize{12}{14.4}\sffamily\bfseries}
 \newcommand*\ListeMethodePageFont{\fontsize{12}{14.4}\sffamily\bfseries}
@@ -2569,7 +2574,7 @@
 \newcommand*\StringActivitesApproche{Activit\'e d'approche}
 \newcommand*\StringCoursMethodes{Trace écrite}
 \newcommand*\StringExercicesBase{Entraînement}
-\newcommand*\StringExercicesAppr{Approfondir}
+\newcommand*\StringExercicesAppr{R\'ecr\'eation}
 \newcommand*\StringTestConnaissances{Je teste mes connaissances}
 \newcommand*\StringConnaissances{Auto-\'evaluation QCM}
 \newcommand*\StringTravauxPratiques{Travaux pratiques}
@@ -2584,7 +2589,7 @@
 \newcommand*\StringQCMAE{QCM d'auto-\'evaluation}
 \newcommand*\StringQCM{QCM}
 \newcommand*\StringChapitre{Chapitre}
-\newcommand*\StringEnigme{\'Enigme}
+\newcommand*\StringEnigme{Récréation}
 \newcommand*\StringPropriete{Propri\'et\'e}
 \newcommand*\StringPROPRIETE{PROPRI\'ET\'E}
 \newcommand*\StringDEFINITION{D\'EFINITION}
@@ -2607,6 +2612,9 @@
 \newcommand*\StringListeMethodeG{G\'eom\'etrie}
 \newcommand*\StringListeMethodeSP{Stat. et probabilit\'es}
 \def\smc@diagonal(#1,#2)#3{%
+  \psframe[linewidth=0pt, linestyle=none, fillcolor=#34Color]
+          (\dimexpr #1-\SquareWidth, \dimexpr #2)
+          (\dimexpr #1+\SquareWidth, \dimexpr #2+\SquareWidth)
   \psframe[linewidth=0pt, linestyle=none, fillcolor=#33Color]
           (\dimexpr #1, \dimexpr #2)
           (\dimexpr #1+\SquareWidth, \dimexpr #2+\SquareWidth)
@@ -2625,15 +2633,15 @@
   \psframe[linewidth=0pt, linestyle=none, fillcolor=#32Color]
           (\dimexpr #1+\SquareWidth*2, \dimexpr #2+\SquareWidth)
           (\dimexpr #1+\SquareWidth*3, \dimexpr #2+\SquareWidth*2)
-  \psframe[linewidth=0pt, linestyle=none, fillcolor=#35Color]
-          (\dimexpr #1, \dimexpr #2+\SquareWidth*2)
-          (\dimexpr #1+\SquareWidth, \dimexpr #2+\SquareWidth*3)
   \psframe[linewidth=0pt, linestyle=none, fillcolor=#34Color]
           (\dimexpr #1+\SquareWidth, \dimexpr #2+\SquareWidth*2)
           (\dimexpr #1+\SquareWidth*2, \dimexpr #2+\SquareWidth*3)
   \psframe[linewidth=0pt, linestyle=none, fillcolor=#33Color]
           (\dimexpr #1+\SquareWidth*2, \dimexpr #2+\SquareWidth*2)
           (\dimexpr #1+\SquareWidth*3, \dimexpr #2+\SquareWidth*3)
+  \psframe[linewidth=0pt, linestyle=none, fillcolor=#34Color]
+          (\dimexpr #1+\SquareWidth*2, \dimexpr #2+\SquareWidth*3)
+          (\dimexpr #1+\SquareWidth*3, \dimexpr #2+\SquareWidth*4)
   \ignorespaces
 }
 \def\smc@antidiagonal(#1,#2)#3{%
@@ -2646,6 +2654,9 @@
   \psframe[linewidth=0pt, linestyle=none, fillcolor=#33Color]
           (\dimexpr #1+\SquareWidth*2, \dimexpr #2)
           (\dimexpr #1+\SquareWidth*3, \dimexpr #2+\SquareWidth)
+  \psframe[linewidth=0pt, linestyle=none, fillcolor=#34Color]
+          (\dimexpr #1+\SquareWidth*3, \dimexpr #2)
+          (\dimexpr #1+\SquareWidth*4, \dimexpr #2+\SquareWidth)% fin L1     
   \psframe[linewidth=0pt, linestyle=none, fillcolor=#32Color]
           (\dimexpr #1, \dimexpr #2+\SquareWidth)
           (\dimexpr #1+\SquareWidth, \dimexpr #2+\SquareWidth*2)
@@ -2654,16 +2665,16 @@
           (\dimexpr #1+\SquareWidth*2, \dimexpr #2+\SquareWidth*2)
   \psframe[linewidth=0pt, linestyle=none, fillcolor=#34Color]
           (\dimexpr #1+\SquareWidth*2, \dimexpr #2+\SquareWidth)
-          (\dimexpr #1+\SquareWidth*3, \dimexpr #2+\SquareWidth*2)
+          (\dimexpr #1+\SquareWidth*3, \dimexpr #2+\SquareWidth*2)% fin L2
   \psframe[linewidth=0pt, linestyle=none, fillcolor=#33Color]
           (\dimexpr #1, \dimexpr #2+\SquareWidth*2)
           (\dimexpr #1+\SquareWidth, \dimexpr #2+\SquareWidth*3)
   \psframe[linewidth=0pt, linestyle=none, fillcolor=#34Color]
           (\dimexpr #1+\SquareWidth, \dimexpr #2+\SquareWidth*2)
-          (\dimexpr #1+\SquareWidth*2, \dimexpr #2+\SquareWidth*3)
-  \psframe[linewidth=0pt, linestyle=none, fillcolor=#35Color]
-          (\dimexpr #1+\SquareWidth*2, \dimexpr #2+\SquareWidth*2)
-          (\dimexpr #1+\SquareWidth*3, \dimexpr #2+\SquareWidth*3)
+          (\dimexpr #1+\SquareWidth*2, \dimexpr #2+\SquareWidth*3)% fin L3
+  \psframe[linewidth=0pt, linestyle=none, fillcolor=#34Color]
+          (\dimexpr #1, \dimexpr #2+\SquareWidth*3)
+          (\dimexpr #1+\SquareWidth, \dimexpr #2+\SquareWidth*4)% fin L4
   \ignorespaces
 }
 \def\smc@rounddiagonal(#1,#2)#3{%
@@ -2744,111 +2755,168 @@
           {\dimexpr \SquareWidth/2}
   \ignorespaces
 }
-\newcommand*\themaN{%nombres et calculs
+\newcommand*\themaF{%
   \cleardoubleoddpage
-  \def\smc@thema{nombres \&\\calculs}%
-  \def\smc@themacap{NOMBRES \&\\CALCULS}%
-  \def\smc@thema@init{n}%
-  \def\smc@thema@initcap{N}%
-  \smc@themaNColor
-  %\setcounter{chapter}{0}%
+  \def\smc@thema{fonctions}%
+  \def\smc@themacap{FONCTIONS}%
+  \def\smc@thema@init{f}%
+  \def\smc@thema@initcap{F}%
+  \smc@themaFColor
+  \setcounter{chapter}{0}%
 }
-\newcommand*\smc@themaNColor{%
-  \def\CorrigeChapterFrameColor{Red}%
+\newcommand*\smc@themaFColor{%
+  \def\CorrigeChapterFrameColor{PartieFonction}%
   \def\CorrigeChapterTextColor{Blanc}%
-  \colorlet{ChapterNumFrameColor}{Red}%
-  \colorlet{FootTitleHeadColor}{Red}%
-  \colorlet{ChapterTopFrameColor}{Red!50}%
-  \colorlet{ChapterNumSquare2Color}{Red!25}%
-  \colorlet{ChapterNumSquare3Color}{Red!50}%
-  \colorlet{ChapterNumSquare4Color}{Red!75}%
-  \colorlet{ChapterNumSquare5Color}{Red}%
-  \colorlet{FirstChapterFootColor}{Red!50}%
+  \colorlet{ChapterNumFrameColor}{PartieFonction}%
+  \colorlet{FootTitleHeadColor}{PartieFonction}%
+  \colorlet{ChapterTopFrameColor}{A3}%
+  \colorlet{ChapterNumSquare4Color}{A3}%
+  \colorlet{ChapterNumSquare5Color}{PartieFonction}%
+  \colorlet{FirstChapterFootColor}{FootFonctionColor}%
 }
-\newcommand*\themaG{% geometrie
+\newcommand*\themaG{%
   \cleardoubleoddpage
-  \def\smc@thema{espace \&\\g\'eom\'etrie}%
-  \def\smc@themacap{ESPACE \&\\G\'EOM\'ETRIE}%
+  \def\smc@thema{g\'eom\'etrie}%
+  \def\smc@themacap{G\'EOM\'ETRIE}%
   \def\smc@thema@init{g}%
   \def\smc@thema@initcap{G}%
   \smc@themaGColor
-  %\setcounter{chapter}{0}%
+  \setcounter{chapter}{0}%
 }
 \newcommand*\smc@themaGColor{%
-  \def\CorrigeChapterFrameColor{DodgerBlue}%
+  \def\CorrigeChapterFrameColor{PartieGeometrie}%
   \def\CorrigeChapterTextColor{Blanc}%
-  \colorlet{ChapterNumFrameColor}{DodgerBlue}%
-  \colorlet{FootTitleHeadColor}{DodgerBlue}%
-  \colorlet{ChapterTopFrameColor}{DodgerBlue!50}%
-  \colorlet{ChapterNumSquare2Color}{DodgerBlue!25}%
-  \colorlet{ChapterNumSquare3Color}{DodgerBlue!50}%
-  \colorlet{ChapterNumSquare4Color}{DodgerBlue!75}%
-  \colorlet{ChapterNumSquare5Color}{DodgerBlue}% 
-  \colorlet{FirstChapterFootColor}{DodgerBlue!50}%
+  \colorlet{ChapterNumFrameColor}{PartieGeometrie}%
+  \colorlet{FootTitleHeadColor}{PartieGeometrie}%
+  \colorlet{ChapterTopFrameColor}{G3}%
+  \colorlet{ChapterNumSquare4Color}{G3}%
+  \colorlet{ChapterNumSquare5Color}{PartieGeometrie}%
+  \colorlet{FirstChapterFootColor}{FootGeometrieColor}%
 }
-\newcommand*\themaM{%grandeurs et mesures
+\newcommand*\themaS{%
   \cleardoubleoddpage
-  \def\smc@thema{grandeurs\\\& mesures}%
-  \def\smc@themacap{GRANDEURS\\\& MESURES}%
-  \def\smc@thema@init{m}%
-  \def\smc@thema@initcap{M}%
-  \smc@themaMColor
-  %\setcounter{chapter}{0}%
+  \def\smc@thema{statistiques\\probabilit\'es}%
+  \def\smc@themacap{STATISTIQUES\\PROBABILIT\'ES}%
+  \def\smc@thema@init{sp}%
+  \def\smc@thema@initcap{SP}%
+  \smc@themaSColor
+  \setcounter{chapter}{0}%
 }
-\newcommand*\smc@themaMColor{%
-  \def\CorrigeChapterFrameColor{Green}%
+\newcommand*\smc@themaSColor{%
+  \def\CorrigeChapterFrameColor{PartieStatistique}%
   \def\CorrigeChapterTextColor{Blanc}%
-  \colorlet{ChapterNumFrameColor}{Green}%
-  \colorlet{FootTitleHeadColor}{Green}%
-  \colorlet{ChapterTopFrameColor}{Green!50}%
-  \colorlet{ChapterNumSquare2Color}{Green!25}%
-  \colorlet{ChapterNumSquare3Color}{Green!50}%
-  \colorlet{ChapterNumSquare4Color}{Green!75}%
-  \colorlet{ChapterNumSquare5Color}{Green}%
-  \colorlet{FirstChapterFootColor}{Green!50}%
+  \colorlet{ChapterNumFrameColor}{PartieStatistique}%
+  \colorlet{FootTitleHeadColor}{PartieStatistique}%
+  \colorlet{ChapterTopFrameColor}{U2}%
+  \colorlet{ChapterNumSquare4Color}{U2}%
+  \colorlet{ChapterNumSquare5Color}{PartieStatistique}%
+  \colorlet{FirstChapterFootColor}{FootStatistiqueColor}%
 }
-\newcommand*\themaO{%organisation et gestion de données
-  \cleardoubleoddpage
-  \def\smc@thema{organisation \& gestion\\de données}%
-  \def\smc@themacap{ORGANISATION \& GESTION\\DE DONN\'EES}%
-  \def\smc@thema@init{o}%
-  \def\smc@thema@initcap{O}%
-  \smc@themaOColor
-  %\setcounter{chapter}{0}%
-}
-\newcommand*\smc@themaOColor{%
-  \def\CorrigeChapterFrameColor{violet}%
-  \def\CorrigeChapterTextColor{Blanc}%
-  \colorlet{ChapterNumFrameColor}{violet}%
-  \colorlet{FootTitleHeadColor}{violet}%
-  \colorlet{ChapterTopFrameColor}{violet!50}%
-  \colorlet{ChapterNumSquare2Color}{violet!25}%
-  \colorlet{ChapterNumSquare3Color}{violet!50}%
-  \colorlet{ChapterNumSquare4Color}{violet!75}%
-  \colorlet{ChapterNumSquare5Color}{violet}%
-  \colorlet{FirstChapterFootColor}{violet!50}%
-}
-\newcommand*\themaA{%Algorithmique et programmation
-  \cleardoubleoddpage
-  \def\smc@thema{algorithmique \& \\programmation}%
-  \def\smc@themacap{ALGORITHMIQUE \& \\PROGRAMMATION}%
-  \def\smc@thema@init{a}%
-  \def\smc@thema@initcap{A}%
-  \smc@themaAColor
-  %\setcounter{chapter}{0}%
-}
-\newcommand*\smc@themaAColor{%
-  \def\CorrigeChapterFrameColor{orange}%
-  \def\CorrigeChapterTextColor{Blanc}%
-  \colorlet{ChapterNumFrameColor}{orange}%
-  \colorlet{FootTitleHeadColor}{orange}%
-  \colorlet{ChapterTopFrameColor}{orange!50}%
-  \colorlet{ChapterNumSquare2Color}{orange!25}%
-  \colorlet{ChapterNumSquare3Color}{orange!50}%
-  \colorlet{ChapterNumSquare4Color}{orange!75}%
-  \colorlet{ChapterNumSquare5Color}{orange}%
-  \colorlet{FirstChapterFootColor}{orange!50}%
-}
+%\newcommand*\themaN{%nombres et calculs
+%  \cleardoubleoddpage
+%  \def\smc@thema{nombres \&\\calculs}%
+%  \def\smc@themacap{NOMBRES \&\\CALCULS}%
+%  \def\smc@thema@init{n}%
+%  \def\smc@thema@initcap{N}%
+%  \smc@themaNColor
+%  %\setcounter{chapter}{0}%
+%}
+%\newcommand*\smc@themaNColor{%
+%  \def\CorrigeChapterFrameColor{Red}%
+%  \def\CorrigeChapterTextColor{Blanc}%
+%  \colorlet{ChapterNumFrameColor}{Red}%
+%  \colorlet{FootTitleHeadColor}{Red}%
+%  \colorlet{ChapterTopFrameColor}{Red!50}%
+%  \colorlet{ChapterNumSquare2Color}{Red!25}%
+%  \colorlet{ChapterNumSquare3Color}{Red!50}%
+%  \colorlet{ChapterNumSquare4Color}{Red!75}%
+%  \colorlet{ChapterNumSquare5Color}{Red}%
+%  \colorlet{FirstChapterFootColor}{Red!50}%
+%}
+%\newcommand*\themaG{% geometrie
+%  \cleardoubleoddpage
+%  \def\smc@thema{espace \&\\g\'eom\'etrie}%
+%  \def\smc@themacap{ESPACE \&\\G\'EOM\'ETRIE}%
+%  \def\smc@thema@init{g}%
+%  \def\smc@thema@initcap{G}%
+%  \smc@themaGColor
+%  %\setcounter{chapter}{0}%
+%}
+%\newcommand*\smc@themaGColor{%
+%  \def\CorrigeChapterFrameColor{DodgerBlue}%
+%  \def\CorrigeChapterTextColor{Blanc}%
+%  \colorlet{ChapterNumFrameColor}{DodgerBlue}%
+%  \colorlet{FootTitleHeadColor}{DodgerBlue}%
+%  \colorlet{ChapterTopFrameColor}{DodgerBlue!50}%
+%  \colorlet{ChapterNumSquare2Color}{DodgerBlue!25}%
+%  \colorlet{ChapterNumSquare3Color}{DodgerBlue!50}%
+%  \colorlet{ChapterNumSquare4Color}{DodgerBlue!75}%
+%  \colorlet{ChapterNumSquare5Color}{DodgerBlue}% 
+%  \colorlet{FirstChapterFootColor}{DodgerBlue!50}%
+%}
+%\newcommand*\themaM{%grandeurs et mesures
+%  \cleardoubleoddpage
+%  \def\smc@thema{grandeurs\\\& mesures}%
+%  \def\smc@themacap{GRANDEURS\\\& MESURES}%
+%  \def\smc@thema@init{m}%
+%  \def\smc@thema@initcap{M}%
+%  \smc@themaMColor
+%  %\setcounter{chapter}{0}%
+%}
+%\newcommand*\smc@themaMColor{%
+%  \def\CorrigeChapterFrameColor{Green}%
+%  \def\CorrigeChapterTextColor{Blanc}%
+%  \colorlet{ChapterNumFrameColor}{Green}%
+%  \colorlet{FootTitleHeadColor}{Green}%
+%  \colorlet{ChapterTopFrameColor}{Green!50}%
+%  \colorlet{ChapterNumSquare2Color}{Green!25}%
+%  \colorlet{ChapterNumSquare3Color}{Green!50}%
+%  \colorlet{ChapterNumSquare4Color}{Green!75}%
+%  \colorlet{ChapterNumSquare5Color}{Green}%
+%  \colorlet{FirstChapterFootColor}{Green!50}%
+%}
+%\newcommand*\themaO{%organisation et gestion de données
+%  \cleardoubleoddpage
+%  \def\smc@thema{organisation \& gestion\\de données}%
+%  \def\smc@themacap{ORGANISATION \& GESTION\\DE DONN\'EES}%
+%  \def\smc@thema@init{o}%
+%  \def\smc@thema@initcap{O}%
+%  \smc@themaOColor
+%  %\setcounter{chapter}{0}%
+%}
+%\newcommand*\smc@themaOColor{%
+%  \def\CorrigeChapterFrameColor{violet}%
+%  \def\CorrigeChapterTextColor{Blanc}%
+%  \colorlet{ChapterNumFrameColor}{violet}%
+%  \colorlet{FootTitleHeadColor}{violet}%
+%  \colorlet{ChapterTopFrameColor}{violet!50}%
+%  \colorlet{ChapterNumSquare2Color}{violet!25}%
+%  \colorlet{ChapterNumSquare3Color}{violet!50}%
+%  \colorlet{ChapterNumSquare4Color}{violet!75}%
+%  \colorlet{ChapterNumSquare5Color}{violet}%
+%  \colorlet{FirstChapterFootColor}{violet!50}%
+%}
+%\newcommand*\themaA{%Algorithmique et programmation
+%  \cleardoubleoddpage
+%  \def\smc@thema{algorithmique \& \\programmation}%
+%  \def\smc@themacap{ALGORITHMIQUE \& \\PROGRAMMATION}%
+%  \def\smc@thema@init{a}%
+%  \def\smc@thema@initcap{A}%
+%  \smc@themaAColor
+%  %\setcounter{chapter}{0}%
+%}
+%\newcommand*\smc@themaAColor{%
+%  \def\CorrigeChapterFrameColor{orange}%
+%  \def\CorrigeChapterTextColor{Blanc}%
+%  \colorlet{ChapterNumFrameColor}{orange}%
+%  \colorlet{FootTitleHeadColor}{orange}%
+%  \colorlet{ChapterTopFrameColor}{orange!50}%
+%  \colorlet{ChapterNumSquare2Color}{orange!25}%
+%  \colorlet{ChapterNumSquare3Color}{orange!50}%
+%  \colorlet{ChapterNumSquare4Color}{orange!75}%
+%  \colorlet{ChapterNumSquare5Color}{orange}%
+%  \colorlet{FirstChapterFootColor}{orange!50}%
+%}
 \newcommand*\themaL{%
   \def\smc@thema{}%
   \def\smc@themacap{}%
@@ -2958,7 +3026,7 @@
       {\CorrigeChapterTextColor}%
     }%
   \begin{pspicture}(0,0)(\linewidth,\ChapterBottomPicture)
-    \psset{linewidth=0.15mm,linecolor=J4,fillstyle=solid}
+    \psset{linewidth=0pt,linecolor=J4,fillstyle=solid}
     \psframe[fillcolor=ChapterTopFrameColor]
             (\dimexpr-\smc@bleed-\smc@marginleft,\ChapterBottomFrameHeight)
             (\dimexpr\linewidth+\smc@marginright+\smc@bleed,
@@ -4445,7 +4513,7 @@
   \def\smc@currpart{Enigme}%
   \par
   \@ifmtarg{#1}{}{%
-    {\RecreationTitleFont \textcolor{RecreationTitleColor}{#1}\par}%
+    {\centering\RecreationTitleFont \textcolor{RecreationTitleColor}{#1}\par}%
   }
   \setcounter{partie}{0}
 }
@@ -4730,8 +4798,9 @@
     \par\nobreak
     \def\smc@BeforeCorrige{\par}%
   }%
-  \colorlet{CorrigeNumExerciceFrameBkg}{J1}%
+  \colorlet{CorrigeNumExerciceFrameBkg}{Blanc}%%%% modifié (avant J1)
   \colorlet{CorrigeNumExerciceFrameTxt}{Blanc}%
+  \setcounter{partie}{0}
 }
 \newcommand\smc@corrigelibre{%
   \let\itemize\smc@corrlibreitemize

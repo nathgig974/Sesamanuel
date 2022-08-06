@@ -7,17 +7,27 @@
 \renewcommand\PrefixeCorrection{Corrections/}
 \usepackage{etex}
 \usepackage{ProfCollege}
+\usepackage{qrcode}
+
+\NewThema{N}{n}{nombres\\\& calculs}{Nombres\\\& calculs}{NOMBRES\\\& CALCULS}{red}{red!50}
+
+%\NewThema{E}{e}{espace \&\\géométrie}{Espace \&\\géométrie}{ESPACE \&\\ GEOMETRIE}{DodgerBlue}{DodgerBlue!50}
+
+%\NewThema{D}{d}{organisation et \\et gestion de données}{Organisation et \\et gestion de données}{ORGANISATION ET\\GESTION DE DONNÉES}{violet}{violet!50}
+
+%\NewThema{M}{m}{grandeurs\\et mesures}{Grandeurs\\et mesures}{GRANDEURS\\ET MESURES}{Green}{Green!50}
+
+%\NewThema{A}{a}{algorithmique \&\\programmation}{Algorithmique \&\\ programmation}{ALGORITHMIQUE \&\\PROGRAMMATION}{orange}{orange!50}
 
 %\renewcommand\ListeMethodesThemes{{n}{N},{d}{D},{g}{G},{m}{M},{a}{A}}
  
 \begin{document}
 
 \frontmatter
-%\include{1ere_de_couverture_5e_22-23}
+\include{1ere_de_couverture_5e_22-23}
 
 \mainmatter
-%\include{Progression_5e_22-23}
-%\include{Sommaire_5e_22-23}
+\include{Preliminaires_5e_22-23}
 
 \input{../../S01_Enchainement_d_operations/NewM5_S01_Enchainement_d_operations}
 %\input{../../S02_Les_angles/M5_S02_Les_angles}
@@ -43,18 +53,19 @@
 %\input{../../S22_Traiter_des_donnees/M5_S22_Traiter_des_donnees}
 %\input{../../S23_Nombres_premiers/M5_S23_Nombres_premiers}
 %\input{../../S24_Representer_les_solides/M5_S24_Representer_les_solides}
-%\input{../../S25_L_aire_du_parallelogramme/M5_S25_L_aire_du_parallelogramme}
+%\input{../../S25_L_aire_du_parallelogramme/M5_S25_L_aire_du_parallelogramme}t
 %\input{../../S26_Somme_et_difference_de_fractions/M5_S26_Somme_et_difference_de_fractions}
 %\input{../../S27_Les_droites_du_triangle/M5_S27_Les_droites_du_triangle}
 %\input{../../S28_Le_ratio/M5_S28_Le_ratio}
 %\input{../../S29_Introduction_aux_equations/M5_S29_Introduction_aux_equations}
 %\input{../../S30_Transformations_et_grandeurs/M5_S30_Transformations_et_grandeurs}
 %
-%\AfficheCorriges[2]
-%
+\AfficheCorriges[2]
+
 \include{Plans_de_travail_22-23}
 
 \backmatter
-%\include{4e_de_couverture_22-23}
+\fancyfoot[R]{}
+\include{4e_de_couverture_22-23}
 
 \end{document}
