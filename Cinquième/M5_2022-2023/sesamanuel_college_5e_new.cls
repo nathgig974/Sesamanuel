@@ -2136,12 +2136,12 @@
 \colorlet{PrerequisItemColor}{B2}
 \colorlet{AEItemColor}{B2}
 \colorlet{AETitleFrame0Color}{Blanc}
-\colorlet{AETitleFrame1Color}{B2}
+\colorlet{AETitleFrame1Color}{J4}
 \colorlet{AETitleFrame2Color}{B3}
 \colorlet{AETitleFrame3Color}{A4}
 \colorlet{AETitleFrame4Color}{A3}
 \colorlet{AETitleFrame5Color}{A2}
-\colorlet{AETitleColor}{Blanc}
+\colorlet{AETitleColor}{B2}
 \colorlet{AEExoNumColor}{Blanc}
 \colorlet{AEExoNumFrameColor}{J1}
 \colorlet{AEFrameColor}{J4}
@@ -2277,7 +2277,7 @@
 \colorlet{RecreationHeadFrame5Color}{B2}
 \colorlet{RecreationFootColor}{B4}
 \colorlet{RecreationTitleColor}{B1}
-\colorlet{RecreationItemColor}{U3}
+\colorlet{RecreationItemColor}{A1}
 \colorlet{RecreationPartieColor}{B2}
 \colorlet{CorrigeHeadFrameColor}{J2}
 \colorlet{CorrigeColumnRuleColor}{B1}
@@ -2435,7 +2435,7 @@
 \def\ThemaBottomFrame{5.7cm}
 \def\ThemaTopFrame{6.6cm}
 \def\PrerequisTitleVSpace{1mm}
-\def\AETitleWidth{7.5cm}
+\def\AETitleWidth{7cm}
 \edef\AETitleHeight{\the\dimexpr \SquareWidth*2}
 \def\AEFrameVSep{4mm}
 \edef\AEFrameHSep{\SquareWidth}
@@ -2574,7 +2574,7 @@
 \newcommand*\StringActivitesApproche{Activit\'e d'approche}
 \newcommand*\StringCoursMethodes{Trace écrite}
 \newcommand*\StringExercicesBase{Entraînement}
-\newcommand*\StringExercicesAppr{R\'ecr\'eation}
+\newcommand*\StringExercicesAppr{Approfondissement}
 \newcommand*\StringTestConnaissances{Je teste mes connaissances}
 \newcommand*\StringConnaissances{Auto-\'evaluation QCM}
 \newcommand*\StringTravauxPratiques{Travaux pratiques}
@@ -2583,7 +2583,7 @@
 \newcommand*\StringManuel{Des ressources num\'eriques pour pr\'eparer le chapitre sur \textcolor{U4}{\LogoURLManuelFont manuel.sesamath.net}}
 \newcommand*\StringALGO{ALGO}
 \newcommand*\StringTICE{INFO}
-\newcommand*\StringRecreation{R\'ecr\'eation, \'enigmes}
+\newcommand*\StringRecreation{R\'ecr\'eation}
 \newcommand*\StringAcquisTitle{\`A la fin de ce chapitre, je dois
   \^etre capable de\,:}
 \newcommand*\StringQCMAE{QCM d'auto-\'evaluation}
@@ -3066,7 +3066,7 @@
 }
 \newenvironment{prerequis}[1][\StringPrerequis]
 {%
-  \par\vspace*{\stretch{1}}
+  \par\vspace*{5mm}
   \let\itemize\smc@prerequisitemize
   \let\enditemize\endsmc@prerequisitemize
   \let\colitemize\smc@prerequiscolitemize
@@ -3100,7 +3100,7 @@
 \newenvironment{autoeval}
 {%
   \addtocontents{cor}{\protect\smc@corrigeautoeval}%
-  \par\vspace{\stretch{1}}
+  %\par\vspace{\stretch{1}}
   \begingroup
     \linewidth=\AETitleWidth
     \def\FrameSep{0pt}%
@@ -3109,11 +3109,11 @@
     \begin{smc@cadre}[0,0,10,10]{AETitleFrame1Color}%
       \minipage[b][\AETitleHeight]{\AETitleWidth}%
         \begin{pspicture}(0,0)(\dimexpr\SquareWidth*3,\dimexpr\SquareWidth*2)
-          \smc@rounddiagonal(0mm,0mm){AETitleFrame}%
+          \smc@rounddiagonal(0mm,0mm){CoursHeadFrame}%
         \end{pspicture}%
-        \hspace*{\stretch{1}}%
+        %\hspace*{\stretch{1}}%
         \AETitleFont
-        \raisebox{\dimexpr\SquareWidth*3/4}{\textcolor{AETitleColor}{\StringAE}}%
+        \raisebox{\dimexpr\SquareWidth*1/2}{\textcolor{AETitleColor}{\StringAE}}%
         \hspace*{\stretch{1}}%
       \endminipage
     \end{smc@cadre}
@@ -4155,7 +4155,7 @@
 \newenvironment{smc@enigmecorrige}
 {%
   \addtocontents{cor}{%
-    \protect\inputcor{\smc@currpart}{\smc@thema@initcap\thechapter}{}%
+    \protect\inputcor{\smc@currpart}{\smc@thema@initcap\thechapter}{\the\c@exercice}%
   }%
   \killienc
   \VerbatimEnvironment
@@ -4496,6 +4496,7 @@
               {TPTitleColor}
 \newenvironment{enigme}[1][]{%
   \addtocontents{cor}{\protect\smc@corrigeenigme}%
+  \refstepcounter{exercice}
   \let\itemize\smc@recreationitemize
   \let\enditemize\endsmc@recreationitemize
   \let\colitemize\smc@recreationcolitemize
@@ -4654,6 +4655,7 @@
   \endgroup
 }
 \newcommand*\smc@corrigechapter[4]{%
+  \clearpage
   \let\exercice\smc@noexercice
   \let\endexercice\endsmc@noexercice
   \let\corrige\smc@nocorrige
@@ -4673,7 +4675,7 @@
     \centering
     \color{#3}
     \CorrigeChapterFont \smc@nobsbs{#2}
-    \par\nobreak
+    \par\nobreak\smallskip
   }%
 }
 \newcommand\smc@corrigeautoeval{%

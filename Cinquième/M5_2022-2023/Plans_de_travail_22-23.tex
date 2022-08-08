@@ -1,4 +1,5 @@
 \annexe{Plans de travail}
+\label{PDT}
 
 %macros pour les bulles
 
@@ -7,6 +8,14 @@
    \psline[linecolor=#1](0,2.2)(5,2.2)
    \rput(2.5,2.6){#2}
    \rput(2.5,1.1){\begin{minipage}{4cm}
+                           {\small\darkgray #3}
+                         \end{minipage}}}
+                        
+\newcommand{\bullelongue}[3]{
+   \psframe[linewidth=1mm,framearc=0.1,linecolor=#1](0,0)(8.5,3)
+   \psline[linecolor=#1](0,2.2)(8.5,2.2)
+   \rput(4.25,2.6){#2}
+   \rput(4.25,1.1){\begin{minipage}{8cm}
                            {\small\darkgray #3}
                          \end{minipage}}}
    
@@ -35,7 +44,8 @@
 %%%%%%%%%% Séquence 1 %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{pspicture}(0.5,0)(18,11)            
-   \rput(9,5.75){\parbox{5cm}{\red\centering\large S1 \par  ENCHAÎNEMENT D'OPĖRATIONS}} %bulle centrale  
+   {\color{red}
+      \rput(9,5.75){\parbox{5cm}{\red\centering\large S1 \par  ENCHAÎNEMENT D'OPĖRATIONS}}} %bulle centrale  
    \rput[l](0,8){%bulle NNO : connaissances et compétences
       \pspolygon[fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
       \bullecours
@@ -89,57 +99,51 @@
    
 
 %%%%%%%%%% Séquence 2 %%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-\begin{pspicture}(0.5,1)(18,12.5)           
-   \rput(9,5.75){\parbox{5cm}{\centering\large S2 \par  TITRE}} %bulle centrale     
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pspicture}(0.5,0.5)(18,12.25)            
+   {\color{DodgerBlue}
+      \rput(9,5.75){\parbox{5cm}{\centering\large S2 \par ANGLES \par PARTICULIERS}}} %bulle centrale  
    \rput[l](0,8){%bulle NNO : connaissances et compétences
-      \pspolygon[fillcolor=A1,linecolor=A1](5.7,0)(8.5,-1.5)(6.3,0)
+      \pspolygon[fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
       \bullecours
          {A1}
          {Je connais mon cours}
-         {$\to$ Connaissance ou compétence 1 : \hfill \square \par
-          $\to$ Compétence ou connaissance 2 : \hfill \square \par
-          $\to$ Compétence ou connaissance 3 : \hfill \square}}         
+         {C1 : Je reconnais des angles alternes-internes \hfill \square \par
+          C2 : Je reconnais des angles correspondants \hfill \square \par
+          C3 : J'utilise les propriétés des angles alternes-internes et correspondants pour montrer que des droites sont parallèles ou pour déterminer des angles \hfill \square}}         
    \rput[l](14,4){%bulle ENE : Aide vidéo
-      \pspolygon[fillcolor=A1,linecolor=A1](0,3.55)(-2,2.5)(0,3.95)
+      \pspolygon[fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {%\includegraphics[width=2.4cm]{QRcode} \par
-          Vidéo 1 \par \medskip
-          %\includegraphics[width=2.4cm]{QRcode} \par
-          Vidéo 2}}    
+         {\qrcode{https://www.youtube.com/watch?v=c8CuPY-KaNM&list=PLVUDmbpupCaoTCiYBCUGfCyenktNbkIdt} \par \smallskip
+          Angles alternes-internes \par \medskip
+          \qrcode{https://www.youtube.com/watch?v=ErUq2wdA_PE&list=PLVUDmbpupCaoTCiYBCUGfCyenktNbkIdt&index=2} \par \smallskip
+          Angles correspondants}}    
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
             {Goldenrod}
             {Questions flash}
-            {\psline[linecolor=darkgray](2.5,-0.5)(3,0.5)
-             \rput(3.5,0){\darkgray\Huge 5}}}     
-      \rput[l](0,0){%bulle SO : Compétence 1
-         \pspolygon[fillcolor=B1,linecolor=B1](5,2)(7.5,4.5)(5,2.4)
-         \bulle
+            {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
+             \rput(2.75,0){\darkgray\Huge 5}}}     
+      \rput[l](0,0){%bulle SSO : Compétence 1
+         \pspolygon[fillcolor=B1,linecolor=B1](5,2)(8,4.5)(5.5,2)
+         \bullelongue
             {B1}
-            {Compétence 1}
+            {Compétences 1 et 2}
             {Exercice 1 \hfill $\star$ \hfill \square \par
-             Exercice 2 \hfill $\star\star$ \hfill \square \par
-             Exercice 3 \hfill $\star\star$ \hfill \square}}
-      \rput[l](6.5,0){%bulle S : compétence 2
-         \pspolygon[fillcolor=B1,linecolor=B1](2.35,3)(2.5,4.5)(2.65,3)
-         \bulle
-            {B1}
-            {Compétence 2}
-            {Exercice 4 \hfill $\star$ \hfill \square \par
-             Exercice 5 \hfill $\star\star$ \hfill \square}}             
-      \rput[l](13,0){%bulle SE : compétence 3
-          \pspolygon[fillcolor=B1,linecolor=B1](0,2)(-2.5,4.5)(0,2.4)
-          \bulle
+             Exercice 2 \hfill $\star$ \hfill \square \par
+             Exercice 3 \hfill $\star\star\star$ \hfill \square}}
+      \rput[l](10,0){%bulle S : compétence 2
+         \pspolygon[fillcolor=B1,linecolor=B1](3,2)(0.5,4.5)(3.5,2)
+         \bullelongue
             {B1}
             {Compétence 3}
-            {Exercice 6 \hfill $\star$ \hfill \square \par
-             Exercice 7 \hfill $\star\star$ \hfill \square \par
-             Exercice 8 \hfill $\star\star\star$ \hfill \square \par
-             Exercice 9 \hfill $\star\star\star$ \hfill \square}}                  
+            {Exercice 4 \hfill $\star$ \hfill \square \par
+             Exercice 5 \hfill $\star\star$ \hfill \square \par
+             Exercice 6 \hfill $\star\star$ \hfill \square \par
+             Exercice 7 \hfill $\star\star\star$ \hfill \square}}                             
 \end{pspicture}
    
 \end{center}
