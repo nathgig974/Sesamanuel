@@ -178,10 +178,13 @@
 \RequirePackage{hyperref}
 %\RequirePackage{arydshln}
 \RequirePackage{frcursive}
-%\RequirePackage{scratch}
+\RequirePackage{scratch}
 %\RequirePackage{fancybox}
 %\usepackage{dashrule}
 \RequirePackage{setspace}
+\usepackage{qrcode}
+\usepackage{unicode-math}
+\newfontfamily\myfontScratch[]{FreeSans}
 
 %%%%%%%%%%macros personnelles %%%%%%%%%%%%
 %\newcommand{\compas}[5] %compas
@@ -761,11 +764,11 @@
     \else
       \ifcase\@enumdepth
       \or %(
-        \def\@enumlabel{\textcolor{#3}{#2\ni)}}%(
+        \def\@enumlabel{\textcolor{#3}{#2\na)}}%(
       \or
-        \def\@enumlabel{\textcolor{#3}{#2{\@alph\ni})}}%(
+        \def\@enumlabel{\textcolor{#3}{#2{\@alph\na})}}%(
       \or
-        \def\@enumlabel{\textcolor{#3}{#2{\@roman\ni)}}}%
+        \def\@enumlabel{\textcolor{#3}{#2{\@roman\na)}}}%
       \fi
     \fi
     \def\smc@nbcolumn{##1}%
@@ -779,13 +782,13 @@
     \smc@nbline \numexpr \smc@nbitem+\smc@nbcolumn-1
     \divide\smc@nbline \smc@nbcolumn
     \multido{\n=1+1}{\smc@nbline}{%
-      \multido{\ni=\n+\the\smc@nbline}{\smc@nbcolumn}{%
-        \unless\ifnum\ni>\smc@nbitem
+      \multido{\na=\n+\the\smc@nbline}{\smc@nbcolumn}{%
+        \unless\ifnum\na>\smc@nbitem
           \makebox[\ListLabelWidth]{\@enumlabel\hss}%
           \begin{minipage}[t]{\dimexpr
               (\linewidth-\ListHSep*(\smc@nbcolumn-1))%
                 /\smc@nbcolumn-\ListLabelWidth}
-            \strut\@nameuse{smc@item\ni}\strut
+            \strut\@nameuse{smc@item\na}\strut
           \end{minipage}%
           \hspace{\ListHSep}%
         \fi
@@ -4398,13 +4401,13 @@
   \smc@nbline \numexpr \smc@nbitem+\smc@nbcolumn-1
   \divide\smc@nbline \smc@nbcolumn
   \multido{\n=1+1}{\smc@nbline}{%
-    \multido{\ni=\n+\the\smc@nbline}{\smc@nbcolumn}{%
-      \unless\ifnum\ni>\smc@nbitem
-        \makebox[\QCMLabelWidth]{\QCMLabel{\ni}\hss}%
+    \multido{\na=\n+\the\smc@nbline}{\smc@nbcolumn}{%
+      \unless\ifnum\na>\smc@nbitem
+        \makebox[\QCMLabelWidth]{\QCMLabel{\na}\hss}%
         \begin{minipage}[t]{\dimexpr
             (\linewidth-\ListHSep*(\smc@nbcolumn-1))%
               /\smc@nbcolumn-\QCMLabelWidth}
-          \strut\@nameuse{smc@item\ni}\strut
+          \strut\@nameuse{smc@item\na}\strut
         \end{minipage}%
         \hspace{\ListHSep}%
       \fi
@@ -4655,7 +4658,7 @@
   \endgroup
 }
 \newcommand*\smc@corrigechapter[4]{%
-  \clearpage
+  %\clearpage
   \let\exercice\smc@noexercice
   \let\endexercice\endsmc@noexercice
   \let\corrige\smc@nocorrige
@@ -4675,7 +4678,7 @@
     \centering
     \color{#3}
     \CorrigeChapterFont \smc@nobsbs{#2}
-    \par\nobreak\smallskip
+    \par\nobreak
   }%
 }
 \newcommand\smc@corrigeautoeval{%

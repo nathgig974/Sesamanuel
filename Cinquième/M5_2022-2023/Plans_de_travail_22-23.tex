@@ -5,49 +5,48 @@
 
 \newcommand{\bulle}[3]{
    \psframe[linewidth=1mm,framearc=0.1,linecolor=#1](0,0)(5,3)
-   \psline[linecolor=#1](0,2.2)(5,2.2)
-   \rput(2.5,2.6){#2}
-   \rput(2.5,1.1){\begin{minipage}{4cm}
+   \psline[linecolor=#1](0,2.3)(5,2.3)
+   \rput(2.5,2.65){#2}
+   \rput(2.5,1.15){\begin{minipage}{4cm}
                            {\small\darkgray #3}
                          \end{minipage}}}
                         
 \newcommand{\bullelongue}[3]{
    \psframe[linewidth=1mm,framearc=0.1,linecolor=#1](0,0)(8.5,3)
-   \psline[linecolor=#1](0,2.2)(8.5,2.2)
-   \rput(4.25,2.6){#2}
-   \rput(4.25,1.1){\begin{minipage}{8cm}
+   \psline[linecolor=#1](0,2.3)(8.5,2.3)
+   \rput(4.25,2.65){#2}
+   \rput(4.25,1.15){\begin{minipage}{8cm}
                            {\small\darkgray #3}
                          \end{minipage}}}
    
 \newcommand{\bullecours}[3]{
    \psframe[linewidth=1mm,framearc=0.1,linecolor=#1](0,0)(12.5,3)
-   \psline[linecolor=#1](0,2.2)(12.5,2.2)
-   \rput(6.25,2.6){#2}
-   \rput(6.25,1.1){\begin{minipage}{12cm}
+   \psline[linecolor=#1](0,2.3)(12.5,2.3)
+   \rput(6.25,2.65){#2}
+   \rput(6.25,1.15){\begin{minipage}{12cm}
                         {\small\darkgray #3}
                       \end{minipage}}}
    
 \newcommand{\bulleQR}[3]{
    \psframe[linewidth=1mm,framearc=0.1,linecolor=#1](0,0)(4,7)
-   \psline[linecolor=#1](0,6.2)(4,6.2)
-   \rput(2,6.6){#2}
-   \rput(2,3.1){\begin{minipage}{3.5cm}
+   \psline[linecolor=#1](0,6.3)(4,6.3)
+   \rput(2,6.65){#2}
+   \rput(2,3.15){\begin{minipage}{3.5cm}
                            \begin{center}
                               {\small\darkgray #3}
                            \end{center}
                          \end{minipage}}}
-  
-\psset{fillstyle=solid}
-
+ 
 \begin{center}
+
 
 %%%%%%%%%% Séquence 1 %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{pspicture}(0.5,0)(18,11)            
    {\color{red}
-      \rput(9,5.75){\parbox{5cm}{\red\centering\large S1 \par  ENCHAÎNEMENT D'OPĖRATIONS}}} %bulle centrale  
+      \rput(9,5.75){\parbox{5cm}{\centering\large S1 \par  ENCHAÎNEMENT D'OPĖRATIONS}}} %bulle centrale  
    \rput[l](0,8){%bulle NNO : connaissances et compétences
-      \pspolygon[fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
       \bullecours
          {A1}
          {Je connais mon cours}
@@ -55,31 +54,32 @@
           C2 : Je traduis un enchaînement d’opérations à l’aide d’une expression et inversement \hfill \square \par
           C3 : J'effectue un enchaînement d'opérations en respectant les priorités opératoires \hfill \square}}         
    \rput[l](14,4){%bulle ENE : Aide vidéo
-      \pspolygon[fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.youtube.com/watch?v=TJH-fiwAt5s} \par \smallskip
-          Calculer avec des priorités \par \medskip
-          \qrcode{https://www.youtube.com/watch?v=_yF5ItbcN28&feature=youtu.be} \par \smallskip
+         {\qrcode{https://www.youtube.com/watch?v=TJH-fiwAt5s} \par \medskip
+          Calculer avec des priorités \par \bigskip
+          \qrcode{https://www.youtube.com/watch?v=_yF5ItbcN28&feature=youtu.be} \par \medskip
           Traduire une expression}}    
       \rput[l](0,4){%bulle O : Questions flash
-         \pspolygon[fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
+         \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
             {Goldenrod}
             {Questions flash}
             {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
              \rput(2.75,0){\darkgray\Huge 5}}}     
       \rput[l](0,0){%bulle SO : Compétence 1
-         \pspolygon[fillcolor=B1,linecolor=B1](5,2)(7.2,4.5)(5,2.35)
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](5,2)(7.2,4.5)(5,2.35)
          \bulle
             {B1}
             {Compétence 1}
-            {Exercice 1 \hfill $\star$ \hfill \square \par
+            {Activité d'approche \hfill $\star$ \hfill \square \par
+             Exercice 1 \hfill $\star$ \hfill \square \par
              Exercice 2 \hfill $\star\star$ \hfill \square \par
              Exercice 3 \hfill $\star\star\star$ \hfill \square}}
       \rput[l](6.5,0){%bulle S : compétence 2
-         \pspolygon[fillcolor=B1,linecolor=B1](2.35,3)(2.5,4.5)(2.65,3)
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](2.35,3)(2.5,4.5)(2.65,3)
          \bulle
             {B1}
             {Compétence 2}
@@ -87,14 +87,15 @@
              Exercice 5 \hfill $\star\star$ \hfill \square \par
              Exercice 6 \hfill $\star\star$ \hfill \square}}             
       \rput[l](13,0){%bulle SE : compétence 3
-          \pspolygon[fillcolor=B1,linecolor=B1](0,2)(-2.3,4.5)(0,2.35)
+          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](0,2)(-2.3,4.5)(0,2.35)
           \bulle
             {B1}
             {Compétence 3}
             {Exercice 7 \hfill $\star$ \hfill \square \par
              Exercice 8 \hfill $\star$ \hfill \square \par
              Exercice 9 \hfill $\star\star$ \hfill \square \par
-             Exercice 10 \hfill $\star\star\star$ \hfill \square}}                  
+             Exercice 10 \hfill $\star\star\star$ \hfill \square \par
+             Récréation \hfill $\star\star\star$ \hfill \square}}                  
 \end{pspicture}
    
 
@@ -104,7 +105,7 @@
    {\color{DodgerBlue}
       \rput(9,5.75){\parbox{5cm}{\centering\large S2 \par ANGLES \par PARTICULIERS}}} %bulle centrale  
    \rput[l](0,8){%bulle NNO : connaissances et compétences
-      \pspolygon[fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
       \bullecours
          {A1}
          {Je connais mon cours}
@@ -112,31 +113,32 @@
           C2 : Je reconnais des angles correspondants \hfill \square \par
           C3 : J'utilise les propriétés des angles alternes-internes et correspondants pour montrer que des droites sont parallèles ou pour déterminer des angles \hfill \square}}         
    \rput[l](14,4){%bulle ENE : Aide vidéo
-      \pspolygon[fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.youtube.com/watch?v=c8CuPY-KaNM&list=PLVUDmbpupCaoTCiYBCUGfCyenktNbkIdt} \par \smallskip
-          Angles alternes-internes \par \medskip
-          \qrcode{https://www.youtube.com/watch?v=ErUq2wdA_PE&list=PLVUDmbpupCaoTCiYBCUGfCyenktNbkIdt&index=2} \par \smallskip
+         {\qrcode{https://www.youtube.com/watch?v=c8CuPY-KaNM&list=PLVUDmbpupCaoTCiYBCUGfCyenktNbkIdt} \par \medskip
+          Angles alternes-internes \par \bigskip
+          \qrcode{https://www.youtube.com/watch?v=ErUq2wdA_PE&list=PLVUDmbpupCaoTCiYBCUGfCyenktNbkIdt&index=2} \par \medskip
           Angles correspondants}}    
       \rput[l](0,4){%bulle O : Questions flash
-         \pspolygon[fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
+         \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
             {Goldenrod}
             {Questions flash}
             {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
              \rput(2.75,0){\darkgray\Huge 5}}}     
       \rput[l](0,0){%bulle SSO : Compétence 1
-         \pspolygon[fillcolor=B1,linecolor=B1](5,2)(8,4.5)(5.5,2)
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](5,3)(8,4.5)(5.5,3)
          \bullelongue
             {B1}
             {Compétences 1 et 2}
-            {Exercice 1 \hfill $\star$ \hfill \square \par
+            {Activité d'approche \hfill $\star$ \hfill \square \par
+             Exercice 1 \hfill $\star$ \hfill \square \par
              Exercice 2 \hfill $\star$ \hfill \square \par
              Exercice 3 \hfill $\star\star\star$ \hfill \square}}
       \rput[l](10,0){%bulle S : compétence 2
-         \pspolygon[fillcolor=B1,linecolor=B1](3,2)(0.5,4.5)(3.5,2)
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](3,3)(0.5,4.5)(3.5,3)
          \bullelongue
             {B1}
             {Compétence 3}
@@ -145,6 +147,60 @@
              Exercice 6 \hfill $\star\star$ \hfill \square \par
              Exercice 7 \hfill $\star\star\star$ \hfill \square}}                             
 \end{pspicture}
-   
+
+
+%%%%%%%%%% Séquence 3 %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pspicture}(0.5,0)(18,11)            
+   {\color{orange}
+      \rput(9,5.75){\parbox{5cm}{\centering\large S3 \par EN ROUTE VERS LA PROGRAMMATION}}} %bulle centrale  
+   \rput[l](0,8){%bulle NNO : connaissances et compétences
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
+      \bullecours
+         {A1}
+         {Je connais mon cours}
+         {C1 : Je réalise des activités d’algorithmique débranchée \hfill \square \par
+          C2 : Je traduis un script de déplacement ou de construction géométrique \hfill \square \par
+          C3 : J'écrit un script de déplacement ou de construction géométrique \hfill \square}}         
+   \rput[l](14,4){%bulle ENE : Aide vidéo
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
+      \bulleQR
+         {A1}
+         {Aide en vidéo}
+         {\qrcode{https://www.youtube.com/watch?v=pdtMUgnmRa4&list=PLVUDmbpupCaqKLNci7_86rbIt61SMhJPd&index=1} \par \medskip
+          Prise en main de Scratch \par \bigskip
+          \qrcode{https://www.youtube.com/watch?v=8Sfarvw6jgg&list=PLVUDmbpupCaqKLNci7_86rbIt61SMhJPd&index=2} \par \medskip
+          Utiliser une boucle}}    
+      \rput[l](0,4){%bulle O : Questions flash
+         \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
+         \bulle
+            {Goldenrod}
+            {Questions flash}
+            {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
+             \rput(2.75,0){\darkgray\Huge 5}}}    
+      \rput[l](0,0){%bulle SO : Compétence 1
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](5,2)(7.2,4.5)(5,2.35)
+         \bulle
+            {B1}
+            {Compétence 1}
+            {Activité d'approche \hfill $\star\star\star$ \hfill \square \par
+             Récréation \hfill $\star\star\star$ \hfill \square}}
+      \rput[l](6.5,0){%bulle S : compétence 2
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](2.35,3)(2.5,4.5)(2.65,3)
+         \bulle
+            {B1}
+            {Compétence 2}
+            {Exercice 1 \hfill $\star$ \hfill \square \par
+             Exercice 2 \hfill $\star\star$ \hfill \square}}           
+      \rput[l](13,0){%bulle SE : compétence 3
+          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](0,2)(-2.3,4.5)(0,2.35)
+          \bulle
+            {B1}
+            {Compétence 3}
+            {Exercice 1 \hfill $\star$ \hfill \square \par
+             Exercice 3 \hfill $\star$ \hfill \square \par
+             Exercice 4 \hfill $\star\star$ \hfill \square \par}}               
+\end{pspicture}
+  
 \end{center}
 
