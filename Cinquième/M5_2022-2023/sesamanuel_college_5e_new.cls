@@ -2975,7 +2975,7 @@
       \colorlet{ChapterNumSquare4Color}{#7}%
       \colorlet{ChapterNumSquare5Color}{#6}%
       \colorlet{FirstChapterFootColor}{#7}%
-      \setcounter{chapter}{0}% AjoutSeb -> Initialiser la numérotation des themes perso ajoutés avec \newThema
+      %\setcounter{chapter}{0}% AjoutSeb -> Initialiser la numérotation des themes perso ajoutés avec \newThema
     }%
   \fi
 }
@@ -4658,7 +4658,7 @@
   \endgroup
 }
 \newcommand*\smc@corrigechapter[4]{%
-  %\clearpage
+  \clearpage
   \let\exercice\smc@noexercice
   \let\endexercice\endsmc@noexercice
   \let\corrige\smc@nocorrige
