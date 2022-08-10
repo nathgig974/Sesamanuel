@@ -165,8 +165,9 @@
 \RequirePackage{multicol}
 \RequirePackage[french]{babel}
 \RequirePackage[autolanguage]{numprint}
-%\RequirePackage[T1]{fontenc} %%%%%%%%%%%%%%%%
+%\RequirePackage[T1]{fontenc} 
 
+%%%%%%%%%%%%%%%%
 % ajout de packages
 %\RequirePackage{lscape}
 %\RequirePackage{xlop}
@@ -185,6 +186,8 @@
 \usepackage{qrcode}
 \usepackage{unicode-math}
 \newfontfamily\myfontScratch[]{FreeSans}
+\usepackage{microtype}
+
 
 %%%%%%%%%%macros personnelles %%%%%%%%%%%%
 %\newcommand{\compas}[5] %compas

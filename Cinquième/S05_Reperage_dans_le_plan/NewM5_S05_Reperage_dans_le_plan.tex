@@ -1,0 +1,708 @@
+\themaE
+\graphicspath{{../../S05_Reperage_et_deplacements/Images/}}
+
+\chapter{Repérage\\dans le plan}
+\label{S05}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{autoeval}
+   \small
+   \begin{enumerate}
+      \item Il se repère dans le plan muni d'un repère orthogonal.
+   \end{enumerate}
+\end{autoeval}
+
+\begin{prerequis}
+   \begin{itemize}
+      \item Abscisse, ordonnée.
+      \item[\com] (Se) repérer dans le plan muni d'un repère orthogonal.
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\begin{debat}[Débat : repère, ou repaire ?] 
+   Ces deux mots ont la même origine, le nom latin {\it rapatrirare}, \og rentrer chez soi, rentrer dans sa patrie \fg. \\
+   {\bf Repaire} a assez vite pris le sens de \og gîte d'animaux sauvages \fg. Au moyen-âge, l'écriture du nom n'était pas encore stabilisée et s'écrivait également {\bf repère}, que l'on rattacha à tort au nom latin {\it reperire}, \og retrouver \fg. Finalement, repère se spécialise pour désigner une marque permettant de retrouver quelque chose. \\ [2mm]
+    Revenons aux mathématiques, comment se repérer, selon le type d'objet où l'on se trouve :
+   \begin{center}
+      {\psset{unit=0.8,linecolor=B1}
+      \begin{pspicture}(0,-0.5)(15,3.3)
+         \psline(0,0)(3,3)
+         \rput(1.5,-0.7){\small Sur une droite ?}
+         \psframe(4,0)(7,3)
+         \rput(5.5,-0.7){\small Sur un plan ?}
+         \psframe(8,0)(10,2) 
+         \psline(10,0)(11,1)(11,3)(9,3)(8,2)
+         \psline(10,2)(11,3)
+         \rput(9.5,-0.7){\small Dans l'espace ?}
+         \pscircle(13.5,1.5){1.5}
+         \psellipticarc(13.5,1.5)(1.5,0.6){180}{0}
+         \rput(13.5,-0.7){\small Sur une sphère ?}
+      \end{pspicture}}    
+   \end{center}
+   \bigskip
+   \begin{cadre}[B2][J4]
+      \begin{center}
+         Vidéo : \href{https://www.youtube.com/watch?v=Tu2kRuZcWRI}{\bf C'est quoi un peu en 4D (et 1D) ?}, chaîne YouTube {\it Trash Bandicoot}.
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Dessin gradué]
+   {\bf Objectif :} créer un dessin en utilisant un repérage particulier. \\ [-5mm]
+   \begin{QCM}
+      Pour découvrir le dessin codé, il faut placer les points A, B, C\dots{} selon les indications du tableau ci-dessous. Par exemple, le point A est sur la première ligne et son abscisse est 8. \\
+      Une fois tous les points placés les relier en suivant les instructions données.
+      \begin{center}
+         \begin{tabular}{|*{3}{C{0.5}|}}
+            \hline
+            \cellcolor{lightgray}{\!\!\!\small Ligne} & \cellcolor{lightgray}{\!\!\!\small Point} & \cellcolor{lightgray}{\!\small Abs.} \\
+            \hline
+            (1) & A & 8 \\
+            \hline
+            (1) & B & 9 \\
+            \hline
+            (1) & C & 12 \\
+            \hline
+            (2) & D & 17 \\
+            \hline
+            (2) & E & 18 \\
+            \hline
+            (2) & F& 19 \\
+            \hline
+            (2) & G & 20 \\
+            \hline
+            (2) & H & 21 \\
+            \hline
+            (2) & I & 22 \\
+            \hline
+            (2) & J & 23 \\
+            \hline
+            (3) & K & 57 \\
+            \hline
+         \end{tabular}
+         \hfill
+         \begin{tabular}{|*{3}{C{0.5}|}}
+            \hline
+            \cellcolor{lightgray}{\!\!\!\small Ligne} & \cellcolor{lightgray}{\!\!\!\small Point} & \cellcolor{lightgray}{\!\small Abs.} \\
+            \hline
+            (3) &  L & 58 \\
+            \hline
+            (3) & M & 59 \\
+            \hline
+            (3) & N & 63 \\
+            \hline
+            (3) & O & 64 \\
+            \hline
+            (4) & P & 23 \\
+            \hline
+            (4) & Q & 24 \\
+            \hline
+            (4) & R & 25 \\
+            \hline
+            (4) & S & 28 \\
+            \hline
+            (4) & T & 29 \\
+            \hline
+            (5) & U & 22 \\
+            \hline
+            (5) & V & 24 \\
+            \hline
+         \end{tabular}
+         \hfill
+         \begin{tabular}{|*{3}{C{0.5}|}}
+            \hline
+            \cellcolor{lightgray}{\!\!\!\small Ligne} & \cellcolor{lightgray}{\!\!\!\small Point} & \cellcolor{lightgray}{\!\small Abs.} \\
+            \hline
+            (5) & W & 26 \\
+            \hline
+            (6) & X & 36 \\
+            \hline
+            (6) & Y & 44 \\
+            \hline
+            (7) & Z & 6 \\
+            \hline
+            (7) & A' & 14 \\
+            \hline
+            (7) & B' & 18 \\
+            \hline
+            (7) & C' & 22 \\
+            \hline
+            (8) & D' & 15 \\
+            \hline
+            (8) & E' & 18 \\
+            \hline
+            (8) & F' & 27 \\
+            \hline
+            (9) & G' & 103 \\
+            \hline
+         \end{tabular}
+         \hfill
+         \begin{tabular}{|*{3}{C{0.5}|}}
+            \hline
+            \cellcolor{lightgray}{\!\!\!\small Ligne} & \cellcolor{lightgray}{\!\!\!\small Point} & \cellcolor{lightgray}{\!\small Abs.} \\
+            \hline
+            (9) & H' & 107 \\
+            \hline
+            (9) & I' & 108 \\
+            \hline
+            (10) & J' & 2 \\
+            \hline
+             (10) & K' & 4 \\
+            \hline
+            (10) & L' & 16 \\
+            \hline
+            (11) & M' & 50 \\
+            \hline
+            (11) & N' & 80 \\
+            \hline
+            (12) & O' & 32 \\
+            \hline
+            (12) & P' & 44 \\
+            \hline
+            (13) & Q' & 0,1 \\
+            \hline
+            (13) & R' & 0,2 \\
+            \hline
+         \end{tabular}
+         \hfill
+         \begin{tabular}{|*{3}{C{0.5}|}}
+            \hline
+            \cellcolor{lightgray}{\!\!\!\small Ligne} & \cellcolor{lightgray}{\!\!\!\small Point} & \cellcolor{lightgray}{\!\small Abs.} \\
+            \hline
+            (13) & S' & 0,3 \\
+            \hline
+            (13) & T' & 0,5 \\
+            \hline
+            (13) & U' & 0,6 \\
+            \hline
+            (13) & V' & 0,7 \\
+            \hline
+            (13) & W' & 0,8 \\
+            \hline
+            (13) & X' & 0,9 \\
+            \hline
+            (14) & Y' & $-15$ \\
+            \hline
+            (14) & Z' & $-14$ \\
+            \hline
+            (14) & A'' & $-11$ \\
+            \hline
+            (14) & B'' & $-7$ \\
+            \hline
+            (14) & C'' & $-6$ \\
+            \hline
+         \end{tabular}
+      \end{center}
+      \begin{minipage}{4cm}
+         Tracer les lignes brisées \\
+         suivantes : \\ [3mm]
+         FELMPKDACOTWVY \\
+         C'P’C"B"V’O’W’X’B’XA’  \\ [3mm]
+         GB \\ [3mm]
+         HJNI \\ [3mm]
+         ST \\ [3mm]
+         QRUC’ \\ [3mm]
+         D’E’L’N’U’T’ \\ [3mm]
+         F’I’H’ \\ [3mm]
+         U’V’ \\ [3mm]
+         B"A"S’M’G’K’R’Z’Y’Q’J’ZK \\ [3mm]
+         ZG’
+      \end{minipage}
+      \qquad
+      \begin{minipage}{10cm}
+            \DessinGradue[LignesIdentiques=false,Echelle=1,EcartVertical=0.8]
+            {0/15/15,
+            10/25/15,
+            50/65/15,
+            15/30/15,
+            0/30/30, %5
+            20/50/15,
+            0/30/15,
+            0/45/15,
+            100/115/15,
+            0/30/15, %10
+            0/150/15,
+            0/60/30,
+            0/1.5/15,
+            -15/0/15}
+            {1/A/8,1/B/9,1/C/12,
+            2/D/7,2/E/8,2/F/9,2/G/10,2/H/11,2/I/12,2/J/13,
+            3/K/7,3/L/8,3/M/9,3/N/13,3/O/14,
+            4/P/8,4/Q/9,4/R/10,4/S /13,4/T/14,
+            5/U/22,5/V/24,5/W/26,
+            6/X/8,6/ Y/12,
+            7/Z/3,7/A'/7,7/B'/9,7/C'/11,
+            8/D'/5 ,8/E'/6,8/F'/9,
+            9/G'/3,9/H'/7,9/I'/8,
+            10/J'/1,10/K'/2,10/L'/8,
+            11/M'/5,11/N'/8,
+            12/O'/16,12/P'/22,
+            13/Q'/1,13/R'/2,13/S'/3,13/ T'/5,13/U'/6,13/V'/7,13/W'/8,13/X'/9,
+            14/Y'/0,14/Z'/1,14/A''/4,14/B''/8,14/C''/9}
+            {chemin(F,E,L,M,P,K,D,A,C,O,T,W,V,Y,C',P',C '',B'',V',O',W',X',B',X,A'),
+            chemin(G,B),
+            chemin(H,J,N,I),
+            chemin(S,T),
+            chemin(Q,R,U ,C'),
+            chemin(D',E',L',N',U',T'),
+            chemin(F ',I',H'),
+            chemin(U',V'),
+            chemin(B'',A'',S',M',G',K',R',Z',Y',Q',J',Z,K),
+            chemin(Z, G')}
+      \end{minipage} \smallskip
+   \end{QCM}
+   \vfill\hfill{\it\small Activité inspirée de la brochure APMEP n°169 : \og Jeux 7 \fg}
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+%%%%%%%%%%%%%%%%%%
+\section{La droite graduée (rappels)}
+
+\begin{definition}
+   Pour graduer une droite, il faut choisir une {\bf origine} qui correspond au \og 0 \fg{} et une {\bf unité} qui sera reportée de manière régulière. \\
+   Sur une droite graduée, un point est repéré par son {\bf abscisse}.
+\end{definition}
+      
+\begin{center}
+   \begin{pspicture}(-3,-1.3)(5.1,1)
+      \psaxes[yAxis=false]{->}(0,0)(-3,0)(5.1,0)
+      \psline[linecolor=gray]{<-}(0,0)(-0.5,0.5)
+      \rput(-1,0.7){\textcolor{gray}{origine}}
+      \psline[linecolor=gray]{<->}(0,0.3)(1,0.3)
+      \rput(0.5,0.6){\textcolor{gray}{unité}}
+      \rput(3,0.4){\textcolor{A1}{A}}
+      \rput(3,-0.9){\textcolor{A1}{l'abscisse du}}
+      \rput(3,-1.3){\textcolor{A1}{point A est 3}}
+      \rput(3,-1.7){\textcolor{A1}{on note A(3)}}
+   \end{pspicture}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Repérer un point dans un repère du plan}
+
+
+\begin{definition}  
+   Un \textbf{repère orthogonal} est constitué de deux axes gradués perpendiculaires et sécants en O.
+    \begin{itemize}
+      \item O est l'\textbf{origine} du repère ;
+      \item la droite horizontale est l'\textbf{axe des abscisses} ;
+      \item la droite verticale est l'\textbf{axe des ordonnées}.
+   \end{itemize} 
+\end{definition}
+
+\medskip
+
+\begin{propriete}
+   Dans un repère, un point $M$ est repéré par un couple $(x;y)$ appelé coordonnées du point $M$. \\
+   $x$ est l'\textbf{abscisse} du point et $y$ est l'\textbf{ordonnée}.
+\end{propriete}
+
+\begin{exemple*1}
+\ \\
+   \begin{pspicture}(-7,-3.5)(7,3.5)
+      \psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray!70](-4,-3)(4,3)
+      \pstGeonode[PosAngle=45](3,2){A}(-2,1.5){B}(-3,-2){C}(2.5,-1.5){D}
+      \rput(-0.3,-0.3){\small $O$}
+      \rput[l](4.5,0){\textcolor{A1}{axe des abscisses}}
+      \rput(0,3.5){\textcolor{B1}{axe des ordonnées}}
+      \rput[l](4.5,-2.5){\gray origine du repère}
+      \footnotesize
+      \psaxes[yAxis=false,linecolor=A1,labels=none]{->}(0,0)(-4,0)(4,0)
+      \multido{\n=-4+1}{4}{\rput(\n,-0.4){\textcolor{A1}{\n}}}
+      \multido{\n=1+1}{4}{\rput(\n,-0.4){\textcolor{A1}{\n}}}
+      \psaxes[xAxis=false,linecolor=B1,labels=none]{->}(0,0)(0,-3)(0,3)
+      \multido{\n=-3+1}{3}{\rput(-0.4,\n){\textcolor{B1}{\n}}}
+      \multido{\n=1+1}{3}{\rput(-0.4,\n){\textcolor{B1}{\n}}}
+      \psline[linestyle=dashed,linecolor=gray]{->}(4,-2.5)(2,-2.5)(0.1,-0.1)
+      \psline[linestyle=dashed]{<->}(0,2)(3,2)(3,0)
+   \end{pspicture}
+   \correction
+      Les coordonnées des points $O, A, B, C$ et $D$ sont : \\
+      $O(\textcolor{A1}{0}\,;\textcolor{B1}{0})$ \qquad $A(\textcolor{A1}{3}\,;\textcolor{B1}{2})$ \qquad $B(\textcolor{A1}{-2}\,;\textcolor{B1}{1,5})$ \qquad $C(\textcolor{A1}{-3}\,;\textcolor{B1}{-2})$ \qquad $D(\textcolor{A1}{2,5}\,;\textcolor{B1}{-1,5})$
+\end{exemple*1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+\begin{exercice} %1
+  Lire puis écrire les coordonnées des points A à L.
+  {\psset{unit=0.4}
+  \begin{center}
+  \begin{pspicture}(-9,-10)(9,10.25)
+   \psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](-9,-10)(9,10)
+      \psaxes[labels=none,ticks=none]{->}(0,0)(-9,-10)(9,10)
+      \psline(2,-0.2)(2,0.2)
+      \psline(-0.2,2)(0.2,2)
+      \small
+      \rput(-0.4,-00.4){$O$}
+      \rput(2,-0.5){1}
+      \rput(-0.5,2){1}
+      \pstGeonode[PointSymbol=+,PosAngle=45,linewidth=1mm](3,3){A}(-4,7){B}(-8,-7){C}(7,-3){D}(6,9){E}(-8,2){F}(-2,-4){G}(2,-6){H}(8,0){I}(0,5){J}(-4;0){K}(0,-8){L}
+   \end{pspicture}
+   \end{center}}
+\end{exercice}
+
+\begin{corrige}
+   \begin{colitemize}{2}
+      \item \blue $A(1,5\,;\,1,5)$
+      \item \blue $B(-2\,;\,3,5)$
+      \item \blue $C(-4\,;\,-3,5)$
+      \item \blue $D(3,5\,;\,-1,5)$
+      \item \blue $E(3\,;\,4,5)$
+      \item \blue $F(-4\,;\,1)$
+      \item \blue $G(-1\,;\,-2)$
+      \item \blue $H(1\,;\,-3)$
+      \item \blue $I(4\,;\,0)$
+      \item \blue $J(0\,;\,2,5)$
+      \item \blue $K(-2\,;\,0)$
+      \item \blue $L(0\,;\,-4)$
+   \end{colitemize}
+\end{corrige}
+
+\medskip
+
+
+\begin{exercice} %2
+   On considère les points de coordonnées : \\
+   {\hautab{1.2}
+   \begin{tabular}{p{1.6cm}p{1.6cm}p{1.6cm}p{1.6cm}}
+      $M(-9\,;-5)$ & $N(-4\,;0)$ & $O'(2,5\,;7)$ & $P(5\,;3)$ \\
+      $Q(-1\,;-1)$ & $R(2\,;-3)$ & $S(5\,;-2)$ & $T(-6,5\,;-2)$ \\
+      $U(-1\,;-4)$ & $V(2\,;0)$ & $W(-6,5\,;4)$ & $X(-9\,,0)$ \\
+      $Y(-4\,;-5)$ & $Z(-6,5\,;-1)$ & & \\
+   \end{tabular}}
+   \begin{enumerate}
+      \item Créer un repère orthogonal en prenant un centimètre pour une unité qui puisse contenir tous les points.
+      \item Placer les points dans le repère.
+      \item Relier dans l'ordre les points suivants :
+      \begin{itemize}
+         \item $W-X-M-Y-N-W-O'-P-S-Y$.
+         \item $U-Q-V-R$.
+         \item $X-N-P$.
+         \item Tracer le cercle de centre $T$ passant par $Z$.
+      \end{itemize}
+      Imane reconnait un dessin familier. Quel est-il ?
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   Imane reconnait le dessin d'{\blue une maison}. \\
+   {\psset{unit=0.777,PointSymbol=none}
+   \begin{pspicture}(-10,-5.6)(6,8.3)
+   \psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](-10,-6)(6,8)
+      \psaxes[labels=none,ticks=none]{->}(0,0)(-10,-6)(6,8)
+      \psline(1,-0.2)(1,0.2)
+      \psline(-0.2,1)(0.2,1)
+      \footnotesize
+      \rput(-0.4,-00.4){$O$}
+      \rput(1,0.5){1}
+      \rput(-0.5,1){1}
+      \psset{linecolor=blue}
+      \pstGeonode[PosAngle={90,135,-135,-45,50},CurveType=polygon](-6.5,4){W}(-9,0){X}(-9,-5){M}(-4,-5){Y}(-4,0){N}
+      \pstGeonode[PosAngle=45,CurveType=polyline](2.5,7){O'}(5,3){P}(5,-2){S}
+      \pstLineAB{W}{O'}
+      \pstLineAB{S}{Y}
+      \pstGeonode[PosAngle={-90,135,45,-45},CurveType=polyline](-1,-4){U}(-1,-1){Q}(2,0){V}(2,-3){R}
+      \pstLineAB{X}{N}
+      \pstLineAB{N}{P}
+      \pstGeonode(-6.5,-2){T}(-6.1,-1){Z}
+      \psdot(-6.5,-2)
+      \pstCircleOA{T}{Z}
+   \end{pspicture}}
+\end{corrige}
+
+\medskip
+
+
+\begin{exercice} %3
+   On se place dans un repère orthogonal d'origine $O$ et d'unité \ucm{1}.
+   \begin{enumerate}
+      \item Placer le point $A$ de coordonnées $(3,5\,;1,5)$.
+      \item Placer le point $B$ symétrique du point $A$ par rapport à l'axe des abscisses. Quelles sont ses coordonnées ?
+      \item Placer le point $C$ symétrique du point $B$ par rapport à l'axe des ordonnées. Quelles sont ses coordonnées ?
+      \item Placer le point $D$ symétrique du point $C$ par rapport à l'axe des abscisses. Quelles sont ses coordonnées ?
+      \item Quelle est la nature du quadrilatère $ABCD$ ?
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   On obtient un {\blue rectangle}. \\
+   \begin{pspicture}(-3.5,-2)(4,2.2)
+      \footnotesize
+      \psgrid[gridlabels=0,subgriddiv=2,gridcolor=lightgray](-4,-2)(4,2)
+      \pstGeonode[PointSymbol=none,PosAngle={45,-45,-135,135},CurveType=polygon,linecolor=blue](3.5,1.5){A}(3.5,-1.5){B}(-3.5,-1.5){C}(-3.5,1.5){D}
+      \psaxes[labels=none,ticks=none]{->}(0,0)(-4,-2)(4,2)
+      \psline(1,-0.2)(1,0.2)
+      \psline(-0.2,1)(0.2,1)
+      \rput(-0.4,-00.4){$O$}
+      \rput(1,0.5){1}
+      \rput(-0.5,1){1}
+   \end{pspicture} \\
+   {\blue $B(3,5\,;-1.5)\,; C(-3,5\,;-1.5)\,;D(-3,5\,;1.5)$} \\
+\end{corrige}
+
+\columnbreak
+
+
+\begin{exercice} %4
+   L'image suivante représente la position obtenue au déclenchement du bloc \og Départ \fg{} d'un programme. \\
+   L'arrière-plan est constitué de points espacés de 40 unités. Le chat a pour coordonnées $(-120\,;\,-80)$. \\
+   Le but du jeu est de positionner le chat sur la balle représentée par le petit disque.
+   \begin{center}
+   {\psset{unit=0.4}
+   \begin{pspicture}(-6,-3.3)(6,4.3)
+      \multido{\n=-6+1}{13}{
+      \multido{\na=-4+1}{9}{\psdots[dotscale=0.5](\n,\na)}}
+      \psaxes[Dx=10,Dy=10]{->}(0,0)(-6,-4)(6,4)
+      \uput[dl](0,0){O}
+      \psdots[dotscale=2](4,3)
+      \rput(-3,-2){Chat}
+   \end{pspicture}}
+   \end{center}
+   \begin{enumerate}
+      \item Quelles sont les coordonnées du centre de la balle représentée dans cette position?
+      \item Dans cette question, le chat est dans la position obtenue au déclenchement du bloc départ. \\
+      Voici le script du lutin \og chat \fg{} qui se déplace. \\ [2mm]
+      \begin{Scratch}[Echelle=0.75]
+         Place Drapeau;
+         Place Bloc("Départ");
+      \end{Scratch}
+      \quad
+      \begin{Scratch}[Echelle=0.75]
+         Place QPresse("n'importe laquelle");
+         Place Si(TestCapToucheObjet("Balle"));
+            Place DireT("Je t'ai attrapée","2");
+            Place Bloc("Départ");
+         Place FinBlocSi;
+      \end{Scratch} \\ [2mm]
+      \hspace*{-5mm}   
+      \begin{Scratch}[Echelle=0.65]
+         Place QPresse("flèche droite");
+         Place AjouterVar("80","x");
+      \end{Scratch}
+      \begin{Scratch}[Echelle=0.65]
+         Place QPresse("flèche haut");
+         Place AjouterVar("80","y");
+      \end{Scratch} \\ [2mm]
+      \hspace*{-5mm}
+      \begin{Scratch}[Echelle=0.65]
+         Place QPresse("flèche gauche");
+         Place AjouterVar("-40","x");
+      \end{Scratch}
+      \begin{Scratch}[Echelle=0.65]
+         Place QPresse("flèche bas");
+         Place AjouterVar("-40","y");
+      \end{Scratch} 
+      \begin{enumerate}
+         \item Expliquer pourquoi le chat ne revient pas à sa position de départ si le joueur appuie sur la touche $\to$ puis sur la touche $\gets$.
+         \item Le joueur appuie sur la succession de touches suivante : $\to$ $\to$  $\uparrow$ $\gets$ $\downarrow$. Quelles sont les coordonnées $x$ et $y$ du chat après ce déplacement ? Justifier.
+         \item Parmi les propositions ci-dessous, laquelle permet au chat d'atteindre la balle ? \medskip
+      \end{enumerate}
+      \hspace*{-5mm}
+      {\small
+      \hautab{1.2}
+      \begin{tabular}{|c|c|c|}
+         \hline
+         déplacement 1 & déplacement 2 & déplacement 3\\ \hline
+         $\to \to \to \to \to \to \to \uparrow\uparrow\uparrow\uparrow\uparrow$
+         &
+         $\to\to\to \uparrow\uparrow\uparrow \to \downarrow \gets$
+         &
+         $\uparrow \to \uparrow \to \uparrow \to \to \downarrow \downarrow$ \\
+         \hline
+      \end{tabular}}
+      \smallskip
+      \item Que se passe-t-il quand le chat atteint la balle ?
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item La balle est située à quatre espaces vers la droite et trois espaces vers le haut, soit $4\times40$ unités = 160 unités et $3\times40$ unités = 120 unités. \\
+      Ses coordonnées sont donc {\blue (160\,;\,120)}.
+      \item \\
+      \begin{enumerate}
+         \item La touche $\to$ ajoute 80 à l'abscisse $x$ ; la touche $\gets$ ajoute $-40$ à l'abscisse $x$ ; donc, la succession $\to \, \gets$ ajoute $80+(-40) =40$ à l'abscisse $x$. \\
+            Le chat a donc \og avancé \fg{} de 40 unités vers la droite,  {\blue il ne revient pas à sa position de départ}. \vspace*{11.5cm}
+         \item On résume dans un tableau les déplacements : \\ \smallskip
+            {\hautab{1.3}
+            \begin{tabular}{|*{7}{c|}}
+               \hline
+               & départ & $\to$ & $\to$ & $\uparrow$ & $\gets$ & $\downarrow$ \\
+               \hline
+               $x$ & $-120$ & $-40$ & 40 & 40 & 0 & 0 \\
+               \hline 
+               $y$ & $-80$ & $-80$ & $-80$ & 0 & 0 & $-40$ \\
+               \hline
+            \end{tabular}} \\ \smallskip
+         Les coordonnées du chat après ces cinq déplacements sont {\blue $(0\,;\,-40)$}.
+         \item Seul le {\blue déplacement 2} permet au chat d'attraper la balle.
+      \end{enumerate}
+      \setcounter{enumi}{2}
+      \item Quand le chat atteint la balle, {\blue il dit \og Je t'ai attrapée \fg{} pendant 2 sec.} puis retourne au départ. 
+   \end{enumerate}
+\end{corrige}
+
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\begin{enigme}[Déformations]
+   \partie[dessin]
+      \begin{minipage}{10cm}
+         \begin{enumerate}
+            \item Placer ces points dans le repérage ci-contre. \\ [-9mm]
+               \begin{multicols}{4}
+                 \textls[400]{A($-$3;2) \\ B($-$3;$-5$) \\ C(3;$-$5) \\ D(3;2) \\ E(4;1) \\
+            F(4;2) \\ G(0;6) \\ H($-$4;2) \\ I($-$4;1) \\ J(0;5) \\
+            K($-$1;$-$5) \\ L($-$1;$-$2) \\ M(1;$-$2) \\ N(1;$-$5) \\
+            O($-$2;0) \\ P($-$2;2) \\ Q($-$1;2) \\ R($-$1;0) \\ S(1;$-$1) \\
+            T(1;1) \\ U(2;1) \\ V(2;$-$1)}
+               \end{multicols}
+               \vspace*{-4mm}
+         \item Relier les points suivants : \\
+            ABCDEFGHIJD \\
+            KLMN \\
+            OPQRO \\
+            STUVS
+         \end{enumerate}
+      \end{minipage}
+      \qquad
+      \begin{minipage}{6cm}
+         {\psset{unit=0.5}
+         \begin{pspicture}(-6,-6)(5,6)
+            \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](0,0)(-5,-6)(5,7)
+            \psaxes[labels=none]{->}%
+(0,0)(-5,-6)(5,7)
+            \rput(-0.4,-0.4){\scriptsize 0}
+            \rput(1,-0.5){\scriptsize 1}
+            \rput(-0.5,1){\scriptsize 1}
+         \end{pspicture}}
+      \end{minipage}
+      \bigskip
+      
+   \partie[déformations]
+      Tracer le dessin dans les repères suivants : que se passe-t-il ? \\ [2mm]
+      \begin{minipage}{6cm}
+         {\psset{xunit=0.5}
+         \begin{pspicture}(-6,-5)(5,7)
+            \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](0,0)(-5,-6)(5,7)
+            \psaxes[labels=none]{->}%
+(0,0)(-5,-6)(5,7)
+            \rput(-0.4,-0.4){\scriptsize 0}
+            \rput(1,-0.5){\scriptsize 1}
+            \rput(-0.5,1){\scriptsize 1}
+         \end{pspicture}}
+      \end{minipage}
+      \begin{minipage}{11cm}
+         {\psset{yunit=0.5}
+         \begin{pspicture}(-6,-6)(5,7)
+            \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](0,0)(-5,-6)(5,7)
+            \psaxes[labels=none]{->}%
+(0,0)(-5,-6)(5,7)
+            \rput(-0.4,-0.4){\scriptsize 0}
+            \rput(1,-0.5){\scriptsize 1}
+            \rput(-0.5,1){\scriptsize 1}
+         \end{pspicture}} \\
+         \pstilt{55}{
+         {\psset{xunit=0.7,yunit=0.6}
+         \begin{pspicture}(-5,-5)(5,8)
+            \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](0,0)(-5,-6)(5,7)
+            \psaxes[labels=none]{->}%
+(0,0)(-5,-6)(5,7)
+            \rput(-0.4,-0.4){\scriptsize 0}
+            \rput(1,-0.5){\scriptsize 1}
+            \rput(-0.5,1){\scriptsize 1}
+         \end{pspicture}}}
+      \end{minipage}
+\end{enigme}
+
+\begin{corrige}
+   \partie[dessin]
+      {\psset{unit=0.5}
+         \begin{pspicture}(-6,-6)(5,8)
+            \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](0,0)(-5,-6)(5,7)
+            \psaxes[labels=none]{->}%
+(0,0)(-5,-6)(5,7)
+            \rput(-0.4,-0.4){\scriptsize 0}
+            \rput(1,-0.5){\scriptsize 1}
+            \rput(-0.5,1){\scriptsize 1}
+            \psset{linecolor=blue}
+            \psline(-3,2)(-3,-5)(3,-5)(3,2)(4,1)(4,2)(0,6)(-4,2)(-4,1)(0,5)(3,2) 
+            \psframe(-1,-5)(1,-2)
+            \psframe(-2,0)(-1,2)
+            \psframe(1,-1)(2,1)
+         \end{pspicture}}
+         \bigskip
+         
+   \partie[déformations]
+      {\psset{xunit=0.5}
+         \begin{pspicture}(-6,-5)(5,7.5)
+            \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](0,0)(-5,-6)(5,7)
+            \psaxes[labels=none]{->}%
+(0,0)(-5,-6)(5,7)
+            \rput(-0.4,-0.4){\scriptsize 0}
+            \rput(1,-0.5){\scriptsize 1}
+            \rput(-0.5,1){\scriptsize 1}
+            \psset{linecolor=blue}
+            \psline(-3,2)(-3,-5)(3,-5)(3,2)(4,1)(4,2)(0,6)(-4,2)(-4,1)(0,5)(3,2) 
+            \psframe(-1,-5)(1,-2)
+            \psframe(-2,0)(-1,2)
+            \psframe(1,-1)(2,1)
+         \end{pspicture}}
+
+\Coupe
+
+      {\psset{yunit=0.5}
+         \begin{pspicture}(-4.05,-6)(5,10.55)
+            \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](0,0)(-5,-6)(5,7)
+            \psaxes[labels=none]{->}%
+(0,0)(-5,-6)(5,7)
+            \rput(-0.4,-0.4){\scriptsize 0}
+            \rput(1,-0.5){\scriptsize 1}
+            \rput(-0.5,1){\scriptsize 1}
+            \psset{linecolor=blue}
+            \psline(-3,2)(-3,-5)(3,-5)(3,2)(4,1)(4,2)(0,6)(-4,2)(-4,1)(0,5)(3,2) 
+            \psframe(-1,-5)(1,-2)
+            \psframe(-2,0)(-1,2)
+            \psframe(1,-1)(2,1)
+         \end{pspicture}}
+         
+      \pstilt{55}{
+      {\psset{xunit=0.7,yunit=0.6}
+         \begin{pspicture}(-2,-5)(5,10.5)
+            \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](0,0)(-5,-6)(5,7)
+            \psaxes[labels=none]{->}%
+(0,0)(-5,-6)(5,7)
+            \rput(-0.4,-0.4){\scriptsize 0}
+            \rput(1,-0.5){\scriptsize 1}
+            \rput(-0.5,1){\scriptsize 1}
+            \psset{linecolor=blue}
+            \psline(-3,2)(-3,-5)(3,-5)(3,2)(4,1)(4,2)(0,6)(-4,2)(-4,1)(0,5)(3,2) 
+            \psframe(-1,-5)(1,-2)
+            \psframe(-2,0)(-1,2)
+            \psframe(1,-1)(2,1)
+         \end{pspicture}}}
+\end{corrige}
