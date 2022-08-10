@@ -1,0 +1,508 @@
+\themaD
+\graphicspath{{../../S06_Interpreter_representer_des_donnees/Images/}}
+
+\newcommand{\Cell}[1]{\fcolorbox[gray]{0.1}{0.9}{\begin{minipage}{2.5cm} #1 \end{minipage}}}
+\newcommand{\cell}[1]{\fcolorbox[gray]{0.1}{0.9}{#1}}
+
+
+\chapter{Interpréter,\\représenter\\des données}
+\label{S06}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{autoeval}
+   \small
+   \begin{enumerate}
+      \item Il recueille et organise des données.
+      \item Il lit et interprète des données brutes ou présentées sous forme de tableaux, de diagrammes et de graphiques.
+      \item Il représente, sur papier ou à l’aide d’un tableur-grapheur, des données sous la forme d’un tableau, d’un diagramme ou d’un graphique.
+   \end{enumerate}
+\end{autoeval}
+
+\begin{prerequis}
+   \begin{itemize}
+      \item[\com] Recueillir des données, les organiser.
+      \item[\com] Lire et interpréter des données sous forme de données brutes, de tableau, de diagramme (diagramme en bâtons, diagramme circulaire, histogramme).
+      \item[\com] Utiliser un tableur-grapheur pour présenter des données sous la forme d’un tableau ou d’un diagramme.
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+
+\begin{debat}[Débat : le premier tableur]
+   Des données brutes récoltées ont souvent peu de sens si elles sont utilisées ainsi, d'où la nécessité de les disposer d'une manière plus lisible à l'aide de tableaux et diagrammes. \\
+   Avec l'avènement de l'informatique, les tableaux deviennent numériques grâce à l'apport des {\bf tableurs} : logiciels qui permettent de manipuler des données numériques, d'effectuer un certain nombre d'opérations de façon automatisée, de créer des représentations graphiques à partir des données : diagrammes , histogrammes, courbes\dots{} \\
+   Le premier tableur fut créé en 1978 par {\it Daniel Bricklin}, étudiant à Harvard qui devait établir des tableaux comptables pour une étude de cas sur Pepsi-Cola sans pour autant établir tous les calculs \og à la main \fg. Son premier prototype, {\it VisiCalc} (pour Visible Calculator), pouvait manipuler un tableau de vingt lignes et cinq colonnes ! \\
+   \begin{center}
+      \textsf{
+      \begin{tabular}{|>{\columncolor{lightgray!30}}c|*{5}{C{1}|}}
+         \hline
+         \rowcolor{lightgray!30} & A & B & C & D & E \\
+         \hline
+         1 & & & & &  \\
+         \hline
+         2 & & & & & \\
+         \hline
+         3 & & & & & \\
+         \hline
+     \end{tabular}}
+   \end{center}
+   \bigskip
+   \begin{cadre}[B2][J4]
+      \begin{center}
+         Vidéo : \href{https://www.ted.com/talks/dan_bricklin_meet_the_inventor_of_the_electronic_spreadsheet#t-556741}{\bf Meet the inventor of electronic spreadsheet}, site Internet de {\it Ted talks}.
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Récolter des données]
+   {\bf Objectif :} Récolter des données au sein de la classe afin de les représenter sous différentes formes. \\
+   \begin{QCM}
+      De combien d'enfants est composée ta famille proche (éventuellement recomposée), toi y compris ?
+      \begin{center}
+      {\hautab{2.5}
+      \begin{ttableau}{0.9\linewidth}{4}
+         \hline
+         & & & \\
+         \hline
+         & & & \\
+         \hline
+         & & & \\
+         \hline
+         & & & \\
+         \hline
+         & & & \\
+         \hline
+         & & & \\
+         \hline
+         & & & \\
+         \hline
+      \end{ttableau}}
+      \end{center}
+      \ \\
+      Ces données seront utilisées pour construire la trace écrite.
+   \end{QCM}
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+
+%%%%%%%%%
+\section{Tableaux}
+
+On souhaite connaître le nombre d'enfants qui constitue une fratrie d'une classe de 5\up{e} du collège Simone Veil composée ce jour là de 25 élèves. On obtient les résultats suivants :
+   \begin{center}
+      1 ; 2 ; 5 ; 1 ; 2 ; 2 ; 3 ; 4 ; 1 ; 3 ; 2 ; 6 ; 2 ; 3 ; 4 ; 2 ; 6 ; 1 ; 3 ; 2 ; 1 ; 2 ; 3 ; 3 ; 2.
+   \end{center}
+   
+On {\bf organise} les résultats : pour rassembler les données, on les présente sous forme d'un tableau où l'on regroupe ensemble les différentes valeurs obtenues. L'{\bf effectif} d'une donnée est le nombre de fois qu'elle apparaît.
+\begin{center}
+   \Stat[Sondage,Tableau,Largeur=8mm,Donnee=Nombre d'enfants,Total]{1,2,5,1,2,2,3,4,1,3,2,6,2,3,4,2,6,1,3,2,1,2,3,3,2}
+\end{center}
+
+
+%%%%%%%%%%%
+\section{Diagrammes en barres}
+
+\begin{definition}
+   Un \textbf{diagramme en barres} (ou en bâtons) est un graphique qui représente une série par de barres rectangulaires avec des hauteurs ou des longueurs proportionnelles aux effectifs.
+\end{definition}
+
+\bigskip
+
+\begin{minipage}{8cm}
+   {\it Diagramme en barres verticales}\Stat[Graphique,Grille,Unitex=0.9,Unitey=0.4,EpaisseurBatons=8,Donnee=Nombre d'enfants,ListeCouleursB={CadetBlue,LightSeaGreen,DarkTurquoise,MediumTurquoise,Turquoise,PaleTurquoise}]{1/5,2/9,3/6,4/2,5/1,6/2}
+\end{minipage}
+\begin{minipage}{8cm}
+   {\it Diagramme en barres horizontales}
+      \Stat[Qualitatif,Graphique,Barre,Grille,Longueur=6cm,EcartBarre=2mm,ListeCouleurs={CadetBlue,LightSeaGreen,DarkTurquoise,MediumTurquoise,Turquoise,PaleTurquoise}]{1 enfant/5,2 enfants/9,3 enfants/6,4 enfants/2,5 enfants/1,6 enfants/2}
+\end{minipage}
+
+
+\begin{definition}
+   Un \textbf{diagramme circulaire} est un graphique qui représente une série par des secteurs circulaires dont la mesure des angles est proportionnelle aux effectifs.
+\end{definition}
+   
+\bigskip
+   
+\begin{minipage}{8.6cm}
+   Pour déterminer la valeur d'un angle, on effectue un calcul de proportionnalité : \\
+   Les 25 familles sont représentées sur le diagramme par un secteur angulaire de \udeg{360}. \\
+   Une famille correspond à un secteur égal à $\dfrac{\udeg{360}}{25} =\udeg{14,4}$. \\
+   Il suffit donc de multiplier l'effectif par 14,4 pour obtenir la valeur de l'angle (ici arrondie au degré). \\ [2mm]
+   \Stat[Qualitatif,Tableau,Angle,Donnee=Nombre d'enfants,Largeur=0.5cm]{1/5,2/9,3/6,4/2,5/1,6/2}
+\end{minipage}
+\qquad
+\begin{minipage}{7cm}
+   {\it Diagramme circulaire} \\ [5mm]
+   \Stat[Qualitatif,Graphique,Angle,Rayon=1.8cm,ListeCouleurs={CadetBlue,LightSeaGreen,DarkTurquoise,MediumTurquoise,Turquoise,PaleTurquoise}]{1 enfant/5,2 enfants/9,3 enfants/6,4 enfants/2,5 enfants/1,6 enfants/2}
+\end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+\begin{exercice} %1
+   On a demandé à des élèves de trois classes de 5\up{e} combien d'animaux de compagnie vivaient avec eux. \\
+   Le résultat est représenté dans le diagramme suivant :
+   \Stat[Graphique,Grille,Unitex=1.2,Unitey=0.14,Origine=-0.5,Pasy=5,EpaisseurBatons=8,Donnee=,Effectif=Nombre d'élèves,LectureFine,Tiret,ListeCouleursB={Gray,Gray,Gray,Gray,Gray}]{0/32,1/21,2/15,3/4,4/3} \\ [-8mm]
+   \hspace*{27mm} Nombre d'animaux de compagnie \\ [2mm]
+   Les affirmations suivantes sont-elles vraies ou fausses ?
+   \begin{enumerate}
+      \item 21 élèves ont un seul animal de compagnie.
+      \item Il y a 75 élèves en 5\up{e} dans ce collège.
+      \item Les élèves qui ont deux animaux de compagnie sont trois fois plus nombreux que les élèves qui en ont trois.
+      \item 70 élèves ont moins de trois animaux de compagnie.
+      \item Plus de la moitié des élèves ont au moins un animal de compagnie.
+      \item Parmi les élèves qui ont au moins un animal de compagnie, la moitié en ont plusieurs.
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item {\blue vrai}, par lecture de la deuxième barre.
+      \item {\blue faux}. Le diagramme ne nous permet pas de connaître le nombre d'élèves de ce collège puisqu'il s'agit des données de trois classes seulement.
+      \item {\blue faux}. 15 élèves ont deux animaux de compagnie et  4 en ont trois. or, 15 n'est pas le triple de 4.
+      \item {\blue faux}. $32+21+15 =68$. 68 élèves ont moins de trois animaux de compagnie.   
+      \item {\blue vrai}. 32 élèves n'ont pas d'animal de compagnie et 43 en ont au moins un.
+      \item {\blue vrai}. Parmi les 43 élèves qui ont au moins un animal de compagnie, 22 en ont plusieurs, donc plus de la moitié.
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %2
+   L'infographie suivante donne le nombre de fois que des sortilèges de magie apparaissent dans les sept livres de la série {\it Harry Potter}.
+   \begin{center}
+      \includegraphics[width=8cm]{infographie}
+   \end{center}
+   {\footnotesize\it Source de l'infographie : Harry Potter, les nombres d'or de la saga, Le Figaro.fr, 2017}
+   \begin{enumerate}
+      \item Comment sont représentées les données dans cette infographie ?
+      \item Combien y a-t-il eu de sortilèges donnés au total dans les sept livres ?
+      \item Représenter les données dans un tableau en notant uniquement les sortilèges cités plus de 20 fois.
+      \item Construire un diagramme en bâtons pour les valeurs de ce tableau.
+      \item Construire un diagramme circulaire pour les valeurs de ce tableau.
+      \item Laquelle de ces trois représentations vous convient le mieux ? Pourquoi ?
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item Les données sont représentées sous forme de {\blue bulles proportionnelles à l'effectif}.
+      \item $140+49+39+34+27+27+24+22+18+15+13+11+11+10+9+7+6+6+4+3 =475$. \\
+      {\blue 475 sorts ont été donnés durant les sept livres}.
+      \item Tableau des effectifs : \\ \smallskip
+         {\small
+         \hautab{1}
+         \setlength{\tabcolsep}{0cm}
+         \begin{Ltableau}{\linewidth}{9}{c}
+            \hline       
+            Nom & E.P. & Imp. & End. & Accio &Stup. & Exp. & A.K. & Lum. \\
+            \hline
+            Eff. & 140 & 49 & 39 & 34 & 27 & 27 & 24 & 22 \\
+            \hline
+         \end{Ltableau}}
+      \item Diagramme en bâtons : \\
+         {\psset{yunit=0.4,xunit=0.8}
+         \begin{pspicture}(-0.8,-1)(8,8.25)
+         {\footnotesize
+            \psline(0,0)(8,0)
+            \multido{\i=0+1,\n=0+20}{8}{\psline(-0.1,\i)(0.1,\i) \rput(-0.5,\i){\n}}
+            \psline{->}(0,0)(0,8)
+            \psset{linewidth=0.5,linecolor=blue}
+            \psline(0.5,0)(0.5,7)
+            \psline(1.5,0)(1.5,2.45)
+            \psline(2.5,0)(2.5,1.95)
+            \psline(3.5,0)(3.5,1.7)
+            \psline(4.5,0)(4.5,1.35)
+            \psline(5.5,0)(5.5,1.35)
+            \psline(6.5,0)(6.5,0.6)
+            \psline(7.5,0)(7.5,0.55)
+            \rput(0.5,-0.5){E.P.}
+            \rput(1.5,-0.6){Imp.}
+            \rput(2.5,-0.5){End.}
+            \rput(3.5,-0.5){Accio}
+            \rput(4.5,-0.6){Stup.}
+            \rput(5.5,-0.6){Exp.}
+            \rput(6.5,-0.5){A.K.}
+            \rput(7.5,-0.5){Lum.}
+            \rput(1,7.7){\it Effectifs}}
+         \end{pspicture}}
+      \item Diagramme circulaire : \\
+         {\psset{unit=0.6}
+         \footnotesize
+         \begin{pspicture}(-5,-3.25)(3,3.25)
+            \pscircle(0,0){3}
+            \pswedge[fillstyle=solid,fillcolor=blue!70](0,0){3}{0}{139}
+            \pswedge[fillstyle=solid,fillcolor=blue!65](0,0){3}{139}{188}
+            \pswedge[fillstyle=solid,fillcolor=blue!60](0,0){3}{188}{227}      
+            \pswedge[fillstyle=solid,fillcolor=blue!55](0,0){3}{227}{261}
+            \pswedge[fillstyle=solid,fillcolor=blue!50](0,0){3}{261}{287}
+            \pswedge[fillstyle=solid,fillcolor=blue!45](0,0){3}{287}{314}
+            \pswedge[fillstyle=solid,fillcolor=blue!40](0,0){3}{314}{338}
+            \pswedge[fillstyle=solid,fillcolor=blue!35](0,0){3}{338}{360}
+            \rput(1.5;69){\white Expecto}
+            \rput(2;69){\white Patronum}
+            \rput{-17}(2;163){\white Impero}
+            \rput{28}(2;208){\white Endoloris}
+            \rput{62}(2.2;242){\white Accio}
+            \rput{274}(2.2;274){\white Stupéfix}
+            \rput{300}(1.9;300){\white Expelliarmus}
+            \rput{326}(2.2;326){\white A.K.}
+            \rput{349}(2.2;349){\white Lumos}
+         \end{pspicture}}
+      \item Cette question est personnelle\dots
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %3
+   Le tableau ci-dessous représente la répartition des médailles françaises aux Jeux olympiques d'été de 1896 à 2016 pour les dix sports ayant eu le plus de médailles.
+   \begin{enumerate}
+      \item Compléter le tableau.
+      \item Comment est établi le classement des sports aux Jeux olympiques.
+      \item Construire trois diagrammes circulaires : celui du cyclisme, du tir et du canoë-kayak en fonction de la couleur de médaille obtenue. Les comparer.
+   \end{enumerate}
+   \begin{center}
+      \small
+         {\hautab{2.1}
+         \begin{tabular}{|*{7}{c|}}
+            \hline 
+            Pl. & & Sport & \pscircle[fillstyle=solid,fillcolor=Gold](0,0.1){0.2} & \pscircle[fillstyle=solid,fillcolor=lightgray](0,0.1){0.2} & \pscircle[fillstyle=solid,fillcolor=brown](0,0.1){0.2} & T. \\
+            \hline
+            1 & \includegraphics[height=4mm]{S1} & & & \, 51 \, & \, 35 \, & \, {\bf 118} \, \\
+            \hline 
+            2 & \includegraphics[height=4mm]{S2} & & 41 & & 23 & {\bf 91} \\
+            \hline
+            3 & \includegraphics[height=4mm]{S3} & & 14 & 25 & & {\bf 68} \\
+            \hline  
+            4 & \includegraphics[height=4mm]{S4} & & 14 & 13 & 10 & \\
+            \hline  
+            5 & \includegraphics[height=4mm]{S5} & & 14 & 10 & & {\bf 49} \\
+            \hline  
+            6 & \includegraphics[height=4mm]{S6} & & 13 & & 17 & {\bf 41} \\
+            \hline  
+            7 & \includegraphics[height=4mm]{S7} & & & 14 & 10 & {\bf 33} \\
+            \hline  
+            8 & \includegraphics[height=4mm]{S8} & & 9 & & 3 & {\bf 15} \\
+            \hline  
+            9 & \includegraphics[height=4mm]{S9} & & 8 & 15 & & {\bf 43} \\
+            \hline  
+            10 & \includegraphics[height=4mm]{S10} & {\textcolor{white}{Canoé-kayak}} & 8 & 9 & 19 & \\
+            \hline    
+         \end{tabular}} \\ [2mm]
+      \hfill {\footnotesize\it Source : France aux Jeux olympiques, Wikipedia, 2019}
+   \end{center}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item Voici le tableau complété : \\ \smallskip
+         {\footnotesize
+         \hautab{2}
+         \begin{tabular}{|*{7}{c|}}
+            \hline 
+             & & Sport & \pscircle[fillstyle=solid,fillcolor=Gold](0,0.1){0.2} & \pscircle[fillstyle=solid,fillcolor=lightgray](0,0.1){0.2} & \pscircle[fillstyle=solid,fillcolor=brown](0,0.1){0.2} & T. \\
+            \hline
+            1 & \includegraphics[scale=0.3]{S1} & {\blue Escrime} & \, {\blue 32} \, & \, 51 \, & \, 35 \, & \, {\bf 118} \, \\
+            \hline 
+            2 & \includegraphics[scale=0.3]{S2} & {\blue Cyclisme} & 41 & {\blue 27} & 23 & {\bf 91} \\
+            \hline
+            3 & \includegraphics[scale=0.3]{S3} & {\blue Athlétisme} & 14 & 25 & {\blue 29} & {\bf 68} \\
+            \hline  
+            4 & \includegraphics[scale=0.3]{S4} & {\blue Équitation} & 14 & 13 & 10 & {\blue \bf 37} \\
+            \hline  
+            5 & \includegraphics[scale=0.3]{S5} & {\blue Judo} & 14 & 10 & {\blue 25} & {\bf 49} \\
+            \hline  
+            6 & \includegraphics[scale=0.3]{S6} & {\blue Voile} & 13 & {\blue 11} & 17 & {\bf 41} \\
+            \hline  
+            7 & \includegraphics[scale=0.3]{S7} & {\blue Tir} & {\blue 9} & 14 & 10 & {\bf 33} \\
+            \hline  
+            8 & \includegraphics[scale=0.3]{S8} & {\blue Haltérophilie} & 9 & {\blue 3} & 3 & {\bf 15} \\
+            \hline  
+            9 & \includegraphics[scale=0.3]{S9} & {\blue Natation} & 8 & 15 & {\blue 20} & {\bf 43} \\
+            \hline  
+            10 & \includegraphics[scale=0.3]{S10} & {\blue Canoé-kayak} & 8 & 9 & 19 & {\blue \bf 36} \\
+            \hline    
+         \end{tabular}} \medskip
+      \item Le classement des sports est établi grâce au {\blue nombre de médailles d'or}, puis d'argent, puis de bronze.
+      \item On récapitule dans un tableau les angles : \\ \smallskip
+   \end{enumerate}
+      \small
+      {\hautab{1.5}
+      \begin{Ltableau}{0.95\linewidth}{5}{c}
+         \hline   
+         Couleur & Or & Argent & Bronze & Total \\
+         \hline   
+         Cyclisme & 41 & 27 & 23 & 91 \\
+         Angle & \textcolor{blue}{\udeg{162}} & \textcolor{blue}{\udeg{107}} & \textcolor{blue}{\udeg{91}} & \udeg{360} \\
+         \hline
+         Tir & 9 & 14 & 10 & 33 \\
+         Angle & \textcolor{blue}{\udeg{98}} & \textcolor{blue}{\udeg{153}} & \textcolor{blue}{\udeg{109}} & \udeg{360} \\
+         \hline
+         Canoé-kayak & 8 & 9 & 19 & 36 \\
+         Angle & \textcolor{blue}{\udeg{80}} & \textcolor{blue}{\udeg{90}} & \textcolor{blue}{\udeg{190}} & \udeg{360} \\
+        \hline
+      \end{Ltableau}}
+      {\psset{unit=0.4}
+      \begin{pspicture}(-2,-3.3)(3,3.8)
+         \pscircle(0,0){3}
+         \pswedge[fillstyle=solid,fillcolor=Gold](0,0){3}{0}{162}
+         \pswedge[fillstyle=solid,fillcolor=lightgray](0,0){3}{162}{269}
+         \pswedge[fillstyle=solid,fillcolor=brown](0,0){3}{269}{360}      
+      \end{pspicture}
+      \begin{pspicture}(-3.5,-3)(3,3.5)
+         \pscircle(0,0){3}
+         \pswedge[fillstyle=solid,fillcolor=Gold](0,0){3}{0}{98}
+         \pswedge[fillstyle=solid,fillcolor=lightgray](0,0){3}{98}{251}
+         \pswedge[fillstyle=solid,fillcolor=brown](0,0){3}{251}{360}      
+      \end{pspicture}
+      \begin{pspicture}(-3.5,-3)(2.5,3.5)
+         \pscircle(0,0){3}
+         \pswedge[fillstyle=solid,fillcolor=Gold](0,0){3}{0}{80}
+         \pswedge[fillstyle=solid,fillcolor=lightgray](0,0){3}{80}{170}
+         \pswedge[fillstyle=solid,fillcolor=brown](0,0){3}{170}{360}      
+      \end{pspicture}} \\
+      \quad {\blue Cyclisme \hfill Tir \hfill Canoé-kayak} \hspace*{4mm} \\ \medskip
+      On remarque par exemple que chacun de ces sports à une couleur très dominante : l'or pour le cyclisme, l'argent pour le tir et le bronze pour le canoé-kayak.  
+\end{corrige} 
+
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\begin{enigme}[Le tableur]
+   Un tableur est un logiciel d'édition et de présentation de tableaux. Il comporte des \textbf{feuilles de calcul} composées de multiples lignes et colonnes formant des \textbf{cellules}. Chaque cellule est repérée par son adresse : une lettre désignant la colonne et un numéro désignant la ligne. Par exemple, la cellule {\bf A1} fait référence à la colonne A ligne numéro 1. \medskip
+
+\partie[écrire dans une cellule] 
+   Ouvrir une nouvelle feuille de tableur, écrire les textes suivants et appuyer sur entrée. 
+   $$\text{Dans la cellule A1 : } \Cell{\texttt{1+2}} \qquad ; \qquad \text{ Dans la cellule A2 :} \Cell{\texttt{=1+2}}$$
+   Quelle est la différence entre ces deux écritures ? Quelle est la différence d'interprétation du tableur ? \par
+   \Lignespointilles{2} \medskip
+
+\partie[un exemple d'utilisation du tableur]
+   Adam revient de la boulangerie avec huit petits gâteaux qu'il a payés \ueuro{11,50} au total. Il y a des muffins à \ueuro{0,80} l'un et des tartelettes à \ueuro{2,50} pièce. On veut connaître le nombre de muffins et de tartelettes ramenées. 
+   \begin{enumerate}
+      \item Préparation du tableau : commencer par indiquer dans la \textbf{ligne 1} les données de type \og texte \fg. \\
+      Dans la {\bf colonne A}, écrire le nombre de muffins qu'il est possible d'avoir acheté, de 0 à 8 dans les cellules {\bf A2} à {\bf A10}. Connais-tu une méthode rapide pour écrire ces neuf nombres de 0 à 8 ? \\ [-2mm]
+         \begin{center}
+         \textsf{
+         \begin{tabular}{|>{\columncolor{lightgray!30}}c|c|c|c|c|c|}
+            \hline
+            \rowcolor{lightgray!30} & A & B & C & D & E \\
+            \hline
+            1 & \cellcolor{FondTableaux}{Nombre de muffins} & \cellcolor{FondTableaux}{Nombre de tartelettes} & \cellcolor{FondTableaux}{Prix des muffins} & \cellcolor{FondTableaux}{Prix des tartelettes} & \cellcolor{FondTableaux}{Prix payé} \\
+            \hline
+            2 & 0 & & & & \\
+            \hline
+            3 & 1 & & & & \\
+            \hline
+            4 & & & & & \\
+            \hline
+            5 & & & & & \\
+            \hline
+            6 & & & & & \\
+            \hline
+            7 & & & & & \\
+            \hline
+            8 & & & & & \\
+            \hline
+            9 & & & & & \\
+            \hline
+            10 & & & & & \\
+            \hline
+        \end{tabular}} \bigskip
+      \end{center}
+      \item {\bf Colonne B} : dans la cellule {\bf B2}, écrire la formule : \cell{=8-A2} puis sélectionner cette cellule et la tirer vers le bas pour compléter la colonne B. Quel est l'effet de ces actions ? \par
+        \pointilles \medskip
+      \item {\bf Colonne C} : dans la cellule {\bf C2}, écrire la formule : \cell{=0,8*A2} Expliquer cette formule puis compléter la colonne C. \par\
+        \pointilles \medskip
+      \item {\bf Colonne D} : quelle formule peut-on écrire dans le cellule \textbf{D2} ? Compléter alors la colonne D. \par
+        \pointilles \medskip
+      \item {\bf Colonne E} : quelle formule peut-on écrire dans le cellule \textbf{E2} ? Compléter alors la colonne E. \par\
+        \pointilles \medskip
+      \item Résoudre le problème en lisant le résultat dans le tableur et en indiquant les cellules importantes pour cela. \par
+        \pointilles
+   \end{enumerate}
+\end{enigme}
+
+\begin{corrige}
+
+\setcounter{partie}{0}
+\partie
+   Dans la deuxième écriture, on note la présence du {\blue signe \og = \fg{}} avant le calcul. \\
+   Cette écriture est interprétée comme un {\blue calcul que le tableur effectue} alors que la première écriture est interprétée comme un {\blue texte à afficher.}
+
+\medskip
+
+\partie
+   \begin{enumerate}
+      \item On commence par écrire 0 dans la cellule A2, puis 1 dans la cellule A3. \\
+      Puis on sélectionne les cellules A2 et A3. \\
+      Enfin, on \og tire \fg{} ces cellules vers le bas en plaçant la souris au coin à droite des cellules et en glissant vers le bas jusqu'à la cellule A10. \\
+      {\it Le tableur interprète cette action comme une répétition de l'addition permettant de passant de 0 à 1, c'est-à-dire par l'ajout de 1 à chaque cellule}.
+      \item Cette formule permet de trouver le {\blue nombre de tartelettes achetées} si on a acheté 0 muffin pour la ligne 2. \\
+         En sélectionnant la cellule et en la tirant vers le bas, le tableur répète la formule pour 1 muffin, puis 2, puis 3\dots
+      \item Cette formule permet de calculer le {\blue prix payé pour les muffins} si on en a acheté 0. \\
+         En sélectionnant la cellule et en la tirant vers le bas, le tableur répète la formule pour 1 muffin, puis 2, puis 3\dots
+      \item En D2, on peut écrire : {\blue \fbox{=2,5*B2}} pour calculer le prix des tartelettes. \\
+         On tire la cellule vers le bas pour compléter la colonne.
+      \item En E2, on peut écrire : {\blue \fbox{=C2+D2}} pour calculer le prix payé au total, somme du prix payé pour les muffins et de celui payé pour les tartelettes. \\
+         On tire la cellule vers le bas pour compléter la colonne.
+      \item On cherche, dans la colonne E, le prix de 11,50~\euro{}, on lit ce prix en E7, ce qui donne le nombre de muffins en A7 et le nombre de tartelettes en B7. \\
+         Conclusion : {\blue Adrien a acheté 5 muffins et 3 tartelettes}.
+   \end{enumerate}
+   
+\Coupe
+   
+On obtient le tableau suivant : \\ [2mm]
+   \textsf{
+      \hautab{1.5}
+         \begin{tabular}{|>{\columncolor{lightgray!30}}c|C{0.9}|C{0.9}|C{0.9}|C{0.9}|C{0.9}|C{0.9}|}
+            \hline
+            \rowcolor{lightgray!30} & A & B & C & D & E \\
+            \hline
+            1 & \cellcolor{FondTableaux}{Muffins} & \cellcolor{FondTableaux}{\!\!\!Tartelettes} & \cellcolor{FondTableaux}{Prix muff.} & \cellcolor{FondTableaux}{Prix tarte.} & \cellcolor{FondTableaux}{Prix payé} \\
+            \hline
+            2 & 0 & 8 & 0 & 20 & 20 \\
+            \hline
+            3 & 1 & 7 & 0,8 & 17,5 & 18,3 \\
+            \hline
+            4 & 2 & 6 & 1,6 & 15 & 16,6 \\
+            \hline
+            5 & 3 & 5 & 2,4 & 12,5 & 14,9 \\
+            \hline
+            6 & 4 & 4 & 3,2 & 10 & 13,2 \\
+            \hline
+            7 & 5 & 3 & 4 & 7,5 & 11,5 \\
+            \hline
+            8 & 6 & 2 & 4,8 & 5 &  9,8 \\
+            \hline
+            9 & 7 & 1 & 5,6 & 2,5 & 8,1 \\
+            \hline
+            10 & 8 & 0 & 6,4 & 0 & 6,4 \\
+            \hline
+        \end{tabular}}
+\end{corrige}
