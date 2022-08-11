@@ -190,6 +190,11 @@
 
 
 %%%%%%%%%%macros personnelles %%%%%%%%%%%%
+
+% écriture des cellules de tableur
+\newcommand{\Cell}[1]{\fcolorbox[gray]{0.1}{0.9}{\begin{minipage}{2.5cm} #1 \end{minipage}}}
+\newcommand{\cell}[1]{\fcolorbox[gray]{0.1}{0.9}{#1}}
+
 %\newcommand{\compas}[5] %compas
 %   {\psset{fillstyle=solid,fillcolor=gray!20}
 %    \scalebox{#4}
@@ -237,8 +242,7 @@
 %
 %Tableau
 \newcommand\hautab[1]{\renewcommand{\arraystretch}{#1}}
-%\newcommand\corec[1]{\hspace*{-7.5mm} \textcolor{RecreationTitleColor}{\large\bf\textsf{#1}}}
-%
+
 %Compétences
 \newcommand{\com}{\textcolor{B2}{$\diamondsuit$}}
 
@@ -1172,12 +1176,12 @@
 \newunit{damc}{\text{dam}^3}
 \newunit{hmc}{\text{hm}^3}
 \newunit{kmc}{\text{km}^3}
-\newunit{hl}{\text{hl}}
-\newunit{dal}{\text{dal}}
-\newunit{l}{\text{l}}
-\newunit{dl}{\text{dl}}
-\newunit{cl}{\text{cl}}
-\newunit{ml}{\text{ml}}
+\newunit{hl}{\text{hL}}
+\newunit{dal}{\text{daL}}
+\newunit{l}{\text{L}}
+\newunit{dl}{\text{dL}}
+\newunit{cl}{\text{cL}}
+\newunit{ml}{\text{mL}}
 \newunit{hel}{\text{h$\ell$}}
 \newunit{dael}{\text{da$\ell$}}
 \newunit{el}{\text{$\ell$}}

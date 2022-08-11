@@ -1,0 +1,56 @@
+
+\setcounter{partie}{0}
+\partie
+   Dans la deuxième écriture, on note la présence du {\blue signe \og = \fg{}} avant le calcul. \\
+   Cette écriture est interprétée comme un {\blue calcul que le tableur effectue} alors que la première écriture est interprétée comme un {\blue texte à afficher.}
+
+\medskip
+
+\partie
+   \begin{enumerate}
+      \item On commence par écrire 0 dans la cellule A2, puis 1 dans la cellule A3. \\
+      Puis on sélectionne les cellules A2 et A3. \\
+      Enfin, on \og tire \fg{} ces cellules vers le bas en plaçant la souris au coin à droite des cellules et en glissant vers le bas jusqu'à la cellule A10. \\
+      {\it Le tableur interprète cette action comme une répétition de l'addition permettant de passant de 0 à 1, c'est-à-dire par l'ajout de 1 à chaque cellule}.
+      \item Cette formule permet de trouver le {\blue nombre de tartelettes achetées} si on a acheté 0 muffin pour la ligne 2. \\
+         En sélectionnant la cellule et en la tirant vers le bas, le tableur répète la formule pour 1 muffin, puis 2, puis 3\dots
+      \item Cette formule permet de calculer le {\blue prix payé pour les muffins} si on en a acheté 0. \\
+         En sélectionnant la cellule et en la tirant vers le bas, le tableur répète la formule pour 1 muffin, puis 2, puis 3\dots
+      \item En D2, on peut écrire : {\blue \fbox{=2,5*B2}} pour calculer le prix des tartelettes. \\
+         On tire la cellule vers le bas pour compléter la colonne.
+      \item En E2, on peut écrire : {\blue \fbox{=C2+D2}} pour calculer le prix payé au total, somme du prix payé pour les muffins et de celui payé pour les tartelettes. \\
+         On tire la cellule vers le bas pour compléter la colonne.
+      \item On cherche, dans la colonne E, le prix de 11,50~\euro{}, on lit ce prix en E7, ce qui donne le nombre de muffins en A7 et le nombre de tartelettes en B7. \\
+         Conclusion : {\blue Adrien a acheté 5 muffins et 3 tartelettes}.
+   \end{enumerate}
+
+\Coupe
+
+On obtient le tableau suivant : \\ [2mm]
+   \textsf{
+      \hautab{1.5}
+         \begin{tabular}{|>{\columncolor{lightgray!30}}c|C{0.9}|C{0.9}|C{0.9}|C{0.9}|C{0.9}|C{0.9}|}
+            \hline
+            \rowcolor{lightgray!30} & A & B & C & D & E \\
+            \hline
+            1 & \cellcolor{FondTableaux}{Muffins} & \cellcolor{FondTableaux}{\!\!\!Tartelettes} & \cellcolor{FondTableaux}{Prix muff.} & \cellcolor{FondTableaux}{Prix tarte.} & \cellcolor{FondTableaux}{Prix payé} \\
+            \hline
+            2 & 0 & 8 & 0 & 20 & 20 \\
+            \hline
+            3 & 1 & 7 & 0,8 & 17,5 & 18,3 \\
+            \hline
+            4 & 2 & 6 & 1,6 & 15 & 16,6 \\
+            \hline
+            5 & 3 & 5 & 2,4 & 12,5 & 14,9 \\
+            \hline
+            6 & 4 & 4 & 3,2 & 10 & 13,2 \\
+            \hline
+            7 & 5 & 3 & 4 & 7,5 & 11,5 \\
+            \hline
+            8 & 6 & 2 & 4,8 & 5 &  9,8 \\
+            \hline
+            9 & 7 & 1 & 5,6 & 2,5 & 8,1 \\
+            \hline
+            10 & 8 & 0 & 6,4 & 0 & 6,4 \\
+            \hline
+        \end{tabular}}

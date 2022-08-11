@@ -1,8 +1,6 @@
 \themaD
 \graphicspath{{../../S06_Interpreter_representer_des_donnees/Images/}}
 
-\newcommand{\Cell}[1]{\fcolorbox[gray]{0.1}{0.9}{\begin{minipage}{2.5cm} #1 \end{minipage}}}
-\newcommand{\cell}[1]{\fcolorbox[gray]{0.1}{0.9}{#1}}
 
 
 \chapter{Interpréter,\\représenter\\des données}
@@ -35,18 +33,11 @@
    Avec l'avènement de l'informatique, les tableaux deviennent numériques grâce à l'apport des {\bf tableurs} : logiciels qui permettent de manipuler des données numériques, d'effectuer un certain nombre d'opérations de façon automatisée, de créer des représentations graphiques à partir des données : diagrammes , histogrammes, courbes\dots{} \\
    Le premier tableur fut créé en 1978 par {\it Daniel Bricklin}, étudiant à Harvard qui devait établir des tableaux comptables pour une étude de cas sur Pepsi-Cola sans pour autant établir tous les calculs \og à la main \fg. Son premier prototype, {\it VisiCalc} (pour Visible Calculator), pouvait manipuler un tableau de vingt lignes et cinq colonnes ! \\
    \begin{center}
-      \textsf{
-      \begin{tabular}{|>{\columncolor{lightgray!30}}c|*{5}{C{1}|}}
-         \hline
-         \rowcolor{lightgray!30} & A & B & C & D & E \\
-         \hline
-         1 & & & & &  \\
-         \hline
-         2 & & & & & \\
-         \hline
-         3 & & & & & \\
-         \hline
-     \end{tabular}}
+      \begin{Tableur}[Bandeau=false,Colonnes=5]
+         & & & & \\
+         & & & & \\
+         & & & & \\
+      \end{Tableur}
    \end{center}
    \bigskip
    \begin{cadre}[B2][J4]
@@ -120,11 +111,11 @@ On {\bf organise} les résultats : pour rassembler les données, on les présent
 \bigskip
 
 \begin{minipage}{8cm}
-   {\it Diagramme en barres verticales}\Stat[Graphique,Grille,Unitex=0.9,Unitey=0.4,EpaisseurBatons=8,Donnee=Nombre d'enfants,ListeCouleursB={CadetBlue,LightSeaGreen,DarkTurquoise,MediumTurquoise,Turquoise,PaleTurquoise}]{1/5,2/9,3/6,4/2,5/1,6/2}
+   {\it Diagramme en barres verticales}\Stat[Graphique,Grille,Unitex=0.9,Unitey=0.4,EpaisseurBatons=8,Donnee=Nombre d'enfants,ListeCouleursB={LightSeaGreen,0.15[LightSeaGreen,white],0.3[LightSeaGreen,white],0.45[LightSeaGreen,white],0.6[LightSeaGreen,white],0.75[LightSeaGreen,white]}]{1/5,2/9,3/6,4/2,5/1,6/2}
 \end{minipage}
 \begin{minipage}{8cm}
    {\it Diagramme en barres horizontales}
-      \Stat[Qualitatif,Graphique,Barre,Grille,Longueur=6cm,EcartBarre=2mm,ListeCouleurs={CadetBlue,LightSeaGreen,DarkTurquoise,MediumTurquoise,Turquoise,PaleTurquoise}]{1 enfant/5,2 enfants/9,3 enfants/6,4 enfants/2,5 enfants/1,6 enfants/2}
+      \Stat[Qualitatif,Graphique,Barre,Grille,Longueur=6cm,EcartBarre=2mm,ListeCouleurs={LightSeaGreen,0.15[LightSeaGreen,white],0.3[LightSeaGreen,white],0.45[LightSeaGreen,white],0.6[LightSeaGreen,white],0.75[LightSeaGreen,white]}]{1 enfant/5,2 enfants/9,3 enfants/6,4 enfants/2,5 enfants/1,6 enfants/2}
 \end{minipage}
 
 
@@ -144,7 +135,7 @@ On {\bf organise} les résultats : pour rassembler les données, on les présent
 \qquad
 \begin{minipage}{7cm}
    {\it Diagramme circulaire} \\ [5mm]
-   \Stat[Qualitatif,Graphique,Angle,Rayon=1.8cm,ListeCouleurs={CadetBlue,LightSeaGreen,DarkTurquoise,MediumTurquoise,Turquoise,PaleTurquoise}]{1 enfant/5,2 enfants/9,3 enfants/6,4 enfants/2,5 enfants/1,6 enfants/2}
+   \Stat[Qualitatif,Graphique,Angle,Rayon=1.8cm,ListeCouleurs={LightSeaGreen,0.15[LightSeaGreen,white],0.3[LightSeaGreen,white],0.45[LightSeaGreen,white],0.6[LightSeaGreen,white],0.75[LightSeaGreen,white]}]{1 enfant/5,2 enfants/9,3 enfants/6,4 enfants/2,5 enfants/1,6 enfants/2}
 \end{minipage}
 
 
@@ -323,25 +314,25 @@ On {\bf organise} les résultats : pour rassembler les données, on les présent
             \hline 
              & & Sport & \pscircle[fillstyle=solid,fillcolor=Gold](0,0.1){0.2} & \pscircle[fillstyle=solid,fillcolor=lightgray](0,0.1){0.2} & \pscircle[fillstyle=solid,fillcolor=brown](0,0.1){0.2} & T. \\
             \hline
-            1 & \includegraphics[scale=0.3]{S1} & {\blue Escrime} & \, {\blue 32} \, & \, 51 \, & \, 35 \, & \, {\bf 118} \, \\
+            1 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S1} & {\blue Escrime} & \, {\blue 32} \, & \, 51 \, & \, 35 \, & \, {\bf 118} \, \\
             \hline 
-            2 & \includegraphics[scale=0.3]{S2} & {\blue Cyclisme} & 41 & {\blue 27} & 23 & {\bf 91} \\
+            2 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S2} & {\blue Cyclisme} & 41 & {\blue 27} & 23 & {\bf 91} \\
             \hline
-            3 & \includegraphics[scale=0.3]{S3} & {\blue Athlétisme} & 14 & 25 & {\blue 29} & {\bf 68} \\
+            3 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S3} & {\blue Athlétisme} & 14 & 25 & {\blue 29} & {\bf 68} \\
             \hline  
-            4 & \includegraphics[scale=0.3]{S4} & {\blue Équitation} & 14 & 13 & 10 & {\blue \bf 37} \\
+            4 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S4} & {\blue Équitation} & 14 & 13 & 10 & {\blue \bf 37} \\
             \hline  
-            5 & \includegraphics[scale=0.3]{S5} & {\blue Judo} & 14 & 10 & {\blue 25} & {\bf 49} \\
+            5 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S5} & {\blue Judo} & 14 & 10 & {\blue 25} & {\bf 49} \\
             \hline  
-            6 & \includegraphics[scale=0.3]{S6} & {\blue Voile} & 13 & {\blue 11} & 17 & {\bf 41} \\
+            6 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S6} & {\blue Voile} & 13 & {\blue 11} & 17 & {\bf 41} \\
             \hline  
-            7 & \includegraphics[scale=0.3]{S7} & {\blue Tir} & {\blue 9} & 14 & 10 & {\bf 33} \\
+            7 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S7} & {\blue Tir} & {\blue 9} & 14 & 10 & {\bf 33} \\
             \hline  
-            8 & \includegraphics[scale=0.3]{S8} & {\blue Haltérophilie} & 9 & {\blue 3} & 3 & {\bf 15} \\
+            8 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S8} & {\blue Haltérophilie} & 9 & {\blue 3} & 3 & {\bf 15} \\
             \hline  
-            9 & \includegraphics[scale=0.3]{S9} & {\blue Natation} & 8 & 15 & {\blue 20} & {\bf 43} \\
+            9 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S9} & {\blue Natation} & 8 & 15 & {\blue 20} & {\bf 43} \\
             \hline  
-            10 & \includegraphics[scale=0.3]{S10} & {\blue Canoé-kayak} & 8 & 9 & 19 & {\blue \bf 36} \\
+            10 & \includegraphics[scale=0.3]{../../S06_Interpreter_representer_des_donnees/Images/S10} & {\blue Canoé-kayak} & 8 & 9 & 19 & {\blue \bf 36} \\
             \hline    
          \end{tabular}} \medskip
       \item Le classement des sports est établi grâce au {\blue nombre de médailles d'or}, puis d'argent, puis de bronze.
@@ -398,111 +389,37 @@ On {\bf organise} les résultats : pour rassembler les données, on les présent
 
 \partie[écrire dans une cellule] 
    Ouvrir une nouvelle feuille de tableur, écrire les textes suivants et appuyer sur entrée. 
-   $$\text{Dans la cellule A1 : } \Cell{\texttt{1+2}} \qquad ; \qquad \text{ Dans la cellule A2 :} \Cell{\texttt{=1+2}}$$
+   $$\text{Dans la cellule A1 : }  \Cell{\texttt{1+2}} \qquad ; \qquad \text{ Dans la cellule A2 :} \Cell{\texttt{=1+2}}$$
    Quelle est la différence entre ces deux écritures ? Quelle est la différence d'interprétation du tableur ? \par
    \Lignespointilles{2} \medskip
 
-\partie[un exemple d'utilisation du tableur]
-   Adam revient de la boulangerie avec huit petits gâteaux qu'il a payés \ueuro{11,50} au total. Il y a des muffins à \ueuro{0,80} l'un et des tartelettes à \ueuro{2,50} pièce. On veut connaître le nombre de muffins et de tartelettes ramenées. 
+\partie[utilisation du tableaur-grapheur]
+   Le ministère de la culture a effectué une enquête sur les équipements utilisés le plus souvent pour se connecter à Internet en 2019, en fonction de l'âge des utilisateurs.
+   \begin{center}
+      \begin{Tableur}[Bandeau=false,Colonnes=7,LargeurUn=5.5,Largeur=4.8]
+         & 12-17 ans & 18-24 ans & 25-39 ans	 & 40-59 ans & 60-69 ans & 70 ans + \\
+         Smartphone & 78\,\% & 89\,\% & 79\,\% & 45\,\% & 24\,\% & 12\,\% \\
+         Ordinateur & 16\,\% & 10\,\% & 15\,\% & 42\,\% & 45\,\% & 38\,\% \\
+      \end{Tableur}
+   \end{center}
+   On souhaite représenter, sous différentes formes, les résultats de cette enquête.
    \begin{enumerate}
-      \item Préparation du tableau : commencer par indiquer dans la \textbf{ligne 1} les données de type \og texte \fg. \\
-      Dans la {\bf colonne A}, écrire le nombre de muffins qu'il est possible d'avoir acheté, de 0 à 8 dans les cellules {\bf A2} à {\bf A10}. Connais-tu une méthode rapide pour écrire ces neuf nombres de 0 à 8 ? \\ [-2mm]
-         \begin{center}
-         \textsf{
-         \begin{tabular}{|>{\columncolor{lightgray!30}}c|c|c|c|c|c|}
-            \hline
-            \rowcolor{lightgray!30} & A & B & C & D & E \\
-            \hline
-            1 & \cellcolor{FondTableaux}{Nombre de muffins} & \cellcolor{FondTableaux}{Nombre de tartelettes} & \cellcolor{FondTableaux}{Prix des muffins} & \cellcolor{FondTableaux}{Prix des tartelettes} & \cellcolor{FondTableaux}{Prix payé} \\
-            \hline
-            2 & 0 & & & & \\
-            \hline
-            3 & 1 & & & & \\
-            \hline
-            4 & & & & & \\
-            \hline
-            5 & & & & & \\
-            \hline
-            6 & & & & & \\
-            \hline
-            7 & & & & & \\
-            \hline
-            8 & & & & & \\
-            \hline
-            9 & & & & & \\
-            \hline
-            10 & & & & & \\
-            \hline
-        \end{tabular}} \bigskip
-      \end{center}
-      \item {\bf Colonne B} : dans la cellule {\bf B2}, écrire la formule : \cell{=8-A2} puis sélectionner cette cellule et la tirer vers le bas pour compléter la colonne B. Quel est l'effet de ces actions ? \par
-        \pointilles \medskip
-      \item {\bf Colonne C} : dans la cellule {\bf C2}, écrire la formule : \cell{=0,8*A2} Expliquer cette formule puis compléter la colonne C. \par\
-        \pointilles \medskip
-      \item {\bf Colonne D} : quelle formule peut-on écrire dans le cellule \textbf{D2} ? Compléter alors la colonne D. \par
-        \pointilles \medskip
-      \item {\bf Colonne E} : quelle formule peut-on écrire dans le cellule \textbf{E2} ? Compléter alors la colonne E. \par\
-        \pointilles \medskip
-      \item Résoudre le problème en lisant le résultat dans le tableur et en indiquant les cellules importantes pour cela. \par
-        \pointilles
+      \item Reproduire ce tableau dans un tableur. \\
+         {\it Enregistre ton travail dans un fichier nommé \texttt{Nom\_prenom\_classe\_tableur\_grapheur}.}
+      \item Sélectionner le tableau en entier (cellules A1 à G3) et insérer trois graphiques : un diagramme en barres verticales (titre : graphique 1), un diagramme en barres horizontales (graphique 2) et un diagramme circulaire (graphique 3).
+      \item Laquelle de ces trois représentations vous parait-elle la plus lisible, pourquoi ? \Lignespointilles{2}
+      \item Choisir deux autres représentations et les décrire brièvement. \par
+         Graphique 4 : \Lignespointilles{3} \par
+         Graphique 5 : \Lignespointilles{3} \par
+      \item Créer un graphique 6 de votre choix représentant uniquement les données concernant les ordinateurs.
+      \item Répondre aux questions suivantes :
+         \begin{enumerate}
+            \item Quelle tranche d'âge utilise le plus son smartphone pour aller sur Internet ? \pointilles
+            \item Selon toi, pourquoi \og les jeunes \fg{} utilisent-ils plus un smartphone qu'un ordinateur pour aller sur Internet ? \par
+               \Lignespointilles{3}
+            \item Selon toi, pourquoi \og les seniors \fg{} utilisent-ils plus un ordinateur qu'un smartphone pour aller sur Internet ? \par
+               \Lignespointilles{3}         
+         \end{enumerate}
    \end{enumerate}
 \end{enigme}
 
-\begin{corrige}
-
-\setcounter{partie}{0}
-\partie
-   Dans la deuxième écriture, on note la présence du {\blue signe \og = \fg{}} avant le calcul. \\
-   Cette écriture est interprétée comme un {\blue calcul que le tableur effectue} alors que la première écriture est interprétée comme un {\blue texte à afficher.}
-
-\medskip
-
-\partie
-   \begin{enumerate}
-      \item On commence par écrire 0 dans la cellule A2, puis 1 dans la cellule A3. \\
-      Puis on sélectionne les cellules A2 et A3. \\
-      Enfin, on \og tire \fg{} ces cellules vers le bas en plaçant la souris au coin à droite des cellules et en glissant vers le bas jusqu'à la cellule A10. \\
-      {\it Le tableur interprète cette action comme une répétition de l'addition permettant de passant de 0 à 1, c'est-à-dire par l'ajout de 1 à chaque cellule}.
-      \item Cette formule permet de trouver le {\blue nombre de tartelettes achetées} si on a acheté 0 muffin pour la ligne 2. \\
-         En sélectionnant la cellule et en la tirant vers le bas, le tableur répète la formule pour 1 muffin, puis 2, puis 3\dots
-      \item Cette formule permet de calculer le {\blue prix payé pour les muffins} si on en a acheté 0. \\
-         En sélectionnant la cellule et en la tirant vers le bas, le tableur répète la formule pour 1 muffin, puis 2, puis 3\dots
-      \item En D2, on peut écrire : {\blue \fbox{=2,5*B2}} pour calculer le prix des tartelettes. \\
-         On tire la cellule vers le bas pour compléter la colonne.
-      \item En E2, on peut écrire : {\blue \fbox{=C2+D2}} pour calculer le prix payé au total, somme du prix payé pour les muffins et de celui payé pour les tartelettes. \\
-         On tire la cellule vers le bas pour compléter la colonne.
-      \item On cherche, dans la colonne E, le prix de 11,50~\euro{}, on lit ce prix en E7, ce qui donne le nombre de muffins en A7 et le nombre de tartelettes en B7. \\
-         Conclusion : {\blue Adrien a acheté 5 muffins et 3 tartelettes}.
-   \end{enumerate}
-   
-\Coupe
-   
-On obtient le tableau suivant : \\ [2mm]
-   \textsf{
-      \hautab{1.5}
-         \begin{tabular}{|>{\columncolor{lightgray!30}}c|C{0.9}|C{0.9}|C{0.9}|C{0.9}|C{0.9}|C{0.9}|}
-            \hline
-            \rowcolor{lightgray!30} & A & B & C & D & E \\
-            \hline
-            1 & \cellcolor{FondTableaux}{Muffins} & \cellcolor{FondTableaux}{\!\!\!Tartelettes} & \cellcolor{FondTableaux}{Prix muff.} & \cellcolor{FondTableaux}{Prix tarte.} & \cellcolor{FondTableaux}{Prix payé} \\
-            \hline
-            2 & 0 & 8 & 0 & 20 & 20 \\
-            \hline
-            3 & 1 & 7 & 0,8 & 17,5 & 18,3 \\
-            \hline
-            4 & 2 & 6 & 1,6 & 15 & 16,6 \\
-            \hline
-            5 & 3 & 5 & 2,4 & 12,5 & 14,9 \\
-            \hline
-            6 & 4 & 4 & 3,2 & 10 & 13,2 \\
-            \hline
-            7 & 5 & 3 & 4 & 7,5 & 11,5 \\
-            \hline
-            8 & 6 & 2 & 4,8 & 5 &  9,8 \\
-            \hline
-            9 & 7 & 1 & 5,6 & 2,5 & 8,1 \\
-            \hline
-            10 & 8 & 0 & 6,4 & 0 & 6,4 \\
-            \hline
-        \end{tabular}}
-\end{corrige}

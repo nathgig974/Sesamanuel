@@ -1,0 +1,13 @@
+   On obtient un {\blue rectangle}. \\
+   \begin{pspicture}(-3.5,-2)(4,2.2)
+      \footnotesize
+      \psgrid[gridlabels=0,subgriddiv=2,gridcolor=lightgray](-4,-2)(4,2)
+      \pstGeonode[PointSymbol=none,PosAngle={45,-45,-135,135},CurveType=polygon,linecolor=blue](3.5,1.5){A}(3.5,-1.5){B}(-3.5,-1.5){C}(-3.5,1.5){D}
+      \psaxes[labels=none,ticks=none]{->}(0,0)(-4,-2)(4,2)
+      \psline(1,-0.2)(1,0.2)
+      \psline(-0.2,1)(0.2,1)
+      \rput(-0.4,-00.4){$O$}
+      \rput(1,0.5){1}
+      \rput(-0.5,1){1}
+   \end{pspicture} \\
+   {\blue $B(3,5\,;-1.5)\,; C(-3,5\,;-1.5)\,;D(-3,5\,;1.5)$} \\
