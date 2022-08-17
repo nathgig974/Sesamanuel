@@ -1,0 +1,174 @@
+%\listfiles
+
+\PassOptionsToPackage{table}{xcolor}
+\PassOptionsToPackage{svgnames}{xcolor}
+
+\documentclass[nocrop]{sesamanuel_college_5e_new}
+\renewcommand\PrefixeCorrection{Corrections/}
+\usepackage{etex}
+\usepackage{ProfCollege}
+%\usepackage{pstcol,pst-grad}%
+
+\NewThema{N}{n}{nombres\\\& calculs}{Nombres\\\& calculs}{NOMBRES\\\& CALCULS}{red}{red!50}
+
+%\NewThema{E}{e}{espace \&\\géométrie}{Espace \&\\géométrie}{ESPACE \&\\ GEOMETRIE}{DodgerBlue}{DodgerBlue!50}
+%
+%\NewThema{D}{d}{organisation et \\et gestion de données}{Organisation et \\et gestion de données}{ORGANISATION ET\\GESTION DE DONNÉES}{violet}{violet!50}
+%
+%\NewThema{M}{m}{grandeurs\\et mesures}{Grandeurs\\et mesures}{GRANDEURS\\ET MESURES}{Green}{Green!50}
+%
+%\NewThema{A}{a}{algorithmique \&\\programmation}{Algorithmique \&\\ programmation}{ALGORITHMIQUE \&\\PROGRAMMATION}{orange}{orange!50}
+
+\renewcommand\ListeMethodesThemes{{n}{N},{d}{D},{g}{G},{m}{M},{a}{A}}
+ 
+ 
+\begin{document}
+
+\frontmatter
+\pagenumbering{gobble}
+%\include{1ere_de_couverture_5e_22-23}
+
+\mainmatter
+
+\themaN
+
+\chapter{Enchaînement d'opérations}
+\label{S01}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{autoeval}
+   \small
+   \begin{enumerate}
+      \item Il utilise, dans le cas des nombres décimaux, les écritures décimales et fractionnaires et passe de l’une à l’autre, en particulier dans le cadre de la résolution de problèmes.
+   \end{enumerate}
+\end{autoeval}
+
+
+\begin{prerequis}
+   \small
+   \begin{itemize}
+      \item Connaissance
+      \item[\com] Compétence
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\begin{debat}[Débat : un peu d'histoire]
+   Texte\medskip
+   \begin{center}
+      Image
+   \end{center} \medskip
+   \begin{cadre}[B2][J4]
+      \begin{center}
+         Vidéo : \href{https://www.youtube.com/watch?v=bkGMa1EJkSA}{\bf Histoire de la virgule}, chaîne Youtube de {\it Maths 28}.
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Nom de l'activité]
+   {\bf Objectifs :} \dots
+   \begin{QCM}
+      \partie[Partie 1 de l'activité]
+      \vspace*{18cm}
+   \end{QCM}
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+
+%%%%%%%%%%%%%%%%%
+\section{Section 1}
+
+\begin{definition}
+   Définition
+\end{definition}
+
+\begin{propriete}
+   Propriété
+\end{propriete}
+
+\begin{exemple*1}
+   Exemple 1
+\end{exemple*1}
+
+\begin{methode}[Nom de la méthode]
+   Dans un calcul, on effectue dans l'ordre :
+   \begin{itemize}
+      \item les calculs entre parenthèses, en commençant par les plus intérieures ;
+      \item les multiplications et les divisions ;
+      \item les additions et soustractions.
+   \end{itemize}
+   \exercice
+      Exemple
+   \correction
+      Sa correction
+\end{methode}
+
+\begin{remarque}
+   Une remarque
+\end{remarque}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+\begin{exercice} %1
+   Exercice 1
+\end{exercice}
+
+\begin{corrige}
+   Corrigé de l'exo 1
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice}[éventuel nom] %2
+   Exercice 2
+\end{exercice}
+
+\begin{corrige}
+   Corrigé de l'exo 2
+\end{corrige}
+
+
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\begin{enigme}[Nom de l'énigme]
+
+   \partie[nom de la partie]
+
+\end{enigme}
+
+
+\begin{corrige}
+   Corrigé de l'énigme
+\end{corrige}  
+
+
+%\include{Plans_de_travail_22-23}
+
+\AfficheCorriges[2]
+
+\backmatter
+%\fancyfoot[R]{}
+%\include{4e_de_couverture_22-23}
+
+\end{document}
