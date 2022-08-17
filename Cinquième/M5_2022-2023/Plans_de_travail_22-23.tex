@@ -12,10 +12,10 @@
                          \end{minipage}}}
                         
 \newcommand{\bullelongue}[3]{
-   \psframe[linewidth=1mm,framearc=0.1,linecolor=#1](0,0)(8.5,3)
-   \psline[linecolor=#1](0,2.3)(8.5,2.3)
-   \rput(4.25,2.65){#2}
-   \rput(4.25,1.15){\begin{minipage}{8cm}
+   \psframe[linewidth=1mm,framearc=0.1,linecolor=#1](0,0)(8.25,3)
+   \psline[linecolor=#1](0,2.3)(8.25,2.3)
+   \rput(4.125,2.65){#2}
+   \rput(4.125,1.15){\begin{minipage}{7.75cm}
                            {\small\darkgray #3}
                          \end{minipage}}}
    
@@ -111,7 +111,7 @@
          {Je connais mon cours}
          {C1 : Je reconnais des angles alternes-internes \hfill $\square$ \par
           C2 : Je reconnais des angles correspondants \hfill $\square$ \par
-          C3 : J'utilise les propriétés des angles alternes-internes et correspondants pour montrer que des droites sont parallèles ou pour déterminer des angles \hfill $\square$}}         
+          C3 : J'utilise les propriétés des angles alternes-internes et correspondants pour \par \hspace*{6mm} montrer que des droites sont parallèles ou pour déterminer des angles \hfill $\square$}}         
    \rput[l](14,4){%bulle ENE : Aide vidéo
       \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
       \bulleQR
@@ -137,7 +137,7 @@
              Exercice 1 \hfill $\star$ \hfill $\square$ \par
              Exercice 2 \hfill $\star$ \hfill $\square$ \par
              Exercice 3 \hfill $\star\star\star$ \hfill $\square$}}
-      \rput[l](10,0){%bulle S : compétence 2
+      \rput[l](9.75,0){%bulle S : compétence 2
          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](3,3)(0.5,4.5)(3.5,3)
          \bullelongue
             {B1}
@@ -297,7 +297,7 @@
             {Compétence 1}
             {Exercice 1 \hfill $\star$ \hfill $\square$ \par
              Exercice 4 \hfill $\star\star$ \hfill $\square$}}
-      \rput[l](10,0){%bulle S : compétence 2
+      \rput[l](9.75,0){%bulle S : compétence 2
          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](3,3)(0.5,4.5)(3.5,3)
          \bullelongue
             {B1}
@@ -488,7 +488,7 @@
       \bullecours
          {A1}
          {Je connais mon cours}
-         {C1 : J'applique directement la propriété des angles d'un triangles pour savoir si un triangle est constructible ou pour déterminer un angle \hfill $\square$ \par
+         {C1 : J'applique directement la propriété des angles d'un triangles pour savoir si un  \par \hspace*{6mm} triangle est constructible ou pour déterminer un angle \hfill $\square$ \par
           C2 : J'effectue des démonstrations utilisant la propriété de la somme des angles \hfill $\square$}}         
    \rput[l](14,4){%bulle ENE : Aide vidéo
       \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
@@ -498,7 +498,7 @@
          {\qrcode{https://www.youtube.com/watch?v=S1vCp-O7fbw&list=PLVUDmbpupCaqW33IMWG2n_73O4Jy7GEse&index=11} \par \medskip
           La règle des \udeg{180} \par \bigskip
           \qrcode{https://www.youtube.com/watch?v=x0UA6kbiDcM&list=PLVUDmbpupCaqW33IMWG2n_73O4Jy7GEse&index=12} \par \medskip
-          Démonstration}}    
+          Démontrer}}    
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -515,7 +515,7 @@
              Exercice 1 \hfill $\star$ \hfill $\square$ \par
              Exercice 2 \hfill $\star$ \hfill $\square$ \par
              Exercice 3 \hfill $\star\star$ \hfill $\square$}}
-      \rput[l](10,0){%bulle S : compétence 2
+      \rput[l](9.75,0){%bulle S : compétence 2
          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](3,3)(0.5,4.5)(3.5,3)
          \bullelongue
             {B1}
@@ -523,7 +523,172 @@
             {Exercice 4 \hfill $\star\star$ \hfill $\square$ \par
              Exercice 5 \hfill $\star\star$ \hfill $\square$ \par
              Exercice 6 \hfill $\star\star\star$ \hfill $\square$ \par
+             Récréation \hfill $\star\star$ \hfill $\square$}}
+\end{pspicture}
+
+             
+%%%%%%%%%% Séquence 10 %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pspicture}(0.5,0.5)(18,12.5)           
+   {\color{violet}
+      \rput(9,5.75){\parbox{5cm}{\centering\large S10 \par PROBABILITÉS}}} %bulle centrale  
+   \rput[l](0,8){%bulle NNO : connaissances et compétences
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
+      \bullecours
+         {A1}
+         {Je connais mon cours}
+         {C1 : Je place un événement sur une échelle de probabilités \hfill $\square$ \par
+          C2 : Je calcule des probabilités dans des cas simples \hfill $\square$}}         
+   \rput[l](14,4){%bulle ENE : Aide vidéo
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
+      \bulleQR
+         {A1}
+         {Aide en vidéo}
+         {\qrcode{https://www.youtube.com/watch?v=6EtRH4udcKY&feature=youtu.be} \par \medskip
+          Problème de hasard \par \bigskip
+          \qrcode{https://www.youtube.com/watch?v=a9Mb5v7Z4Mw} \par \medskip
+          Calculer un probabilité}}    
+      \rput[l](0,4){%bulle O : Questions flash
+         \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
+         \bulle
+            {Goldenrod}
+            {Questions flash}
+            {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
+             \rput(2.75,0){\darkgray\Huge 5}}}    
+      \rput[l](0,0){%bulle SSO : Compétence 1
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](5,3)(8,4.5)(5.5,3)
+         \bullelongue
+            {B1}
+            {Compétence 1}
+            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 1 \hfill $\star$ \hfill $\square$ \par
+             Exercice 2 \hfill $\star$ \hfill $\square$}}
+      \rput[l](9.75,0){%bulle S : compétence 2
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](3,3)(0.5,4.5)(3.5,3)
+         \bullelongue
+            {B1}
+            {Compétence 2}
+            {\begin{multicols}{2}
+               Exercice 3 \hfill $\star$ \hfill $\square$ \par
+               Exercice 4 \hfill $\star\star$ \hfill $\square$ \par
+               Exercice 5 \hfill $\star\star$ \hfill $\square$ \par
+               Exercice 6 \hfill $\star\star$ \hfill $\square$ \par
+               Exercice 7 \hfill $\star\star\star$ \hfill $\square$ \par
+               Récréation \hfill $\star$ \hfill $\square$
+             \end{multicols}}}                    
+\end{pspicture}
+
+
+%%%%%%%%%% Séquence 11 %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pspicture}(0.5,0)(18,10)            
+   {\color{red}
+      \rput(9,5.75){\parbox{5cm}{\centering\large S11 \par  MULTIPLES ET DIVISEURS}}} %bulle centrale  
+   \rput[l](0,8){%bulle NNO : connaissances et compétences
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
+      \bullecours
+         {A1}
+         {Je connais mon cours}
+         {C1 : Je calcule le quotient et le reste d'une division euclidienne \hfill $\square$ \par
+          C2 : Je détermine si un nombre entier est ou n’est pas multiple ou diviseur d’un \par \hspace*{6mm} autre nombre entier. \hfill $\square$ \par
+          C3 : J'utilise les critères de divisibilité (par 2, 3, 5, 9, 10). \hfill $\square$}}         
+   \rput[l](14,4){%bulle ENE : Aide vidéo
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
+      \bulleQR
+         {A1}
+         {Aide en vidéo}
+         {\qrcode{https://www.youtube.com/watch?v=-PLZFlAG99Q&feature=youtu.be} \par \medskip
+          Multiples et diviseurs \par \bigskip
+          \qrcode{https://www.youtube.com/watch?v=BJDE6uOrmYQ} \par \medskip
+          Critères de divisibilité}}    
+      \rput[l](0,4){%bulle O : Questions flash
+         \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
+         \bulle
+            {Goldenrod}
+            {Questions flash}
+            {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
+             \rput(2.75,0){\darkgray\Huge 5}}}     
+      \rput[l](0,0){%bulle SO : Compétence 1
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](5,2)(7.2,4.5)(5,2.35)
+         \bulle
+            {B1}
+            {Compétence 1}
+            {Exercice 1 \hfill $\star$ \hfill $\square$ \par
+             Exercice 2 \hfill $\star$ \hfill $\square$ \par
+             Exercice 3 \hfill $\star\star$ \hfill $\square$}}
+      \rput[l](6.5,0){%bulle S : compétence 2
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](2.35,3)(2.5,4.5)(2.65,3)
+         \bulle
+            {B1}
+            {Compétence 2}
+            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 4 \hfill $\star$ \hfill $\square$ \par
+             Exercice 5 \hfill $\star\star$ \hfill $\square$ \par
              Récréation \hfill $\star\star$ \hfill $\square$}}             
+      \rput[l](13,0){%bulle SE : compétence 3
+          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](0,2)(-2.3,4.5)(0,2.35)
+          \bulle
+            {B1}
+            {Compétence 3}
+            {Exercice 6 \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 7 \hfill $\star$ \hfill $\square$ \par
+             Exercice 8 \hfill $\star$ \hfill $\square$ \par
+             Exercice 9 \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 10 \hfill $\star\star\star$ \hfill $\square$}}                  
+\end{pspicture}
+
+%%%%%%%%%% Séquence 11 %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pspicture}(0.5,0.5)(18,12.5)            
+   {\color{DodgerBlue}
+      \rput(9,5.75){\parbox{5cm}{\centering\large 11 \par LA SYMÉTRIE \par CENTRALE}}} %bulle centrale  
+   \rput[l](0,8){%bulle NNO : connaissances et compétences
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
+      \bullecours
+         {A1}
+         {Je connais mon cours}
+         {C1 : Je fais la distinction entre symétrie centrale et symétrie axiale \hfill $\square$ \par
+          C2 : Je transforme une figure par symétrie centrale \hfill $\square$ \par
+          C3 : J'identifie des symétries dans des frises, des pavages, des rosaces \hfill $\square$}}         
+   \rput[l](14,4){%bulle ENE : Aide vidéo
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
+      \bulleQR
+         {A1}
+         {Aide en vidéo}
+         {\qrcode{https://www.youtube.com/watch?v=gQZIWxzOfaE} \par \medskip
+          Symétrie (feuille unie) \par \bigskip
+          \qrcode{https://www.youtube.com/watch?v=NIrHncshQLA} \par \medskip
+          Symétrie (quadrillage)}}    
+      \rput[l](0,4){%bulle O : Questions flash
+         \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
+         \bulle
+            {Goldenrod}
+            {Questions flash}
+            {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
+             \rput(2.75,0){\darkgray\Huge 5}}}    
+      \rput[l](0,0){%bulle SO : Compétence 1
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](5,2)(7.2,4.5)(5,2.35)
+         \bulle
+            {B1}
+            {Compétence 1}
+            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 2 \hfill $\star$ \hfill $\square$ \par
+             Exercice 6 \hfill $\star$ \hfill $\square$}}
+      \rput[l](6.5,0){%bulle S : compétence 2
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](2.35,3)(2.5,4.5)(2.65,3)
+         \bulle
+            {B1}
+            {Compétence 2}
+            {Exercice 1 \hfill $\star$ \hfill $\square$ \par
+             Exercice 3 \hfill $\star$ \hfill $\square$ \par
+             Exercice 4 \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 5 \hfill $\star\star$ \hfill $\square$}}           
+      \rput[l](13,0){%bulle SE : compétence 3
+          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](0,2)(-2.3,4.5)(0,2.35)
+          \bulle
+            {B1}
+            {Compétence 3}
+            {Récréation \hfill $\star\star$ \hfill $\square$}}               
 \end{pspicture}
 
 \end{center}
