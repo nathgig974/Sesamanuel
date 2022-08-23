@@ -179,7 +179,7 @@
 \RequirePackage{hyperref}
 %\RequirePackage{arydshln}
 \RequirePackage{frcursive}
-\RequirePackage{scratch}
+%\RequirePackage{scratch}
 %\RequirePackage{fancybox}
 %\usepackage{dashrule}
 \RequirePackage{setspace}
@@ -195,56 +195,59 @@
 \newcommand{\Cell}[1]{\fcolorbox[gray]{0.1}{0.9}{\begin{minipage}{2.5cm} #1 \end{minipage}}}
 \newcommand{\cell}[1]{\fcolorbox[gray]{0.1}{0.9}{#1}}
 
-%\newcommand{\compas}[5] %compas
-%   {\psset{fillstyle=solid,fillcolor=gray!20}
-%    \scalebox{#4}
-%      {\rput{#3}(#1,#2)      
-%         {\psframe(-0.1,3.6)(0.1,4)
-%          \rput{-#5}(-0.1,3){\psframe(-0.1,-2.4)(0.1,0.1)
-%                                     \psline[fillcolor=gray!60](-0.05,-2.4)(0,-3)(0.05,-2.4)}
-%          \rput{#5}(0.1,3){\psframe(-0.1,-2.4)(0.1,0.1)
-%                                  \pspolygon[fillcolor=gray](-0.05,-2.4)(-0.05,-2.95)(0.05,-2.7)(0.05,-2.4)}
-%          \psframe[fillcolor=gray!40](-0.25,3)(0.25,3.6)
-%          \pscircle(0,3.3){0.1}
-%          }
-%       }      
-%   }
-%   
-%%Rapporteur
-%\newcommand{\rapporteur}[4]
-%   {\scalebox{#4}
-%      {\rput{#3}(#1,#2)           
-%          {\psarc(0,0){3.75}{0}{180} %arc extérieur
-%           \psline(-3.75,0)(-3.75,-0.75)(3.75,-0.75)(3.75,0) %trait extérieur
-%           \psarc(0,0){2.5}{0}{180} %arc intérieur
-%           \psline(-2.5,0)(-0.5,0) %trait intérieur gauche
-%           \psarc(0,0){0.5}{0}{180} %petit arc
-%           \psline(0.5,0)(2.5,0) %trait intérieur droit
-%           \psline(-0.1,0)(0.1,0) % signe plus
-%           \psline(0,-0.1)(0,0.1) % signe plus   
-%           \multido{\i=0+1}{180}{\psline(3.55;\i)(3.75;\i)} %graduations extérieures
-%           \multido{\i=0+10}{19}{\psline(3.4;\i)(3.75;\i)} %grandes graduations extérieures   
-%           \multido{\i=0+5}{36}{\psline(3.45;\i)(3.75;\i)} %petites graduations extérieures              
-%           \multido{\i=0+10}{19}{\psline(2.7;\i)(2.5;\i)} %grandes graduations intérieures   
-%           \multido{\i=0+5}{36}{\psline(2.6;\i)(2.5;\i)} %petites graduations intérieures
-%           \multido{\i=0+10}{19}{\uput[\i](2.9;\i){\tiny{\i}}} %écriture extérieure
-%           \multido{\i=180+-10,\I=0+10}{19}{\uput[\i](2.5;\i){\tiny{\I}}} %écriture intérieure   
-%           }
-%       }      
-%   }
-%
+\newcommand{\compas}[5] %compas
+   {\psset{fillstyle=solid,fillcolor=gray!20}
+    \scalebox{#4}
+      {\rput{#3}(#1,#2)      
+         {\psframe(-0.1,3.6)(0.1,4)
+          \rput{-#5}(-0.1,3){\psframe(-0.1,-2.4)(0.1,0.1)
+                                     \psline[fillcolor=gray!60](-0.05,-2.4)(0,-3)(0.05,-2.4)}
+          \rput{#5}(0.1,3){\psframe(-0.1,-2.4)(0.1,0.1)
+                                  \pspolygon[fillcolor=gray](-0.05,-2.4)(-0.05,-2.95)(0.05,-2.7)(0.05,-2.4)}
+          \psframe[fillcolor=gray!40](-0.25,3)(0.25,3.6)
+          \pscircle(0,3.3){0.1}
+          }
+       }      
+   }
+   
+%Rapporteur
+\newcommand{\rapporteur}[4]
+   {\scalebox{#4}
+      {\rput{#3}(#1,#2)           
+          {\psarc(0,0){3.75}{0}{180} %arc extérieur
+           \psline(-3.75,0)(-3.75,-0.75)(3.75,-0.75)(3.75,0) %trait extérieur
+           \psarc(0,0){2.5}{0}{180} %arc intérieur
+           \psline(-2.5,0)(-0.5,0) %trait intérieur gauche
+           \psarc(0,0){0.5}{0}{180} %petit arc
+           \psline(0.5,0)(2.5,0) %trait intérieur droit
+           \psline(-0.1,0)(0.1,0) % signe plus
+           \psline(0,-0.1)(0,0.1) % signe plus   
+           \multido{\i=0+1}{180}{\psline(3.55;\i)(3.75;\i)} %graduations extérieures
+           \multido{\i=0+10}{19}{\psline(3.4;\i)(3.75;\i)} %grandes graduations extérieures   
+           \multido{\i=0+5}{36}{\psline(3.45;\i)(3.75;\i)} %petites graduations extérieures              
+           \multido{\i=0+10}{19}{\psline(2.7;\i)(2.5;\i)} %grandes graduations intérieures   
+           \multido{\i=0+5}{36}{\psline(2.6;\i)(2.5;\i)} %petites graduations intérieures
+           \multido{\i=0+10}{19}{\uput[\i](2.9;\i){\tiny{\i}}} %écriture extérieure
+           \multido{\i=180+-10,\I=0+10}{19}{\uput[\i](2.5;\i){\tiny{\I}}} %écriture intérieure   
+           }
+       }      
+   }
+
 %%papier millimétré
 %\newcommand{\milli}[4]{\psgrid[subgriddiv=10,gridlabels=0,gridwidth=0.4pt, subgridwidth=0.4pt,gridcolor=brown!80,subgridcolor=brown!40](#1,#2)(#3,#4)}
 %
 
 %\renewcommand*\tabularxcolumn[1]{>{\centering\arraybackslash}m{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1cm}}
-%
+
 %Tableau
 \newcommand\hautab[1]{\renewcommand{\arraystretch}{#1}}
 
 %Compétences
 \newcommand{\com}{\textcolor{B2}{$\diamondsuit$}}
+
+%texte entrouré
+\renewcommand{\O}[1]{\tikz[baseline=(letter.base)]\node[draw,circle,inner sep=1pt] (letter) {$#1$};}
 
 \newbox\smc@boxa
 \newbox\smc@boxb
@@ -1169,6 +1172,7 @@
 \newunit{hmq}{\text{hm}^2}
 \newunit{kmq}{\text{km}^2}
 \newunit{ha}{\text{ha}}
+\newunit{a}{\text{a}} %ajout Nath
 \newunit{mmc}{\text{mm}^3}
 \newunit{cmc}{\text{cm}^3}
 \newunit{dmc}{\text{dm}^3}

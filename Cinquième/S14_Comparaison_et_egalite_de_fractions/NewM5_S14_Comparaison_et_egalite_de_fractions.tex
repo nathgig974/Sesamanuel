@@ -1,0 +1,688 @@
+\themaN
+\graphicspath{{../../S14_Comparaison_et_egalite_de_fractions/Images/}}
+
+\chapter{Comparaison et\\égalité de fractions}
+\label{S14}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{autoeval}
+   \small
+   \begin{enumerate}
+      \item Il reconnait et produit des fractions égales.
+      \item Il compare, range, encadre des fractions dont les dénominateurs sont égaux ou multiples l'un de l'autre.
+      \item Il résout des problèmes faisant intervenir des fractions.  
+   \end{enumerate}
+\end{autoeval}
+
+\begin{prerequis}
+   \begin{itemize}
+      \item Fractions, nombres rationnels.
+      \item Egalité de fractions.
+      \item Ordre sur les nombres rationnels.
+      \item[\com] Comparer, ranger, encadrer des nombres fractionnaires.
+      \item[\com] Repérer et placer un nombre rationnel sur une droite graduée.
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\begin{debat}[Débat : les fractions, ces nombres rompus !] 
+   Tout nombre peut s'écrire de différentes façons : ils ont des habillages différents mais ont la même valeur. La façon dont on les écrit permet de pouvoir les comparer. Par exemple, la {\bf fraction} $\dfrac68$ possède (entre autres) les représentations suivantes :
+   \begin{center}
+      {\psset{unit=0.7}
+      \begin{pspicture}(-4,-3.7)(4,3.7)  
+         \textcolor{B1}{\large
+         \multido{\n=5+60,\i=55+60}{6}{\psline(3;\n)(0,0)(3;\i)}
+         \multido{\n=30+60,\i=-60+60,\r=120+60}{6}{\psarc(2.719;\n){1.268}{\i}{\r}}
+         \pscircle[fillstyle=solid,fillcolor=yellow](0,0){1.3}
+         \rput(0,0){\bf $\dfrac68$}
+         \rput(2.7;30){75\,\%}
+         \rput(2.7;-30){0,75}
+         \rput(2.7;150){$\dfrac34$}
+         \rput(2.7;-150){$\dfrac{75}{100}$}
+         \rput(2.7;90){\pswedge[fillstyle=solid,fillcolor=B3](0,0){0.8}{0}{-90}
+                              \pscircle(0,0){0.8}
+                              \multido{\n=0+45}{8}{\psline(0,0)(0.8;\n)}}
+          \rput(2.7;-90){\psline(-1,0)(1,0)  
+          \rput(-1,-0.4){\footnotesize 0}
+          \rput(1,-0.4){\footnotesize 1}
+          \psline[linecolor=B1,linewidth=1mm](-1,0)(0.5,0) \multido{\r=-1+0.25}{9}{\rput(\r,0){|}}}}
+      \end{pspicture}}
+   \end{center}
+   \bigskip
+   \begin{cadre}[B2][J4]
+      \begin{center}
+         Vidéo : \href{https://www.yout-ube.com/watch?v=eawBr43xWf8}{\bf Les fractions}, site Internet {\it Le blob}, épisode de la série {\it Petits contes mathématiques}.
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Des briques et des fractions]
+   {\bf Objectifs :} utiliser des fractions pour exprimer une proportion ; produire des fractions égales, ranger des fractions. \\
+   \begin{QCM}
+      \partie[les Lego®] \medskip
+         \begin{minipage}{10cm}
+            On choisit la brique de Lego® classique $u$ ci-contre que l'on prend comme unité et les onze briques $a$ à $k$. On considère que le volume d'une brique est proportionnel au nombre de \og boutons \fg{} présents sur le dessus.
+         \end{minipage}
+         \hspace{1cm}
+         \begin{minipage}{5cm}
+            $u$ : \includegraphics[width=3.15cm]{lego_4_2a}
+         \end{minipage} \\ [10mm]
+            $a$ : \includegraphics[width=5.22cm]{lego_8_2a} \qquad 
+            $b$ : \includegraphics[width=3.6cm]{lego_6_2a} \qquad
+            $c$ : \includegraphics[width=1.35cm]{lego_2_2a} \qquad
+            $d$ : \includegraphics[width=1.8cm]{lego_3_2a} \\ [5mm]
+            $e$ : \includegraphics[width=6.3cm]{lego_10_2a} \qquad
+            $f$ : \includegraphics[width=0.9cm]{lego_1_1a} \qquad
+            $g$ : \includegraphics[width=1.35cm]{lego_2_1a} \qquad
+            $h$ : \includegraphics[width=2.7cm]{lego_4_1a} \\ [5mm]
+            $i$ : \includegraphics[width=5.4cm]{lego_8_1a} \qquad
+            $j$ : \includegraphics[width=1.98cm]{lego_3_1a} \qquad
+            $k$ : \includegraphics[width=4.05cm]{lego_6_1a} \\
+            
+      \partie[les fractions]
+         \begin{enumerate}
+            \item Compléter les égalités suivantes à l'aide de nombres fractionnaires : \\ [-3mm]
+               \begin{multicols}{6}
+                  $a = \pointilles u$ \\ [7mm]
+                  $b = \pointilles u$ \\ [7mm]
+                  $c = \pointilles u$ \\ [7mm]
+                  $d = \pointilles u$ \\ [7mm]
+                  $e = \pointilles u$ \\ [7mm]
+                  $f = \pointilles u$ \\ [7mm]
+                  $g = \pointilles u$ \\ [7mm]
+                  $h = \pointilles u$ \\ [7mm]
+                  $i = \pointilles u$ \\ [7mm]
+                  $j = \pointilles u$ \\ [7mm]
+                  $k = \pointilles u$ \\ [7mm]
+               \end{multicols} \medskip
+            \item Compléter les égalités suivantes à l'aide de fractions dont le dénominateur est 8 : \\ [-3mm]
+               \begin{multicols}{6}
+                  $a = \dfrac{\qquad}{8} u$ \\ [7mm]
+                  $b = \dfrac{\qquad}{8} u$ \\ [7mm]
+                  $c = \dfrac{\qquad}{8} u$ \\ [7mm]
+                  $d = \dfrac{\qquad}{8} u$ \\ [7mm]
+                  $e = \dfrac{\qquad}{8} u$ \\ [7mm]
+                  $f = \dfrac{\qquad}{8} u$ \\ [7mm]
+                  $g = \dfrac{\qquad}{8} u$ \\ [7mm]
+                  $h = \dfrac{\qquad}{8} u$ \\ [7mm]
+                  $i = \dfrac{\qquad}{8} u$ \\ [7mm]
+                  $j = \dfrac{\qquad}{8} u$ \\ [7mm]
+                  $k = \dfrac{\qquad}{8} u$ \\ [7mm]
+               \end{multicols} \smallskip
+            \item Classer les Lego® dans l'ordre croissant de leur volume : \par \medskip
+               \pointilles
+      \end{enumerate}
+   \end{QCM}
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+%%%%%%%%%%%%%%
+\section{Égalité de fractions}
+
+\begin{propriete}
+   On ne change pas la valeur d'une fraction en multipliant ou en divisant le numérateur et le dénominateur par un même nombre relatif non nul. \\ [1mm]
+   \hspace*{3cm} $\dfrac{b}{c} =\dfrac{b\times a}{c\times a}= \dfrac{ba}{ca}. \text{\quad On a aussi \quad }a\times\dfrac{b}{c}= \dfrac{a\times b}{c} =\dfrac{ab}{c}$
+\end{propriete}
+
+\begin{preuve}
+{\hautab{1.7}
+   \begin{tabular}{p{3.7cm}p{10cm}}
+      $(a\times c)\times\dfrac{b}{c} =a\times \left(c\times\dfrac{b}{c}\right)$
+      &
+      {\it associativité de la multiplication}
+      \\
+      $(a\times c)\times\dfrac{b}{c} =a\times b$
+      &
+      {\it $\dfrac{b}{c}$ est le nombre qui, multiplié par $c$ donne $b$ donc $c\times\dfrac{b}{c} =b$}
+      \\
+      donc, $\dfrac{b}{c} =\dfrac{a\times b}{a\times c}$
+      &
+      {\it puisque $\dfrac{a\times b}{a\times c}$ est le nombre qui, multiplié par $a\times c$ donne $a\times b$}
+      \\
+   \end{tabular}}
+\end{preuve}
+
+\begin{exemple*1}   
+   $\dfrac12 =\dfrac{1\times2}{2\times2} =\dfrac24 =\dfrac{2\times2}{4\times2} = \dfrac48\dots \qquad ; \qquad 7\times\dfrac{3}{5} =\dfrac{7\times3}{5} =\dfrac{21}{5}$.
+\end{exemple*1}
+
+\begin{remarque}
+   la propriété permet de {\bf simplifier} des fractions, ce qui  signifie écrire une fraction qui lui est égale, mais avec un numérateur et un dénominateur plus petits.
+\end{remarque}
+
+\begin{exemple*1}
+   Pour simplifier $\dfrac{150}{180}$, on peut tout d'abord diviser le numérateur et le dénominateur \\ [1mm]
+      par 10 : $\dfrac{150}{180} =\dfrac{150\div10}{180\div10} =\dfrac{15}{18}$, puis les diviser encore par 3 : $\dfrac{15}{18} =\dfrac{15\div3}{18\div3} =\dfrac56$.
+\end{exemple*1}
+
+
+%%%%%%%%%%%%%%%%%
+\section{Comparaison de fractions}
+
+\begin{methode}[Comparer des fractions de même dénominateur]
+   Pour comparer deux fractions ayant le même dénominateur, il suffit de comparer les numérateurs : la fraction ayant le plus grand numérateur est la plus grande.
+   \exercice \smallskip
+      Comparer $\dfrac26$ et $\dfrac36$.
+   \correction \smallskip
+      $2<3$ donc $\dfrac26<\dfrac36$ \quad \parbox{1.4cm}{\Fraction[Rayon=6mm,Couleur=IndianRed,Reponse]{2/6}} < \parbox{1.2cm}{\Fraction[Rayon=6mm,Couleur=IndianRed,Reponse]{3/6}}
+\end{methode}
+
+\begin{remarque}
+   cela revient à dire que, lorsque l'on partage une quantité en un nombre de parts égales, plus on prend de parts plus le nombre est grand.
+\end{remarque}
+
+
+\begin{methode}[Comparer des fractions de dénominateurs multiples]
+   Pour comparer deux fractions de dénominateurs multiples, on modifie l'écriture de l'une des fractions pour qu'elle ait le même dénominateur que l'autre.
+   \exercice \smallskip
+   Comparer $\dfrac23$ et $\dfrac{7}{12}$.
+   \correction
+   On remarque que $\dfrac23=\dfrac{2\times4}{3\times4}=\dfrac{8}{12}$. \\ [1mm]
+      Comme $\dfrac{8}{12}>\dfrac{7}{12}$, alors $\dfrac23>\dfrac{7}{12}$.
+\end{methode}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+
+\begin{exercice} %1
+   Ecrire la fraction qui représente la partie colorée de chaque figure puis la simplifier si possible.
+   \begin{center}
+      a \Fraction[Regulier,Cotes=4,Rayon=6mm,Couleur=Cyan,Reponse]{1/4} \quad b \Fraction[Regulier,Cotes=4,Rayon=6mm,Couleur=Cyan,Reponse]{3/4} \quad c \Fraction[Regulier,Cotes=4,Rayon=6mm,Couleur=Cyan,Reponse]{2/4} \quad d\Fraction[Regulier,Cotes=4,Rayon=6mm,Couleur=Cyan,Reponse]{4/4} \medskip
+      
+       e \Fraction[Rayon=6mm,Couleur=IndianRed,Reponse]{10/12} \quad f \Fraction[Rayon=6mm,Couleur=IndianRed,Reponse]{3/12} \quad g \Fraction[Rayon=6mm,Couleur=IndianRed,Reponse]{2/12} \quad h \Fraction[Rayon=6mm,Couleur=IndianRed,Reponse]{6/12} \smallskip
+       
+       i \Fraction[Triangle,Longueur=12mm,Couleur=LimeGreen,Reponse]{3/9} \quad j \Fraction[Triangle,Longueur=12mm,Couleur=LimeGreen,Reponse]{7/9} \quad k \Fraction[Triangle,Longueur=12mm,Couleur=LimeGreen,Reponse]{6/9} \quad l \Fraction[Triangle,Longueur=12mm,Couleur=LimeGreen,Reponse]{8/9} \medskip
+       
+      {\psset{unit=0.6}
+      \begin{pspicture}(-1,-1.5)(2.2,1)
+         \psgrid[subgriddiv=2,subgridcolor=black,subgridwidth=0.8pt,gridlabels=0](-1,-1)(1,1)
+         \psframe[fillstyle=solid,fillcolor=J1](-1,0)(0,1)
+         \rput(-1.4,-0.9){m}
+      \end{pspicture}
+      \begin{pspicture}(-1,-1.5)(2.2,1)
+         \psgrid[subgriddiv=2,subgridcolor=black,subgridwidth=0.8pt,gridlabels=0](-1,-1)(1,1)
+         \psframe[fillstyle=solid,fillcolor=J1](-1,0)(0,1)
+         \psframe[fillstyle=solid,fillcolor=J1](0,0.5)(0.5,0)
+         \psframe[fillstyle=solid,fillcolor=J1](-1,-0.5)(-0.5,0)
+         \rput(-1.4,-0.9){n}
+      \end{pspicture}
+      \begin{pspicture}(-1,-1.5)(2.2,1)
+         \psgrid[subgriddiv=2,subgridcolor=black,subgridwidth=0.8pt,gridlabels=0](-1,-1)(1,1)
+         \psframe[fillstyle=solid,fillcolor=J1](-1,-1)(1,0)
+         \psframe[fillstyle=solid,fillcolor=J1](-1,0)(0,1)
+         \psframe[fillstyle=solid,fillcolor=J1](0,0)(0.5,0.5)
+         \rput(-1.4,-0.9){p}
+      \end{pspicture}
+      \begin{pspicture}(-1,-1.5)(1,1)
+         \psgrid[subgriddiv=2,subgridcolor=black,subgridwidth=0.8pt,gridlabels=0](-1,-1)(1,1)
+         \psframe[fillstyle=solid,fillcolor=J1](-1,-1)(0.5,0)
+         \psframe[fillstyle=solid,fillcolor=J1](-1,0)(-0.5,1)
+         \psframe[fillstyle=solid,fillcolor=J1](0.5,-0.5)(1,0)
+         \rput(-1.4,-0.9){q}
+      \end{pspicture}}   
+   \end{center}
+\end{exercice}
+      
+\begin{corrige}
+   \begin{colitemize}{2}
+      \item a $=\blue \dfrac14$ \medskip
+      \item b $=\blue \dfrac34$ \medskip
+      \item c $=\blue \dfrac24 =\dfrac12$ \medskip
+      \item d $=\blue \dfrac44 =1$ \medskip
+      \item e $=\blue \dfrac{10}{12} =\dfrac56$ \medskip
+      \item f $=\blue \dfrac{3}{12} =\dfrac14$
+      \item g $=\blue \dfrac{2}{12} =\dfrac16$
+      \item h $=\blue \dfrac{6}{12} =\dfrac12$
+      \item i $=\blue \dfrac39 =\dfrac13$
+      \item j $=\blue \dfrac79$
+      \item k $=\blue \dfrac69 =\dfrac23$
+      \item l $=\blue \dfrac89$
+      \item m $=\blue \dfrac{4}{16} =\dfrac14$
+      \item n $=\blue \dfrac{6}{16} =\dfrac38$
+      \item p $=\blue \dfrac{13}{16}$
+      \item q $=\blue \dfrac{9}{16}$
+   \end{colitemize}
+\end{corrige}
+ 
+      
+\begin{exercice} %2
+   Dans chaque figure, colorier la fraction donnée.
+   \begin{center}
+   {\small
+      \psset{unit=0.75}
+      \begin{pspicture}(-1,-1.3)(2.5,1)
+         \psframe(-1,-1)(1,1)
+         \rput(1.25,0){$\dfrac13$}
+      \end{pspicture}
+      \begin{pspicture}(-1,-1.3)(2.5,1)
+         \psframe(-1,-1)(1,1)
+         \rput(1.25,0){$\dfrac34$}
+      \end{pspicture}
+      \begin{pspicture}(-1,-1.3)(1.5,1)
+         \psframe(-1,-1)(1,1)
+         \rput(1.25,0){$\dfrac58$}
+      \end{pspicture} \\ \medskip
+      
+      \begin{pspicture}(-1,-1.3)(2.5,1)
+         \pscircle(0,0){1}
+         \rput(1.25,0){$\dfrac13$}
+      \end{pspicture}
+      \begin{pspicture}(-1,-1.3)(2.5,1)
+         \pscircle(0,0){1}
+         \rput(1.25,0){$\dfrac34$}
+      \end{pspicture}
+      \begin{pspicture}(-1,-1.3)(1.5,1)
+         \pscircle(0,0){1}
+         \rput(1.25,0){$\dfrac58$}
+      \end{pspicture} \\ \medskip
+      
+      \begin{pspicture}(-1,-1.3)(2.5,1)
+         \pspolygon(1;0)(1;60)(1;120)(1;180)(1;-120)(1;-60)
+         \rput(1.25,0){$\dfrac13$}
+      \end{pspicture}
+      \begin{pspicture}(-1,-1.3)(2.5,1)
+         \pspolygon(1;0)(1;60)(1;120)(1;180)(1;-120)(1;-60)
+         \rput(1.25,0){$\dfrac34$}
+      \end{pspicture}
+      \begin{pspicture}(-1,-1.3)(1.5,1)
+         \pspolygon(1;0)(1;60)(1;120)(1;180)(1;-120)(1;-60)
+         \rput(1.25,0){$\dfrac56$}
+      \end{pspicture} \\ \medskip
+
+      \begin{pspicture}(-1,-1.3)(2.5,1)
+         \pspolygon(-1,-0.33)(-1,0.33)(-0.33,0.33)(-0.33,1)(0.33,1)(0.33,0.33)(1,0.33)(1,-0.33)(0.33,-0.33)(0.33,-1)(-0.33,-1)(-0.33,-0.33)
+         \rput(1.25,0){$\dfrac14$}
+      \end{pspicture}
+      \begin{pspicture}(-1,-1.3)(2.5,1)
+         \pspolygon(-1,-0.33)(-1,0.33)(-0.33,0.33)(-0.33,1)(0.33,1)(0.33,0.33)(1,0.33)(1,-0.33)(0.33,-0.33)(0.33,-1)(-0.33,-1)(-0.33,-0.33)
+         \rput(1.25,0){$\dfrac38$}
+      \end{pspicture}
+      \begin{pspicture}(-1,-1.3)(1.5,1)
+         \pspolygon(-1,-0.33)(-1,0.33)(-0.33,0.33)(-0.33,1)(0.33,1)(0.33,0.33)(1,0.33)(1,-0.33)(0.33,-0.33)(0.33,-1)(-0.33,-1)(-0.33,-0.33)
+         \rput(1.25,0){$\dfrac25$}
+      \end{pspicture}}
+   \end{center}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-3mm]
+   \Fraction[Rectangle,Longueur=12mm,Largeur=12mm,Couleur=CornflowerBlue,Reponse]{1/3} $\dfrac13$ \qquad \Fraction[Rectangle,Multiple=2,Longueur=12mm,Largeur=12mm,Couleur=CornflowerBlue,Reponse]{3/4} $\dfrac34$ \qquad \Fraction[Rectangle,Multiple=2,Longueur=12mm,Largeur=12mm,Couleur=CornflowerBlue,Reponse]{5/8} $\dfrac58$ \medskip
+   
+   \Fraction[Rayon=6mm,Couleur=CornflowerBlue,Reponse]{1/3} $\dfrac13$ \qquad \Fraction[Rayon=6mm,Couleur=CornflowerBlue,Reponse]{3/4} $\dfrac34$ \qquad \Fraction[Rayon=6mm,Couleur=CornflowerBlue,Reponse]{5/8} $\dfrac58$ \\ [2mm]
+   \Fraction[Regulier,Cotes=6,Rayon=6mm,Couleur=CornflowerBlue,Reponse]{1/3} $\dfrac13$ \qquad \Fraction[Regulier,Cotes=6,Rayon=6mm,Couleur=CornflowerBlue,Reponse]{3/4} $\dfrac34$ \qquad \Fraction[Regulier,Cotes=6,Rayon=6mm,Couleur=CornflowerBlue,Reponse]{5/6} $\dfrac56$ \medskip
+   
+   {\small
+      \psset{unit=0.6}
+      \begin{pspicture}(-1,-1.5)(3,1)
+         \pspolygon[fillstyle=solid,fillcolor=CornflowerBlue](0,0)(0.33,0.33)(0.33,1)(-0.33,1)(-0.33,0.33)
+         \pspolygon(-1,-0.33)(-1,0.33)(-0.33,0.33)(-0.33,1)(0.33,1)(0.33,0.33)(1,0.33)(1,-0.33)(0.33,-0.33)(0.33,-1)(-0.33,-1)(-0.33,-0.33)
+         \psline(-0.33,-0.33)(0.33,0.33)
+         \psline(0.33,-0.33)(-0.33,0.33)
+         \rput(1.5,-1){$\dfrac14$}
+      \end{pspicture}
+      \begin{pspicture}(-1,-1.5)(3,1)
+         \pspolygon[fillstyle=solid,fillcolor=CornflowerBlue](0,0)(1,0)(1,0.33)(0.33,0.33)(0.33,1)(-0.33,1)(-0.33,0.33)
+         \pspolygon(-1,-0.33)(-1,0.33)(-0.33,0.33)(-0.33,1)(0.33,1)(0.33,0.33)(1,0.33)(1,-0.33)(0.33,-0.33)(0.33,-1)(-0.33,-1)(-0.33,-0.33)
+         \pspolygon(-1,-0.33)(-1,0.33)(-0.33,0.33)(-0.33,1)(0.33,1)(0.33,0.33)(1,0.33)(1,-0.33)(0.33,-0.33)(0.33,-1)(-0.33,-1)(-0.33,-0.33)
+         \psline(-0.33,-0.33)(0.33,0.33)
+         \psline(0.33,-0.33)(-0.33,0.33)
+         \psline(-1,0)(1,0)
+         \psline(0,-1)(0,1)
+         \rput(1.5,-1){$\dfrac38$}
+      \end{pspicture}
+      \begin{pspicture}(-1,-1.5)(1.5,1)
+         \psframe[fillstyle=solid,fillcolor=CornflowerBlue](-0.33,-0.33)(1,0.33)
+         \pspolygon(-1,-0.33)(-1,0.33)(-0.33,0.33)(-0.33,1)(0.33,1)(0.33,0.33)(1,0.33)(1,-0.33)(0.33,-0.33)(0.33,-1)(-0.33,-1)(-0.33,-0.33)
+         \psframe(-0.33,-0.33)(0.33,0.33)
+         \rput(1.5,-1){$\dfrac25$}
+      \end{pspicture}}
+\end{corrige}
+
+
+\begin{exercice} %3
+   Compléter avec le signe $=$ ou $\neq$. \medskip
+   \begin{colenumerate}{3}
+      \item $\dfrac{3+5}{7+5} \pointilles \dfrac{3}{7}$ \bigskip
+      \item $\dfrac{3\times5}{7\times5} \pointilles \dfrac{3}{7}$ \bigskip
+      \item $\dfrac{3\times7}{7\times3} \pointilles \dfrac{3}{7}$ \medskip
+      \item $\dfrac{33}{77} \pointilles \dfrac{3}{7}$
+      \item $\dfrac{7}{3} \pointilles \dfrac{3}{7}$
+      \item $\dfrac{3}{7} \pointilles 3,7$
+      \item $\dfrac{3}{7} \pointilles \dfrac{30}{70}$
+      \item $\dfrac{3}{3} \pointilles \dfrac{7}{7}$
+      \item $3 \pointilles \dfrac{21}{7}$
+   \end{colenumerate}
+\end{exercice}
+
+\begin{corrige}
+    \begin{colenumerate}{3}
+      \item $\dfrac{3+5}{7+5} \, {\blue \neq} \, \dfrac{3}{7}$ \medskip
+      \item $\dfrac{3\times5}{7\times5} \, {\blue =} \, \dfrac{3}{7}$ \medskip
+      \item $\dfrac{3\times7}{7\times3} \, {\blue \neq} \, \dfrac{3}{7}$ \medskip
+      \item $\dfrac{33}{77} \, {\blue =} \,  \dfrac{3}{7}$
+      \item $\dfrac{7}{3} \, {\blue \neq} \, \dfrac{3}{7}$
+      \item $\dfrac{3}{7} \, {\blue \neq} \, 3,7$
+      \item $\dfrac{3}{7} \, {\blue =} \, \dfrac{30}{70}$
+      \item $\dfrac{3}{3} \, {\blue =} \, \dfrac{7}{7}$
+      \item $3 \, {\blue =} \, \dfrac{21}{7}$
+   \end{colenumerate}
+\end{corrige}
+
+\medskip
+
+
+\begin{exercice} %4
+   Compléter les fractions suivantes : \medskip
+   \begin{enumerate}
+      \item $\dfrac{1}{2} =\dfrac{\qquad\;}{14} =\dfrac{8}{\qquad\;} =\dfrac{\qquad\;}{50} =\dfrac{16}{\qquad\;} =\dfrac{64}{\qquad\;}$ \\ [2mm]
+      \item $\dfrac{4}{5} =\dfrac{\qquad\;}{15} =\dfrac{8}{\qquad\;} =\dfrac{\qquad\;}{50} =\dfrac{16}{\qquad\;} =\dfrac{64}{\qquad\;}$ \\ [2mm]
+      \item $\dfrac{11}{7} =\dfrac{\qquad\;}{14} =\dfrac{88}{\qquad\;} =\dfrac{\qquad\;}{49} =\dfrac{121}{\qquad\;} =\dfrac{550}{\qquad\;}$ \\
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item $\dfrac{1}{2} =\dfrac{\blue 7}{14} =\dfrac{8}{\blue 16} =\dfrac{\blue 25}{50} =\dfrac{16}{\blue 32} =\dfrac{64}{\blue 128}$ \\ [2mm]
+      \item $\dfrac{4}{5} =\dfrac{\blue 12}{15} =\dfrac{8}{\blue 10} =\dfrac{\blue 40}{50} =\dfrac{16}{\blue 20} =\dfrac{64}{\blue 80}$ \\ [2mm]
+      \item $\dfrac{11}{7} =\dfrac{\blue 22}{14} =\dfrac{88}{\blue 56} =\dfrac{\blue 77}{49} =\dfrac{121}{\blue 77} =\dfrac{550}{\blue 350}$
+   \end{enumerate}
+\end{corrige}
+
+\smallskip
+
+
+\begin{exercice} %5
+   Simplifier au maximum ces fractions. \medskip
+   \begin{colenumerate}{4}
+      \item $\dfrac{6}{10}$ \bigskip
+      \item $\dfrac{18}{16}$ \bigskip
+      \item $\dfrac{16}{28}$
+      \item $\dfrac{30}{48}$
+      \item $\dfrac{88}{33}$
+      \item $\dfrac{55}{30}$
+      \item $\dfrac{15}{75}$
+      \item $\dfrac{108}{117}$
+   \end{colenumerate}
+\end{exercice}
+
+\begin{corrige}
+   \begin{colenumerate}{2}
+      \item $\dfrac{6}{10} =\dfrac{\cancel2\times3}{\cancel2\times5} =\blue\dfrac35$ \bigskip
+      \item $\dfrac{18}{16} =\dfrac{\cancel2\times9}{\cancel2\times8} =\blue\dfrac98$ \bigskip
+      \item $\dfrac{16}{28} =\dfrac{\cancel4\times4}{\cancel4\times7} =\blue\dfrac47$ \bigskip
+      \item $\dfrac{30}{48} =\dfrac{\cancel6\times5}{\cancel6\times8} =\blue\dfrac58$ \bigskip
+      \item $\dfrac{88}{33} =\dfrac{\cancel{11}\times8}{\cancel{11}\times3} =\blue\dfrac83$ \bigskip
+      \item $\dfrac{55}{30} =\dfrac{\cancel5\times11}{\cancel5\times6} =\blue\dfrac{11}6$ \bigskip
+      \item $\dfrac{15}{75} =\dfrac{\cancel{15}\times1}{\cancel{15}\times5} =\blue\dfrac15$ \bigskip
+      \item $\dfrac{108}{117} =\dfrac{\cancel9\times12}{\cancel9\times13} =\blue\dfrac{12}{13}$
+   \end{colenumerate}
+\end{corrige}
+
+\smallskip
+
+
+\begin{exercice} %6
+   Surligner d'une même couleur les nombres égaux. \\ [2mm]
+   {\hautab{2}
+   \begin{tabular}{|*{7}{C{0.8}}|}
+      \hline
+      $\dfrac{5}{4}$ & $\dfrac{54}{45}$ & $\dfrac{28}{42}$ & $\dfrac{12}{15}$ & $\dfrac{1}{2}$ & $\dfrac{9}{81}$ & $\dfrac{4}{6}$ \\ [2mm]
+      $\dfrac{50}{40}$ & $\dfrac{27}{54}$ & $\dfrac{4}{36}$ & $\dfrac{36}{72}$ & $\dfrac{1}{9}$ & $\dfrac{4}{5}$ & $\dfrac{6}{5}$ \\ [2mm]
+      \hline
+   \end{tabular}} \\ [1mm]
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-20mm]
+   \begin{spacing}{1.5}
+   \begin{flalign*}
+      & \dfrac54 \text{ est irréductible.} & \\
+      & \frac{54}{45}=\Simplification[Longue]{54}{45} & \\ 
+      & \frac{28}{42}=\Simplification[Longue]{28}{42} & \\ 
+      & \frac{12}{15}=\Simplification[Longue]{12}{15} & \\
+      & \dfrac12 \text{ est irréductible.} & \\
+      & \frac{9}{81}=\Simplification[Longue]{9}{81} & \\
+      & \frac{4}{6}=\Simplification[Longue]{4}{6} & \\
+      & \frac{50}{40}=\Simplification[Longue]{50}{40} & \\
+      & \frac{27}{54}=\Simplification[Longue]{27}{54} & \\
+      & \frac{4}{36}=\Simplification[Longue]{4}{36} & \\
+      & \frac{36}{72}=\Simplification[Longue]{36}{72} & \\
+      & \dfrac19 \text{ est irréductible.} & \\
+      & \dfrac45 \text{ est irréductible.} & \\
+      & \dfrac65 \text{ est irréductible.} & \\    
+   \end{flalign*}
+   \end{spacing}
+   \vspace*{-15mm}
+   Ce qui nous donne les égalités suivantes : \\
+   {\hautab{2}
+   \begin{tabular}[t]{|*{7}{C{0.6}}|}
+      \hline
+      $\textcolor{red}{\dfrac{5}{4}}$ & $\textcolor{blue}{\dfrac{54}{45}}$ & $\textcolor{orange}{\dfrac{28}{42}}$ & $\textcolor{green}{\dfrac{12}{15}}$ & $\textcolor{violet}{\dfrac{1}{2}}$ & $\textcolor{teal}{\dfrac{9}{81}}$ & $\textcolor{orange}{\dfrac{4}{6}}$ \\
+       $\textcolor{red}{\dfrac{50}{40}}$ & $\textcolor{violet}{\dfrac{27}{54}}$ & $\textcolor{teal}{\dfrac{4}{36}}$ & $\textcolor{violet}{\dfrac{36}{72}}$ & $\textcolor{teal}{\dfrac{1}{9}}$ & $\textcolor{green}{\dfrac{4}{5}}$ & $\textcolor{blue}{\dfrac{6}{5}}$ \\ [1mm]
+      \hline
+   \end{tabular}}
+\end{corrige}
+
+\smallskip
+
+
+\begin{exercice} %7
+   Comparer les fractions suivantes : \medskip
+   \begin{colenumerate}{3}
+      \item $\dfrac{1}{9} \pointilles \dfrac{1}{3}$ \bigskip
+      \item $\dfrac{4}{9} \pointilles \dfrac{12}{9}$ \bigskip
+      \item $\dfrac{18}{17} \pointilles 1$ \bigskip
+      \item $\dfrac{7}{19} \pointilles \dfrac{7}{20}$
+      \item $\dfrac{2}{3} \pointilles \dfrac{4}{6}$
+      \item $\dfrac{18}{13} \pointilles \dfrac{15}{13}$
+      \item $\dfrac{81}{91} \pointilles \dfrac{81}{90}$
+      \item $\dfrac{17}{10} \pointilles 0,7$
+      \item $\dfrac{2}{3} \pointilles \dfrac{1}{4}$
+   \end{colenumerate}
+\end{exercice}
+
+\begin{corrige}
+   \begin{colenumerate}{3}
+      \item $\dfrac{1}{9} \, {\blue <} \, \dfrac{1}{3}$ \bigskip
+      \item $\dfrac{4}{9} \, {\blue <} \,\dfrac{12}{9}$ \bigskip
+      \item $\dfrac{18}{17} \, {\blue >} \,1$
+      \item $\dfrac{7}{19} \, {\blue >} \,\dfrac{7}{20}$
+      \item $\dfrac{2}{3} \, {\blue =} \,\dfrac{4}{6}$
+      \item $\dfrac{18}{13} \, {\blue >} \,\dfrac{15}{13}$
+      \item $\dfrac{81}{91} \, {\blue <} \,\dfrac{81}{90}$
+      \item $\dfrac{17}{10} \, {\blue >} \,0,7$
+      \item $\dfrac{2}{3} \, {\blue >} \,\dfrac{1}{4}$
+   \end{colenumerate}
+\end{corrige}
+
+\smallskip
+
+
+\begin{exercice} %8
+   Pour chaque item, réduire les fractions au même dénominateur, les ranger dans l'ordre croissant puis en déduire le classement des fractions dans l'ordre croissant. \\ [-2mm]
+   \begin{enumerate}
+      \item $A =\dfrac12 \; ; \; B =\dfrac23 \; ; \; C =\dfrac56 \; ; \; D = \dfrac5{12} \; ; \; E =\dfrac7{24}$. \medskip
+      \item $F =\dfrac12 \; ; \; G =\dfrac34 \; ; \; H =\dfrac78 \; ; \; I = \dfrac{11}{16} \; ; \; J =\dfrac{23}{32}$.
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item $A =\dfrac{1\times12}{2\times12} =\dfrac{12}{24}$ \\ [2mm]
+         $B =\dfrac{2\times8}{3\times8} =\dfrac{16}{24}$ \\ [2mm]
+         $C =\dfrac{5\times4}{6\times4} =\dfrac{20}{24}$ \\ [2mm]
+         $D = \dfrac{5\times2}{12\times2} =\dfrac{10}{24}$ \\ [2mm]
+         $E =\dfrac{7}{24}$ \\ [2mm]
+         Or, on a $\dfrac{7}{24}<\dfrac{10}{24}<\dfrac{12}{24}<\dfrac{16}{24}<\dfrac{20}{24}$ \\ [2mm]
+         D'où : {\blue $E<D<A<B<C$} \\ [2mm]
+      \item $F =\dfrac{1\times16}{2\times16} =\dfrac{16}{32}$ \\ [2mm]
+         $G =\dfrac{3\times8}{4\times8} =\dfrac{24}{32}$ \\ [2mm]
+         $H =\dfrac{7\times4}{8\times4} =\dfrac{28}{32}$ \\ [2mm]
+         $I = \dfrac{11\times2}{16\times2} =\dfrac{22}{32}$ \\ [2mm]
+         $J =\dfrac{23}{32}$ \\ [2mm]
+         Or, on a $\dfrac{16}{32}<\dfrac{22}{32}<\dfrac{23}{32}<\dfrac{23}{32}<\dfrac{24}{32}$ \\ [2mm]
+         D'où {\blue $F<I<J<G<H$}
+   \end{enumerate}
+\end{corrige}
+
+\medskip
+
+
+\begin{exercice}
+Résoudre les deux problèmes suivants.
+   \begin{enumerate}
+      \item La collecte : \ueuro{20} ont été collectés par 3 élèves lors de la vente de gâteaux. Jim en  a collecté le quart, Paul trois huitièmes et Jane le reste. \\
+         Sachant qu’une part de gâteau coûtait 50 centimes, combien de parts de gâteaux ont-ils vendues chacun ?
+       \item Économies : Je dépense quatre septièmes de mes économies pour acheter un manteau et le tiers du reste pour une paire de chaussettes. J’ai maintenant \ueuro{9,52}. \\
+          Combien avais-je d’économies au départ ?
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item Une part de gâteau coûte \ueuro{0,50}. \\
+         S'ils ont collecté \ueuro{20}, cela signifie qu'ils ont vendus au total 40 parts de gâteau. \\
+         Modélisons la situation par un graphique en barre : \\ [1mm]
+         \ModeleBarre{Turquoise 8 {"\ueuro{20} = 40 parts de gâteaux"}}{LightSkyBlue -2 "Jim $\frac14$" PaleTurquoise -3 "Paul $\frac38$" PowderBlue -3 "Jane"} \\
+         On observe que 8 briques unité correspondent à 40 parts de gâteaux. \\
+         Une brique correspond donc à 5 parts. \\
+         {\blue Jim a vendu 10 parts de gâteaux, Paul et Jane en ont vendu 15 chacun}.
+      \item Modélisons la situation par un graphique en barre : \\ [1mm]
+         \ModeleBarre{Turquoise 7 {"Mes économies"}}{LightSkyBlue -4 "manteau" PaleTurquoise -1 "chaussettes" PowderBlue -2 "\ueuro{9,52}"} \\
+         \ueuro{9,52} correspondent à 2 briques unité. \\
+         Une brique est donc égale à \ueuro{4,76} ($9,52\div2$) ; \\
+         7 briques équivalent à \ueuro{33,32} ($7\times4,76$). \\
+         {\blue Au départ, j'avais \ueuro{33,32}.}
+   \end{enumerate}
+\end{corrige}
+
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\begin{enigme}[ExploRATIO]
+   \partie[présentation du matériel] 
+      ExploRATIO est un matériel permettant des activités de manipulation et de réflexion dans le domaine des fractions. \\
+      Il est composé de {\bf transparents} représentant un carré unité, puis un carré partagé en 2, en 3, en 4, en 5, en 6, en 7, en 8, en 9 et en 10 et de {\bf vignettes} dont une partie est colorée. \\
+      L'objectif est de déterminer la fraction de l'unité correspondant à la partie colorée. \\ [3mm]
+      {\it Exemple de vignette :
+      \begin{center}
+         \psset{unit=0.5}
+         \begin{pspicture}(0,-1)(30,10)
+            \psframe(0,0)(10,10)
+            \psset{fillstyle=solid,fillcolor=A1}
+            \psframe[linecolor=A1](1.43,0)(5.71,10)
+            \rput(15,5){\parbox{4cm}{le transparent divisé en 7 parts égales permet de vérifier que la partie colorée correspond à trois septièmes d'unité, soit $\dfrac37$.}}
+            \psframe[fillcolor=lightgray!50](20,0)(30,10)
+            \psframe(21.43,0)(25.71,10)
+            \multido{\n=21.43+1.43}{6}{\psline(\n,0)(\n,10)}
+            \rput(29.6,9.5){7}
+            \rput{90}(20.6,1.8){\footnotesize\gray ExploRATIO}
+         \end{pspicture}
+       \end{center}}
+
+   \partie[à vous de jouer !]
+      Pour chacun des niveaux 1, 2 et 3, donner la fraction de carré unité coloriée puis simplifier au maximum.
+      \begin{center}
+         \begin{ltableau}{\linewidth}{8}
+            \hline
+            \multicolumn{8}{|c|}{Niveau 1} \\
+            \hline
+            1a & 1b & 1c & 1d & 1e & 1f & 1g & 1h \\
+            \hline
+            & & & & & & & \\
+            & & & & & & & \\
+            & & & & & & & \\
+            \hline
+         \end{ltableau}
+         \bigskip
+         \begin{ltableau}{\linewidth}{8}
+            \hline
+            \multicolumn{8}{|c|}{Niveau 2} \\
+            \hline
+            2a & 2b & 2c & 2d & 2e & 2f & 2g & 2h \\
+            \hline
+            & & & & & & & \\
+            & & & & & & & \\
+            & & & & & & & \\
+            \hline
+         \end{ltableau}
+         \bigskip
+         \begin{ltableau}{\linewidth}{7}
+            \hline
+            \multicolumn{7}{|c|}{Niveau 3} \\
+            \hline
+            2i & 2j & 2k & 2l & 2m & 2n & 2p \\
+            \hline
+            & & & & & & \\
+            & & & & & & \\
+            & & & & & & \\
+            \hline
+         \end{ltableau}
+      \end{center}
+      
+\vfill\hfill{\footnotesize \href{https://wp.gem-math.be/2021/02/04/exploratio-2/}{ExploRATIO : Un dispositif pédagogique créé par le 
+Groupe d’Enseignement Mathématique (Belgique)}}
+
+\end{enigme}
+
+\begin{corrige}
+   \smallskip
+   \begin{ltableau}{\linewidth}{8}
+      \hline
+      \multicolumn{8}{|c|}{Niveau 1} \\
+      \hline
+      1a & 1b & 1c & 1d & 1e & 1f & 1g & 1h \\
+      \hline
+      \rule[-4mm]{0mm}{10mm} $\dfrac27$ & $\dfrac38$ & $\dfrac14 $ & $\dfrac25$ & $\dfrac78$ & $\dfrac34$ & $\dfrac76$ & $\dfrac75$ \\
+      \hline
+   \end{ltableau}
+   
+   \smallskip
+   
+   \begin{ltableau}{\linewidth}{8}
+      \hline
+      \multicolumn{8}{|c|}{Niveau 2} \\
+      \hline
+      2a & 2b & 2c & 2d & 2e & 2f & 2g & 2h \\
+      \hline
+      \rule[-4mm]{0mm}{10mm} $\dfrac14$ & $\dfrac18$ & $\dfrac16$ & $\dfrac{1}{18}$ & $\dfrac{11}{24}$ & $\dfrac13$ & $\dfrac89$ & $\dfrac13$ \\
+      \hline
+   \end{ltableau}
+   
+   \smallskip
+   
+   \begin{ltableau}{\linewidth}{7}
+      \hline
+      \multicolumn{7}{|c|}{Niveau 3} \\
+      \hline
+      2i & 2j & 2k & 2l & 2m & 2n & 2p \\
+      \hline
+      \rule[-4mm]{0mm}{10mm} $\dfrac{13}{6}$ & $\dfrac23$ & $\dfrac35$ & $\dfrac23$ & $1$ & $\dfrac12$ & $\dfrac38$ \\
+      \hline
+   \end{ltableau}
+\end{corrige}
+
