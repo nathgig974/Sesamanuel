@@ -1,0 +1,45 @@
+   \ \\ [-5mm]
+    \begin{enumerate}
+      \item La somme des angles fait \udeg{180} donc, le troisième angle mesure $\udeg{180}-\udeg{64}-\udeg{46} =\blue\udeg{70}$.
+      \item Figure à l'échelle 1/2 en bas de page, complétée au fur et à mesure.
+      \item Pour tracer les points demandés, il suffit de construire la médiatrice de $[AD]$ qui coupe $[DE]$ en $B$, puis celle de $[AE]$ qui coupe $[DE]$ en $C$.
+      \item {\blue Le triangle $ABD$ est isocèle en $B$} puisque le point $B$ est à égale distance de $A$ et $D$. \\
+         {\blue Le triangle $ACE$ est isocèle en $C$} puisque le point $C$ est à égale distance de $A$ et $E$.
+   \end{enumerate}
+
+\Coupe
+
+   \begin{enumerate}
+   \setcounter{enumi}{4}
+      \item $ABD$ est isocèle en $B$ donc, $\widehat{DAB} =\widehat{ADB} =\udeg{32}$. \\
+         La somme des angles faisant \udeg{180}, l'angle $\widehat{ABD}$ mesure alors $\udeg{180}-2\times\udeg{32} =\udeg{116}$. \\
+         {\blue Les angles de $ABD$ mesurent \udeg{32}, \udeg{32} et \udeg{116}}. \\
+         $ACE$ est isocèle en $C$ donc, $\widehat{CAE} =\widehat{CEA} =\udeg{23}$. \\
+         La somme des angles faisant \udeg{180}, l'angle $\widehat{ACE}$ mesure $\udeg{180}-2\times\udeg{23} =\udeg{134}$. \\
+         {\blue Les angles de $ACE$ mesurent \udeg{23}, \udeg{23} et \udeg{134}}.
+      \item $AB+BC+CA = DB+BC+CE =DE =\ucm{16}$. \\
+        {\blue Le périmètre de $ABC$ vaut \ucm{16}}.
+      \item $\widehat{ABC} =\udeg{180}-\udeg{116} =\udeg{64}$ ; \\
+         $\widehat{ACB} =\udeg{180}-\udeg{134} =\udeg{46}$. \\
+         Conclusion : {\blue le triangle $ABC$ correspond bien au triangle demandé.}
+   \end{enumerate}
+   {\psset{unit=0.5,PointSymbol=none,CodeFig=true}
+      \small
+       \begin{pspicture}(1,-2.3)(15.5,5.5)
+         \pstTriangle[PointSymbol=none](0,0){D}(16,0){E}(7.63;32){A}
+         \psline[linestyle=dashed]{<->}(0,-1.5)(16,-1.5)
+         \rput(8,-2){\ucm{16}}
+         \pstMarkAngle[MarkAngleRadius=1.5,LabelSep=2.2]{E}{D}{A}{\small \udeg{32}}
+         \pstMarkAngle[MarkAngleRadius=1.5,LabelSep=2.2]{A}{E}{D}{\small \udeg{23}}
+         \psset{CodeFigColor=B1,linecolor=B1}
+         \pstMediatorAB[PointName=none]{A}{D}{I}{J}
+         \pstMediatorAB[PointName=none,SegmentSymbol=pstslash]{E}{A}{K}{L}
+         \psset{PosAngle=-90,linecolor=blue}
+         \pstInterLL{D}{E}{I}{J}{B}
+         \pstInterLL{D}{E}{K}{L}{C}
+         \pstLineAB{A}{B}
+         \pstLineAB{A}{C}
+         \pstLineAB{B}{C}
+         \pstMarkAngle[MarkAngleRadius=0.8,LabelSep=1.6]{C}{B}{A}{\small\blue \udeg{64}}
+         \pstMarkAngle[MarkAngleRadius=0.8,LabelSep=1.6]{A}{C}{B}{\small\blue \udeg{46}}
+      \end{pspicture}}

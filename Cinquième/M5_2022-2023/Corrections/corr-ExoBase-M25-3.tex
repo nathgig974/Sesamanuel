@@ -1,0 +1,27 @@
+   \ \\ [-5mm]
+   \psset{unit=0.4}
+      \begin{pspicture}(0,-0.5)(18,14.6)
+         \psset{fillstyle=solid,linewidth=0.5mm}
+         \pspolygon[fillcolor=A1!25](1,2)(6,0)(6,7)(1,9)
+         \pspolygon[fillcolor=B1!25](7,2)(15,2)(18,7)(10,7)
+         \pspolygon[fillcolor=G1!25](4,11)(10,11)(8,13)(2,13)
+         \pspolygon[fillcolor=J1!25](13,8)(17,9)(17,13)(13,12)
+         \psgrid[subgriddiv=1,griddots=10,gridlabels=0,gridcolor=gray](18,14)
+         \psline[linewidth=0.5mm]{<->}(7,8)(9,8)
+         \rput(8,8.6){\ucm{1}}
+         \rput(3.5,4.5){\bf a.}
+         \rput(12.5,4.5){\bf b.}
+         \rput(15,10.5){\bf c.}
+         \rput(6,12){\bf d.}
+         \psset{linecolor=red,linewidth=0.6mm}
+         \psline(1,2)(6,2)
+         \psline(10,2)(10,7)
+         \psline(4,11)(4,13)
+         \psline(13,9)(17,9)
+      \end{pspicture}
+   \begin{itemize}
+      \item $\mathcal{A}_a =\ucm{3,5}\times\ucm{2,5} =\blue \ucmq{8,75}$.
+      \item $\mathcal{A}_b =\ucm{4}\times\ucm{2,5} =\blue \ucmq{10}$.
+      \item $\mathcal{A}_c =\ucm{2}\times\ucm{2} =\blue \ucmq{4}$.
+      \item $\mathcal{A}_d =\ucm{3}\times\ucm{1} =\blue \ucmq{3}$.
+   \end{itemize}

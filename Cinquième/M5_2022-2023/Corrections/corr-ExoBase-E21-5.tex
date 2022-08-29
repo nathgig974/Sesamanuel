@@ -1,0 +1,36 @@
+   \ \\ [-5mm]
+   \begin{pspicture}(0,-0.5)(7.5,4.5)
+      \pstGeonode[PointSymbol=none,CurveType=polygon,PointName=none]{A}(6,0){B}(7.37,3.76){C}(4;70){D}
+      \pstLabelAB{D}{C}{\blue \ucm{6}}
+      \pstLabelAB{A}{D}{\blue \ucm{4}}
+      \pstMarkAngle{A}{D}{C}{\blue \udeg{110}}
+      \rput(0,3.7){\textcolor{G1}{\bf a.}}
+   \end{pspicture} \\
+   \begin{pspicture}(-3.5,-2)(3,2)
+      \pstGeonode[PointSymbol=none,CurveType=polygon,PointName=none](3;180){A}(2;220){B}(3;0){C}(2;40){D}
+      \pstGeonode[PointSymbol=none,PointName=none]{O}
+      \pstLineAB{A}{C}
+      \pstLineAB{B}{D}
+      \pstLabelAB[offset=-2mm]{O}{D}{\blue\small \ucm{2}}
+      \pstLabelAB[offset=2mm]{A}{O}{\blue\small \ucm{3}}
+      \pstMarkAngle{A}{O}{B}{\blue \udeg{40}}
+      \rput(-3,1){\textcolor{G1}{\bf b.}}
+   \end{pspicture} \\
+   \begin{pspicture}(0,-0.5)(3,2.5)
+      \pstGeonode[PointSymbol=none,CurveType=polygon,PointName=none]{A}(5,0){B}(7.3,1.9){C}(3;39.6){D}
+      \pstLineAB{B}{D}
+      \pstLabelAB[offset=-3mm]{B}{C}{\blue\ucm{3}}
+      \pstLabelAB{D}{C}{\blue\ucm{5}}
+      \pstLabelAB[offset=-3mm]{D}{B}{\blue\ucm{3,3}}
+      \rput(-0.1,1.8){\textcolor{G1}{\bf c.}}
+   \end{pspicture} \\
+   \begin{pspicture}(-3.5,-2)(3,2.5)
+      \pstGeonode[PointSymbol=none,CurveType=polygon,PointName=none](3;180){A}(2;232.0){B}(3;0){C}(2;52.9){D}
+      \pstGeonode[PointSymbol=none,PointName=none]{O}
+      \pstLineAB{A}{C}
+      \pstLineAB{B}{D}
+      \pstLabelAB[offset=-3mm]{A}{B}{\blue\ucm{2,4}}
+      \pstLabelAB{B}{O}{\blue\ucm{2}}
+      \pstLabelAB{O}{C}{\blue\ucm{3}}
+      \rput(-3.1,1.3){\textcolor{G1}{\bf d.}}
+   \end{pspicture}

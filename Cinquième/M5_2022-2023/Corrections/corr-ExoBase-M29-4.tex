@@ -1,0 +1,23 @@
+   \ \\ [-5mm]
+   \begin{minipage}{7.5cm}
+      \begin{pspicture}(-0.5,-0.75)(6,3.2)
+         \psset{PointSymbol=none}
+         \pstTriangle{O}(3,0){P}(2.5;70){M}
+         \pstGeonode(3,2.5){d}
+         \pstLineAB[nodesep=-0.5,linecolor=A1]{P}{d}
+         \pstOrtSym[CurveType=polygon,linecolor=B1,PosAngle={-100,90,-5}]{P}{d}{O,M,P}[O',M',P]
+         \pstLabelAB[offset=-3mm]{O}{P}{\ucm{3}}
+         \pstLabelAB{O}{M}{\ucm{2,5}}
+         \pstMarkAngle{P}{O}{M}{\udeg{70}}
+      \end{pspicture}
+   \end{minipage}
+   \begin{minipage}{8.5cm}
+      \begin{enumerate}
+         \item Par conservation des longueurs par symétrie : \\
+            $PO' =PO =\blue \ucm{3}$.
+         \item Par conservation des longueurs par symétrie : \\
+            $M'O' =MO =\blue \ucm{2,5}$.
+         \item Par conservation des angles par symétrie : \\
+            $\widehat{PO'M'} =\widehat{POM} =\blue \udeg{70}$.
+       \end{enumerate}
+   \end{minipage}

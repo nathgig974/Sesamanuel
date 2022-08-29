@@ -1,0 +1,18 @@
+   \ \\ [-5mm]
+   \begin{pspicture}(-1,-2.25)(6,4.25)
+      \psset{CodeFig=true}
+      \pstGeonode[CurveType=polygon,PosAngle={200,0,90}](0,0){Y}(6,0.5){E}(3.8,4){S}
+      \pstMiddleAB[PosAngle=-90,SegmentSymbol=pstslashhh]{Y}{E}{I}
+      \pstMiddleAB[SegmentSymbol=pstslash]{Y}{S}{U}
+      \pstMiddleAB[PosAngle=30,SegmentSymbol=pstslashh]{E}{S}{O}
+      \pstLineAB{O}{U}
+      \pstLineAB{O}{I}
+      \pstLineAB{I}{U}
+      \psset{CodeFigColor=red,PointName=none}
+      \pstProjection{O}{U}{I}[J]
+      \pstProjection{I}{O}{U}[K]
+      \pstProjection{U}{I}{O}
+      \pstInterLL[PointName=T,PosAngle=65]{I}{J}{K}{U}{T}
+      \pstCircleOA{T}{Y}
+   \end{pspicture} \\
+   On peut conjecturer que {\blue le centre du cercle circonscrit au triangle $YES$ est l'orthocentre du triangle $OUI$}.

@@ -1,0 +1,16 @@
+   Il suffit de construire les points $U$ et $V$ symétriques du point $A$ par rapport aux deux droites déjà tracées.
+   \begin{center}
+      \begin{pspicture}(0,0.5)(6,4)
+         \pstGeonode[PosAngle=135](1,3){A}
+         \pstGeonode[PointName=none,PointSymbol=none](0,0.5){B}(6,4){C}(4,0){D}(2.5,4){E}
+         \rput(1,3){$\times$}
+         \pstLineAB{B}{C}
+         \pstLineAB{E}{D}
+         \psset{CodeFig=true,linecolor=blue,CodeFigColor=blue}
+         \pstOrtSym[SegmentSymbol=pstslash]{B}{C}{A}[V]
+         \pstOrtSym[SegmentSymbol=pstslashh]{D}{E}{A}[U]
+         \pstLineAB{A}{V}
+         \pstLineAB{A}{U}
+         \pstLineAB{U}{V}
+      \end{pspicture}
+   \end{center}

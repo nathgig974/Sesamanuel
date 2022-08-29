@@ -1,0 +1,31 @@
+   \ \\ [-5mm]
+   Figure à l'échelle 3/4. \\
+   {\psset{unit=0.75}
+   \small
+   \begin{pspicture}(-4.5,-4.5)(6,4.8)
+      \pstGeonode[PosAngle={-90,-90,-45,45,-90},PointSymbol=+](-3,0){D}(5,0){A}(6;30){B}(4;120){C}(0,0){O}(4;-60){F}(6;-150){E}
+      \pstLineAB{D}{A}
+      \pstMarkAngle[MarkAngleRadius=0.7]{C}{O}{D}{\udeg{60}}
+      \pstMarkAngle[MarkAngleRadius=1,MarkAngleType=double,LabelSep=1.6]{A}{O}{B}{\udeg{30}}
+      \pstLabelAB{O}{B}{\ucm{6}}
+      \pstLabelAB{C}{O}{\ucm{4}}
+      \pstLabelAB[offset=-3mm]{D}{O}{\ucm{3}}
+      \pstLabelAB[offset=-3mm]{O}{A}{\ucm{5}}
+      \pstSegmentMark{O}{B}
+      \pstSegmentMark[linecolor=blue]{O}{E}
+      \pstSegmentMark[SegmentSymbol=pstslash]{O}{C}
+      \pstSegmentMark[SegmentSymbol=pstslash,linecolor=blue,CodeFigColor=blue]{O}{F}
+   \end{pspicture}}
+   \begin{itemize}
+      \item {\blue Jules a tort pour l'angle $\widehat{BOF}$} : \\ \smallskip
+         on a $\widehat{BOF} =\widehat{BOA}+\widehat{AOF}$. \\
+         Par conservation des angles par symétrie centrale, \\ \smallskip
+         on a $\widehat{AOF} =\widehat{DOC} =\udeg{60}$ donc, \\ \smallskip
+         $\widehat{BOF} =\udeg{30}+\udeg{60} =\udeg{90}$. \\ \smallskip
+         {\blue L'angle $\widehat{BOF}$ est droit}. \smallskip
+      \item {\blue Jules a raison pour l'angle $\widehat{COE}$} : \\ \smallskip
+         on a $\widehat{COE} =\widehat{COD}+\widehat{DOE}$. \\
+         Par conservation des angles par symétrie centrale, \\ \smallskip
+         on a $\widehat{DOE} =\widehat{AOB} =\udeg{30}$ donc, \\ \smallskip
+         $\widehat{COE} =\udeg{60}+\udeg{30} =\udeg{90}$. \medskip
+   \end{itemize}

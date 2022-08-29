@@ -1,0 +1,497 @@
+\themaM
+\graphicspath{{../../S25_L_aire_du_parallelogramme/Images/}}
+
+\chapter{L'aire du\\parallélogramme}
+\label{S25}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{prerequis}
+   \begin{itemize}
+      \item Aire du parallélogramme (obtenue à partir de celle du rectangle par découpage et recollement).
+      \item[\com] Mener des calculs impliquant des grandeurs mesurables, notamment des grandeurs composées, exprimer les résultats dans des unités adaptées.
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+
+\begin{debat}[Débat : des aires en images]
+   Le parallélogramme peut être vu comme un rectangle que l'on aurait \og étiré \fg{} par un coin, son {\bf aire} correspond donc à l'aire un rectangle.
+   \begin{center}
+      \begin{pspicture}(0,-0.5)(15.5,2.5)
+         \rput(0.1,1.7){\Huge \ding{43}}
+         \psframe[fillstyle=solid,fillcolor=A3,linecolor=A3](0.5,0)(3.5,2)
+         \rput(5.55,1.7){\Huge \ding{43}}
+         \pspolygon[fillstyle=solid,fillcolor=A3,linecolor=A3](5,0)(8,0)(9,2)(6,2)
+         \psframe[linestyle=dashed,linecolor=B1](5,0)(8,2)
+         \rput(10.95,1.7){\Huge \ding{43}}
+         \pspolygon[fillstyle=solid,fillcolor=A3,linecolor=A3](9.5,0)(12.5,0)(14.5,2)(11.5,2)
+         \psframe[linestyle=dashed,linecolor=B1](9.5,0)(12.5,2)
+      \end{pspicture}
+   \end{center}
+   \begin{cadre}[B2][F4]
+      \begin{center}
+         Vidéo : \href{https://www.youtube.com/watch?v=5_PiZrfLghQ}{\bf Aire de figures simples}, chaîne YouTube de {\it Science silencieuse}.
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+\vfill
+
+\textcolor{PartieGeometrie}{\sffamily\bfseries Cahier de compétences} : chapitre 11, exercices 16.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites 
+
+\begin{activite}[Aire d'un parallélogramme]
+   {\bf Objectif :} calculer l'aire d'un rectangle ; déterminer la formule de l'aire d'un parallélogramme. \\
+   \begin{QCM}
+      Pour cette activité, il faut se munir d'une paire de ciseau et de colle.
+      \begin{enumerate}
+         \item Sur le cahier, tracer une droite horizontale sur toute la largeur de la page en laissant \ucm{4} au dessus puis dessiner un rectangle de \ucm{5} sur \ucm{3} sur la ligne comme ceci :
+            \begin{center}
+               \begin{pspicture}(0,-0.5)(16,2.3)
+                  \psline[linewidth=1mm](0,0)(16,0)
+                  \psframe(1,0)(4,1.8)
+                  \rput(2.5,1.55){\footnotesize \ucm{5}}
+                  \rput{-90}(3.75,0.9){\footnotesize \ucm{3}}
+               \end{pspicture}
+            \end{center}
+         \item Découper les trois rectangles tracés en bas de page dont une longueur est en gras (la base). \\
+            Ils mesurent tous \ucm{5} par \ucm{3}.
+         \item Transformer les trois rectangles en trois parallélogrammes en donnant un seul coup de ciseaux en ligne droite en partant de la base (côté en gras) et en coupant le bord supérieur.
+         \item Coller les deux morceaux obtenus côte à côte sur le cahier en apposant le côté gras sur la droite tracée. \\
+            Quelle est la nature de chaque quadrilatère obtenu ? \\ [3mm]
+            \pf \\
+         \item Que peut-on dire de l'aire des quatre quadrilatères obtenus ? \\ [3mm]
+            \pf \\
+         \item À partir de la formule de l'aire du rectangle, déterminer comment calculer l'aire d'un parallélogramme. \\ [3mm]
+            \pf \\ [3mm]
+            \pf \\ [3mm]
+            \pf \\ [3mm]
+      \end{enumerate}
+   \end{QCM}
+   \begin{center}
+      \begin{pspicture}(0,-0.5)(5.5,4)
+         \psframe(0,0)(5,3)
+         \psline[linewidth=1mm](0,0)(5,0)
+      \end{pspicture}
+      \begin{pspicture}(0,-0.5)(5.5,4)
+         \psframe(0,0)(5,3)
+         \psline[linewidth=1mm](0,0)(5,0)
+      \end{pspicture}
+      \begin{pspicture}(0,-0.5)(5,4)
+         \psframe(0,0)(5,3)
+         \psline[linewidth=1mm](0,0)(5,0)
+      \end{pspicture}
+   \end{center}
+
+   \vfill \hfill {\footnotesize\it Inspiré de : \href{http://www.gem-math.be/spip.php?article14}{Aire des parallélogrammes}, Groupe d'Enseignement Mathématique, Belgique.}
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+\section{Hauteur d'un parallélogramme} %%%
+
+\begin{definition}
+   On considère l'un des côtés parallèles d'un parallélogramme que l'on prend comme {\bf base}. Une {\bf hauteur} du parallélogramme associée à cette base est un segment perpendiculaire à la base situé entre les deux côtés parallèles.
+\end{definition}
+
+\begin{remarque}
+   il y a donc quatre bases possibles pour un parallélogramme, deux à deux parallèles et deux hauteurs associées chacune à une paire de parallèles.
+\end{remarque}
+
+\begin{center}
+   \begin{pspicture}(0,-0.5)(6,3.2)
+      \pspolygon(0,0)(4,0)(5,2.5)(1,2.5)
+      \psset{linecolor=B1}
+      \color{B1}
+      \psline{<->}(0,-0.3)(4,-0.3)
+      \rput(2,-0.6){base 1}
+      \psline{<->}(1,2.8)(5,2.8)
+      \rput(3,3.1){base 1'}
+      \psline(1,0)(1,2.5)
+      \psframe(1,0)(1.3,0.3)
+      \psframe(1,2.5)(1.3,2.2)
+      \rput{90}(1.3,1.3){hauteur 1}
+   \end{pspicture}
+   \begin{pspicture}(-1,-0.5)(6,3)
+      \pspolygon(0,0)(4,0)(5,2.5)(1,2.5)
+      \psset{linecolor=A1}
+      \color{A1}
+      \psline{<->}(-0.3,0)(0.7,2.5)
+      \rput{68}(-0.15,1.4){base 2}
+      \psline{<->}(4.3,0)(5.3,2.5)
+      \rput{68}(5.15,1.3){base 2'}
+      \psline(4,0)(0.55,1.38)
+      \pspolygon(4,0)(4.1,0.25)(3.85,0.35)(3.75,0.1)
+      \pspolygon(0.55,1.38)(0.8,1.28)(0.9,1.53)(0.65,1.63)
+      \rput{-23}(2.4,1){hauteur 2}
+   \end{pspicture} 
+\end{center}
+
+
+\section{Aire du parallélogramme} %%%
+
+\begin{propriete}
+   L'aire du parallélogramme se calcule grâce à la formule :
+   $$\mathcal{A} =\text{base}\times\text{hauteur} =b\times h$$
+\end{propriete}
+
+\begin{remarque}
+   attention à ne pas confondre avec l'aire du rectangle qui est longueur $\times$ largeur.
+\end{remarque}
+
+\begin{exemple}[0.3]
+   Déterminer l'aire du parallélogramme suivant : \\
+   \begin{pspicture}(1,-3)(5,3)
+      \rput{-90}(2,2.5){\pspolygon(0,0)(4,0)(5,2.5)(1,2.5)}
+   \end{pspicture}
+   \correction
+      \begin{minipage}{4.5cm}
+         \begin{itemize}
+            \item On définit une base ;
+            \item on trace une hauteur relative à cette base ;
+            \item on mesure la base ;
+            \item on mesure la hauteur ;
+            \item on applique la formule : \\
+            $\mathcal{A} =b\times h$ \\
+            $\mathcal{A} =\ucm{4}\times\ucm{2,5}$ \\
+            $\mathcal{A} =\ucmq{10}$.
+         \end{itemize}
+      \end{minipage}
+      \begin{minipage}{4cm}
+         \begin{pspicture}(0.5,-3)(5,3)
+            \rput{-90}(2,2.5){
+            \pspolygon(0,0)(4,0)(5,2.5)(1,2.5)
+            \psset{linecolor=B1}
+            \color{B1}
+            \psline{<->}(0,-0.3)(4,-0.3)
+            \rput(2,-0.6){$b =\ucm{4}$}
+            \psline(1,0)(1,2.5)
+            \psframe(1,0)(1.3,0.3)
+            \rput{90}(1.3,1.3){$h =\ucm{2,5}$}
+           }
+         \end{pspicture}
+      \end{minipage}
+\end{exemple}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+
+\begin{colonne*exercice}
+
+\serie{Aire des parallélogrammes} %%%
+
+\begin{exercice} %1
+   Calculer l'aire puis le périmètre :
+   \begin{enumerate}
+      \item d’un rectangle de longueur \um{30} et de largeur \um{20} ;
+      \item d’un carré de côté \ucm{6} ;
+      \item du parallélogramme suivant :
+      \begin{center}
+      {\small
+      \psset{unit=0.9}
+         \begin{pspicture}(1,0)(6,2.7)
+            \pspolygon(0,2)(3,0)(6,0)(3,2)
+            \psline(3,0)(3,2)
+            \psframe(3,0)(3.3,0.3)
+            \psframe(3,2)(2.7,1.7)
+            \rput(1.5,2.3){\ucm{12}}
+            \rput{90}(2.7,1){\ucm{5}}
+            \rput{-35}(4.5,1.35){\ucm{13}}  
+         \end{pspicture}}
+      \end{center}
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item Aire du rectangle : $\um{30}\times\um{20} =\blue \umq{600}$. \\
+        Périmètre du rectangle : \\
+        $2\times(\um{30}+\um{20}) =\blue \um{100}$.
+      \item Aire du carré : $\ucm{6}\times\ucm{6} =\blue \ucmq{36}$. \\
+        Périmètre du carré : $4\times\ucm{6} =\blue \ucm{24}$.
+     \item Aire du parallélogramme : $\ucm{12}\times\ucm{5} =\blue \umq{60}$. \\
+        Périmètre : $2\times(\ucm{12}+\ucm{13}) =\blue \um{50}$.
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %2
+   Observer le parallélogramme $ABCD$ puis compléter les phrases ci-dessous.
+   \begin{center}
+   {\small
+      \begin{pspicture}(0,-0.1)(5,2.6)
+         \psset{PointSymbol=none}
+         \pstGeonode[CurveType=polygon,PosAngle={45,100,-45,-45}](0,2){A}(3,2){B}(5,0){C}(2,0){D}
+         \pstProjection[PosAngle=180]{A}{D}{B}[P]
+         \pstProjection[PosAngle=135]{A}{B}{D}[R]
+         \pstProjection[PosAngle=-135]{C}{D}{A}[Q]
+         \psset{linestyle=dashed,nodesep=-0.4}
+         \pstLineAB[nodesepB=-1]{B}{P}
+         \pstLineAB{D}{R}
+         \pstLineAB{Q}{D}
+         \pstLineAB{A}{Q}
+         \psset{RightAngleSize=0.15}
+         \pstRightAngle{A}{Q}{D}
+         \pstRightAngle{B}{P}{D}
+         \pstRightAngle{A}{R}{D}
+      \end{pspicture}}
+   \end{center}
+   \begin{enumerate}
+      \item Une hauteur relative au côté $[DC]$ est \pfb
+      \item La droite $(BP)$ est une hauteur relative à \pfb
+      \item La perpendiculaire à $(AB)$ passant par $R$ est une hauteur relative à \pfb
+      \item La droite $(AQ)$ est une hauteur relative à \pfb
+      \item Le quadrilatère $ARDQ$ est un \pfb
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+  \ \\ [-5mm]
+  \begin{enumerate}
+      \item Une hauteur relative au côté $[DC]$ est {\blue [DR]} ou {\blue [QA]}.
+      \item La droite $(BP)$ est une hauteur relative à {\blue [AD]} ou {\blue [BC]}.
+      \item La perpendiculaire à $(AB)$ passant par $R$ est une hauteur relative à {\blue [AB]} ou {\blue [DC]}.
+      \item La droite $(AQ)$ est une hauteur relative à {\blue [AB] et [DC]}.
+      \item Le quadrilatère $ARDQ$ est un {\blue rectangle}.
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %3
+   Pour chaque parallélogramme, tracer une hauteur puis déterminer son aire.
+   \begin{center}
+   {\psset{unit=0.45}
+      \begin{pspicture}(0,0)(18,14)
+         \psset{fillstyle=solid,linewidth=0.5mm}
+         \pspolygon[fillcolor=A1!25](1,2)(6,0)(6,7)(1,9)
+         \pspolygon[fillcolor=B1!25](7,2)(15,2)(18,7)(10,7)
+         \pspolygon[fillcolor=G1!25](4,11)(10,11)(8,13)(2,13)
+         \pspolygon[fillcolor=J1!25](13,8)(17,9)(17,13)(13,12)
+         \psgrid[subgriddiv=1,griddots=10,gridlabels=0,gridcolor=gray](18,14)
+         \psline[linewidth=0.5mm]{<->}(7,8)(9,8)
+         \rput(8,8.6){\ucm{1}}
+         \rput(3.5,4.5){\bf a.}
+         \rput(12.5,4.5){\bf b.}
+         \rput(15,10.5){\bf c.}
+         \rput(6,12){\bf d.}
+      \end{pspicture}}
+   \end{center}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \psset{unit=0.4}
+      \begin{pspicture}(0,-0.5)(18,14.6)
+         \psset{fillstyle=solid,linewidth=0.5mm}
+         \pspolygon[fillcolor=A1!25](1,2)(6,0)(6,7)(1,9)
+         \pspolygon[fillcolor=B1!25](7,2)(15,2)(18,7)(10,7)
+         \pspolygon[fillcolor=G1!25](4,11)(10,11)(8,13)(2,13)
+         \pspolygon[fillcolor=J1!25](13,8)(17,9)(17,13)(13,12)
+         \psgrid[subgriddiv=1,griddots=10,gridlabels=0,gridcolor=gray](18,14)
+         \psline[linewidth=0.5mm]{<->}(7,8)(9,8)
+         \rput(8,8.6){\ucm{1}}
+         \rput(3.5,4.5){\bf a.}
+         \rput(12.5,4.5){\bf b.}
+         \rput(15,10.5){\bf c.}
+         \rput(6,12){\bf d.}
+         \psset{linecolor=red,linewidth=0.6mm}
+         \psline(1,2)(6,2)
+         \psline(10,2)(10,7)
+         \psline(4,11)(4,13)
+         \psline(13,9)(17,9)
+      \end{pspicture}
+   \begin{itemize}
+      \item $\mathcal{A}_a =\ucm{3,5}\times\ucm{2,5} =\blue \ucmq{8,75}$.
+      \item $\mathcal{A}_b =\ucm{4}\times\ucm{2,5} =\blue \ucmq{10}$.
+      \item $\mathcal{A}_c =\ucm{2}\times\ucm{2} =\blue \ucmq{4}$.
+      \item $\mathcal{A}_d =\ucm{3}\times\ucm{1} =\blue \ucmq{3}$.
+   \end{itemize}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %4
+   Déterminer l'aire de chacun des parallélogrammes suivants.
+   \begin{center}
+      \includegraphics[width=8cm]{parallelogrammes}
+   \end{center}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item $\mathcal{A}_a =\ucm{7}\times\ucm{3} =\blue \ucmq{21}$.
+      \item $\mathcal{A}_b =\ucm{8}\times\ucm{6,5} =\blue \ucmq{52}$.
+      \item $\mathcal{A}_c =\ucm{10}\times\ucm{6} =\blue \ucmq{60}$.
+      \item $\mathcal{A}_d =\ucm{10,5}\times\ucm{3,7} =\blue \ucmq{38,85}$.
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %5
+   Déterminer la longueur inconnue.
+   \begin{enumerate}
+      \item Parallélogramme de base \ucm{8} et d'aire \ucmq{24}. Calculer la hauteur.
+      \item Parallélogramme de hauteur \ucm{30} et d'aire \udmq{2,1}. Calculer la mesure de la base relative à cette hauteur.
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item $\mathcal{A} =\ucm{8}\times h =\ucmq{24}$ soit $h =\dfrac{\ucmq{24}}{\ucm{8}} =\ucm{3}$. \\ [1mm]
+         La {\blue hauteur} du parallélogramme mesure {\blue \ucm{3}}. \smallskip
+      \item $\mathcal{A} =b\times\ucm{30} =\ucmq{210}$ ; $b =\dfrac{\ucmq{210}}{\ucm{30}} =\ucm{7}$. \\ [1mm]
+      La {\blue base} du parallélogramme mesure {\blue 7 cm}.
+   \end{enumerate}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %6
+   Un menuisier doit découper une planche selon le plan suivant :
+   \begin{center}
+   \footnotesize
+   {\psset{unit=0.7}
+      \begin{pspicture}(0,0)(8,4.5)
+         \pspolygon(0,0)(5,0)(8,1)(8,4.5)(5,3.5)(0,3.5)
+         \psline(5,0)(5,3.5)
+         \psline{<->}(0,-0.3)(8,-0.3)
+         \rput(4,-0.7){\ucm{80}}
+         \psline{<->}(-0.3,0)(-0.3,3.5)
+         \rput{90}(-0.7,1.75){\ucm{35}}
+         \psline{<->}(0,3.8)(5,3.8)
+         \rput(2.5,4.2){\ucm{50}}
+      \end{pspicture}}
+   \end{center}
+   \begin{enumerate}
+      \item Calculer l'aire de la planche.
+      \item Le menuisier doit faire deux ouvertures dans cette planche :
+      \begin{itemize}
+        \item une ouverture rectangulaire de \ucm{40} sur \ucm{15} ;
+        \item une ouverture en parallélogramme de base \ucm{20} et de hauteur \ucm{13}.
+      \end{itemize}
+      Calculer la nouvelle aire de la planche.
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item Aire de la planche de gauche : \\
+      $\mathcal{A}_1 =\ucm{50}\times\ucm{35} =\ucmq{1750}$. \\
+         Aire de la planche de droite : \\
+         $\mathcal{A}_2 =\ucm{35}\times(\ucm{80}-\ucm{50}) =\ucm{35}\times\ucm{30}$ \\
+         $=\ucmq{1050}$. \\
+         Aire de la planche complète : \\
+         $\mathcal{A}_1+\mathcal{A}_2 =\ucmq{1750}+\ucmq{1050} =\ucmq{2800}$. \\
+         L'aire de la planche est de {\blue \ucmq{2800}}.
+      \item Ouverture rectangulaire : \\
+         $\mathcal{A}_3 =\ucm{40}\times\ucm{15} =\ucmq{600}$. \\
+         Ouverture du parallélogramme : \\
+         $\mathcal{A}_4 =\ucm{20}\times\ucm{13} =\ucmq{260}$. \\
+         $\mathcal{A}_3+\mathcal{A}_4 =\ucmq{600}+\ucmq{260} =\ucmq{860}$. \\
+         La nouvelle aire de la planche est de \\
+         $\ucmq{2800}-\ucmq{860} ={\blue \ucmq{1940}}$.
+   \end{enumerate}
+   
+\bigskip
+\corec{La formule de Pick}
+\smallskip
+
+\begin{enumerate}
+   \item $\mathcal{A}_{PICK} =6\,u.\ell.\times4\,u\ell. ={\blue 24\,u.a.}$
+   \item $\mathcal{A}(MOFE) =5\,u.\ell.\times5\,u.\ell. =25\,u.a.$ \\ [1mm] 
+      $\mathcal{A}(MOR) =\dfrac{5\,u.\ell.\times4\,u.\ell.}{2} =10\,u.a.$ \\ [1mm]
+      $\mathcal{A}(MULE) =4\,u.\ell.\times3\,u.\ell.+\dfrac{4\,u.\ell.\times2\,u.\ell.}{2} =16\,u.a.$ \\ [1mm]
+      En sommant, on obtient : $\mathcal{A}(FORMULE)$ \\
+      $=25\,u.a.+10\,u.a.+16\,u.a. ={\blue 51\,u.a.}$ \smallskip
+   \item {\blue $i =18$} et {\blue $b =14$} donc, $\mathcal{A} =18+\dfrac{14}{2}-1 ={\blue 24}$. \smallskip
+   \item {\blue $i =41$} et {\blue $b =22$} donc, $\mathcal{A} =41+\dfrac{22}{2}-1 ={\blue 51}$. \smallskip
+   \item On décompose comme à la question 2)
+   \begin{itemize}
+      \item MOFE : $i =16$, $b =20$, $\mathcal{A} =16+\dfrac{20}{2}-1 =25$. \smallskip
+      \item MOR : $i =7$ et $b =8$, $\mathcal{A} =7+\dfrac{8}{2}-1 =10$. \smallskip
+      \item MULE : $i =10$ et $b =14$, $\mathcal{A} =10+\dfrac{14}{2}-1 =16$. \smallskip
+      \item FORMULE : $\mathcal{A} =25+10+16 =51$. \\
+         {\blue La somme des résultats obtenus est égale au résultat trouvé à la question 2).}
+      \end{itemize}
+   \end{enumerate}
+
+\end{corrige}
+
+\vfill\hfill {\footnotesize\it D'après Les cahiers Sésamath 5e. Magnard-Sesamath 2017}
+
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\enigme[La formule de Pick]
+
+\bigskip
+
+On travaille dans un réseau pointé à maille carrée. On note $u.\ell.$ l'unité de longueur et $u.a.$ l'unité d'aire. \\
+On appelle polygone de Pick, un polygone non aplati construit sur un tel réseau et dont chacun des sommets est un point du réseau. On considère les figures $FORMULE$ et $PICK$ suivantes :
+\begin{center}
+   \small
+   {\psset{unit=0.5}
+   \begin{pspicture}(6,0)(28,11.5)
+      \pstGeonode[fillstyle=solid,fillcolor=lightgray!30,CurveType=polygon,PosAngle={45,135,-135,-50,-30,45}](9,10){R}(7,6){O}(7,1){F}(12,1){E}(16,3){L}(16,6){U}(12,6){M}
+      \psframe[fillstyle=solid,fillcolor=lightgray!30](22,9)(23,10)
+      \pstGeonode[fillstyle=solid,fillcolor=lightgray!30,CurveType=polygon,PosAngle={-150,-45,30,135}](18,1){P}(24,1){I}(27,5){C}(21,5){K}
+      \psgrid[griddots=1,gridlabels=0,subgriddiv=1,gridwidth=0.5mm](6,0)(28,11)
+      \rput(22.5,8.5){1 $u.a.$}
+      \psline{<->}(18,9)(19,9)
+      \rput(18.5,8.5){1 $u.\ell.$}      
+   \end{pspicture}}
+\end{center}
+
+\partie[avec les formules classiques]
+  \ \\ [-10mm]
+   \begin{enumerate}
+      \item Calculer l'aire du parallélogramme $PICK$ en unité d'aire. \\ [3mm]
+         \pf \\
+      \item Calculer l'aire du polygone $FORMULE$, en unité d'aire en détaillant les étapes du raisonnement. \\ [3mm]
+         \pf \\ [3mm]
+         \pf
+   \end{enumerate}
+
+\partie[avec la formule de Pick]
+   La formule de Pick permet de calculer l'aire $\mathcal{A}$ d'un polygone de Pick, à partir du nombre $i$ de points du réseau strictement intérieurs à ce polygone et du nombre $b$ de points du réseau sur le bord du polygone : \fbox{$\mathcal{A} =i+\dfrac{b}{2}-1$}. 
+   \begin{enumerate}
+   \setcounter{enumi}{2}
+      \item Appliquer cette formule au parallélogramme $PICK$. \\ [3mm]
+         $i =\pfb \quad b =\pfb$ \quad donc, $\mathcal{A} = \pfb$ \\
+       \item Appliquer cette formule au polygone $FORMULE$. \\ [3mm]
+         $i =\pfb \quad b =\pfb$ \quad donc, $\mathcal{A} = \pfb$ \\
+       \item Appliquer la formule de Pick aux trois polygones de Pick $MOFE$, $MOR$ et $MULE$. \\
+         Vérifier que la somme des résultats obtenus est égale à l'aire totale de la figure. \\ [3mm]
+         \pf \\ [3mm]
+         \pf \\ [3MM]
+         \pf
+   \end{enumerate}
+

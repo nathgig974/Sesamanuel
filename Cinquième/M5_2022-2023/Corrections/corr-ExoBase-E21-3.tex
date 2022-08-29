@@ -1,0 +1,10 @@
+   \ \\ [-3mm]
+   {\psset{unit=0.7}
+      \begin{pspicture}(11,11)
+         \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](0,0)(11,11)
+         \pstGeonode(1,1){A}(5,1){B}(6,3){C}(9,6){D}(3,7){E}
+         \pstGeonode[CurveType=polygon,linecolor=A1](1,1){A}(5,1){B}(6,3){C}(2,3){F}
+         \pstGeonode[CurveType=polygon,linecolor=B1](5,1){B}(6,3){C}(9,6){D}(8,4){G}
+         \pstGeonode[CurveType=polygon,linecolor=G1](6,3){C}(9,6){D}(6,10){H}(3,7){E}
+         \pstGeonode[CurveType=polygon,linecolor=J1](5,1){B}(2,5){I}(3,7){E}(6,3){C}
+      \end{pspicture}}

@@ -1,0 +1,34 @@
+   \ \\[-5mm]
+   \begin{enumerate}
+   \psset{linecolor=blue}
+      \item Pour tracer le triangle $EFG$, il faut calculer l'angle $\widehat{GEF}$ : la somme des angle d'une triangle faisant \udeg{180}, $\widehat{GEF} =\udeg{180}-\udeg{49}-\udeg{72} =\udeg{59}$. \\
+         \begin{pspicture}(0.25,-0.75)(7.5,6)
+            \pstTriangle[PointSymbol=none](0,0){E}(7.5,0){F}(5.95;59){G}
+            \pstLabelAB[offset=-3mm]{E}{F}{\small\blue \ucm{7,5}}
+            \pstMarkAngle{G}{F}{E}{\small\blue \udeg{49}}
+            \pstMarkAngle{E}{G}{F}{\small\blue \udeg{72}}
+            \pstMarkAngle{F}{E}{G}{\small \udeg{59}}
+         \end{pspicture}
+      \item Pour tracer le triangle $RST$ isocèle en $S$, il faut calculer la mesure du troisième côté. \\
+      On a $SR =ST =\ucm{4}$ et le périmètre mesure \ucm{13} donc, $RT =\ucm{13}-2\times\ucm{4} =\ucm{5}$. \\
+   \end{enumerate}
+
+\Coupe
+
+         \begin{pspicture}(-1,-0.75)(5,3.75)
+            \pstTriangle[PointSymbol=none](0,0){T}(5,0){R}(2.5,3.12){S}
+            \pstLabelAB[offset=-3mm]{T}{R}{\small \ucm{5}}
+            \pstLabelAB{T}{S}{\small\blue \ucm{4}}
+            \pstLabelAB{S}{R}{\small \ucm{4}}
+         \end{pspicture}
+   \begin{enumerate}
+   \setcounter{enumi}{2}
+      \item Pour tracer le triangle $OCI$, il faut calculer les angles à la base. La somme des angle faisant \udeg{180}, il reste $\udeg{180}-\udeg{100} =\udeg{80}$ à partager en deux angles égaux puisque le triangle est isocèle, soit \udeg{40} chacun. \\
+         \begin{pspicture}(0,0)(7,3.5)
+            \pstTriangle[PointSymbol=none](0,0){C}(7,0){O}(4.57;40){I}
+            \pstLabelAB[offset=-3mm]{C}{O}{\small\blue \ucm{7}}
+            \pstMarkAngle{C}{I}{O}{\small\blue \udeg{100}}
+            \pstMarkAngle{O}{C}{I}{\small \udeg{40}}
+            \pstMarkAngle{I}{O}{C}{\small \udeg{40}}
+         \end{pspicture}
+   \end{enumerate}

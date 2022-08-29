@@ -1,0 +1,8 @@
+   \ \\ [-5mm]
+   \begin{pspicture}(0,0.5)(6,5.5)
+      \pstGeonode[CurveType=polygon,PosAngle={200,0,90}](0,1){B}(6,2){L}(4,5){E}
+      \pstProjection[CodeFig=true,CodeFigColor=blue,PointName=none]{B}{L}{E}
+      \pstProjection[CodeFig=true,CodeFigColor=black,PointName=none]{L}{E}{B}
+      \pstProjection[CodeFig=true,CodeFigColor=red,PointName=none]{E}{B}{L}
+   \end{pspicture} \\
+   On remarque que {\blue les hauteurs sont concourantes} en un point appelé l'orthocentre du triangle.

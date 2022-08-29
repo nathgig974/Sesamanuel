@@ -1,0 +1,31 @@
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item {\bf\textcolor{G1}{2) \;3)}} Figure taille réelle.
+      \begin{pspicture}(-1,-5.7)(5,10.2)
+         \pstGeonode[PointSymbol=none,PosAngle={180,0,45,-45,-135,45,145}]{A}(5,0){B}(5;60){C}(5,-5){D}(0,-5){E}(2.8,9.5){F}(0,5){G}
+         \psset{MarkAngle=90}
+         \pstSegmentMark{A}{B}
+         \pstSegmentMark{B}{C}
+         \pstSegmentMark{A}{C}
+         \pstLabelAB{A}{B}{\blue\ucm{5}}
+         \pstSegmentMark[SegmentSymbol=pstslashhh]{B}{D}
+         \pstSegmentMark[SegmentSymbol=pstslashhh]{A}{E}
+         \pstSegmentMark{E}{D}
+         \pstLabelAB{A}{D}{\blue\ucm{7}}
+         \pstSegmentMark{C}{F}
+         \pstSegmentMark{F}{G}
+         \pstSegmentMark{A}{G}
+         \pstLineAB{A}{D}
+         \pstMarkAngle[Mark=MarkHashhh,MarkAngleRadius=0.5]{F}{C}{A}{\blue\udeg{150}}
+         \pstMarkAngle{B}{A}{C}{\blue\udeg{60}}
+         \pstMarkAngle{C}{B}{A}{\blue\udeg{60}}
+         \pstMarkAngle{A}{C}{B}{\blue\udeg{60}}
+         \pstRightAngle{A}{B}{D}
+      \end{pspicture}
+      \setcounter{enumi}{3}
+      \item Le triangle $CAG$ est isocèle en $A$ puisque $AC = AG$ donc, $\widehat{ACG} = \widehat{AGC}$. \\
+      De plus, $(GC)$ est un axe de symétrie du losange, donc $\widehat{ACG}=\udeg{150}\div2 =\udeg{75}$. \\
+      La somme des angles dans un triangle vaut \udeg{180} donc $\widehat{CAG}+\widehat{AGC}+\widehat{GCA} =\udeg{180}$ soit $\widehat{CAG} + \udeg{75}+\udeg{75}=\udeg{180}$ ou encore {\blue $\widehat{CAG} =\udeg{30}$}. \\
+      $\widehat{BAG} = \widehat{BAC}+\widehat{CAG} =\udeg{60}+\udeg{30} =\blue \udeg{90}$. \smallskip
+      \item On a $\widehat{GAE} =\widehat{GAB}+\widehat{BAE} =\udeg{90}+\udeg{90} =\udeg{180}$ donc l'angle $\widehat{GAE}$ est plat d'où : {\blue les points $G, A$ et $E$ sont alignés}.
+   \end{enumerate}

@@ -1,0 +1,23 @@
+   \ \\
+   \begin{pspicture}(-1,-0.5)(5,2)
+      {\footnotesize
+      \pstGeonode[PointSymbol=none,CurveType=polygon,PosAngle={-135,-45,45,135}]{I}(3.5,0){L}(4.5,2){A}(1,2){N}
+      \pstGeonode[PosAngle=90,PointSymbol=none](2.25,1){O}
+      \pstLineAB{L}{N}
+      \pstLineAB{I}{A}
+      \pstSegmentMark{I}{L}
+      \pstSegmentMark{N}{A}
+      \pstSegmentMark[SegmentSymbol=MarkHash]{N}{I}
+      \pstSegmentMark[SegmentSymbol=MarkHash]{L}{A}
+      \pstSegmentMark[SegmentSymbol=MarkCros]{O}{I}
+      \pstSegmentMark[SegmentSymbol=MarkCros]{O}{A}
+      \pstSegmentMark[SegmentSymbol=MarkArrow]{O}{N}
+      \pstSegmentMark[SegmentSymbol=MarkArrow]{L}{O}
+      \psset{linecolor=blue}
+      \pstMarkAngle{L}{I}{N}{}
+      \pstMarkAngle{N}{A}{L}{}
+      \pstMarkAngle[MarkAngleRadius=0.2]{I}{N}{A}{}
+      \pstMarkAngle[MarkAngleRadius=0.3]{I}{N}{A}{}
+      \pstMarkAngle[MarkAngleRadius=0.2]{A}{L}{I}{}
+      \pstMarkAngle[MarkAngleRadius=0.3]{A}{L}{I}{}}
+   \end{pspicture}

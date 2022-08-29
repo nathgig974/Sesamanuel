@@ -1,0 +1,50 @@
+   On peut dessiner un quadrillage par-dessus la figure afin de \og compter \fg{} les parties colorées ou additionner les fractions puis transformer en pourcentage. Ou travailler directement sur les pourcentages.
+
+\Coupe
+
+   \begin{itemize}
+      \item Par découpage : \\ [2mm]
+         {\psset{unit=1.1}
+         \begin{pspicture}(0,-1.1)(2,2)
+            \psframe(0,0)(2,2)
+            \psset{}
+            \psframe[fillstyle=solid,fillcolor=B2](1,1)(2,2)
+            \pspolygon[fillstyle=solid,fillcolor=B2](0,0)(1,1)(0,1)
+            \pspolygon[fillstyle=solid,fillcolor=B2](1,0)(2,0)(1.5,0.5)
+            \psline(1,0)(1,1)(2,2)
+            \psline(1.5,0.5)(0,2)
+            \psline(1,0)(0,1)(1,2)(2,1)(1.5,0.5)
+            \rput(1,-0.6){$\dfrac{7}{16} =43,75\,\%$}
+         \end{pspicture}
+         \quad
+         \begin{pspicture}(0,-1.1)(2,2)
+            \psframe(0,0)(2,2)
+            \psframe[fillstyle=solid,fillcolor=A2](0,1.33)(2,2)
+            \psframe[fillstyle=solid,fillcolor=A2](0,0.67)(1,1.33)
+            \psframe[fillstyle=solid,fillcolor=A2](1.33,0)(2,0.67)
+            \multido{\r=0.333+0.333}{5}{\psline(\r,0)(\r,2)}
+            \psline(0.5,0.67)(1.33,0.67)
+            \rput(1,-0.6){$\dfrac{11}{18} \approx61,11\,\%$}
+         \end{pspicture}
+         \quad
+         \begin{pspicture}(0,-1.1)(2,2)
+            \psframe(0,0)(2,2)
+            \pspolygon[fillstyle=solid,fillcolor=J2](0,0)(1,1)(0,2)
+            \pspolygon[fillstyle=solid,fillcolor=J2](1,0)(1,1)(2,0)
+            \pspolygon[fillstyle=solid,fillcolor=J2](1,1)(2,1)(1.5,1.5)
+            \pspolygon[fillstyle=solid,fillcolor=J2](1,1.5)(1,2)(0.5,1.5)
+            \multido{\r=0.5+0.5}{3}{\psline(\r,0)(\r,2)}
+            \multido{\r=0.5+0.5}{3}{\psline(0,\r)(2,\r)}
+            \pspolygon(0,1)(1,2)(2,1)(1,0)
+            \psline(2,2)(1.5,1.5)
+            \rput(1,-0.6){$\dfrac{15}{32} =46,875\,\%$}
+         \end{pspicture}}
+      \item Par calcul de fractions : \\ [1mm]
+         Figure 1 : $\dfrac14+\dfrac18+\dfrac{1}{16} =\dfrac{4}{16}+\dfrac{2}{16}+\dfrac{1}{16} =\blue \dfrac{7}{16}$ \\ [2mm]
+         Figure 2 : $\dfrac13+\dfrac16+\dfrac19 =\dfrac{6}{18}+\dfrac{3}{18}+\dfrac{2}{18} =\blue \dfrac{11}{18}$ \\ [1mm]
+         Fig. 3 : $\dfrac14+\dfrac18+\dfrac{1}{16}+\dfrac{1}{32} =\dfrac{8}{32}+\dfrac{4}{32}+\dfrac{2}{32}+\dfrac{1}{32} =\blue \dfrac{15}{32}$ \\
+      \item Par calcul de pourcentages : \\ [1mm]
+         Figure 1 : $25\,\%+12,5\,\%+6,25\,\% =\blue 43,75\,\%$ \\ [1mm]
+         Figure 2 : $33,33\,\%+16,67\,\%+11,11\,\% \approx \blue 61,07\,\%$ \\ [1mm]
+         Fig. 3 : $25\,\%+12,5\,\%+6,25\,\%+3,125\,\% =\blue 46,875\,\%$
+   \end{itemize}

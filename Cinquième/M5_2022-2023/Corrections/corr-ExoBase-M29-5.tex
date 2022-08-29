@@ -1,0 +1,30 @@
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item
+      \begin{enumerate}
+         \item Quadrilatère $ABCD$ isocerfvolant en $A$ : \\
+            \begin{pspicture}(-1.5,-1.5)(6,1.7)
+               \pstGeonode[PointSymbol=none,CurveType=polygon,PosAngle={135,-90,45,90}]{A}(1,-1){B}(4,0){C}(1,1){D}
+               \pstLineAB[linecolor=blue,nodesep=-1]{A}{C}
+               \pstRightAngle[linecolor=B1]{D}{A}{B}
+            \end{pspicture}
+         \item Quadrilatère $ABCD$ non isocervolant ayant un axe de symétrie : \\
+            \begin{pspicture}(-1.5,-2.8)(6,2.8)
+               \pstGeonode[PointSymbol=none,CurveType=polygon,PosAngle={135,-90,45,90}]{A}(1,-2){B}(4,0){C}(1,2){D}
+               \pstLineAB[linecolor=blue,nodesep=-1]{A}{C}
+            \end{pspicture}
+      \end{enumerate}
+      \setcounter{enumi}{1}
+      \item
+      \begin{enumerate}
+         \item $(AC)$ est un axe de symétrie de la figure $ABCD$, donc par conservation des angles, $\blue \widehat{DAC} =\widehat{BAC}$.
+         \item $\widehat{DAB} =\udeg{90}$, donc $\widehat{DAC}$ vaut la moitié, c'est-à-dire $\blue \udeg{45}$.
+         \item $B$ est le symétrique de $D$ par rapport à $(AC)$ donc, {\blue les droites $(BD)$ et $(AC)$ sont perpendiculaires}.
+      \end{enumerate}
+   \setcounter{enumi}{2}
+   \item
+      \begin{enumerate}
+         \item {\blue Un carré est un isocervolant} car ses diagonales sont des axes de symétrie et tous ses angles mesurent \udeg{90}.
+         \item {\blue Un rectangle n'est pas un isocervolant} car ses diagonales ne sont pas des axes de symétrie.
+      \end{enumerate}
+   \end{enumerate}

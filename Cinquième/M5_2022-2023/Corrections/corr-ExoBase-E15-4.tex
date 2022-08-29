@@ -1,0 +1,18 @@
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \psset{linecolor=blue}
+      \item Triangle $NOM$ : \\
+         \begin{pspicture}(0,-1)(7,4)
+            \pstTriangle[PointSymbol=none](0,0){M}(7,0){O}(4.5;48){N}
+            \pstLabelAB[offset=-3mm]{M}{O}{\small\blue \ucm{7}}
+            \pstLabelAB{M}{N}{\small\blue \ucm{4,5}}
+            \pstMarkAngle{O}{M}{N}{\small\blue \udeg{48}}
+         \end{pspicture}
+      \item Triangle $EDF$ : \\
+         \begin{pspicture}(0.25,-0.5)(8,3.5)
+            \pstTriangle[PointSymbol=none](0,0){D}(8,0){E}(3.93;45){F}
+            \pstLabelAB[offset=-3mm]{D}{E}{\small\blue \ucm{8}}
+            \pstMarkAngle{E}{D}{F}{\small\blue \udeg{45}}
+            \pstMarkAngle{F}{E}{D}{\small\blue \udeg{28}}
+         \end{pspicture}
+   \end{enumerate}

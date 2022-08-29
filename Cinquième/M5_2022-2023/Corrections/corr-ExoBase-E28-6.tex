@@ -1,0 +1,24 @@
+   \ \\ [-5mm]
+   \begin{pspicture}(1,-3.6)(8,3)
+      \pstGeonode[CurveType=polygon,PosAngle={200,0,90}](1,0){B}(5,0){A}(5,3){C}
+      \pstRightAngle{B}{A}{C}
+      \pstGeonode[PosAngle={135,-135,45}](2,1.6){M}(2,-1.6){P}(8,1.6){Q}
+      \psset{CodeFig=true,CodeFigColor=blue}
+      \pstProjection[PosAngle=45]{A}{B}{M}[I]
+      \pstProjection[PosAngle=45]{A}{C}{M}[J]
+      \pstCircleOA{A}{M}
+      \psset{linecolor=blue}
+      \pstSegmentMark[SegmentSymbol=pstslash]{M}{I}
+      \pstSegmentMark[SegmentSymbol=pstslash]{P}{I}
+      \pstSegmentMark[SegmentSymbol=pstslashh]{M}{J}
+      \pstSegmentMark[SegmentSymbol=pstslashh]{Q}{J}
+      \pstLineAB{P}{Q}
+      \rput(5.5,-1.5){\parbox{4cm}{$A$ est le {\blue centre du cercle circonscrit au triangle $MPQ$}.}}
+   \end{pspicture}
+
+   \begin{itemize}
+      \item la droite $(CJ)$ est perpendiculaire à la droite $(MQ)$ et coupe le segment $[MQ]$ en son milieu $J$ , il s'agit donc de la médiatrice du segment $[MQ]$ ;
+      \item la droite $(BA)$ est perpendiculaire à la droite $(MP)$ et coupe le segment $[MP]$ en son milieu $I$, il s'agit donc de la médiatrice du segment $[MP]$ ;
+      \item or, les médiatrices du triangle $MPQ$ sont concourantes en un point qui est le centre de son cercle circonscrit ;
+      \item $(CJ)$ et $(BI)$ se coupent en $A$, qui est bien le centre du triangle circonscrit au triangle $MPQ$.
+   \end{itemize}

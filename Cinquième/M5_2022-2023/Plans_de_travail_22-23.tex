@@ -8,41 +8,46 @@
    \psline[linecolor=#1](0,2.3)(5,2.3)
    \rput(2.5,2.65){#2}
    \rput(2.5,1.15){\begin{minipage}{4cm}
-                           {\small\darkgray #3}
-                         \end{minipage}}}
+                            {\small\darkgray #3}
+                          \end{minipage}}}
                         
 \newcommand{\bullelongue}[3]{
    \psframe[linewidth=1mm,framearc=0.1,linecolor=#1](0,0)(8.25,3)
    \psline[linecolor=#1](0,2.3)(8.25,2.3)
    \rput(4.125,2.65){#2}
    \rput(4.125,1.15){\begin{minipage}{7.75cm}
-                           {\small\darkgray #3}
-                         \end{minipage}}}
+                                 {\small\darkgray #3}
+                               \end{minipage}}}
    
+\newcommand{\bullemegalongue}[3]{
+   \psframe[linewidth=1mm,framearc=0.1,linecolor=#1](0,0)(18,3)
+   \psline[linecolor=#1](0,2.3)(18,2.3)
+   \rput(9,2.65){#2}
+   \rput(9,1.15){\begin{minipage}{17.5cm}
+                                {\small\darkgray #3}
+                             \end{minipage}}}
+                         
 \newcommand{\bullecours}[3]{
    \psframe[linewidth=1mm,framearc=0.1,linecolor=#1](0,0)(12.5,3)
    \psline[linecolor=#1](0,2.3)(12.5,2.3)
    \rput(6.25,2.65){#2}
    \rput(6.25,1.15){\begin{minipage}{12cm}
-                        {\small\darkgray #3}
-                      \end{minipage}}}
+                              {\small\darkgray #3}
+                            \end{minipage}}}
    
-\newcommand{\bulleQR}[3]{
+\newcommand{\bulleQR}[4]{
    \psframe[linewidth=1mm,framearc=0.1,linecolor=#1](0,0)(4,7)
    \psline[linecolor=#1](0,6.3)(4,6.3)
    \rput(2,6.65){#2}
-   \rput(2,3.15){\begin{minipage}{3.5cm}
-                           \begin{center}
-                              {\small\darkgray #3}
-                           \end{center}
-                         \end{minipage}}}
- 
-\begin{center}
+   \rput(2,3.5){\small\darkgray #3}
+   \rput(2,0.5){\small\darkgray #4}}
 
+
+\begin{center}
 
 %%%%%%%%%% Séquence 1 %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{pspicture}(0.5,0)(18,11)            
+\begin{pspicture}(0.5,0)(18,10.5)            
    {\color{red}
       \rput(9,5.75){\parbox{5cm}{\centering\large S1 \par  ENCHAÎNEMENT D'OPÉRATIONS}}} %bulle centrale  
    \rput[l](0,8){%bulle NNO : connaissances et compétences
@@ -52,29 +57,29 @@
          {Je connais mon cours}
          {C1 : J'utilise et je range différentes représentations d'un même nombre décimal \hfill $\square$ \par
           C2 : Je traduis un enchaînement d’opérations à l’aide d’une expression et inversement \hfill $\square$ \par
-          C3 : J'effectue un enchaînement d'opérations en respectant les priorités opératoires \hfill $\square$}}         
+          C3 : J'effectue un enchaînement d'opérations en respectant les priorités opératoires \hfill $\square$}}        
    \rput[l](14,4){%bulle ENE : Aide vidéo
       \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=TJH-fiwAt5s} \par \medskip
-          Calculer avec des priorités \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=_yF5ItbcN28&feature=youtu.be} \par \medskip
-          Traduire une expression}}    
+         {Calculer avec des priorités}
+         {Traduire une expression}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=TJH-fiwAt5s}};}
+         \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=_yF5ItbcN28&feature=youtu.be}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
             {Goldenrod}
             {Questions flash}
             {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
-             \rput(2.75,0){\darkgray\Huge 5}}}     
+             \rput(2.75,0){\darkgray\Huge 5}}}
       \rput[l](0,0){%bulle SO : Compétence 1
          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](5,2)(7.2,4.5)(5,2.35)
          \bulle
             {B1}
             {Compétence 1}
-            {Activité d'approche \hfill $\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star$ \hfill $\square$ \par
              Exercice 1 \hfill $\star$ \hfill $\square$ \par
              Exercice 2 \hfill $\star\star$ \hfill $\square$ \par
              Exercice 3 \hfill $\star\star\star$ \hfill $\square$}}
@@ -101,7 +106,7 @@
 
 %%%%%%%%%% Séquence 2 %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{pspicture}(0.5,0.5)(18,12.25)            
+\begin{pspicture}(0.5,0.5)(18,12.5)            
    {\color{DodgerBlue}
       \rput(9,5.75){\parbox{5cm}{\centering\large S2 \par ANGLES \par PARTICULIERS}}} %bulle centrale  
    \rput[l](0,8){%bulle NNO : connaissances et compétences
@@ -117,10 +122,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=c8CuPY-KaNM&list=PLVUDmbpupCaoTCiYBCUGfCyenktNbkIdt} \par \medskip
-          Angles alternes-internes \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=ErUq2wdA_PE&list=PLVUDmbpupCaoTCiYBCUGfCyenktNbkIdt&index=2} \par \medskip
-          Angles correspondants}}    
+         {Angles alternes-internes}
+         {Angles correspondants}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=c8CuPY-KaNM&list=PLVUDmbpupCaoTCiYBCUGfCyenktNbkIdt}};}
+         \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=ErUq2wdA_PE&list=PLVUDmbpupCaoTCiYBCUGfCyenktNbkIdt&index=2}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -133,7 +138,7 @@
          \bullelongue
             {B1}
             {Compétences 1 et 2}
-            {Activité d'approche \hfill $\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star$ \hfill $\square$ \par
              Exercice 1 \hfill $\star$ \hfill $\square$ \par
              Exercice 2 \hfill $\star$ \hfill $\square$ \par
              Exercice 3 \hfill $\star\star\star$ \hfill $\square$}}
@@ -161,16 +166,16 @@
          {Je connais mon cours}
          {C1 : Je réalise des activités d’algorithmique débranchée \hfill $\square$ \par
           C2 : Je traduis un script de déplacement ou de construction géométrique \hfill $\square$ \par
-          C3 : J'écrit un script de déplacement ou de construction géométrique \hfill $\square$}}         
+          C3 : J'écris un script de déplacement ou de construction géométrique \hfill $\square$}}         
    \rput[l](14,4){%bulle ENE : Aide vidéo
       \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=pdtMUgnmRa4&list=PLVUDmbpupCaqKLNci7_86rbIt61SMhJPd&index=1} \par \medskip
-          Prise en main de Scratch \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=8Sfarvw6jgg&list=PLVUDmbpupCaqKLNci7_86rbIt61SMhJPd&index=2} \par \medskip
-          Utiliser une boucle}}    
+         {Prise en main de Scratch}
+         {Utiliser une boucle}}  
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=pdtMUgnmRa4&list=PLVUDmbpupCaqKLNci7_86rbIt61SMhJPd&index=1}};}
+         \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=8Sfarvw6jgg&list=PLVUDmbpupCaqKLNci7_86rbIt61SMhJPd&index=2}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -183,7 +188,7 @@
          \bulle
             {B1}
             {Compétence 1}
-            {Activité d'approche \hfill $\star\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star\star$ \hfill $\square$ \par
              Récréation \hfill $\star\star\star$ \hfill $\square$}}
       \rput[l](6.5,0){%bulle S : compétence 2
          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](2.35,3)(2.5,4.5)(2.65,3)
@@ -221,10 +226,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=SImiMoRB0vU} \par \medskip
-          Droite graduée \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=DYbRr4B42h8} \par \medskip
-          Comparer des nombres}}    
+         {Droite graduée}
+         {Comparer des nombres}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=SImiMoRB0vU}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=DYbRr4B42h8}};}   
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -237,7 +242,7 @@
          \bulle
             {B1}
             {Compétence 1}
-            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
              Exercice 3 \hfill $\star$ \hfill $\square$ \par
              Exercice 4 \hfill $\star$ \hfill $\square$ \par
              Récréation \hfill $\star\star\star$ \hfill $\square$}}
@@ -279,10 +284,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=AHNYuKCoCvU&t=280s} \par \medskip
-          Repère du plan \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=kAtwKV3DqKI&list=PLVUDmbpupCap2d3CpwVNB_SrkYWEFsmBX&index=7} \par \medskip
-          Lire et placer des points}}    
+         {Repère du plan}
+         {Lire et placer des points}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=AHNYuKCoCvU&t=280s}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=kAtwKV3DqKI&list=PLVUDmbpupCap2d3CpwVNB_SrkYWEFsmBX&index=7}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -302,7 +307,7 @@
          \bullelongue
             {B1}
             {Compétence 2}
-            {Activité d'approche \hfill $\star\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star\star$ \hfill $\square$ \par
              Exercice 2 \hfill $\star\star$ \hfill $\square$ \par
              Exercice 3 \hfill $\star\star$ \hfill $\square$ \par
              Récréation \hfill $\star\star$ \hfill $\square$}}             
@@ -327,10 +332,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=NZnhF5VDy04&feature=youtu.be} \par \medskip
-          Diagramme en bâtons \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=gpCY_3zq3bk&feature=youtu.be} \par \medskip
-          Diagramme circulaire}}    
+         {Diagramme en bâtons}
+         {Diagramme circulaire}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=NZnhF5VDy04&feature=youtu.be}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=gpCY_3zq3bk&feature=youtu.be}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -343,7 +348,7 @@
          \bulle
             {B1}
             {Compétence 1}
-            {Activité d'approche \hfill $\star\star$ \hfill $\square$}}
+            {Activité A \hfill $\star\star$ \hfill $\square$}}
       \rput[l](6.5,0){%bulle S : compétence 2
          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](2.35,3)(2.5,4.5)(2.65,3)
          \bulle
@@ -381,10 +386,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.lumni.fr/video/comment-convertir-les-heures-en-minutes} \par \medskip
-          Convertir des durées \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=ZV7VG7NzDwE&list=PLVUDmbpupCaqtcNOvmjURARFwa5Vj5xER&index=6} \par \medskip
-          Calculer des durées}}    
+         {Convertir des durées}
+         {Calculer des durées}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.lumni.fr/video/comment-convertir-les-heures-en-minutes}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=ZV7VG7NzDwE&list=PLVUDmbpupCaqtcNOvmjURARFwa5Vj5xER&index=6}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -415,7 +420,8 @@
           \bulle
             {B1}
             {Compétence 3}
-            {Exercice 9 \hfill $\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 9 \hfill $\star\star$ \hfill $\square$ \par
              Exercice 10 \hfill $\star\star\star$ \hfill $\square$ \par
              Récréation \hfill $\star\star\star$ \hfill $\square$}}                  
 \end{pspicture}
@@ -432,17 +438,17 @@
          {A1}
          {Je connais mon cours}
          {C1 : Je simplifie une expression littérale \hfill $\square$ \par
-          C1 : Je produis une expression littérale \hfill $\square$ \par
-          C2 : J'utilise une lettre pour traduire et démontrer une propriété générale \hfill $\square$}}         
+          C2 : Je produis une expression littérale \hfill $\square$ \par
+          C3 : J'utilise une lettre pour traduire et démontrer une propriété générale \hfill $\square$}}         
    \rput[l](14,4){%bulle ENE : Aide vidéo
       \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=_yF5ItbcN28} \par \medskip
-          Traduire une expression \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=eBPOd0bTBro&list=PLVUDmbpupCapuHDg65cf4sNTNkYXVVGP-&index=3} \par \medskip
-          Simplifier une expression}}    
+         {Traduire une expression}
+         {Simplifier une expression}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=_yF5ItbcN28}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=eBPOd0bTBro&list=PLVUDmbpupCapuHDg65cf4sNTNkYXVVGP-&index=3}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -471,7 +477,7 @@
           \bulle
             {B1}
             {Compétence 3}
-            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
              Exercice 7 \hfill $\star\star$ \hfill $\square$ \par
              Exercice 8 \hfill $\star\star\star$ \hfill $\square$ \par
              Récréation \hfill $\star\star\star$ \hfill $\square$}}                  
@@ -495,10 +501,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=S1vCp-O7fbw&list=PLVUDmbpupCaqW33IMWG2n_73O4Jy7GEse&index=11} \par \medskip
-          La règle des \udeg{180} \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=x0UA6kbiDcM&list=PLVUDmbpupCaqW33IMWG2n_73O4Jy7GEse&index=12} \par \medskip
-          Démontrer}}    
+         {La règle des \udeg{180}}
+         {Démontrer}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=S1vCp-O7fbw&list=PLVUDmbpupCaqW33IMWG2n_73O4Jy7GEse&index=11}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=x0UA6kbiDcM&list=PLVUDmbpupCaqW33IMWG2n_73O4Jy7GEse&index=12}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -511,7 +517,7 @@
          \bullelongue
             {B1}
             {Compétence 1}
-            {Activité d'approche \hfill $\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star$ \hfill $\square$ \par
              Exercice 1 \hfill $\star$ \hfill $\square$ \par
              Exercice 2 \hfill $\star$ \hfill $\square$ \par
              Exercice 3 \hfill $\star\star$ \hfill $\square$}}
@@ -544,10 +550,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=6EtRH4udcKY&feature=youtu.be} \par \medskip
-          Problème de hasard \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=a9Mb5v7Z4Mw} \par \medskip
-          Calculer un probabilité}}    
+         {Problème de hasard}
+         {Calculer un probabilité}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=6EtRH4udcKY&feature=youtu.be}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=a9Mb5v7Z4Mw}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -560,7 +566,7 @@
          \bullelongue
             {B1}
             {Compétence 1}
-            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
              Exercice 1 \hfill $\star$ \hfill $\square$ \par
              Exercice 2 \hfill $\star$ \hfill $\square$}}
       \rput[l](9.75,0){%bulle S : compétence 2
@@ -590,17 +596,17 @@
          {A1}
          {Je connais mon cours}
          {C1 : Je calcule le quotient et le reste d'une division euclidienne \hfill $\square$ \par
-          C2 : Je détermine si un nombre entier est ou n’est pas multiple ou diviseur d’un \par \hspace*{6mm} autre nombre entier. \hfill $\square$ \par
-          C3 : J'utilise les critères de divisibilité (par 2, 3, 5, 9, 10). \hfill $\square$}}         
+          C2 : Je détermine si un nombre entier est ou n’est pas multiple ou diviseur d’un \par \hspace*{6mm} autre nombre entier \hfill $\square$ \par
+          C3 : J'utilise les critères de divisibilité (par 2, 3, 5, 9, 10) \hfill $\square$}}         
    \rput[l](14,4){%bulle ENE : Aide vidéo
       \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=-PLZFlAG99Q&feature=youtu.be} \par \medskip
-          Multiples et diviseurs \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=BJDE6uOrmYQ} \par \medskip
-          Critères de divisibilité}}    
+         {Multiples et diviseurs}
+         {Critères de divisibilité}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=-PLZFlAG99Q&feature=youtu.be}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=BJDE6uOrmYQ}};} 
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -621,7 +627,7 @@
          \bulle
             {B1}
             {Compétence 2}
-            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
              Exercice 4 \hfill $\star$ \hfill $\square$ \par
              Exercice 5 \hfill $\star\star$ \hfill $\square$ \par
              Récréation \hfill $\star\star$ \hfill $\square$}}             
@@ -636,6 +642,7 @@
              Exercice 9 \hfill $\star\star$ \hfill $\square$ \par
              Exercice 10 \hfill $\star\star\star$ \hfill $\square$}}                  
 \end{pspicture}
+
 
 %%%%%%%%%% Séquence 12 %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -655,10 +662,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=gQZIWxzOfaE} \par \medskip
-          Symétrie (feuille unie) \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=NIrHncshQLA} \par \medskip
-          Symétrie (quadrillage)}}    
+         {Symétrie sur feuille unie}
+         {Symétrie sur quadrillage}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=gQZIWxzOfaE}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=NIrHncshQLA}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -671,7 +678,7 @@
          \bulle
             {B1}
             {Compétence 1}
-            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
              Exercice 2 \hfill $\star$ \hfill $\square$ \par
              Exercice 6 \hfill $\star$ \hfill $\square$}}
       \rput[l](6.5,0){%bulle S : compétence 2
@@ -711,10 +718,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=bMSrZjOBwcA&list=PLVUDmbpupCarppgOGwJQh5OeCwS6R6f-Y&index=3} \par \medskip
-          Aire d'une figure \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=y-PV5LNmqsM&list=PLVUDmbpupCarppgOGwJQh5OeCwS6R6f-Y&index=4} \par \medskip
-          Le cas du disque}}    
+         {Aire d'une figure}
+         {Le cas du disque}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=bMSrZjOBwcA&list=PLVUDmbpupCarppgOGwJQh5OeCwS6R6f-Y&index=3}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=y-PV5LNmqsM&list=PLVUDmbpupCarppgOGwJQh5OeCwS6R6f-Y&index=4}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -727,7 +734,7 @@
          \bulle
             {B1}
             {Compétence 1}
-            {Activite \hfill $\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
              Exercice 4 \hfill $\star$ \hfill $\square$ \par
              Exercice 7 \hfill $\star$ \hfill $\square$}}
       \rput[l](6.5,0){%bulle S : compétence 2
@@ -761,19 +768,19 @@
       \bullecours
          {A1}
          {Je connais mon cours}
-         {C1 : Je reconnais et produis des fractions égales. \hfill $\square$ \par
+         {C1 : Je reconnais et produis des fractions égales \hfill $\square$ \par
           C2 : Je compare, range, encadre des fractions dont les dénominateurs sont \par
-          \hspace*{6mm} égaux ou multiples l’un de l’autre. \hfill $\square$ \par
-          C3 : Je résous des problèmes faisant intervenir des fractions. \hfill $\square$}}         
+          \hspace*{6mm} égaux ou multiples l’un de l’autre \hfill $\square$ \par
+          C3 : Je résous des problèmes faisant intervenir des fractions \hfill $\square$}}         
    \rput[l](14,4){%bulle ENE : Aide vidéo
       \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=Ate81v_xUiY&list=PLVUDmbpupCaorU_NqVot4wsX1uyOIEKeG&index=3} \par \medskip
-          Fractions égales \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=g5oV2wC6RfU&list=PLVUDmbpupCaorU_NqVot4wsX1uyOIEKeG&index=8} \par \medskip
-          Simplifier une fraction}}    
+         {Fractions égales}
+         {Simplifier une fraction}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=Ate81v_xUiY&list=PLVUDmbpupCaorU_NqVot4wsX1uyOIEKeG&index=3}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=g5oV2wC6RfU&list=PLVUDmbpupCaorU_NqVot4wsX1uyOIEKeG&index=8}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -802,12 +809,13 @@
           \bulle
             {B1}
             {Compétence 3}
-            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
              Exercice 1 \hfill $\star$ \hfill $\square$ \par
              Exercice 2 \hfill $\star$ \hfill $\square$ \par
              Exercice 9 \hfill $\star\star\star$ \hfill $\square$ \par
              Récréation  \hfill $\star\star$ \hfill $\square$}}                  
 \end{pspicture}
+
 
 %%%%%%%%%% Séquence 15 %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -828,10 +836,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=hwCjjX6R2XM&list=PLVUDmbpupCaqW33IMWG2n_73O4Jy7GEse&index=7} \par \medskip
-          Triangle constructible \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=JPinXSVQGWE&list=PLVUDmbpupCaqW33IMWG2n_73O4Jy7GEse&index=5} \par \medskip
-          Triangle non constructible}}    
+         {Triangle constructible}
+         {Triangle non constructible}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=hwCjjX6R2XM&list=PLVUDmbpupCaqW33IMWG2n_73O4Jy7GEse&index=7}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=JPinXSVQGWE&list=PLVUDmbpupCaqW33IMWG2n_73O4Jy7GEse&index=5} };}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -844,7 +852,7 @@
          \bulle
             {B1}
             {Compétence 1}
-            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
              Exercice 1 \hfill $\star$ \hfill $\square$ \par
              Exercice 2 \hfill $\star\star$ \hfill $\square$ \par
              Exercice 3 \hfill $\star\star$ \hfill $\square$}}
@@ -884,10 +892,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=-nKF5P_xxyQ&feature=youtu.be} \par \medskip
-          Utiliser une échelle \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=2UVaPRdSMl0} \par \medskip
-          Appliquer un pourcentage}}    
+         {Utiliser une échelle}
+         {Appliquer un pourcentage}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=-nKF5P_xxyQ&feature=youtu.be}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=2UVaPRdSMl0}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -917,7 +925,7 @@
           \bulle
             {B1}
             {Compétence 3}
-            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
              Exercice 7 \hfill $\star$ \hfill $\square$ \par
              Exercice 8 \hfill $\star\star$ \hfill $\square$ \par
              Récréation  \hfill $\star\star\star$ \hfill $\square$}}                  
@@ -943,10 +951,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=Jdvi2WbIkjo} \par \medskip
-          Distributivité et calcul \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=xZCXVgGT_Bk} \par \medskip
-          Tester une égalité}}    
+         {Distributivité et calculs}
+         {Tester une égalité}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=Jdvi2WbIkjo}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=xZCXVgGT_Bk}};}  
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -959,7 +967,7 @@
          \bulle
             {B1}
             {Compétence 1}
-            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
              Exercice 1 \hfill $\star$ \hfill $\square$ \par
              Exercice 10 \hfill $\star\star\star$ \hfill $\square$ \par
              Récréation \hfill $\star\star$ \hfill $\square$}}
@@ -1002,10 +1010,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://lesfondamentaux.reseau-canope.fr/video/mathematiques/solides/tri-prismes-pyramides/distinguer-prisme-et-pyramide} \par \medskip
-          Prismes et pyramides \par \bigskip
-          \qrcode{https://lesfondamentaux.reseau-canope.fr/video/mathematiques/solides/paves-droits/decrire-le-pave-droit} \par \medskip
-          Décrire le pavé droit}}    
+         {Prismes et pyramides}
+         {Décrire le pavé droit}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://lesfondamentaux.reseau-canope.fr/video/mathematiques/solides/tri-prismes-pyramides/distinguer-prisme-et-pyramide}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://lesfondamentaux.reseau-canope.fr/video/mathematiques/solides/paves-droits/decrire-le-pave-droit}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -1018,7 +1026,7 @@
          \bullelongue
             {B1}
             {Compétence 1}
-            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
              Exercice 1 \hfill $\star$ \hfill $\square$}}
       \rput[l](9.75,0){%bulle S : compétence 2
          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](3,3)(0.5,4.5)(3.5,3)
@@ -1048,10 +1056,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=lsAWODx566E&list=PLVUDmbpupCaqaUVS62rEOogUuKuQLPNJT&index=4} \par \medskip
-          Volume du prisme \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=eJ8BSaTIpYU&list=PLVUDmbpupCaqaUVS62rEOogUuKuQLPNJT&index=7} \par \medskip
-          Volume du cylindre}}    
+         {Volume du prisme}
+         {Volume du cylindre}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=lsAWODx566E&list=PLVUDmbpupCaqaUVS62rEOogUuKuQLPNJT&index=4}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=eJ8BSaTIpYU&list=PLVUDmbpupCaqaUVS62rEOogUuKuQLPNJT&index=7}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -1080,7 +1088,7 @@
           \bulle
             {B1}
             {Compétence 3}
-            {Activité d'approche \hfill $\star\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star\star$ \hfill $\square$ \par
              Exercice 7 \hfill $\star\star$ \hfill $\square$ \par
              Récréation \hfill $\star\star$ \hfill $\square$}}                  
 \end{pspicture}
@@ -1103,10 +1111,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=9L4lz1NMPoY&list=PLVUDmbpupCaq9IBuon2YB9q3yChTQ20b3&index=2} \par \medskip
-          Sommes et différences \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=ZjrmsHRKajg&list=PLVUDmbpupCaq9IBuon2YB9q3yChTQ20b3&index=5} \par \medskip
-          Calculs avec parentheses}}    
+         {Sommes et différences}
+         {Calculs avec parenthèses}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=9L4lz1NMPoY&list=PLVUDmbpupCaq9IBuon2YB9q3yChTQ20b3&index=2}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=ZjrmsHRKajg&list=PLVUDmbpupCaq9IBuon2YB9q3yChTQ20b3&index=5}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -1119,7 +1127,7 @@
          \bullelongue
             {B1}
             {Compétence 1}
-            {Activité d'approche \hfill $\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star$ \hfill $\square$ \par
              Exercice 1 \hfill $\star$ \hfill $\square$ \par
              Exercice 2 \hfill $\star$ \hfill $\square$ \par
              Exercice 3 \hfill $\star\star$ \hfill $\square$ \par
@@ -1147,7 +1155,7 @@
       \bullecours
          {A1}
          {Je connais mon cours}
-         {C1 : J'utilise les propriétés des quadrilatrères \hfill $\square$ \par
+         {C1 : J'utilise les propriétés des quadrilatères \hfill $\square$ \par
           C2 : Je construis un parallélogramme \hfill $\square$ \par
           C3 : J'effectue un démonstration en utilisant les propriétés du parallélogramme  \hfill $\square$}}         
    \rput[l](14,4){%bulle ENE : Aide vidéo
@@ -1155,10 +1163,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=BMEBEpdIVAw&list=PLVUDmbpupCareSDhV1nIRYEI3MBvQMIIY&index=3} \par \medskip
-          Parallélogramme et côtés \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=ornl3k7VbNk&list=PLVUDmbpupCareSDhV1nIRYEI3MBvQMIIY&index=5} \par \medskip
-          Parallélogramme et angles}}
+         {Parallélogramme et côtés}
+         {Parallélogramme et angles}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=BMEBEpdIVAw&list=PLVUDmbpupCareSDhV1nIRYEI3MBvQMIIY&index=3}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=ornl3k7VbNk&list=PLVUDmbpupCareSDhV1nIRYEI3MBvQMIIY&index=5}};}
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -1171,7 +1179,7 @@
          \bulle
             {B1}
             {Compétence 1}
-            {Activité d'approche \hfill $\star\star$ \hfill $\square$ \par
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
              Exercice 1 \hfill $\star$ \hfill $\square$ \par
              Exercice 2 \hfill $\star$ \hfill $\square$ \par
              Récréation  \hfill $\star\star$ \hfill $\square$}}
@@ -1211,10 +1219,10 @@
       \bulleQR
          {A1}
          {Aide en vidéo}
-         {\qrcode{https://www.yout-ube.com/watch?v=LMwUa5oV1fw&list=PLVUDmbpupCao94NJIhVzR96gbJ1Srzxk-&index=4} \par \medskip
-          Partager suivant un ratio \par \bigskip
-          \qrcode{https://www.yout-ube.com/watch?v=xEl2BCqVhN4&list=PLVUDmbpupCao94NJIhVzR96gbJ1Srzxk-&index=5} \par \medskip
-          Utiliser les ratios}}    
+         {Partager suivant un ratio}
+         {Utiliser les ratios}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=LMwUa5oV1fw&list=PLVUDmbpupCao94NJIhVzR96gbJ1Srzxk-&index=4}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=xEl2BCqVhN4&list=PLVUDmbpupCao94NJIhVzR96gbJ1Srzxk-&index=5}};} 
       \rput[l](0,4){%bulle O : Questions flash
          \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
          \bulle
@@ -1228,7 +1236,7 @@
             {B1}
             {Compétence 1}
             {\begin{multicols}{2}
-                Activité d'approche \hfill $\star$ \hfill $\square$ \par
+                Activité A \hfill $\star$ \hfill $\square$ \par
                 Exercice 1 \hfill $\star$ \hfill $\square$ \par
                 Exercice 2 \hfill $\star$ \hfill $\square$ \par
                 Exercice 3 \hfill $\star$ \hfill $\square$ \par
@@ -1242,7 +1250,7 @@
             {B1}
             {Compétence 2}
             {\begin{multicols}{2}
-                Activité d'approche \hfill $\star$ \hfill $\square$ \par
+                Activité A \hfill $\star$ \hfill $\square$ \par
                 Exercice 5 \hfill $\star\star$ \hfill $\square$ \par
                 Exercice 6 \hfill $\star\star$ \hfill $\square$ \par
                 Exercice 7 \hfill $\star\star$ \hfill $\square$ \par
@@ -1252,5 +1260,368 @@
              \end{multicols}}}                    
 \end{pspicture}
 
+
+%%%%%%%%%% Séquence 23 %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pspicture}(0.5,0)(18,10)             
+   {\color{Red}
+      \rput(9,5.75){\parbox{5cm}{\centering\large S23 \par NOMBRES \par PREMIERS}}} %bulle centrale  
+   \rput[l](0,8){%bulle NNO : connaissances et compétences
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
+      \bullecours
+         {A1}
+         {Je connais mon cours}
+         {C1 : Je détermine si un nombre est premier ou non et je décompose un nombre premier \hfill $\square$ \par
+          C2 : J'utilise la décomposition en facteurs premiers pour produire des fractions égales \hfill $\square$ \par
+          C3 : Je résous des problèmes en relation avec les nombres premiers  \hfill $\square$}}         
+   \rput[l](14,4){%bulle ENE : Aide vidéo
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
+      \bulleQR
+         {A1}
+         {Aide en vidéo}
+         {Nombre premier}
+         {Simplifier une fraction}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=g9PLLhnCv88&list=PLVUDmbpupCappZMuDL7e9MdUfjuOZMwdR&index=5}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=HkqUaPYgwQM&list=PLVUDmbpupCappZMuDL7e9MdUfjuOZMwdR&index=9}};}
+      \rput[l](0,4){%bulle O : Questions flash
+         \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
+         \bulle
+            {Goldenrod}
+            {Questions flash}
+            {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
+             \rput(2.75,0){\darkgray\Huge 5}}}     
+      \rput[l](0,0){%bulle SO : Compétence 1
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](5,2)(7.2,4.5)(5,2.35)
+         \bulle
+            {B1}
+            {Compétence 1}
+            {Activité A \hfill $\star$ \hfill $\square$ \par
+             Exercice 1 \hfill $\star$ \hfill $\square$ \par
+             Exercice 2 \hfill $\star\star$ \hfill $\square$ \par
+             Récréation  \hfill $\star\star$ \hfill $\square$}}
+      \rput[l](6.5,0){%bulle S : compétence 2
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](2.35,3)(2.5,4.5)(2.65,3)
+         \bulle
+            {B1}
+            {Compétence 2}
+            {Exercice 3 \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 4 \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 5 \hfill $\star\star$ \hfill $\square$}}             
+      \rput[l](13,0){%bulle SE : compétence 3
+          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](0,2)(-2.3,4.5)(0,2.35)
+          \bulle
+            {B1}
+            {Compétence 3}
+            {Exercice 6 \hfill $\star$ \hfill $\square$ \par
+             Exercice 7 \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 8 \hfill $\star\star$ \hfill $\square$}}                  
+\end{pspicture}
+
+
+%%%%%%%%%% Séquence 24 %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pspicture}(0.5,0.5)(18,12.5)           
+   {\color{DodgerBlue}
+      \rput(9,5.75){\parbox{5cm}{\centering\large S24 \par REPRÉSENTER  \par LE PAVÉ ET \par LE CYLINDRE}}} %bulle centrale  
+   \rput[l](0,8){%bulle NNO : connaissances et compétences
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
+      \bullecours
+         {A1}
+         {Je connais mon cours}
+         {C1 : Je reconnais et je trace un pavé droit et un cylindre en perspective cavalière \hfill $\square$ \par
+          C2 : Je construis le patron d'un pavé droit et d'un cylindre \hfill $\square$}}         
+   \rput[l](14,4){%bulle ENE : Aide vidéo
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
+      \bulleQR
+         {A1}
+         {Aide en vidéo}
+         {Patron du pavé droit}
+         {Patron du cylindre}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=WhwYCIcA220&list=PLVUDmbpupCaqEPQHrY1G0IgVgDBXI4oP2&index=2}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=oRIISSBmdoI&list=PLVUDmbpupCaqaUVS62rEOogUuKuQLPNJT&index=5}};}
+      \rput[l](0,4){%bulle O : Questions flash
+         \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
+         \bulle
+            {Goldenrod}
+            {Questions flash}
+            {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
+             \rput(2.75,0){\darkgray\Huge 5}}}    
+      \rput[l](0,0){%bulle SSO : Compétence 1
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](5,3)(8,4.5)(5.5,3)
+         \bullelongue
+            {B1}
+            {Compétence 1}
+            {Activité A \hfill $\star\star\star$ \hfill $\square$ \par
+             Exercice 1 \hfill $\star\star$ \hfill $\square$ \par
+             Récréation \hfill $\star\star$ \hfill $\square$}}
+      \rput[l](9.75,0){%bulle S : compétence 2
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](3,3)(0.5,4.5)(3.5,3)
+         \bullelongue
+            {B1}
+            {Compétence 2}
+            {Activité A \hfill $\star\star\star$ \hfill $\square$ \par
+             Exercice 2 \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 3 \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 4 \hfill $\star$ \hfill $\square$ \par
+             Exercice 5 \hfill $\star$ \hfill $\square$}}                    
+\end{pspicture}
+
+
+%%%%%%%%%% Séquence 25 %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pspicture}(0.5,0)(18,10)             
+   {\color{Green}
+      \rput(9,5.75){\parbox{5cm}{\centering\large S25 \par L'AIRE DU \par PARALLÉLOGRAMME}}} %bulle centrale  
+   \rput[l](0,8){%bulle NNO : connaissances et compétences
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
+      \bullecours
+         {A1}
+         {Je connais mon cours}
+         {C1 : Je calcule l'aire ou le périmètre d'un parallélogramme \hfill $\square$}}         
+   \rput[l](14,4){%bulle ENE : Aide vidéo
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
+      \bulleQR
+         {A1}
+         {Aide en vidéo}
+         {Aire du parallélogramme}
+         {Aire composée}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=BTLoR9iZXnM&list=PLVUDmbpupCareSDhV1nIRYEI3MBvQMIIY&index=7}};}
+         \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.youtube-nocookie.com/embed/vof06TmPcQk?list=PLVUDmbpupCarppgOGwJQh5OeCwS6R6f-Y&autoplay=1&iv_load_policy=3&loop=1&modestbranding=1&start=}};}
+      \rput[l](0,4){%bulle O : Questions flash
+         \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
+         \bulle
+            {Goldenrod}
+            {Questions flash}
+            {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
+             \rput(2.75,0){\darkgray\Huge 5}}}     
+      \rput[l](0,0){%bulle SO : Compétence 1
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](8.8,3)(9,4.5)(9.2,3)
+         \bullemegalongue
+            {B1}
+            {Compétence 1}
+            {\begin{multicols}{2}
+                Activité A \hfill $\star\star$ \hfill $\square$ \par
+                Exercice 1 \hfill $\star$ \hfill $\square$ \par
+                Exercice 2 \hfill $\star\star$ \hfill $\square$ \par
+                Exercice 3 \hfill $\star$ \hfill $\square$ \par
+                Exercice 4 \hfill $\star\star$ \hfill $\square$ \par
+                Exercice 5 \hfill $\star\star$ \hfill $\square$ \par
+                Exercice 6 \hfill $\star\star$ \hfill $\square$ \par
+                Récréation \hfill $\star\star$ \hfill $\square$
+             \end{multicols}}}       
+\end{pspicture}
+
+
+%%%%%%%%%% Séquence 26 %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pspicture}(0.5,0.5)(18,12.5)            
+   {\color{Red}
+      \rput(9,5.75){\parbox{5cm}{\centering\large S26 \par SOMME ET \par DIFFÉRENCE \par DE FRACTIONS}}} %bulle centrale  
+   \rput[l](0,8){%bulle NNO : connaissances et compétences
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
+      \bullecours
+         {A1}
+         {Je connais mon cours}
+         {C1 : Je relie fractions, proportions et pourcentages \hfill $\square$ \par
+          C2 : Je décompose une fraction sous la forme d’une somme ou d’une différence \par
+             \hspace*{6mm} d’un entier et d’une fraction \hfill $\square$ \par
+          C3 :  J'additionne ou je soustrais des fractions dont les dénominateurs sont \par
+             \hspace*{6mm} égaux ou multiples l’un de l’autre \hfill $\square$}}         
+   \rput[l](14,4){%bulle ENE : Aide vidéo
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
+      \bulleQR
+         {A1}
+         {Aide en vidéo}
+         {Additionner et soustraire}
+         {des fractions}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.youtube.com/watch?v=lGShZVQlXMQ&list=PLVUDmbpupCaorU_NqVot4wsX1uyOIEKeG&index=16}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=9dxCWIdbXXU&list=PLVUDmbpupCaorU_NqVot4wsX1uyOIEKeG&index=17}};} 
+      \rput[l](0,4){%bulle O : Questions flash
+         \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
+         \bulle
+            {Goldenrod}
+            {Questions flash}
+            {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
+             \rput(2.75,0){\darkgray\Huge 5}}}     
+      \rput[l](0,0){%bulle SO : Compétence 1
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](5,2)(7.2,4.5)(5,2.35)
+         \bulle
+            {B1}
+            {Compétence 1}
+            {Exercice 7 \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 8 \hfill $\star\star\star$ \hfill $\square$}}
+      \rput[l](6.5,0){%bulle S : compétence 2
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](2.35,3)(2.5,4.5)(2.65,3)
+         \bulle
+            {B1}
+            {Compétence 2}
+            {Activité \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 1 \hfill $\star$ \hfill $\square$ \par
+             Exercice 2 \hfill $\star\star$ \hfill $\square$}}             
+      \rput[l](13,0){%bulle SE : compétence 3
+          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](0,2)(-2.3,4.5)(0,2.35)
+          \bulle
+            {B1}
+            {Compétence 3}
+            {Exercice 3 \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 4 \hfill $\star$ \hfill $\square$ \par
+             Exercice 5 \hfill $\star$ \hfill $\square$ \par
+             Exercice 6 \hfill $\star\star$ \hfill $\square$ \par
+             Récréation \hfill $\star\star\star$ \hfill $\square$}}
+\end{pspicture}  
+          
+
+%%%%%%%%%% Séquence 27 %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pspicture}(0.5,0)(18,10)           
+   {\color{violet}
+      \rput(9,5.75){\parbox{5cm}{\centering\large S27 \par FRÉQUENCE \par ET MOYENNE}}} %bulle centrale  
+   \rput[l](0,8){%bulle NNO : connaissances et compétences
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
+      \bullecours
+         {A1}
+         {Je connais mon cours}
+         {C1 : Je calcule des effectifs, des fréquences, une moyenne \hfill $\square$ \par
+          C2 : J'utilise et j'interprète des données statistiques \hfill $\square$}}         
+   \rput[l](14,4){%bulle ENE : Aide vidéo
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
+      \bulleQR
+         {A1}
+         {Aide en vidéo}
+         {Calculer des fréquences}
+         {Calculer une moyenne}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=MwNV5eCBFrI&list=PLVUDmbpupCaq-oSlU99muFSPnsApY1mHr&index=1}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=U1NamiLxBaI&list=PLVUDmbpupCaq-oSlU99muFSPnsApY1mHr&index=4}};}
+      \rput[l](0,4){%bulle O : Questions flash
+         \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
+         \bulle
+            {Goldenrod}
+            {Questions flash}
+            {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
+             \rput(2.75,0){\darkgray\Huge 5}}}    
+      \rput[l](0,0){%bulle SSO : Compétence 1
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](5,3)(8,4.5)(5.5,3)
+         \bullelongue
+            {B1}
+            {Compétence 1}
+            {Exercice 1 \hfill $\star$ \hfill $\square$ \par
+             Exercice 2 \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 3 \hfill $\star$ \hfill $\square$ \par
+             Exercice 4 \hfill $\star\star$ \hfill $\square$}}
+      \rput[l](9.75,0){%bulle S : compétence 2
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](3,3)(0.5,4.5)(3.5,3)
+         \bullelongue
+            {B1}
+            {Compétence 2}
+            {Activité A \hfill $\star$ \hfill $\square$ \par
+             Récréation \hfill $\star\star$ \hfill $\square$}}                    
+\end{pspicture}
+
+
+%%%%%%%%%% Séquence 28 %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pspicture}(0.5,0.5)(18,12.5)            
+   {\color{DodgerBlue}
+      \rput(9,5.75){\parbox{5cm}{\centering\large S28 \par LES DROITES \par DU TRIANGLE}}} %bulle centrale  
+   \rput[l](0,8){%bulle NNO : connaissances et compétences
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
+      \bullecours
+         {A1}
+         {Je connais mon cours}
+         {C1 : Je construis les médiatrices d'un triangle \hfill $\square$ \par
+          C2 : Je construis les hauteurs d'un triangle \hfill $\square$ \par
+          C3 :  Je mène des raisonnements en utilisant les propriétés des médiatrices \par
+             \hspace*{6mm} et des hauteurs \hfill $\square$}}         
+   \rput[l](14,4){%bulle ENE : Aide vidéo
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
+      \bulleQR
+         {A1}
+         {Aide en vidéo}
+         {Médiatrice et hauteur}
+         {Cercle circonscrit}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=NYKW2MHECnQ&list=PLVUDmbpupCaqW33IMWG2n_73O4Jy7GEse&index=8}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.youtube.com/watch?v=0h9bZZoQfJM&list=PLVUDmbpupCaqW33IMWG2n_73O4Jy7GEse&index=9}};}  
+      \rput[l](0,4){%bulle O : Questions flash
+         \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
+         \bulle
+            {Goldenrod}
+            {Questions flash}
+            {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
+             \rput(2.75,0){\darkgray\Huge 5}}}     
+      \rput[l](0,0){%bulle SO : Compétence 1
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](5,2)(7.2,4.5)(5,2.35)
+         \bulle
+            {B1}
+            {Compétence 1}
+            {Activité \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 1 \hfill $\star$ \hfill $\square$ \par
+             Exercice 2 \hfill $\star\star$ \hfill $\square$}}
+      \rput[l](6.5,0){%bulle S : compétence 2
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](2.35,3)(2.5,4.5)(2.65,3)
+         \bulle
+            {B1}
+            {Compétence 2}
+            {Exercice 3 \hfill $\star$ \hfill $\square$ \par
+             Exercice 4 \hfill $\star\star$ \hfill $\square$}}             
+      \rput[l](13,0){%bulle SE : compétence 3
+          \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](0,2)(-2.3,4.5)(0,2.35)
+          \bulle
+            {B1}
+            {Compétence 3}
+            {Exercice 5 \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 6 \hfill $\star$ \hfill $\square$ \par
+             Exercice 7 \hfill $\star\star\star$ \hfill $\square$ \par
+             Récréation \hfill $\star\star$ \hfill $\square$}}
+\end{pspicture}  
+
+ 
+%%%%%%%%%% Séquence 29 %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pspicture}(0.5,0)(18,10)           
+   {\color{violet}
+      \rput(9,5.75){\parbox{5cm}{\centering\large S29 \par PROPRIÉTÉS \par DES SYMÉTRIES}}} %bulle centrale  
+   \rput[l](0,8){%bulle NNO : connaissances et compétences
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](6,0)(8,-1.5)(6.4,0)
+      \bullecours
+         {A1}
+         {Je connais mon cours}
+         {C1 : Je comprends l'effet des symétries : conservation du parallélisme, des longueurs \par
+            \hspace*{6mm} et des angles \hfill $\square$ \par
+          C2 : Je mène des raisonnements en utilisant des propriétés des symétries \hfill $\square$}}         
+   \rput[l](14,4){%bulle ENE : Aide vidéo
+      \pspolygon[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3.2)(-2.5,2)(0,3.5)
+      \bulleQR
+         {A1}
+         {Aide en vidéo}
+         {Conservation des aires}
+         {Centre et axe de symétrie}}
+         \tikz[remember picture,overlay]{\node at (16,8.9) {\qrcode{https://www.yout-ube.com/watch?v=zEWQwYUMXZc&list=PLVUDmbpupCaq2_WKgsP0xJM0gOI1ZY6xK&index=7}};}
+          \tikz[remember picture,overlay]{\node at (15.9,5.9) {\qrcode{https://www.yout-ube.com/watch?v=x2MqdM1t5Y4}};}
+      \rput[l](0,4){%bulle O : Questions flash
+         \pspolygon[fillstyle=solid,fillcolor=Goldenrod,linecolor=Goldenrod](5,1.35)(6.5,1.5)(5,1.65)
+         \bulle
+            {Goldenrod}
+            {Questions flash}
+            {\psline[linecolor=darkgray](1.75,-0.5)(2.25,0.5)
+             \rput(2.75,0){\darkgray\Huge 5}}}    
+      \rput[l](0,0){%bulle SSO : Compétence 1
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](5,3)(8,4.5)(5.5,3)
+         \bullelongue
+            {B1}
+            {Compétence 1}
+            {Activité A \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 1 \hfill $\star$ \hfill $\square$ \par
+             Exercice 4 \hfill $\star$ \hfill $\square$ \par
+             Récréation \hfill $\star\star$ \hfill $\square$}}
+      \rput[l](9.75,0){%bulle S : compétence 2
+         \pspolygon[fillstyle=solid,fillcolor=B1,linecolor=B1](3,3)(0.5,4.5)(3.5,3)
+         \bullelongue
+            {B1}
+            {Compétence 2}
+            {Exercice 2 \hfill $\star\star\star$ \hfill $\square$ \par
+             Exercice 3 \hfill $\star\star$ \hfill $\square$ \par
+             Exercice 5 \hfill $\star\star$ \hfill $\square$}}                    
+\end{pspicture}
+            
 \end{center}
 

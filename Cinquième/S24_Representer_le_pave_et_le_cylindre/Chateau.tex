@@ -1,0 +1,56 @@
+\PassOptionsToPackage{table}{xcolor}
+\PassOptionsToPackage{svgnames}{xcolor}
+
+\documentclass[10pt,dvips,landscape]{article} 
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{graphicx}
+\usepackage{pstricks,pst-plot} 
+\usepackage{framed}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage{multicol}
+\usepackage[framed]{ntheorem}
+\usepackage[frenchb]{babel}
+\usepackage{tabularx}
+\usepackage{pst-eucl}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{eurosym}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1cm}}
+
+
+\begin{document}
+
+\begin{pspicture}(0,-0.5)(17,13)
+   \psset{fillstyle=solid}
+   \psframe*[linecolor=Black!70](0,0)(4,10)
+   \pspolygon*[linecolor=Black!50](4,0)(4,10)(5.5,11.5)(5.5,7)(5,6.5)(5,1)
+   \pcline{<->}(0,-0.5)(4,-0.5) \lput*{:U}{4 cm}
+   \pcline{<->}(-0.5,0)(-0.5,10) \lput*{:U}{10 cm}
+   \psframe*[linecolor=Khaki](1.25,7.25)(2.75,8.75)
+   \pspolygon*[linecolor=FireBrick](0,10)(4,10)(2.75,13)
+   \pspolygon*[linecolor=FireBrick!50](4,10)(5.5,11.5)(2.75,13)
+   \pcline{<->}(-0.25,10.25)(2.5,13.25) \lput*{:U}{4 cm}
+   \psframe*[linecolor=SaddleBrown](4.5,0.5)(13,6.5)
+   \pspolygon*[linecolor=SaddleBrown!50](4.5,6.5)(5,7)(13,7)(13,6.5)
+   \pcline{<->}(4.5,0.25)(13,0.25) \lput*{:U}{8 cm}
+   \pcline{<->}(4.25,6.75)(4.75,7.25) \lput*{:U}{2 cm}
+   \psframe*[linecolor=Gold](8,0.5)(10,4)
+   \psellipse*[linecolor=Gold](9,4)(1,0.75)
+   \psframe*[linecolor=Black!70](13,0.25)(17,10.25)
+   \psellipse*[linecolor=Black!70](15,0.25)(2,0.75)
+   \pcline{<->}(13,-0.75)(17,-0.75) \lput*{:U}{4 cm}
+   \psframe*[linecolor=Khaki](14.25,7.25)(15.75,8.75)
+   \pspolygon*[linecolor=FireBrick](13,10.25)(17,10.25)(15,13.25)
+   \psellipse*[linecolor=FireBrick](15,10.25)(2,0.5)
+   \pcline{<->}(12.75,10.5)(14.7,13.35) \lput*{:U}{4 cm}
+\end{pspicture}
+
+\end{document}

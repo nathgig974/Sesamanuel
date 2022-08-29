@@ -1,0 +1,40 @@
+   Un carreau représente un carré de \ucm{1} de côté. \\
+   \begin{enumerate}
+      \item Patron du pavé de mesures \ucm{5}, \ucm{4} et \ucm{2}. \\
+         {\psset{unit=0.5}
+         \begin{pspicture}(0,0)(14,11.5)
+            \psset{linecolor=blue}
+            \psgrid[subgriddiv=1,gridlabels=0pt,gridcolor=lightgray](0,0)(14,11)
+            \psline(3,1)(3,3)(1,3)(1,8)(3,8)(3,10)(7,10)(7,8)(13,8)(13,3)(7,3)(7,1)(3,1)
+            \psframe(3,3)(7,8)
+            \psline(9,3)(9,8)
+         \end{pspicture}}
+   \end{enumerate}
+
+\Coupe
+
+   \begin{enumerate}
+      \setcounter{enumi}{1}
+      \item Développement du cylindre de hauteur \ucm{8} de diamètre \ucm{2} : le périmètre du disque vaut \\ [1mm]
+         $2\times\pi\times\dfrac{\ucm{2}}{2} \approx\ucm{6,28}$. \\
+         {\psset{unit=0.5}
+         \begin{pspicture}(-1,-1.5)(13,7.5)
+            \psgrid[subgriddiv=1,gridlabels=0pt,gridcolor=lightgray](-1,-1)(13,7)
+            \psset{linecolor=blue}
+            \psframe(2,0)(10,6.28)
+            \pscircle(1,3){1}
+            \pscircle(11,3){1}
+            \psdots(1,3)(11,3)
+         \end{pspicture}}
+      \item Développement du cylindre de hauteur \ucm{2} de rayon \ucm{2,5} : le périmètre du disque vaut \\
+         $2\times\pi\times\ucm{2,5} \approx\ucm{15,71}$. \\
+        {\psset{unit=0.41}
+        \begin{pspicture}(-1,-1)(16,14)
+           \psgrid[subgriddiv=1,gridlabels=0pt,gridcolor=lightgray](-1,-1)(16,13)
+           \psset{linecolor=blue}
+           \psframe(0,5)(15.7,7)
+           \pscircle(5,2.5){2.5}
+           \pscircle(8,9.5){2.5}
+           \psdots(5,2.5)(8,9.5)
+         \end{pspicture}}
+   \end{enumerate}

@@ -1,0 +1,33 @@
+   \ \\ [-5mm]
+   \begin{pspicture}(-0.5,0.5)(6,4.5)
+      \pstGeonode[CurveType=polygon,PosAngle={200,0,90}](0,1){O}(5,0.5){N}(2,4){E}
+      \psset{CodeFig=true,CodeFigColor=red,PointName=none}
+      \pstProjection{N}{O}{E}
+      \pstProjection{O}{E}{N}
+      \pstProjection{E}{N}{O}
+      \rput(5,3.5){\parbox{2.5cm}{L'orthocentre se situe {\blue à l'intérieur du triangle}}}
+   \end{pspicture}
+
+   \begin{pspicture}(0.8,-2.2)(8,4)
+      \pstGeonode[CurveType=polygon,PosAngle={200,0,90}](1,3){T}(5.5,1){W}(8,3.5){O}
+      \psset{CodeFig=true,CodeFigColor=red,PointName=none,linecolor=red,linestyle=dashed}
+      \pstProjection{T}{W}{O}[A]
+      \pstProjection{O}{T}{W}[B]
+      \pstProjection{W}{O}{T}[C]
+      \pstLineAB[nodesepB=-2.5]{O}{A}
+      \pstLineAB[nodesepB=-3]{B}{W}
+      \pstLineAB[nodesepB=-2.5]{T}{C}
+      \psset{linecolor=black}
+      \pstLineAB{W}{C}
+      \pstLineAB{W}{A}
+      \rput(2,-0.5){\parbox{2.5cm}{L'orthocentre se situe {\blue à l'extérieur du triangle}}}
+   \end{pspicture}
+
+   \begin{pspicture}(-0.4,-0.5)(6,3.75)
+      \pstGeonode[CurveType=polygon,PosAngle={200,0,90}]{T}(6,0){R}(6,3.5){E}
+      \psset{CodeFig=true,CodeFigColor=red,PointName=none}
+      \psframe(6,0)(5.6,0.4)
+      \pstProjection{E}{T}{R}
+      \pstLineAB[linestyle=dashed,linecolor=red]{T}{E}
+      \rput(1,2.5){\parbox{3cm}{L'orthocentre est {\blue au point $R$} où le triangle est rectangle}}
+   \end{pspicture}

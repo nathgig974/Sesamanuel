@@ -168,26 +168,13 @@
 %\RequirePackage[T1]{fontenc} 
 
 %%%%%%%%%%%%%%%%
-% ajout de packages
-%\RequirePackage{lscape}
-%\RequirePackage{xlop}
-%%\RequirePackage{cancel}
-%\RequirePackage{fp}
-%\RequirePackage{hieroglf}
-%\RequirePackage{ugarite}
-%\RequirePackage{mathabx}
 \RequirePackage{hyperref}
-%\RequirePackage{arydshln}
 \RequirePackage{frcursive}
-%\RequirePackage{scratch}
-%\RequirePackage{fancybox}
-%\usepackage{dashrule}
 \RequirePackage{setspace}
 \usepackage{qrcode}
 \usepackage{unicode-math}
 \newfontfamily\myfontScratch[]{FreeSans}
 \usepackage{microtype}
-
 
 %%%%%%%%%%macros personnelles %%%%%%%%%%%%
 
@@ -232,10 +219,6 @@
            }
        }      
    }
-
-%%papier millimétré
-%\newcommand{\milli}[4]{\psgrid[subgriddiv=10,gridlabels=0,gridwidth=0.4pt, subgridwidth=0.4pt,gridcolor=brown!80,subgridcolor=brown!40](#1,#2)(#3,#4)}
-%
 
 %\renewcommand*\tabularxcolumn[1]{>{\centering\arraybackslash}m{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1cm}}
@@ -1839,7 +1822,9 @@
   \fancyhead[RO]{\smc@headodd{RecreationHeadFrame}{\StringRecreation}}
   \fancyfoot[LE]{\smc@footpage{RecreationFootColor}\smc@foottitleeven}
   \fancyfoot[RO]{\smc@foottitleodd\smc@footpage{RecreationFootColor}}
-}
+  \fancyfoot[RE]{\textsc{\footnotesize N. Daval}}
+  \fancyfoot[LO]{\textsc{\footnotesize N. Daval}}
+  }
 \newcommand*\smc@firstheadevenannexe[1]{%
 %  \begin{pspicture}(0,0)(0,0)
 %    \rput(-\smc@marginleft, \dimexpr \smc@margintop-\smc@headsep){%
@@ -4647,7 +4632,7 @@
 \newcommand*\PrefixeCorrection{}
 \newcommand*\AfficheCorriges[1][\NombreColonnesCorriges]{%
   \clearpage
-  \label{toutes-solutions}
+  \label{solutions}
   \pagestyle{corrige}
   \thispagestyle{firstcorrige}
   \rput[Bl](0,9mm){\CorrigeTitleFont \MakeUppercase{\StringCorriges}}

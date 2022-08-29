@@ -1,0 +1,28 @@
+   \ \\ [-5mm]
+   \begin{pspicture}(-2,-1)(5,8.2)
+      \psset{PointSymbol=none}
+      \pstGeonode[PosAngle={-135,-45,0,45,90}]{B}(3,0){C}(1.5,3.71){A}(1.5,0){I}(1.5,7.42){J}
+      \pstLineAB{B}{C}
+      \pstSymO[PosAngle={45,135}]{A}{B,C}[D,E]
+      \pstSegmentMark{A}{B}
+      \pstSegmentMark{A}{C}
+      \pstLabelAB[offset=-3mm]{B}{C}{\ucm{3}}
+      \pstLabelAB{B}{A}{\ucm{4}}
+      \pstSegmentMark[SegmentSymbol=pstslash]{B}{I}
+      \pstSegmentMark[SegmentSymbol=pstslash]{C}{I}
+      \pstSegmentMark[SegmentSymbol=pstslash]{E}{J}
+      \pstSegmentMark[SegmentSymbol=pstslash]{D}{J}
+      \psset{linecolor=B1}
+      \pstSegmentMark{A}{D}
+      \pstSegmentMark{A}{E}
+      \pstLineAB{E}{D}
+      \pstLineAB[linecolor=blue]{I}{J}
+   \end{pspicture} \\
+   Démonstration de la question 4 : \\
+   \begin{itemize}
+      \item Le triangle $ABC$ est isocèle en $A$ et $I$ est le milieu de $[BC]$ donc, la droite $(AI)$ est la hauteur issue de $A$ dans le triangle $ABC$, mais aussi la médiatrice du segment $[BC]$. On a alors $(AI) \perp (BC)$. \smallskip
+      \item Le triangle $ADE$ est le symétrique du triangle $ABC$ par la symétrie centrale de centre $A$, par conservation des angles, on a $(AJ)\perp(DE)$. \smallskip
+      \item De plus, la droite $(BC)$ est transformée en la droite $(DE)$ qui lui est parallèle donc, on a $\left.\begin{array}{c} (AI) \perp (BC)\,\\\,(AJ)\perp(DE) \\ (BC) // (DE) \end{array}\right\}$ soit $(AI) // (AJ)$. \smallskip
+      \item Par conséquent, {\blue les points $J$, $A$ et $I$ sont alignés.}
+      \item La droite $(IJ)$ est la {\blue médiatrice} des segments $[BC]$ et $[DE]$.
+   \end{itemize}

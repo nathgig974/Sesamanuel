@@ -1,0 +1,19 @@
+   Une échelle au 1:500 signifie que 1 cm sur le dessin représente 500 cm dans la réalité, ou encore 5 m. \\
+   Il suffit donc de diviser toutes les dimensions du plan (exprimées en mètre) par 5 pour obtenir les dimensions sur le dessin (exprimées en centimètre). On obtient le dessin ci-dessous : \\
+   \begin{center}
+      \begin{pspicture}(-1,-1)(5,7)
+         \footnotesize
+         \psgrid[subgriddiv=2,gridlabels=0pt,gridcolor=lightgray](-1,-1)(5,7)
+         \psframe(0,0)(4,6)
+         \rput(2,0.25){4 cm}
+         \rput{90}(3.75,3){6 cm}
+         \rput{90}(0.8,2.8){2,4 cm}
+         \rput{90}(1.1,0.8){1,7 cm}
+         \rput(1.9,4.35){1,6 cm}
+         \rput(0.5,4.1){1,1 cm}
+         \rput(3.4,4.1){1,3 cm}
+         \psframe(1.1,1.7)(2.7,4.1)
+         \psline(-1,0)(5,0)
+         \psline(-1,-0.24)(5,-0.24)
+      \end{pspicture}
+   \end{center}

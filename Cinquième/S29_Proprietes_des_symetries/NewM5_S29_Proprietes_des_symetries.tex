@@ -1,0 +1,519 @@
+\themaM
+\graphicspath{{../../S29_Proprietes_des_symetries/Images/}}
+
+%\usetikzlibrary{calc}
+\chapter{Propriétés\\des symétries}
+\label{S29}
+
+   \def\cocottea{\pspolygon(0,0)(0.5,0)(0.75,0.25)(1,0)(1,0.5)(0.75,0.75)(1,1)(0.5,1)(0.5,0.5)}
+   \def\cocotteb{\pspolygon[fillstyle=solid,fillcolor=lightgray](0,0)(0.5,0)(0.75,0.25)(1,0)(1,0.5)(0.75,0.75)(1,1)(0.5,1)(0.5,0.5)}
+   \def\cocottec{\pspolygon[fillstyle=solid,fillcolor=lightgray](0,0)(-0.5,0)(-0.75,0.25)(-1,0)(-1,0.5)(-0.75,.75)(-1,1)(-0.5,1)(-0.5,0.5)}   
+   \newcommand{\Syst}[2]{\renewcommand{\arraystretch}{1}\left\{\begin{array}{ccccc} #1\\ #2 \end{array}\right.}
+    
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{autoeval}
+   \small
+   \begin{enumerate}
+      \item Il comprend l’effet des symétries (axiale et centrale) : conservation du parallélisme, des longueurs et des angles.
+      \item Il mène des raisonnements en utilisant des propriétés des symétries.
+   \end{enumerate}
+\end{autoeval}
+
+\begin{prerequis}[Connaissances et compétences abordées]
+   \begin{itemize}
+      \item[\com] Comprendre l’effet d’une symétrie (axiale et centrale) sur une figure.
+      \item[\com] Mobiliser les connaissances des transformations au programme pour déterminer des grandeurs géométriques.
+      \item[\com] Mener des raisonnements et s’initier à la démonstration en utilisant des transformations.
+   \end{itemize}
+\end{prerequis}
+
+\vfill
+
+\begin{debat}[Débat : les mandalas]
+   {\bf Mandala} est un terme sanskrit qui signifie {\it cercle}. Il désigne plus largement un objet support à la méditation et à la concentration composé de cercles; de symétries et de formes diverses. \\
+   \begin{center}
+     \begin{tikzpicture}[scale=0.2,pics/leaf/.style={code={\pgfgettransformentries{\myxx}{\myxy}{\myyx}{\myyy}{\tmp}{\tmp}\pgfmathsetmacro{\myscale}{sqrt(\myxx*\myyy-\myxy*\myyx)} \draw[line width=0.5,pic actions] (-0.02,0) to[out=80,in=-80] (0,0.1) to[out=100,in=-90] (-0.1,0.2) to[out=90,in=-80] (-0.006,0.4) -- (0,0.4) to[out=-80,in=90] (0.1,0.2) to[out=-90,in=80] (0.02,0.1) to[out=-100,in=95] (0.02,0) -- cycle;}}]
+        \path foreach \Radius [count=\Cnt] in {4,2,1,0.5} {foreach \Angle [evaluate=\Angle as \EffAngle using {\Angle-15*\Cnt}] in {0,30,...,330} { (\EffAngle:\Radius) pic[rotate=\EffAngle-90,scale=\Radius,fill=white]{leaf}}};
+        \draw (0,0) circle (12) ;
+      \end{tikzpicture}
+   \end{center}
+   \bigskip
+   \begin{cadre}[B2][J4]
+      \begin{center}
+         Vidéo : \href{https://www.yout-ube.com/watch?time_continue=262&v=bgoHUH-_yWo&feature=emb_logo}{\bf Tibet sand painting of Mandala}, chaîne YouTube {\it Tibet travel}
+      \end{center}
+   \end{cadre}
+\end{debat}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\activites
+
+\begin{activite}[Propriétés des symétries]
+   {\bf Objectifs :} observer l'effet d'une symétrie centrale ou d'une symétrie axiale sur les longueurs, les angles, le parallélisme et l'alignement ; utiliser un logiciel de géométrie dynamique.
+   \begin{QCM}
+      Ouvrir Geogebra et choisir l'onglet \textbf{Géométrie}.
+      \partie[symétrie axiale]
+         \begin{center}
+            \newcolumntype{M}{>{\itshape\footnotesize}p{5cm}}
+            \begin{tabular}{|c|p{6cm}|p{2.6cm}|M|}
+               \hline
+               1 & \multicolumn{3}{l|}{Construction de la {\bf figure} et de l'{\bf axe de symétrie}} \\
+               & Tracer un quadrilatère $ABCD$ & polygone & cliquer en quatre points du plan \\
+               & Placer un point $E$ sur la droite $(AB)$ & point sur objet & cliquer quelque part sur la droite $(AB)$ \\
+               & Tracer la parallèle à $(BC)$ passant par $D$ & parallèle & cliquer sur le segment $[BC]$ puis sur $D$ \\
+               & Tracer une droite $(FG)$ & droite & cliquer en deux points du plan \\
+               \hline
+               2 & \multicolumn{3}{l|}{Construction de la figure {\bf symétrique par rapport à l'axe} $(FG)$} \\
+               & Tracer la figure symétrique & symétrie axiale & sélectionner successivement chaque élément de la figure, puis la droite $(FG)$ \\
+               \hline
+               3 & \multicolumn{3}{l|}{Faire apparaître différentes {\bf mesures}} \\
+               & Mesurer la longueur du segment $[AD]$ & distance & cliquer sur le segment $[AD]$ \\
+               & Mesurer l'angle $\widehat{ABC}$ & angle & cliquer sur les trois points de l'angle \\
+               \hline
+            \end{tabular}
+         \end{center}
+         \begin{enumerate}
+            \item Observer ce qu'il se passe lorsque l'on déplace un point du quadrilatère $ABCD$ ou de l'axe de symétrie.
+            \item Comparer la longueur du segment $[AD]$ et celle du segment $[A'D']$ : \pointilles \smallskip
+            \item Comparer la mesure de l'angle $\widehat{ABC}$ et celle de l'angle $\widehat{A'B'C'}$ : \pointilles \smallskip
+            \item Où se situe le point $E'$ ? \pointilles \smallskip
+            \item Les deux droites parallèles dans la figure d'origine le restent-elles dans la figure symétrique ? \pointilles
+         \end{enumerate}
+
+      \partie[symétrie centrale]
+         \begin{center}
+            \newcolumntype{M}{>{\itshape\footnotesize}p{5cm}}
+            \begin{tabular}{|c|p{6cm}|p{2.6cm}|M|}
+               \hline
+               1 & \multicolumn{3}{l|}{Construction de la {\bf figure} et du {\bf centre de symétrie}} \\
+               & Tracer un pentagone $ABCDE$ & polygone & cliquer en cinq points du plan \\
+               & Placer un point $F$ sur la droite $(AB)$ & point sur objet & cliquer quelque part sur la droite $(AB)$ \\
+               & Tracer la parallèle à $(CD)$ passant par $E$ & parallèle & cliquer sur le segment $[CD]$ puis sur $E$ \\
+               & Placer un point $(G)$ & point & cliquer en un point du plan \\
+            \hline
+               2 & \multicolumn{3}{l|}{Construction de la figure {\bf symétrique par rapport au centre} $G$} \\
+               & Tracer la figure symétrique & symétrie centrale & sélectionner successivement chaque élément de la figure, puis le point $G$ \\
+               \hline
+               3 & \multicolumn{3}{l|}{Faire apparaître différentes {\bf mesures}} \\
+               & Mesurer la longueur du segment $[BC]$ & distance & cliquer sur le segment $[BC]$ \\
+               & Mesurer l'angle $\widehat{CDE}$ & angle & cliquer sur les trois points de l'angle \\
+              \hline
+            \end{tabular}
+         \end{center}
+         \begin{enumerate}
+            \item Observer ce qu'il se passe lorsque l'on déplace un point du pentagone $ABCDE$ ou le point $G$.
+            \item Comparer la longueur du segment $[BC]$ et celle du segment $[B'C']$ : \pointilles \smallskip
+            \item Comparer la mesure de l'angle $\widehat{CDE}$ et celle de l'angle $\widehat{C'D'E'}$ : \pointilles \smallskip
+            \item Où se situe le point $F'$ ? \pointilles \smallskip
+            \item Les deux droites parallèles dans la figure d'origine restent-elles parallèles dans la figure symétrique ? \pointilles
+        \end{enumerate}
+        \vspace*{-4mm}
+   \end{QCM}
+\end{activite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cours 
+
+%%%%%%%%%%%%%%%%%%
+\section{Rappels sur les symétries}
+
+\begin{definition}
+   \begin{itemize}
+      \item $M'$ est l'image du point $M$ par la \textbf{symétrie d'axe $\Delta$} signifie que la droite $\Delta$ est la médiatrice du segment $[MM']$.
+      \item $M'$ est l'image du point $M$ par la \textbf{symétrie de centre $O$} signifie que $O$ est le milieu du segment $[MM']$.
+   \end{itemize}
+   \vspace*{-4mm}
+\end{definition}
+   
+\begin{center}
+   {\psset{unit=0.75}
+   \begin{pspicture}(-3,0)(4,3.8)
+      \pstGeonode[PointName=none, PointSymbol=none](0,-0.5){O}(0,3.5){O'}
+      \pstLineAB{O}{O'}
+      \pstTriangle[PosAngleA=115](1,1){A}(4,0){B}(2,3){C}
+      \psset{CodeFig=true,CodeFigColor=A1,linecolor=B1, RightAngleSize=0.2}
+      \pstOrtSym[SegmentSymbol=pstslash, PosAngle=50]{O}{O'}{A}
+      \pstOrtSym[SegmentSymbol=pstslashh, PosAngle=-135]{O}{O'}{B}
+      \pstOrtSym[SegmentSymbol=pstslashhh, PosAngle=90]{O}{O'}{C}
+      \pstLineAB[linecolor=B1]{A'}{B'}
+      \pstLineAB[linecolor=B1]{B'}{C'}
+      \pstLineAB[linecolor=B1]{C'}{A'}
+      \rput(0,3.8){$\Delta$}
+   \end{pspicture}
+   \quad
+   \begin{pspicture}(-5,0)(4,3)
+      \pstGeonode[PosAngle=-90](0,1.5){O}
+      \pstTriangle(1,0){A}(4,0){B}(2,2){C}
+      \pstSymO[CodeFig=true, CodeFigColor=A1, PosAngle={40,170,-90}]{O}{A, B, C}[A', B', C']
+      \pstLineAB[linecolor=B1]{A'}{B'}
+      \pstLineAB[linecolor=B1]{C'}{B'}
+      \pstLineAB[linecolor=B1]{A'}{C'}
+   \end{pspicture}}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%
+\section{Propriétés des symétries}
+  
+\begin{propriete}
+   La symétrie axiale et la symétrie centrale {\bf conservent} les longueurs, les angles, l'alignement et le parallélisme (ce sont des isométries).
+\end{propriete}
+
+\begin{exemple}[0.55]
+   On considère la figure $A'B'C'D'$ symétrique de $ABCD$ par rapport au point $O$ et la figure $A''B''C''D''$ symétrique de $ABCD$ par rapport à la droite $(d)$.
+   \begin{center}
+   {\psset{unit=0.7}
+   \small
+      \begin{pspicture}(-5,-7)(6,4.5)
+         \pstGeonode[PosAngle=-90](0.5,2){O}
+         \pstGeonode[PointName=none,PointSymbol=none](-3,-5){N}(3,1){P}
+         \pstLineAB{N}{P}
+         \pstGeonode[PosAngle={-45,-90,-135,135,45},CurveType=polygon,PointSymbol=+](0,0){A}(-2,0){I}(-4,0){B}(-4,2){C}(-2,2){D}
+         \pstSymO[PosAngle={135,90,45,-45,-135},CurveType=polygon,PointSymbol=+,linecolor=B1]{O}{A,I,B,C,D}[A',I',B',C',D']
+         \pstOrtSym[PosAngle={90,180,-135,-45,45},CurveType=polygon,PointSymbol=+,linecolor=A1]{N}{P}{A,I,B,C,D}[A'',I'',B'',C'',D'']
+         \pstRightAngle{B}{C}{D}
+         \pstRightAngle[linecolor=B1]{B'}{C'}{D'}
+         \pstRightAngle[linecolor=A1]{B''}{C''}{D''}
+         \rput(3,0.2){$(d)$}
+      \end{pspicture}}
+   \end{center}
+   \correction
+      Propriétés conservées : \\
+      \begin{itemize}
+         \item L'alignement : \\
+            $I\in[AB]$ donc : $\Syst{I'\in[A'B']}{I''\in[A''B'']}$ \\
+         \item le parallélisme : \\
+            $(AB)//(CD)$ donc : $\Syst{(A'B')//(C'D')}{(A''B'')//(C''D'')}$ \\
+         \item Les longueurs : \\
+            $A'B' = AB$ et $A''B'' = AB$ \\ [2mm]
+            $IA=IB$ donc $\Syst{I'A'=I'B'}{I''A''=I''B''}$ \\
+         \item Les angles : \\
+            $(BC)\perp(CD)$ donc $\Syst{(B'C')\perp(C'D')}{(B''C'')\perp(C''D'')}$
+      \end{itemize}
+\end{exemple}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exercicesbase
+         
+\begin{exercice} %1
+   Pour chacune des figures suivantes, dire s'il s'agit ou pas d'une symétrie (axiale ou centrale). Si oui, tracer l'axe ou le centre de symétrie.
+   \begin{center}
+      {\psset{unit=1}
+      \begin{pspicture}(15,6)
+         \psframe(0,0)(15,6)
+         \psline(5,0)(5,6)
+         \psline(10,0)(10,6)
+         \psline(0,3)(15,3)
+         \rput(0.5,5.5){a.}
+         \rput(1.5,4.5){\cocottea}
+         \rput(4.5,4.5){\cocottec}
+         \rput(5.5,5.5){b.}
+         \rput(7.5,4.75){\cocotteb}
+         \rput{180}(7.5,4.25){\cocottea} 
+         \rput(10.5,5.5){c.}
+         \rput(11.5,4.75){\cocottea}
+         \rput(11.5,3.25){\cocotteb}
+         \rput(0.5,2.5){d.}
+         \rput{90}(2,1){\cocotteb}
+         \rput(2,1){\cocottea} 
+         \rput(5.5,2.5){e.}
+         \rput(6.25,1.5){\cocottea}
+         \rput(9,1){\cocottec}
+         \rput(10.5,2.5){f.}
+         \rput{-30}(10.5,1){\cocottea}
+         \rput{80}(14.5,2.5){\cocottec}
+      \end{pspicture}}
+   \end{center}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   {\blue Les figures a, b, et f sont des symétries}. \\
+   {\psset{unit=1.4}
+      \begin{center}
+         \begin{pspicture}(0,3)(5,6)
+            \psframe(0,3)(5,6)
+            \rput(0.5,5.5){a.}
+            \rput(1.5,4.5){\cocottea}
+            \rput(4.5,4.5){\cocottec}
+            \psline[linecolor=blue](3,3.25)(3,5.75)
+            \rput(3.4,3.5){\blue $d$}
+            \rput(1.4,3.25){\blue symétrie d'axe $d$}
+         \end{pspicture} \\
+         \begin{pspicture}(5,3)(10,7)
+            \psframe(5,3)(10,6)
+            \rput(5.5,5.5){b.}
+            \rput(7.5,4.75){\cocotteb}
+            \rput{180}(7.5,4.25){\cocottea} 
+            \psdot[linecolor=blue](7.5,4.5)
+            \rput(7.8,4.5){\blue o}
+            \rput(9,3.6){\blue symétrie de}
+            \rput(9,3.25){\blue centre o}
+         \end{pspicture} \\
+         \begin{pspicture}(10,-2)(15,4)
+             \psframe(10,0)(15,3)
+             \rput(10.5,2.5){f.}
+             \rput{-30}(10.5,1){\cocottea}
+             \rput{80}(14.5,2.5){\cocottec}
+             \psline[linecolor=blue](12.9,0.4)(12.3,2.8)
+             \rput(12.5,2.6){\blue $\Delta$}
+             \rput(13.5,0.25){\blue symétrie d'axe $\Delta$}
+         \end{pspicture}
+      \end{center}}
+\end{corrige}
+
+
+\begin{colonne*exercice}
+
+
+\begin{exercice} %2
+   Soit $ABC$ un triangle isocèle en $A$ tel que \\
+   $BC=\ucm{3}$ et $BA=\ucm{4}$.
+   \begin{enumerate}
+      \item Construire le triangle $ABC$.
+      \item Construire le symétrique de $ABC$ par apport à $A$ \\
+         ($D$ est le symétrique de $B$ et $E$ celui de $C$).
+      \item Construire le milieu $I$ de $[BC]$ et $J$ celui de $[DE]$.
+      \item Démontrer que les trois points $J, A$ et $I$ sont alignés. Que représente la droite $(IJ)$ pour les segments $[BC]$ et $[DE]$ ?
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{pspicture}(-2,-1)(5,8.2)
+      \psset{PointSymbol=none}
+      \pstGeonode[PosAngle={-135,-45,0,45,90}]{B}(3,0){C}(1.5,3.71){A}(1.5,0){I}(1.5,7.42){J}
+      \pstLineAB{B}{C}
+      \pstSymO[PosAngle={45,135}]{A}{B,C}[D,E]
+      \pstSegmentMark{A}{B}
+      \pstSegmentMark{A}{C}
+      \pstLabelAB[offset=-3mm]{B}{C}{\ucm{3}}
+      \pstLabelAB{B}{A}{\ucm{4}}
+      \pstSegmentMark[SegmentSymbol=pstslash]{B}{I}
+      \pstSegmentMark[SegmentSymbol=pstslash]{C}{I}
+      \pstSegmentMark[SegmentSymbol=pstslash]{E}{J}
+      \pstSegmentMark[SegmentSymbol=pstslash]{D}{J}
+      \psset{linecolor=B1}
+      \pstSegmentMark{A}{D}
+      \pstSegmentMark{A}{E}
+      \pstLineAB{E}{D}
+      \pstLineAB[linecolor=blue]{I}{J}
+   \end{pspicture} \\
+   Démonstration de la question 4 : \\
+   \begin{itemize}
+      \item Le triangle $ABC$ est isocèle en $A$ et $I$ est le milieu de $[BC]$ donc, la droite $(AI)$ est la hauteur issue de $A$ dans le triangle $ABC$, mais aussi la médiatrice du segment $[BC]$. On a alors $(AI) \perp (BC)$. \smallskip
+      \item Le triangle $ADE$ est le symétrique du triangle $ABC$ par la symétrie centrale de centre $A$, par conservation des angles, on a $(AJ)\perp(DE)$. \smallskip
+      \item De plus, la droite $(BC)$ est transformée en la droite $(DE)$ qui lui est parallèle donc, on a $\left.\begin{array}{c} (AI) \perp (BC)\,\\\,(AJ)\perp(DE) \\ (BC) // (DE) \end{array}\right\}$ soit $(AI) // (AJ)$. \smallskip
+      \item Par conséquent, {\blue les points $J$, $A$ et $I$ sont alignés.}
+      \item La droite $(IJ)$ est la {\blue médiatrice} des segments $[BC]$ et $[DE]$.
+   \end{itemize}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %3
+   Le dessin ci-dessous n'est pas à taille réelle. Les points $D, O$ et $A$ sont alignés.
+   \begin{center}
+      \psset{unit=0.9}
+      \small
+      \begin{pspicture}(-4,-0.2)(4,3)
+         \pstGeonode[PosAngle={-90,-90,-45,45,-90},PointSymbol=+](-4,0){D}(3.5,0){A}(3.5;30){B}(3;120){C}(0,0){O}
+         \pstLineAB[nodesepB=-1]{D}{A}
+         \pstLineAB[nodesepB=-0.5]{O}{C}
+         \pstLineAB[nodesepB=-1]{O}{B}
+         \pstMarkAngle[MarkAngleRadius=0.7]{C}{O}{D}{\udeg{60}}
+         \pstMarkAngle[MarkAngleRadius=1,MarkAngleType=double,LabelSep=1.6]{A}{O}{B}{\udeg{30}}
+         \pstLabelAB{O}{B}{\ucm{6}}
+         \pstLabelAB{C}{O}{\ucm{4}}
+         \pstLabelAB[offset=-3mm]{D}{O}{\ucm{3}}
+         \pstLabelAB[offset=-3mm]{O}{A}{\ucm{5}}
+      \end{pspicture}
+   \end{center}
+   \begin{enumerate}
+      \item Reproduire en vraie grandeur ce dessin.
+      \item Construire les points $E$ et $F$, symétriques respectifs de $B$ et $C$ par rapport à $O$. Jules affirme que l'angle $\widehat{BOF}$ mesure \udeg{60} et l'angle $\widehat{COE}$ mesure \udeg{90}. \\
+         À-t-il raison ? Si oui, justifier ; sinon, corriger son affirmation.
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   Figure à l'échelle 3/4. \\
+   {\psset{unit=0.75}
+   \small
+   \begin{pspicture}(-4.5,-4.5)(6,4.8)
+      \pstGeonode[PosAngle={-90,-90,-45,45,-90},PointSymbol=+](-3,0){D}(5,0){A}(6;30){B}(4;120){C}(0,0){O}(4;-60){F}(6;-150){E}
+      \pstLineAB{D}{A}
+      \pstMarkAngle[MarkAngleRadius=0.7]{C}{O}{D}{\udeg{60}}
+      \pstMarkAngle[MarkAngleRadius=1,MarkAngleType=double,LabelSep=1.6]{A}{O}{B}{\udeg{30}}
+      \pstLabelAB{O}{B}{\ucm{6}}
+      \pstLabelAB{C}{O}{\ucm{4}}
+      \pstLabelAB[offset=-3mm]{D}{O}{\ucm{3}}
+      \pstLabelAB[offset=-3mm]{O}{A}{\ucm{5}}
+      \pstSegmentMark{O}{B}
+      \pstSegmentMark[linecolor=blue]{O}{E}
+      \pstSegmentMark[SegmentSymbol=pstslash]{O}{C}
+      \pstSegmentMark[SegmentSymbol=pstslash,linecolor=blue,CodeFigColor=blue]{O}{F}
+   \end{pspicture}}
+   \begin{itemize}
+      \item {\blue Jules a tort pour l'angle $\widehat{BOF}$} : \\ \smallskip
+         on a $\widehat{BOF} =\widehat{BOA}+\widehat{AOF}$. \\
+         Par conservation des angles par symétrie centrale, \\ \smallskip
+         on a $\widehat{AOF} =\widehat{DOC} =\udeg{60}$ donc, \\ \smallskip
+         $\widehat{BOF} =\udeg{30}+\udeg{60} =\udeg{90}$. \\ \smallskip
+         {\blue L'angle $\widehat{BOF}$ est droit}. \smallskip
+      \item {\blue Jules a raison pour l'angle $\widehat{COE}$} : \\ \smallskip
+         on a $\widehat{COE} =\widehat{COD}+\widehat{DOE}$. \\
+         Par conservation des angles par symétrie centrale, \\ \smallskip
+         on a $\widehat{DOE} =\widehat{AOB} =\udeg{30}$ donc, \\ \smallskip
+         $\widehat{COE} =\udeg{60}+\udeg{30} =\udeg{90}$. \medskip
+   \end{itemize}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %4
+   Programme de construction :
+   \begin{itemize}
+      \item Tracer un triangle $MOP$ tel que: $OM =\ucm{2,5}$ ; $OP =\ucm{3}$ et $\widehat{POM} =\udeg{70}$.
+      \item Tracer la droite $(d)$ perpendiculaire à la droite $(OP)$ passant par le point $P$.
+      \item Tracer le symétrique du triangle $MOP$ par rapport à la droite $(d)$ : on notera $M'$ le symétrique de $M$ par rapport à la droite $(d)$, $O'$ celui de $O$.
+   \end{itemize}
+   \vspace*{-5mm}
+   \begin{enumerate}
+      \item Quelle devrait-être la mesure de $PO'$ ? Vérifier.
+      \item Quelle devrait-être la mesure de $M'O'$ ? Vérifier.
+      \item Quelle devrait-être la mesure de $\widehat{PO'M'}$ ? Vérifier.
+    \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{minipage}{7.5cm}
+      \begin{pspicture}(-0.5,-0.75)(6,3.2)
+         \psset{PointSymbol=none}
+         \pstTriangle{O}(3,0){P}(2.5;70){M}
+         \pstGeonode(3,2.5){d}
+         \pstLineAB[nodesep=-0.5,linecolor=A1]{P}{d}
+         \pstOrtSym[CurveType=polygon,linecolor=B1,PosAngle={-100,90,-5}]{P}{d}{O,M,P}[O',M',P]
+         \pstLabelAB[offset=-3mm]{O}{P}{\ucm{3}}
+         \pstLabelAB{O}{M}{\ucm{2,5}}
+         \pstMarkAngle{P}{O}{M}{\udeg{70}}
+      \end{pspicture}
+   \end{minipage}
+   \begin{minipage}{8.5cm}
+      \begin{enumerate}
+         \item Par conservation des longueurs par symétrie : \\
+            $PO' =PO =\blue \ucm{3}$.
+         \item Par conservation des longueurs par symétrie : \\
+            $M'O' =MO =\blue \ucm{2,5}$.
+         \item Par conservation des angles par symétrie : \\
+            $\widehat{PO'M'} =\widehat{POM} =\blue \udeg{70}$.
+       \end{enumerate}
+   \end{minipage}
+\end{corrige}
+
+\bigskip
+
+
+\begin{exercice} %5
+   Un quadrilatère $ABCD$ est appelé isocerfvolant en $A$ si l'angle $\widehat{BAD}$ est droit et si la droite $(AC)$ est un axe de symétrie.
+   \begin{enumerate}
+      \item
+      \begin{enumerate}
+         \item Construire un quadrilatère ABCD qui soit un isocerfvolant en A.
+         \item Construire un quadrilatère qui admette un axe de symétrie et qui ne soit pas un isocerfvolant.
+      \end{enumerate}
+      \item
+      \begin{enumerate}
+         \item Dans un isocerfvolant, montrer que $\widehat{DAC} =\widehat{BAC}$
+         \item En déduire la mesure de l'angle $\widehat{DAC}$
+         \item Quelle est la position relative de $(BD)$ et $(AC)$ ?
+      \end{enumerate}
+      \item Les affirmations suivantes sont-elles vraies ou fausses ? Justifier les réponses.
+      \begin{enumerate}
+         \item Tous les carrés sont des isocerfvolants.
+         \item Tous les rectangles sont des isocerfvolants.
+      \end{enumerate}
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item 
+      \begin{enumerate}
+         \item Quadrilatère $ABCD$ isocerfvolant en $A$ : \\
+            \begin{pspicture}(-1.5,-1.5)(6,1.7)
+               \pstGeonode[PointSymbol=none,CurveType=polygon,PosAngle={135,-90,45,90}]{A}(1,-1){B}(4,0){C}(1,1){D}
+               \pstLineAB[linecolor=blue,nodesep=-1]{A}{C}
+               \pstRightAngle[linecolor=B1]{D}{A}{B}
+            \end{pspicture}
+         \item Quadrilatère $ABCD$ non isocervolant ayant un axe de symétrie : \\
+            \begin{pspicture}(-1.5,-2.8)(6,2.8)
+               \pstGeonode[PointSymbol=none,CurveType=polygon,PosAngle={135,-90,45,90}]{A}(1,-2){B}(4,0){C}(1,2){D}
+               \pstLineAB[linecolor=blue,nodesep=-1]{A}{C}
+            \end{pspicture}
+      \end{enumerate}
+      \setcounter{enumi}{1}
+      \item 
+      \begin{enumerate}     
+         \item $(AC)$ est un axe de symétrie de la figure $ABCD$, donc par conservation des angles, $\blue \widehat{DAC} =\widehat{BAC}$.
+         \item $\widehat{DAB} =\udeg{90}$, donc $\widehat{DAC}$ vaut la moitié, c'est-à-dire $\blue \udeg{45}$.
+         \item $B$ est le symétrique de $D$ par rapport à $(AC)$ donc, {\blue les droites $(BD)$ et $(AC)$ sont perpendiculaires}.
+      \end{enumerate}
+   \setcounter{enumi}{2}
+   \item
+      \begin{enumerate}
+         \item {\blue Un carré est un isocervolant} car ses diagonales sont des axes de symétrie et tous ses angles mesurent \udeg{90}.
+         \item {\blue Un rectangle n'est pas un isocervolant} car ses diagonales ne sont pas des axes de symétrie.
+      \end{enumerate}
+   \end{enumerate}
+\end{corrige}
+
+\end{colonne*exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Recreation
+
+\begin{enigme}[Entrelacs chinois]
+
+\medskip
+
+   \begin{minipage}{12cm}
+      Dans le rectangle quadrillé ci-dessous, les axes de symétrie ont été tracés en rouge, ils se coupent au point O. Le but est de reproduire l'entrelacs ci-contre, formé de trois rubans entrelacés, sachant que :
+      \begin{itemize}
+          \item l'épaisseur de ces rubans est de 1 carreau ;
+            \item les dimensions de la figure complète sont de 17 carreaux sur 19 carreaux ;
+            \item tous les segments sont portés par des lignes du quadrillages ;
+            \item les cercles ont pour centre commun le point O ;
+            \item les extrémités de leurs diamètres verticaux sont sur des lignes horizontales ;
+            \item cette figure admet un centre de symétrie mais pas d'axe de symétrie.
+         \end{itemize}
+      \end{minipage}
+      \qquad
+      \begin{minipage}{4.5cm}
+         \includegraphics[width=4cm]{entrelacs}
+      \end{minipage}
+   \begin{center}
+      {\psset{unit=0.9}
+      \begin{pspicture}(0,0.5)(17,19.3)
+         \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(17,19)
+         \psline[linecolor=red](8.5,0)(8.5,19)
+         \psline[linecolor=red](0,9.5)(17,9.5)
+       \end{pspicture}}
+   \end{center}
+\end{enigme}
+
